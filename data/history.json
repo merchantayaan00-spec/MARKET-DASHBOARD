@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T06:29:40Z",
+ "updated": "2026-10-17T06:31:10Z",
  "sp500": {
   "dates": [
    "2025-10-16",
@@ -1018,7 +1018,7 @@
    7271.44
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:29:40Z"
+  "fetched_at": "2026-10-17T06:31:10Z"
  },
  "vix": {
   "dates": [
@@ -1530,7 +1530,7 @@
    19.99
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:29:40Z"
+  "fetched_at": "2026-10-17T06:31:10Z"
  },
  "sectors": {
   "XLC": {
@@ -1579,7 +1579,7 @@
   },
   "as_of": "2026-10-16",
   "stale": false,
-  "fetched_at": "2026-10-17T06:29:40Z"
+  "fetched_at": "2026-10-17T06:31:10Z"
  },
  "yield_curve": {
   "tenors": [
@@ -1615,7 +1615,7 @@
    4.64
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:29:43Z"
+  "fetched_at": "2026-10-17T06:31:15Z"
  },
  "spread": {
   "dates": [
@@ -2635,7 +2635,7 @@
    0.35
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:29:44Z"
+  "fetched_at": "2026-10-17T06:31:15Z"
  },
  "consumer": {
   "umcsent": [
@@ -2823,6 +2823,6 @@
    ]
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:29:44Z"
+  "fetched_at": "2026-10-17T06:31:17Z"
  }
 }
