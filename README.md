@@ -2,7 +2,7 @@
 
 A personal, static market dashboard hosted on GitHub Pages and refreshed by GitHub Actions. Nothing sensitive lives in this repo: no keys, no personal data.
 
-**Live page:** https://merchantayaan00-spec.github.io/market-dashboard/ (after you finish the setup below)
+**Live page:** https://merchantayaan00-spec.github.io/MARKET-DASHBOARD/ (after you finish the setup below)
 
 ## What is where
 
@@ -32,7 +32,7 @@ Nothing sensitive is in the repo. The FRED key goes in a GitHub secret (next ste
 1. **Settings**, then **Pages** (left sidebar).
 2. Under **Build and deployment**, **Source**: choose **Deploy from a branch**.
 3. **Branch**: `main`, folder `/ (root)`, then **Save**.
-4. Wait 1-2 minutes. The page address appears at the top of that screen: `https://merchantayaan00-spec.github.io/market-dashboard/`. Pin that tab in Chrome.
+4. Wait 1-2 minutes. The page address appears at the top of that screen: `https://merchantayaan00-spec.github.io/MARKET-DASHBOARD/`. Pin that tab in Chrome.
 
 ### 4. Get a free FRED API key and store it as a secret
 Needed for rates and the consumer macro data (Treasury yields, fed funds, mortgage rate, sentiment, retail sales, unemployment, savings rate, gas price, delinquencies).
