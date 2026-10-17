@@ -1,6 +1,6 @@
 {
   "last_reviewed": "2026-10-17",
-  "note": "Edit this file (not the page code). See DEALS_UPDATE.md. 'facts' is the verified, sourced record (not shown on the page). The page shows: stage tracker, tiles, visual, advisors, 3 latest updates and the questions. Anything not publicly reported must say 'Not disclosed' or 'not confirmed'.",
+  "note": "Edit this file (not the page code). See DEALS_UPDATE.md. 'facts' is the verified, sourced record. The card view shows tracker, tiles, visual, advisors and 3 latest updates; clicking a card opens the detail panel (the 'detail' object, all 'updates', and source links from 'facts'). Anything not publicly reported must say 'Not disclosed' or 'not confirmed'.",
   "deals": [
     {
       "id": "mccormick-unilever-foods",
@@ -317,6 +317,98 @@
           ]
         ],
         "note": "+ $15.7B cash to Unilever"
+      },
+      "detail": {
+        "summary": "McCormick will combine with Unilever's Foods business (Knorr, Hellmann's) through a Reverse Morris Trust. Unilever receives $15.7B in cash, and Unilever and its shareholders end up owning about 65% of the combined company. Unilever Foods' $44.8B enterprise value is about twice McCormick's own $21.0B; the UK CMA decision due Nov 11 is the next test.",
+        "terms": [
+          [
+            "Buyer",
+            "McCormick & Company (NYSE: MKC)"
+          ],
+          [
+            "Target",
+            "Unilever Foods (excl. India and other excluded businesses)"
+          ],
+          [
+            "Value",
+            "~$44.8B enterprise value (McCormick EV ~$21.0B)"
+          ],
+          [
+            "Structure",
+            "Reverse Morris Trust: $15.7B cash + 65.0% of combined equity ($29.1B at $57.84 VWAP)"
+          ],
+          [
+            "Premium",
+            "Not disclosed (no per-share premium stated)"
+          ],
+          [
+            "Implied multiple",
+            "~13.8x FY2025 EBITDA; synergy-adjusted not disclosed"
+          ],
+          [
+            "Advisors: McCormick",
+            "Citi, Rothschild & Co (financial); Cleary Gottlieb, Hogan Lovells (legal)"
+          ],
+          [
+            "Advisors: Unilever",
+            "Goldman Sachs, Morgan Stanley (financial); Clifford Chance, Wachtell Lipton (legal)"
+          ],
+          [
+            "Financing",
+            "$15.7B cash from balance sheet cash and new debt; $15.7B committed bridge, $2.0B moved to a 3-year term loan on Apr 28; net leverage target 4.0x or less at close"
+          ],
+          [
+            "Expected close",
+            "By mid-2027"
+          ]
+        ],
+        "rationale": [
+          "Combines complementary flavor portfolios and adds Knorr and Hellmann's, with wider reach in EMEA, Latin America and APAC.",
+          "~$600M run-rate cost synergies by year 3 (about two-thirds by year 2) against ~$300M one-time costs to achieve.",
+          "Builds a ~$6B foodservice platform; targets operating margin of 23-25% by year 3 (from ~21%) and 3-5% growth."
+        ],
+        "risks": [
+          "UK CMA Phase 1 decision is due Nov 11; a Phase 2 referral would delay closing. Overlap is French's vs Colman's mustard (Unilever is marketing Colman's) and condiments.",
+          "McCormick shareholder vote is required and not yet scheduled. Both stocks fell after announcement, and Sen. Warren asked the FTC and DOJ to scrutinize the deal on Oct 5.",
+          "Net leverage up to 4.0x at close. McCormick owes a $420M termination fee (or up to $75M expense reimbursement) in specified cases."
+        ],
+        "approvals": [
+          {
+            "name": "McCormick shareholder vote",
+            "status": "Not scheduled",
+            "note": "Form S-4 not yet filed in the latest filings found"
+          },
+          {
+            "name": "US antitrust (HSR)",
+            "status": "Done",
+            "note": "Early termination, Oct 5, 2026"
+          },
+          {
+            "name": "UK CMA",
+            "status": "In progress",
+            "note": "Phase 1 decision due Nov 11, 2026"
+          },
+          {
+            "name": "EU",
+            "status": "Not confirmed",
+            "note": "No EU filing or review found in sources checked"
+          },
+          {
+            "name": "Other antitrust / foreign investment",
+            "status": "Not disclosed",
+            "note": "Jurisdictions not named in the 10-Q"
+          },
+          {
+            "name": "Form S-4 / Form 10 effectiveness",
+            "status": "Pending",
+            "note": "Required before closing"
+          },
+          {
+            "name": "Works council consultation",
+            "status": "Not disclosed",
+            "note": "Required; status not disclosed"
+          }
+        ]
       }
     },
     {
@@ -572,6 +664,18 @@
           "title": "Bain, General Atlantic, MBK reported bidding",
           "source_label": "KED Global",
           "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+        },
+        {
+          "date": "2026-05-18",
+          "title": "JPMorgan reported as TA's sale adviser (KED Global)",
+          "source_label": "KED Global",
+          "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+        },
+        {
+          "date": "2026-05-15",
+          "title": "Seoul Economic Daily: sale at ~3T won EV, ~$70M EBITDA (unconfirmed)",
+          "source_label": "Seoul Economic Daily",
+          "source_url": "https://en.sedaily.com/finance/2026/05/15/gong-cha-hits-the-block-at-3-trillion-won-valuation"
         }
       ],
       "questions": [
@@ -632,6 +736,83 @@
         "ebitda": 70,
         "label": "Reported, unconfirmed",
         "note": "EBITDA ~$70M also reported, not official"
+      },
+      "detail": {
+        "summary": "Bain Capital agreed on Aug 6, 2026 to buy Gong cha, the bubble tea chain with nearly 2,200 stores in 33 markets, from TA Associates and other shareholders. Terms were not disclosed; reports range from $635M+ (Nikkei) to about $2B (Reuters), and neither is confirmed. Closing is expected in Q4 2026.",
+        "terms": [
+          [
+            "Buyer",
+            "Bain Capital"
+          ],
+          [
+            "Target",
+            "Gong cha Global (sellers: TA Associates and other shareholders)"
+          ],
+          [
+            "Value",
+            "Not disclosed. Reports: $635M+ (Nikkei), up to ~$2B (Reuters); unconfirmed"
+          ],
+          [
+            "Structure",
+            "Secondary buyout; terms not disclosed"
+          ],
+          [
+            "Premium",
+            "Not disclosed"
+          ],
+          [
+            "Implied multiple",
+            "Not disclosed. Illustrative on reported, unofficial ~$70M EBITDA: ~9x at $635M, ~29x at $2B"
+          ],
+          [
+            "Advisors: Bain",
+            "Nomura (financial); legal not disclosed"
+          ],
+          [
+            "Advisors: Gong cha",
+            "J.P. Morgan, NorthPoint (financial); legal not disclosed"
+          ],
+          [
+            "Financing",
+            "Not disclosed. Bloomberg reported Partners Group will be repaid in full (unconfirmed)"
+          ],
+          [
+            "Expected close",
+            "Q4 2026"
+          ]
+        ],
+        "rationale": [
+          "Continue disciplined store expansion in Japan and Korea.",
+          "Accelerate growth in the US through direct franchising and a contracted pipeline.",
+          "Invest in product innovation, digital marketing and loyalty programs."
+        ],
+        "risks": [
+          "Approvals are not disclosed; Bain cites only customary closing conditions.",
+          "Price is unconfirmed: reports differ by about 3x ($635M+ vs ~$2B), so the multiple paid is not confirmed.",
+          "Analyst view, not reported for this deal: competition from fast-growing Asian tea chains and franchisee economics are the main business risks."
+        ],
+        "approvals": [
+          {
+            "name": "Signed agreement",
+            "status": "Done",
+            "note": "Announced Aug 6, 2026 (Bain press release)"
+          },
+          {
+            "name": "Regulatory approvals",
+            "status": "Not disclosed",
+            "note": "None named by Bain"
+          },
+          {
+            "name": "Closing conditions",
+            "status": "Pending",
+            "note": "Described only as customary"
+          },
+          {
+            "name": "Shareholder vote",
+            "status": "Not disclosed",
+            "note": "Private company; not described"
+          }
+        ]
       }
     }
   ]

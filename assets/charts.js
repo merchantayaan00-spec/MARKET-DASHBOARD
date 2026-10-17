@@ -6,8 +6,8 @@
     XLI: "Industrials", XLP: "Staples", XLE: "Energy", XLU: "Utilities", XLRE: "Real Estate", XLB: "Materials"
   };
 
-  var C = { ink: "#e6edf5", muted: "#8392a5", line: "#243040", accent: "#6aa8ff", amber: "#f5b942",
-    purple: "#b58cff", up: "#2ecc71", dn: "#ff5a5f", panel: "#121923" };
+  var FONT = '"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace';
+  var C = { ink: "#f5f5f5", muted: "#9a9a9a", line: "#2a2a2a", bg: "#0a0a0a", up: "#00e676", dn: "#ff3b30" };
   var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var state = { sp: "1Y", vix: "6M", ff: "3Y", sector: "1M" };
   var charts = [];
@@ -76,20 +76,22 @@
 
   function setDefaults() {
     var D = Chart.defaults;
-    D.color = C.muted; D.borderColor = C.line; D.font.family = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif';
-    D.font.size = 11; D.maintainAspectRatio = false; D.animation = false;
-    D.plugins.legend.labels.boxWidth = 10; D.plugins.legend.labels.boxHeight = 2; D.plugins.legend.labels.usePointStyle = false;
-    D.plugins.tooltip.backgroundColor = "#0b0f14"; D.plugins.tooltip.borderColor = C.line; D.plugins.tooltip.borderWidth = 1;
-    D.plugins.tooltip.titleColor = C.ink; D.plugins.tooltip.bodyColor = C.ink; D.plugins.tooltip.padding = 8;
-    D.plugins.tooltip.boxPadding = 3;
+    D.color = C.muted; D.borderColor = C.line; D.font.family = FONT;
+    D.font.size = 10; D.font.weight = 500; D.maintainAspectRatio = false; D.animation = false;
+    D.plugins.legend.labels.boxWidth = 22; D.plugins.legend.labels.boxHeight = 2; D.plugins.legend.labels.usePointStyle = false;
+    D.plugins.legend.labels.color = C.ink;
+    var T = D.plugins.tooltip;
+    T.backgroundColor = C.bg; T.borderColor = C.ink; T.borderWidth = 2; T.cornerRadius = 0;
+    T.titleColor = C.ink; T.bodyColor = C.ink; T.padding = 8; T.boxPadding = 3; T.titleFont = { family: FONT, weight: 700, size: 11 }; T.bodyFont = { family: FONT, size: 11 };
+    T.displayColors = true; T.boxWidth = 10; T.boxHeight = 10;
     D.interaction = { mode: "index", intersect: false };
-    D.elements.line.borderWidth = 2; D.elements.line.tension = 0;
-    D.elements.point.radius = 0; D.elements.point.hoverRadius = 4;
+    D.elements.line.borderWidth = 2.5; D.elements.line.tension = 0; D.elements.bar.borderRadius = 0;
+    D.elements.point.radius = 0; D.elements.point.hoverRadius = 4; D.elements.point.pointStyle = "rect";
   }
 
   function xScale(dates, range) {
     return {
-      grid: { display: false }, border: { color: C.line },
+      grid: { display: false }, border: { color: C.ink, width: 2 },
       ticks: { maxTicksLimit: 6, maxRotation: 0, autoSkipPadding: 18,
         callback: function (v) { var d = dates[v]; if (!d) return ""; return range === "1M" || range === "6M" ? md(d) : myy(d); } }
     };
@@ -108,17 +110,17 @@
         if (to > y.max) b = a.top; if (from > y.max) return;
         if (b >= t) return;
         ctx.save(); ctx.fillStyle = rgb; ctx.fillRect(a.left, b, a.right - a.left, t - b);
-        ctx.fillStyle = "rgba(230,237,245,.55)"; ctx.font = "10px sans-serif"; ctx.fillText(label, a.left + 6, b + 12); ctx.restore();
+        ctx.fillStyle = "rgba(245,245,245,.7)"; ctx.font = "700 10px " + FONT; ctx.fillText(label.toUpperCase(), a.left + 6, b + 12); ctx.restore();
       }
-      band(20, 30, "rgba(245,185,66,.10)", "Nervous 20+");
-      band(30, 1000, "rgba(255,90,95,.13)", "Panic 30+");
+      band(20, 30, "rgba(245,245,245,.07)", "Nervous 20+");
+      band(30, 1000, "rgba(255,59,48,.16)", "Panic 30+");
     }
   };
   var barLabels = {
     id: "barLabels",
     afterDatasetsDraw: function (chart) {
       var ctx = chart.ctx, m = chart.getDatasetMeta(0), d = chart.data.datasets[0].data;
-      ctx.save(); ctx.font = "11px sans-serif"; ctx.textBaseline = "middle";
+      ctx.save(); ctx.font = "700 11px " + FONT; ctx.textBaseline = "middle";
       m.data.forEach(function (bar, i) {
         var v = d[i]; if (v == null) return;
         ctx.fillStyle = C.ink; ctx.textAlign = v >= 0 ? "left" : "right";
@@ -134,9 +136,9 @@
     cv = slotCanvas("sp"); var n = DAYS[state.sp];
     var dates = lastN(b.dates, n);
     add(cv, { type: "line", data: { labels: dates, datasets: [
-      { label: "S&P 500", data: lastN(b.close, n), borderColor: C.accent },
-      { label: "50 day", data: lastN(b.ma50, n), borderColor: C.amber, borderWidth: 1.4 },
-      { label: "200 day", data: lastN(b.ma200, n), borderColor: C.purple, borderWidth: 1.4 }] },
+      { label: "S&P 500", data: lastN(b.close, n), borderColor: C.ink, borderWidth: 2.5 },
+      { label: "50 day (dashed)", data: lastN(b.ma50, n), borderColor: C.muted, borderWidth: 1.5, borderDash: [7, 5] },
+      { label: "200 day (dotted)", data: lastN(b.ma200, n), borderColor: C.muted, borderWidth: 1.5, borderDash: [2, 4] }] },
       options: { scales: { x: xScale(dates, state.sp), y: yScale({ ticks: { maxTicksLimit: 6, callback: function (v) { return fmt(v, 0); } } }) },
         plugins: { legend: { align: "end" }, tooltip: { callbacks: { title: function (i) { return full(dates[i[0].dataIndex]); },
           label: function (c) { return c.dataset.label + ": " + fmt(c.parsed.y, 2); } } } } } });
@@ -147,9 +149,9 @@
     if (!b || !b.tenors) return slotCanvas("yc", "No data yet");
     var cv = slotCanvas("yc");
     add(cv, { type: "line", data: { labels: b.tenors, datasets: [
-      { label: "Today (" + md(b.today_date) + ")", data: b.today, borderColor: C.accent, backgroundColor: C.accent, pointRadius: 3, pointHoverRadius: 5 },
-      { label: "1 year ago (" + full(b.year_ago_date) + ")", data: b.year_ago, borderColor: C.muted, backgroundColor: C.muted, borderDash: [5, 4], pointRadius: 3, pointHoverRadius: 5 }] },
-      options: { scales: { x: { grid: { display: false }, border: { color: C.line } },
+      { label: "Today (" + md(b.today_date) + ")", data: b.today, borderColor: C.ink, backgroundColor: C.ink, borderWidth: 2.5, pointRadius: 3, pointHoverRadius: 5 },
+      { label: "1 year ago (" + full(b.year_ago_date) + ")", data: b.year_ago, borderColor: C.muted, backgroundColor: C.muted, borderWidth: 1.5, borderDash: [6, 5], pointRadius: 3, pointHoverRadius: 5 }] },
+      options: { scales: { x: { grid: { display: false }, border: { color: C.ink, width: 2 } },
         y: yScale({ ticks: { maxTicksLimit: 6, callback: function (v) { return fmt(v, 1) + "%"; } } }) },
         plugins: { legend: { align: "end" }, tooltip: { callbacks: { label: function (c) { return c.dataset.label.split(" (")[0] + ": " + fmt(c.parsed.y, 2) + "%"; } } } } } });
   }
@@ -160,8 +162,8 @@
       var m = chart.getDatasetMeta(0), pt = m.data[m.data.length - 1], d = chart.data.datasets[0].data;
       if (!pt || d[d.length - 1] == null) return;
       var ctx = chart.ctx, v = d[d.length - 1];
-      ctx.save(); ctx.fillStyle = C.accent; ctx.beginPath(); ctx.arc(pt.x, pt.y, 3.5, 0, 6.2832); ctx.fill();
-      ctx.fillStyle = C.ink; ctx.font = "700 12px sans-serif"; ctx.textBaseline = "middle"; ctx.textAlign = "left";
+      ctx.save(); ctx.fillStyle = C.ink; ctx.fillRect(pt.x - 4, pt.y - 4, 8, 8);
+      ctx.fillStyle = C.ink; ctx.font = "700 12px " + FONT; ctx.textBaseline = "middle"; ctx.textAlign = "left";
       ctx.fillText(fmt(v, 2) + "%", pt.x + 8, pt.y); ctx.restore();
     }
   };
@@ -172,7 +174,7 @@
     var cv = slotCanvas("ff"), cut = Date.parse(b.dates[b.dates.length - 1]) - CAL[state.ff] * 864e5, i0 = 0;
     while (i0 < b.dates.length - 1 && Date.parse(b.dates[i0]) < cut) i0++;
     var dates = b.dates.slice(i0), vals = b.values.slice(i0);
-    add(cv, { type: "line", plugins: [lastLabel], data: { labels: dates, datasets: [{ label: "Fed funds", data: vals, borderColor: C.accent, borderWidth: 2, stepped: "before" }] },
+    add(cv, { type: "line", plugins: [lastLabel], data: { labels: dates, datasets: [{ label: "Fed funds", data: vals, borderColor: C.ink, borderWidth: 2.5, stepped: "before" }] },
       options: { layout: { padding: { right: 46 } },
         scales: { x: xScale(dates, state.ff), y: yScale({ ticks: { maxTicksLimit: 6, callback: function (v) { return fmt(v, 1) + "%"; } } }) },
         plugins: { legend: { display: false }, tooltip: { callbacks: { title: function (i) { return full(dates[i[0].dataIndex]); },
@@ -183,7 +185,7 @@
     var b = H.vix;
     if (!b || !b.dates) return slotCanvas("vix", "No data yet");
     var cv = slotCanvas("vix"), n = DAYS[state.vix], dates = lastN(b.dates, n);
-    add(cv, { type: "line", plugins: [zonesPlugin], data: { labels: dates, datasets: [{ label: "VIX", data: lastN(b.close, n), borderColor: C.ink, borderWidth: 1.6 }] },
+    add(cv, { type: "line", plugins: [zonesPlugin], data: { labels: dates, datasets: [{ label: "VIX", data: lastN(b.close, n), borderColor: C.ink, borderWidth: 2.5 }] },
       options: { scales: { x: xScale(dates, state.vix), y: yScale({ suggestedMin: 10, suggestedMax: 35 }) },
         plugins: { legend: { display: false }, tooltip: { callbacks: { title: function (i) { return full(dates[i[0].dataIndex]); },
           label: function (c) { return "VIX: " + fmt(c.parsed.y, 2); } } } } } });
@@ -197,13 +199,13 @@
       .filter(function (r) { return r[1] != null; }).sort(function (a, c) { return c[1] - a[1]; });
     var cv = slotCanvas("sec");
     add(cv, { type: "bar", plugins: [barLabels], data: { labels: rows.map(function (r) { return r[0]; }),
-      datasets: [{ label: state.sector, data: rows.map(function (r) { return r[1]; }), borderRadius: 2, barPercentage: .78, categoryPercentage: .9,
-        backgroundColor: rows.map(function (r) { return r[1] >= 0 ? "rgba(46,204,113,.75)" : "rgba(255,90,95,.75)"; }) }] },
+      datasets: [{ label: state.sector, data: rows.map(function (r) { return r[1]; }), borderRadius: 0, barPercentage: .78, categoryPercentage: .9,
+        backgroundColor: rows.map(function (r) { return r[1] >= 0 ? C.up : C.dn; }), borderWidth: 0 }] },
       options: { indexAxis: "y", interaction: { mode: "nearest", axis: "y", intersect: false },
         layout: { padding: { right: 44 } },
-        scales: { x: yScale({ grace: "12%", grid: { color: function (c) { return c.tick.value === 0 ? "#e6edf5" : C.line; } },
+        scales: { x: yScale({ grace: "12%", grid: { color: function (c) { return c.tick.value === 0 ? C.ink : C.line; }, lineWidth: function (c) { return c.tick.value === 0 ? 2 : 1; } },
           ticks: { maxTicksLimit: 6, callback: function (v) { return v + "%"; } } }),
-          y: { grid: { display: false }, border: { color: C.line }, ticks: { color: C.ink } } },
+          y: { grid: { display: false }, border: { color: C.ink, width: 2 }, ticks: { color: C.ink } } },
         plugins: { legend: { display: false }, tooltip: { callbacks: { label: function (c) { return state.sector + ": " + (c.parsed.x > 0 ? "+" : "") + fmt(c.parsed.x, 2) + "%"; } } } } } });
   }
 
@@ -211,11 +213,11 @@
     var b = H.consumer;
     if (!b || !b.umcsent || !b.umcsent.length) return slotCanvas("cons", "No data yet");
     var cv = slotCanvas("cons"), labels = b.umcsent.map(function (x) { return x[0]; }), vals = b.umcsent.map(function (x) { return x[1]; });
-    var ds = [{ label: "UMich sentiment", data: vals, borderColor: C.accent, pointRadius: 2, pointHoverRadius: 4 }];
-    if (b.avg != null) ds.push({ label: "Long-run avg (since " + b.avg_since + ")", data: labels.map(function () { return b.avg; }), borderColor: C.amber,
-      borderDash: [2, 4], borderWidth: 1.4, pointRadius: 0, pointHoverRadius: 0 });
+    var ds = [{ label: "UMich sentiment", data: vals, borderColor: C.ink, borderWidth: 2.5, pointRadius: 2, pointHoverRadius: 5 }];
+    if (b.avg != null) ds.push({ label: "Long-run avg (dotted, since " + b.avg_since + ")", data: labels.map(function () { return b.avg; }), borderColor: C.muted,
+      borderDash: [2, 4], borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 0 });
     add(cv, { type: "line", data: { labels: labels, datasets: ds },
-      options: { scales: { x: { grid: { display: false }, border: { color: C.line }, ticks: { maxTicksLimit: 7, maxRotation: 0, callback: function (v) { return myy(labels[v]); } } },
+      options: { scales: { x: { grid: { display: false }, border: { color: C.ink, width: 2 }, ticks: { maxTicksLimit: 7, maxRotation: 0, callback: function (v) { return myy(labels[v]); } } },
         y: yScale({ ticks: { maxTicksLimit: 6 } }) },
         plugins: { legend: { align: "end" }, tooltip: { callbacks: { title: function (i) { return myy(labels[i[0].dataIndex]); },
           label: function (c) { return c.dataset.label + ": " + fmt(c.parsed.y, 1); } } } } } });
