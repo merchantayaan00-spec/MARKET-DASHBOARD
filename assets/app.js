@@ -106,7 +106,7 @@
   }
 
   // ---------- sparkline ----------
-  function spark(vals) {
+  function spark(vals, col) {
     if (!vals || vals.length < 2) return null;
     var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals), rng = max - min || 1;
     var pts = vals.map(function (v, i) { return (i / (vals.length - 1) * 100).toFixed(1) + "," + (18 - (v - min) / rng * 16).toFixed(1); }).join(" ");
@@ -114,22 +114,30 @@
     s.setAttribute("viewBox", "0 0 100 20"); s.setAttribute("preserveAspectRatio", "none"); s.setAttribute("class", "sp"); s.setAttribute("aria-hidden", "true");
     pl.setAttribute("points", pts); pl.setAttribute("fill", "none"); pl.setAttribute("stroke-width", "2");
     pl.setAttribute("stroke-linejoin", "round"); pl.setAttribute("vector-effect", "non-scaling-stroke");
-    pl.setAttribute("stroke", vals[vals.length - 1] >= vals[0] ? "var(--up)" : "var(--dn)");
+    pl.setAttribute("stroke", col === "up" ? "var(--up)" : col === "dn" ? "var(--dn)" : "var(--ink)");
     s.appendChild(pl);
     return s;
   }
 
-  // move steps (hard steps, no fades): m0 small < 0.5%, m1 medium < 1.5%, m2 large; up/dn = direction
-  function moveCls(c) {
-    if (c == null || c === 0) return c === 0 ? " m0" : "";
-    var a = Math.abs(c);
-    return " " + (a >= 1.5 ? "m2" : a >= 0.5 ? "m1" : "m0") + (c > 0 ? " up" : " dn");
+  // Color follows meaning, not direction. pol: "up" = rising is good (default), "down" = rising is bad, "neutral" = no color.
+  // Returns a color class: up (green = good), dn (red = bad), flat (no change), neu (neutral white).
+  function colorOf(v, pol) {
+    if (v == null) return "";
+    if (pol === "neutral") return "neu";
+    if (v === 0) return "flat";
+    var good = pol === "down" ? v < 0 : v > 0;
+    return good ? "up" : "dn";
+  }
+  // Fill steps (same thresholds everywhere, on the size of the move in %): m2 solid >= 1.5%, m1 tinted >= 0.5%, m0 outline < 0.5%.
+  function fillCls(mag, col) {
+    if (mag == null || (col !== "up" && col !== "dn")) return "";
+    return " " + (mag >= 1.5 ? "m2" : mag >= 0.5 ? "m1" : "m0") + " " + col;
   }
 
   // ---------- tiles: label, value, change (+ small "as of"), optional sparkline ----------
   // t: {label, value, vcls, change:{text,dir}, asof, url, spark, big, inv, chip, stale, title}
   function tile(t) {
-    var attrs = { class: "t" + (t.big ? " big" : "") + (t.inv ? " inv" : "") + moveCls(t.move) };
+    var attrs = { class: "t" + (t.big ? " big" : "") + (t.inv ? " inv" : "") + (t.fill || "") };
     if (t.url) { attrs.href = safeUrl(t.url); attrs.target = "_blank"; attrs.rel = "noopener noreferrer"; }
     if (t.title) attrs.title = t.title;
     return h(t.url ? "a" : "div", attrs, [
@@ -138,14 +146,14 @@
       h("div", { class: "r" }, [
         h("span", { class: t.change ? t.change.dir : "", text: t.change ? t.change.text : "" }),
         h("span", { class: "d", text: t.asof ? "as of " + t.asof : "" })]),
-      t.spark ? spark(t.spark) : null
+      t.spark ? spark(t.spark, t.sparkCol) : null
     ]);
   }
-  function chgPct(v) { return v == null ? null : { text: (v > 0 ? "▲ " : v < 0 ? "▼ " : "") + num(Math.abs(v), 2) + "%", dir: dir(v) }; }
-  function chgNum(d, dec, suffix) {
+  function chgPct(v, pol) { return v == null ? null : { text: (v > 0 ? "\u25B2 " : v < 0 ? "\u25BC " : "") + num(Math.abs(v), 2) + "%", dir: colorOf(v, pol) }; }
+  function chgNum(d, dec, suffix, pol) {
     if (d == null) return null;
-    if (Math.abs(d) < 1e-9) return { text: num(0, dec) + (suffix || ""), dir: "flat" };
-    return { text: (d > 0 ? "▲ " : "▼ ") + num(Math.abs(d), dec) + (suffix || ""), dir: dir(d) };
+    if (Math.abs(d) < 1e-9) return { text: num(0, dec) + (suffix || ""), dir: pol === "neutral" ? "neu" : "flat" };
+    return { text: (d > 0 ? "\u25B2 " : "\u25BC ") + num(Math.abs(d), dec) + (suffix || ""), dir: colorOf(d, pol) };
   }
   function naTile(label, rec, url) { return tile({ label: label, value: "n/a", vcls: "na", stale: staleChip(rec), url: url }); }
 
@@ -153,8 +161,9 @@
     o = o || {};
     var q = (window.MKT.quotes || {})[sym];
     if (!q || q.price == null) return naTile(label, q, yahoo(sym));
-    return tile({ label: label, value: (o.prefix || "") + num(q.price, 2), change: chgPct(q.change_pct), asof: md(q.as_of), url: yahoo(sym),
-      spark: o.spark ? q.spark : null, big: o.big, stale: staleChip(q), chip: o.chip && o.chip(q), move: q.change_pct });
+    var c = q.change_pct, col = colorOf(c, o.pol);
+    return tile({ label: label, value: (o.prefix || "") + num(q.price, 2), change: chgPct(c, o.pol), asof: md(q.as_of), url: yahoo(sym),
+      spark: o.spark ? q.spark : null, sparkCol: col, big: o.big, stale: staleChip(q), chip: o.chip && o.chip(q), fill: fillCls(Math.abs(c), col) });
   }
 
   function fred(id) { return (window.MKT.fred || {})[id]; }
@@ -162,10 +171,11 @@
     var r = fred(id);
     if (!r || r.value == null) return naTile(label, r, fredUrl(id));
     var dec = o.dec == null ? 2 : o.dec, d = r.prior_value == null ? null : r.value - r.prior_value;
+    var col = colorOf(d, o.pol), pct = d == null || !r.prior_value ? null : Math.abs(d / r.prior_value * 100);
     var tip = o.kind === "daily" ? "" : (o.kind === "weekly" ? "Week of " + md(r.obs_date) : r.obs_date.slice(0, 7)) + " data" + (r.released ? ", released " + md(r.released) : "");
-    return tile({ label: label, value: (o.prefix || "") + num(r.value, dec) + (o.suffix || ""), change: chgNum(d, dec, o.suffix),
-      asof: md(o.kind === "daily" ? r.obs_date : (r.released || r.obs_date)), url: fredUrl(id), spark: o.spark ? r.spark : null,
-      stale: staleChip(r), title: tip });
+    return tile({ label: label, value: (o.prefix || "") + num(r.value, dec) + (o.suffix || ""), change: chgNum(d, dec, o.suffix, o.pol),
+      asof: md(o.kind === "daily" ? r.obs_date : (r.released || r.obs_date)), url: fredUrl(id), spark: o.spark ? r.spark : null, sparkCol: col,
+      fill: fillCls(pct, col), stale: staleChip(r), title: tip });
   }
 
   // ---------- sections ----------
@@ -178,10 +188,10 @@
       .sort(function (a, b) { return (b.c == null ? -99 : b.c) - (a.c == null ? -99 : a.c); });
     rows.forEach(function (r, i) {
       var c = r.c;
-      sec.appendChild(h("a", { class: "h" + (i >= 6 ? " w" : "") + (c == null ? "" : moveCls(c)), href: yahoo(r.s), target: "_blank", rel: "noopener noreferrer",
+      sec.appendChild(h("a", { class: "h" + (i >= 6 ? " w" : "") + (c == null ? "" : fillCls(Math.abs(c), colorOf(c))), href: yahoo(r.s), target: "_blank", rel: "noopener noreferrer",
         title: r.s + (r.q && r.q.stale ? " (stale)" : "") }, [
         h("div", { class: "n", text: names[r.s] }),
-        h("div", { class: "p " + (c == null ? "na" : dir(c)), text: c == null ? "n/a" : (c > 0 ? "+" : "") + num(c, 2) + "%" })]));
+        h("div", { class: "p " + (c == null ? "na" : colorOf(c)), text: c == null ? "n/a" : (c > 0 ? "+" : "") + num(c, 2) + "%" })]));
     });
   }
 
@@ -192,38 +202,42 @@
 
   function renderRisk() {
     var g = clear("risk-grid");
-    g.appendChild(quoteTile("^VIX", "VIX", { chip: vixChip, spark: true }));
+    g.appendChild(quoteTile("^VIX", "VIX", { chip: vixChip, spark: true, pol: "down" }));
     g.appendChild(quoteTile("GC=F", "Gold", { prefix: "$", spark: true }));
   }
 
   function renderRates() {
     var g = clear("rates-grid");
-    g.appendChild(fredTile("DGS2", "2Y", { suffix: "%", kind: "daily", spark: true }));
-    g.appendChild(fredTile("DGS10", "10Y", { suffix: "%", kind: "daily", spark: true }));
-    g.appendChild(fredTile("DFF", "Fed funds", { suffix: "%", kind: "daily" }));
-    g.appendChild(fredTile("MORTGAGE30US", "30Y mortgage", { suffix: "%", kind: "weekly" }));
+    g.appendChild(fredTile("DGS2", "2Y", { suffix: "%", kind: "daily", spark: true, pol: "neutral" }));
+    g.appendChild(fredTile("DGS10", "10Y", { suffix: "%", kind: "daily", spark: true, pol: "neutral" }));
+    g.appendChild(fredTile("DFF", "Fed funds", { suffix: "%", kind: "daily", pol: "neutral" }));
+    g.appendChild(fredTile("MORTGAGE30US", "30Y mortgage", { suffix: "%", kind: "weekly", pol: "neutral" }));
   }
 
   function renderConsumer() {
     var g = clear("consumer-grid"), r = window.MKT.ratio || {};
     if (!r.mood) g.appendChild(naTile("Consumer mood", r, yahoo("XLY")));
-    else g.appendChild(tile({ label: "Consumer mood", value: r.mood, vcls: r.mood === "Spending" ? "up" : "dn",
-      change: { text: (r.month_change_pct > 0 ? "▲ " : r.month_change_pct < 0 ? "▼ " : "") + num(Math.abs(r.month_change_pct), 2) + "% 1M", dir: dir(r.month_change_pct) },
-      asof: md(r.as_of), url: yahoo("XLY"), stale: staleChip(r), title: "XLY / XLP ratio, 1 month" }));
+    else {
+      var mc = r.month_change_pct, mcol = colorOf(mc);
+      g.appendChild(tile({ label: "Consumer mood", value: r.mood, vcls: r.mood === "Spending" ? "up" : "dn",
+        change: { text: (mc > 0 ? "\u25B2 " : mc < 0 ? "\u25BC " : "") + num(Math.abs(mc), 2) + "% 1M", dir: mcol },
+        fill: fillCls(Math.abs(mc), mcol), asof: md(r.as_of), url: yahoo("XLY"), stale: staleChip(r), title: "XLY / XLP ratio, 1 month" }));
+    }
     g.appendChild(quoteTile("XRT", "XRT"));
     g.appendChild(fredTile("UMCSENT", "UMich sentiment", { dec: 1, kind: "monthly" }));
     var ra = fred("RSAFS");
     if (!ra || ra.mom_pct == null) g.appendChild(naTile("Retail sales MoM", ra, fredUrl("RSAFS")));
     else {
-      var prevMom = ra.prior_mom_pct;
-      g.appendChild(tile({ label: "Retail sales MoM", value: (ra.mom_pct > 0 ? "+" : "") + num(ra.mom_pct, 2) + "%", vcls: dir(ra.mom_pct),
-        change: chgNum(prevMom == null ? null : ra.mom_pct - prevMom, 2, " pts"), asof: md(ra.released || ra.obs_date), url: fredUrl("RSAFS"),
+      var pm = ra.prior_mom_pct, mcol2 = colorOf(ra.mom_pct);
+      g.appendChild(tile({ label: "Retail sales MoM", value: (ra.mom_pct > 0 ? "+" : "") + num(ra.mom_pct, 2) + "%", vcls: mcol2,
+        change: { text: "vs last month " + (pm == null ? "n/a" : (pm > 0 ? "+" : "") + num(pm, 2) + "%"), dir: "flat" },
+        fill: fillCls(Math.abs(ra.mom_pct), mcol2), asof: md(ra.released || ra.obs_date), url: fredUrl("RSAFS"),
         stale: staleChip(ra), title: ra.obs_date.slice(0, 7) + " data" + (ra.released ? ", released " + md(ra.released) : "") }));
     }
-    g.appendChild(fredTile("UNRATE", "Unemployment", { suffix: "%", dec: 1, kind: "monthly" }));
+    g.appendChild(fredTile("UNRATE", "Unemployment", { suffix: "%", dec: 1, kind: "monthly", pol: "down" }));
     g.appendChild(fredTile("PSAVERT", "Savings rate", { suffix: "%", dec: 1, kind: "monthly" }));
-    g.appendChild(fredTile("GASREGW", "Gas price", { prefix: "$", dec: 3, kind: "weekly" }));
-    g.appendChild(fredTile("DRCCLACBS", "Card delinquency", { suffix: "%", dec: 2, kind: "quarterly" }));
+    g.appendChild(fredTile("GASREGW", "Gas price", { prefix: "$", dec: 3, kind: "weekly", pol: "down" }));
+    g.appendChild(fredTile("DRCCLACBS", "Card delinquency", { suffix: "%", dec: 2, kind: "quarterly", pol: "down" }));
   }
 
   function renderHeadlines() {
