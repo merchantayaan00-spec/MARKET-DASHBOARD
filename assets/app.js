@@ -112,17 +112,24 @@
     var pts = vals.map(function (v, i) { return (i / (vals.length - 1) * 100).toFixed(1) + "," + (18 - (v - min) / rng * 16).toFixed(1); }).join(" ");
     var ns = "http://www.w3.org/2000/svg", s = document.createElementNS(ns, "svg"), pl = document.createElementNS(ns, "polyline");
     s.setAttribute("viewBox", "0 0 100 20"); s.setAttribute("preserveAspectRatio", "none"); s.setAttribute("class", "sp"); s.setAttribute("aria-hidden", "true");
-    pl.setAttribute("points", pts); pl.setAttribute("fill", "none"); pl.setAttribute("stroke-width", "1.6");
+    pl.setAttribute("points", pts); pl.setAttribute("fill", "none"); pl.setAttribute("stroke-width", "2");
     pl.setAttribute("stroke-linejoin", "round"); pl.setAttribute("vector-effect", "non-scaling-stroke");
     pl.setAttribute("stroke", vals[vals.length - 1] >= vals[0] ? "var(--up)" : "var(--dn)");
     s.appendChild(pl);
     return s;
   }
 
+  // move steps (hard steps, no fades): m0 small < 0.5%, m1 medium < 1.5%, m2 large; up/dn = direction
+  function moveCls(c) {
+    if (c == null || c === 0) return c === 0 ? " m0" : "";
+    var a = Math.abs(c);
+    return " " + (a >= 1.5 ? "m2" : a >= 0.5 ? "m1" : "m0") + (c > 0 ? " up" : " dn");
+  }
+
   // ---------- tiles: label, value, change (+ small "as of"), optional sparkline ----------
   // t: {label, value, vcls, change:{text,dir}, asof, url, spark, big, inv, chip, stale, title}
   function tile(t) {
-    var attrs = { class: "t" + (t.big ? " big" : "") + (t.inv ? " inv" : "") };
+    var attrs = { class: "t" + (t.big ? " big" : "") + (t.inv ? " inv" : "") + moveCls(t.move) };
     if (t.url) { attrs.href = safeUrl(t.url); attrs.target = "_blank"; attrs.rel = "noopener noreferrer"; }
     if (t.title) attrs.title = t.title;
     return h(t.url ? "a" : "div", attrs, [
@@ -147,7 +154,7 @@
     var q = (window.MKT.quotes || {})[sym];
     if (!q || q.price == null) return naTile(label, q, yahoo(sym));
     return tile({ label: label, value: (o.prefix || "") + num(q.price, 2), change: chgPct(q.change_pct), asof: md(q.as_of), url: yahoo(sym),
-      spark: o.spark ? q.spark : null, big: o.big, stale: staleChip(q), chip: o.chip && o.chip(q) });
+      spark: o.spark ? q.spark : null, big: o.big, stale: staleChip(q), chip: o.chip && o.chip(q), move: q.change_pct });
   }
 
   function fred(id) { return (window.MKT.fred || {})[id]; }
@@ -170,9 +177,8 @@
     var rows = Object.keys(names).map(function (s) { var q = (window.MKT.quotes || {})[s]; return { s: s, c: q ? q.change_pct : null, q: q }; })
       .sort(function (a, b) { return (b.c == null ? -99 : b.c) - (a.c == null ? -99 : a.c); });
     rows.forEach(function (r, i) {
-      var c = r.c, st = "";
-      if (c != null) st = "background:rgba(var(--" + (c >= 0 ? "up" : "dn") + "-rgb)," + (0.1 + Math.min(Math.abs(c) / 3, 1) * 0.55).toFixed(2) + ")";
-      sec.appendChild(h("a", { class: "h" + (i >= 6 ? " w" : ""), style: st, href: yahoo(r.s), target: "_blank", rel: "noopener noreferrer",
+      var c = r.c;
+      sec.appendChild(h("a", { class: "h" + (i >= 6 ? " w" : "") + (c == null ? "" : moveCls(c)), href: yahoo(r.s), target: "_blank", rel: "noopener noreferrer",
         title: r.s + (r.q && r.q.stale ? " (stale)" : "") }, [
         h("div", { class: "n", text: names[r.s] }),
         h("div", { class: "p " + (c == null ? "na" : dir(c)), text: c == null ? "n/a" : (c > 0 ? "+" : "") + num(c, 2) + "%" })]));
@@ -263,10 +269,10 @@
     var box = h("div", { class: "viz" });
     if (!v) return box;
     if (v.type === "ownership") {
-      var colors = ["var(--accent)", "var(--warn)", "#7d8da1"], bar = h("div", { class: "own" }), leg = h("div", { class: "leg" });
+      var bar = h("div", { class: "own" }), leg = h("div", { class: "leg" });
       v.segments.forEach(function (sg, i) {
-        bar.appendChild(h("i", { style: "flex:" + sg[1] + ";background:" + colors[i % 3], text: num(sg[1], 1) + "%" }));
-        leg.appendChild(h("span", {}, [h("em", { style: "background:" + colors[i % 3] }), sg[0]]));
+        bar.appendChild(h("i", { class: "f" + (i % 3), style: "flex:" + sg[1], text: num(sg[1], 1) + "%" }));
+        leg.appendChild(h("span", {}, [h("em", { class: "f" + (i % 3) }), sg[0]]));
       });
       if (v.note) leg.appendChild(h("span", { class: "nt", text: v.note }));
       box.appendChild(bar); box.appendChild(leg);
@@ -289,10 +295,12 @@
     var root = clear("deal-list"), D = window.DEALS || {};
     $("deals-meta").textContent = D.last_reviewed ? "reviewed " + md(D.last_reviewed) : "";
     (D.deals || []).forEach(function (d) {
-      var closed = d.status_tag === "Closed", card = h("div", { class: "deal" });
+      var closed = d.status_tag === "Closed", card = h("div", { class: "deal", role: "button", tabindex: "0", "aria-label": d.name + ": open details" });
       var btn = h("button", { class: "ty", type: "button", text: "Test yourself" });
-      btn.addEventListener("click", function () { openCards(d); });
-      card.appendChild(h("div", { class: "dh" }, [h("b", { text: d.name }), h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" }), h("div", { class: "ctl" }, [btn])]));
+      btn.addEventListener("click", function (e) { e.stopPropagation(); openCards(d); });
+      btn.addEventListener("keydown", function (e) { e.stopPropagation(); });
+      card.appendChild(h("div", { class: "dh" }, [h("b", { text: d.name }), h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" }),
+        h("div", { class: "ctl" }, [btn, h("span", { class: "go", text: "Details →" })])]));
       card.appendChild(tracker(d, closed));
       card.appendChild(tiles4(d));
       card.appendChild(visual(d.visual));
@@ -301,8 +309,96 @@
       (d.updates || []).filter(function (u) { return !u.upcoming && isoDate(u.date); }).sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3)
         .forEach(function (u) { ul.appendChild(h("li", { title: u.title }, [h("span", { class: "dt", text: mdy(u.date) }), u.title])); });
       card.appendChild(ul);
+      card.addEventListener("click", function () { openDetail(d, card); });
+      card.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(d, card); } });
       root.appendChild(card);
     });
+  }
+
+  // ---------- deal detail panel (slides in from the right) ----------
+  var dp = null;
+  function ensurePanel() {
+    if (dp) return dp;
+    var back = h("div", { class: "dpb" }), aside = h("aside", { class: "dp", role: "dialog", "aria-modal": "true", "aria-label": "Deal details" });
+    document.body.appendChild(back); document.body.appendChild(aside);
+    back.addEventListener("mousedown", closeDetail);
+    document.addEventListener("keydown", function (e) {
+      if (!dp || !dp.open || fc) return;
+      if (e.key === "Escape") { e.preventDefault(); closeDetail(); return; }
+      if (e.key === "Tab") { // keep focus inside the panel
+        var f = [].filter.call(aside.querySelectorAll("button,a[href]"), function (x) { return !x.disabled; });
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    dp = { back: back, aside: aside, open: false, prev: null };
+    return dp;
+  }
+  function closeDetail() {
+    if (!dp || !dp.open) return;
+    dp.open = false; dp.back.classList.remove("on"); dp.aside.classList.remove("on");
+    document.body.style.overflow = "";
+    if (dp.prev && document.body.contains(dp.prev)) dp.prev.focus();
+  }
+  function pillCls(st) {
+    var k = (st || "").toLowerCase();
+    return k === "done" ? "s-done" : k === "in progress" ? "s-prog" : (k === "pending" || k === "not scheduled") ? "s-pend" : "";
+  }
+  function section(title, node) { return [h("h3", { text: title }), node]; }
+  function bullets(list) {
+    var ul = h("ul", { class: "bl" });
+    (list && list.length ? list : ["not confirmed"]).forEach(function (t) { ul.appendChild(h("li", { text: t })); });
+    return ul;
+  }
+  function openDetail(d, trigger) {
+    var P = ensurePanel(), det = d.detail || {}, closed = d.status_tag === "Closed";
+    var aside = P.aside; aside.textContent = ""; aside.scrollTop = 0;
+    var x = h("button", { class: "close", type: "button", "aria-label": "Close details", text: "×" });
+    x.addEventListener("click", closeDetail);
+    aside.appendChild(h("div", { class: "hd" }, [
+      h("div", { class: "row1" }, [h("h2", { text: d.name }), h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" }), x]),
+      tracker(d, closed)]));
+    var bd = h("div", { class: "bd" });
+    var add = function (arr) { arr.forEach(function (n) { bd.appendChild(n); }); };
+
+    add(section("Summary", h("p", { class: "sm", text: det.summary || "not confirmed" })));
+
+    var kt = h("table", { class: "kt" });
+    (det.terms && det.terms.length ? det.terms : [["Terms", "not confirmed"]]).forEach(function (r) { kt.appendChild(h("tr", {}, [h("td", { text: r[0] }), h("td", { text: r[1] })])); });
+    add(section("Key terms", kt));
+
+    add(section("Strategic rationale", bullets(det.rationale)));
+    add(section("Key risks and what could block it", bullets(det.risks)));
+
+    var ap = h("table", { class: "ap" });
+    (det.approvals && det.approvals.length ? det.approvals : [{ name: "Approvals", status: "Not confirmed", note: "" }]).forEach(function (a) {
+      ap.appendChild(h("tr", {}, [h("td", { text: a.name }), h("td", {}, [h("span", { class: "pill " + pillCls(a.status), text: a.status })]), h("td", { text: a.note || "" })]));
+    });
+    add(section("Approvals needed", ap));
+
+    var tl = h("ul", { class: "tlx" });
+    (d.updates || []).filter(function (u) { return isoDate(u.date); }).sort(function (a, b) { return a.date < b.date ? 1 : -1; }).forEach(function (u) {
+      tl.appendChild(h("li", { class: u.upcoming ? "up" : "" }, [h("span", { class: "d", text: mdy(u.date) + (u.upcoming ? " (upcoming)" : "") }), h("span", { text: u.title })]));
+    });
+    add(section("Timeline", tl));
+
+    var seen = {}, src = h("div", { class: "src" });
+    (d.facts || []).forEach(function (f) { (f.sources || []).forEach(function (s0) { push(s0.label, s0.url); }); });
+    (d.updates || []).forEach(function (u) { if (u.source_url) push(u.source_label, u.source_url); });
+    function push(label, url) { if (!url || seen[url]) return; seen[url] = 1; src.appendChild(h("a", { href: safeUrl(url), target: "_blank", rel: "noopener noreferrer", text: label || url })); }
+    add(section("Sources", src));
+
+    var qz = h("button", { class: "ty qz", type: "button", text: "Test yourself" });
+    qz.addEventListener("click", function () { openCards(d); });
+    bd.appendChild(h("div", { class: "act" }, [qz]));
+    aside.appendChild(bd);
+
+    P.prev = trigger || document.activeElement; P.open = true;
+    document.body.style.overflow = "hidden";
+    P.back.classList.add("on"); aside.classList.add("on");
+    x.focus();
   }
 
   // ---------- flashcards ----------
@@ -347,7 +443,7 @@
       }
     }
     back.addEventListener("mousedown", function (e) { if (e.target === back) closeCards(); });
-    fc = { el: back, prev: document.activeElement, key: function (e) { if (e.key === "Escape") { e.preventDefault(); closeCards(); } } };
+    fc = { el: back, prev: document.activeElement, key: function (e) { if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); closeCards(); } } };
     document.addEventListener("keydown", fc.key, true);
     document.body.appendChild(back); draw();
   }
@@ -375,7 +471,7 @@
     b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
   });
   document.addEventListener("keydown", function (e) {
-    if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || fc) return;
+    if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || fc || (dp && dp.open)) return;
     var t = e.target, tag = t && t.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (t && t.isContentEditable)) return;
     if (e.key === "1") showTab("today"); else if (e.key === "2") showTab("charts");
