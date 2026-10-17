@@ -1,6 +1,6 @@
 {
   "last_reviewed": "2026-10-17",
-  "note": "Edit this file (not the page code). See DEALS_UPDATE.md. 'facts' and 'updates' hold the verified, sourced record; the page shows only summary, terms, the 3 latest updates and the questions. Anything not publicly reported must say 'Not disclosed'.",
+  "note": "Edit this file (not the page code). See DEALS_UPDATE.md. 'facts' is the verified, sourced record (not shown on the page). The page shows: stage tracker, tiles, visual, advisors, 3 latest updates and the questions. Anything not publicly reported must say 'Not disclosed' or 'not confirmed'.",
   "deals": [
     {
       "id": "mccormick-unilever-foods",
@@ -170,13 +170,17 @@
           "label": "Approvals needed",
           "items": [
             {
-              "text": "McCormick shareholder approval; Form S-4 (McCormick) and Form 10 (Unilever Foods) effectiveness; US HSR clearance (done, 5 Oct 2026); UK CMA review (Phase 1 decision due 11 Nov 2026); other antitrust / foreign investment approvals (the 10-Q does not name jurisdictions; no EU review reported in sources reviewed); works council consultation; customary conditions."
+              "text": "McCormick shareholder approval (Form S-4 not yet filed as of the Aug 2026 10-Q; no meeting date found); US HSR (cleared, early termination 5 Oct 2026); UK CMA Phase 1 (formally launched 16 Sep 2026, decision due 11 Nov 2026); other antitrust / foreign investment approvals (the 10-Q names no jurisdictions; no EU review found); works council consultation; customary conditions."
             },
             {
               "text": "Termination fee: McCormick may owe Unilever $420M (or expense reimbursement up to $75M) in specified circumstances."
             }
           ],
           "sources": [
+            {
+              "label": "CMA case page",
+              "url": "https://www.gov.uk/cma-cases/mccormick-slash-unilever-merger-inquiry"
+            },
             {
               "label": "McCormick 10-Q (Aug 2026)",
               "url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"
@@ -207,43 +211,36 @@
           "date": "2026-11-11",
           "upcoming": true,
           "title": "UK CMA Phase 1 decision due",
-          "detail": "CMA can clear, accept undertakings, or refer to Phase 2. Unilever has put Colman's mustard up for sale to address overlap with McCormick's French's.",
-          "source_label": "FoodNavigator",
-          "source_url": "https://www.foodnavigator.com/Article/2026/09/17/cma-probes-unilever-mccormick-foods-mega-deal/"
+          "source_label": "CMA case page",
+          "source_url": "https://www.gov.uk/cma-cases/mccormick-slash-unilever-merger-inquiry"
         },
         {
           "date": "2026-10-05",
           "title": "FTC grants early termination of HSR waiting period",
-          "detail": "Same day, Sen. Elizabeth Warren wrote to the FTC and DOJ asking for scrutiny of the deal.",
           "source_label": "FoodNavigator",
           "source_url": "https://www.foodnavigator.com/Article/2026/10/08/mccormick-unilever-deal-clears-us-antitrust-hurdle/"
         },
         {
-          "date": "2026-09-01",
-          "approx": true,
-          "title": "UK CMA opens Phase 1 investigation",
-          "detail": "Reported as launched in September 2026; exact start date not given in the source. Phase 1 deadline 11 Nov 2026.",
-          "source_label": "FoodNavigator",
-          "source_url": "https://www.foodnavigator.com/Article/2026/09/17/cma-probes-unilever-mccormick-foods-mega-deal/"
+          "date": "2026-09-16",
+          "title": "UK CMA formally launches Phase 1 inquiry",
+          "source_label": "CMA case page",
+          "source_url": "https://www.gov.uk/cma-cases/mccormick-slash-unilever-merger-inquiry"
         },
         {
-          "date": "2026-07-22",
-          "title": "UK CMA invites comment on the deal",
-          "detail": "Consultation closed 5 Aug 2026.",
-          "source_label": "FoodNavigator",
-          "source_url": "https://www.foodnavigator.com/Article/2026/07/22/unilever-mccormick-merger-anti-trust-consultation-begins/"
+          "date": "2026-07-21",
+          "title": "UK CMA invites comment on the deal (closed Aug 5)",
+          "source_label": "CMA case page",
+          "source_url": "https://www.gov.uk/cma-cases/mccormick-slash-unilever-merger-inquiry"
         },
         {
           "date": "2026-04-28",
           "title": "$2.0B of bridge replaced by 3-year term loan",
-          "detail": "$2.0B of the $15.7B bridge commitments terminated and replaced with a term loan of up to $2.0B maturing three years after closing.",
           "source_label": "McCormick 10-Q",
           "source_url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"
         },
         {
           "date": "2026-03-31",
-          "title": "Deal announced",
-          "detail": "McCormick to combine with Unilever Foods via Reverse Morris Trust; both boards approved unanimously.",
+          "title": "Deal announced; both boards approve unanimously",
           "source_label": "McCormick press release",
           "source_url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
         }
@@ -282,33 +279,45 @@
           "a": "A parent spins off a business to its shareholders and the spun entity merges with another company, with the parent's shareholders ending up with more than 50% of the combined company. Done correctly, the separation is tax-free to the parent and shareholders for US federal tax purposes. Unilever gets to exit foods tax-efficiently, collect $15.7B in cash, and keep a 9.9% stake it plans to sell down over time. McCormick gets a transformational deal without paying a full cash price."
         }
       ],
-      "summary": "Reverse Morris Trust. US antitrust cleared; UK CMA Phase 1 decision due Nov 11.",
-      "terms": [
-        [
-          "Buyer",
-          "McCormick (MKC)"
+      "stage": 1,
+      "announced": "2026-03-31",
+      "close_by": null,
+      "close_label": "Mid-2027",
+      "next": {
+        "event": "CMA Phase 1 decision",
+        "date": "2026-11-11"
+      },
+      "tiles": [
+        {
+          "label": "Value",
+          "value": "$44.8B EV",
+          "sub": "13.8x FY25 EBITDA"
+        },
+        {
+          "label": "Structure",
+          "value": "Cash + stock (RMT)",
+          "sub": "$15.7B cash + ~65% equity"
+        }
+      ],
+      "advisors": "MKC: Citi, Rothschild & Co  |  Unilever: Goldman Sachs, Morgan Stanley",
+      "visual": {
+        "type": "ownership",
+        "segments": [
+          [
+            "Unilever shareholders",
+            55.1
+          ],
+          [
+            "McCormick shareholders",
+            35.0
+          ],
+          [
+            "Unilever",
+            9.9
+          ]
         ],
-        [
-          "Target",
-          "Unilever Foods"
-        ],
-        [
-          "Value",
-          "~$44.8B EV (~13.8x FY25 EBITDA)"
-        ],
-        [
-          "Structure",
-          "RMT: $15.7B cash + ~65% of combined equity"
-        ],
-        [
-          "Advisors",
-          "MKC: Citi, Rothschild & Co | UL: Goldman, Morgan Stanley"
-        ],
-        [
-          "Expected close",
-          "Mid-2027"
-        ]
-      ]
+        "note": "+ $15.7B cash to Unilever"
+      }
     },
     {
       "id": "bain-gong-cha",
@@ -322,7 +331,7 @@
           "label": "Buyer",
           "items": [
             {
-              "text": "Bain Capital (private equity). Becomes Gong cha's third private equity owner."
+              "text": "Bain Capital (private equity). Follows TA Associates (owner since 2019) and earlier PE owner UCK Partners / Unison Capital."
             }
           ],
           "sources": [
@@ -390,8 +399,8 @@
           ],
           "sources": [
             {
-              "label": "Korea JoongAng Daily",
-              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+              "label": "Bain Capital press release",
+              "url": "https://www.baincapital.com/news/bain-capital-acquire-gong-cha-one-worlds-fastest-growing-tea-brands-ta-associates"
             }
           ]
         },
@@ -405,25 +414,46 @@
           "sources": []
         },
         {
+          "label": "EBITDA / revenue",
+          "items": [
+            {
+              "text": "2025 revenue ~$217M and EBITDA ~$70M, attributed to Gong Cha Global by Seoul Economic Daily (15 May 2026). Not published by the company or Bain.",
+              "badge": "Unconfirmed"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Seoul Economic Daily",
+              "url": "https://en.sedaily.com/finance/2026/05/15/gong-cha-hits-the-block-at-3-trillion-won-valuation"
+            }
+          ]
+        },
+        {
           "label": "Implied multiple",
           "items": [
             {
-              "text": "Not disclosed. Gong cha's EBITDA and revenue have not been reported in the sources reviewed, so no EV/EBITDA can be calculated from public facts."
+              "text": "Not officially disclosed. On reported (unofficial) 2025 EBITDA of ~$70M, illustrative: ~9x at $635M and ~29x at $2B. Whether each price is equity value or enterprise value is not confirmed.",
+              "badge": "Unconfirmed"
             }
           ],
-          "sources": []
+          "sources": [
+            {
+              "label": "Seoul Economic Daily (EBITDA)",
+              "url": "https://en.sedaily.com/finance/2026/05/15/gong-cha-hits-the-block-at-3-trillion-won-valuation"
+            }
+          ]
         },
         {
           "label": "Advisors",
           "items": [
             {
-              "text": "Sell side: JPMorgan was reported as TA Associates' adviser (KED Global, 18 May 2026). Buy side and legal advisors: not disclosed."
+              "text": "Bain Capital: Nomura Securities (financial). Gong cha: J.P. Morgan and NorthPoint (financial). Legal advisors: not disclosed."
             }
           ],
           "sources": [
             {
-              "label": "KED Global",
-              "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+              "label": "Bain Capital press release",
+              "url": "https://www.baincapital.com/news/bain-capital-acquire-gong-cha-one-worlds-fastest-growing-tea-brands-ta-associates"
             }
           ]
         },
@@ -431,13 +461,13 @@
           "label": "Strategic rationale",
           "items": [
             {
-              "text": "Bain plans to keep opening stores in Korea and Japan, accelerate growth in the US, and deepen customer engagement through product innovation, digital marketing and loyalty programs (paraphrased by Korea JoongAng Daily)."
+              "text": "Nearly 2,200 stores in 33 markets. Bain plans to continue disciplined store expansion in Japan and Korea, accelerate US growth through direct franchising, and invest in product innovation, digital marketing and loyalty."
             }
           ],
           "sources": [
             {
-              "label": "Korea JoongAng Daily",
-              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+              "label": "Bain Capital press release",
+              "url": "https://www.baincapital.com/news/bain-capital-acquire-gong-cha-one-worlds-fastest-growing-tea-brands-ta-associates"
             }
           ]
         },
@@ -445,16 +475,17 @@
           "label": "Financing",
           "items": [
             {
-              "text": "Acquisition financing: not disclosed."
+              "text": "Acquisition financing: not disclosed (Bain's press release states none)."
             },
             {
-              "text": "Partners Group, which provided a financing package of more than $200M in 2019 and took a minority stake, is being fully repaid on its private credit investment (Bloomberg, via PE Insights, 24 Aug 2026)."
+              "text": "Bloomberg reported (24 Aug 2026, citing a document it saw) that Partners Group, Gong cha's lender since 2019 (more than $200M package, plus a minority stake), agreed to be repaid in full. Not confirmed by Partners Group, Bain or Gong cha.",
+              "badge": "Unconfirmed"
             }
           ],
           "sources": [
             {
-              "label": "PE Insights",
-              "url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"
+              "label": "Bloomberg via Swissinfo",
+              "url": "https://www.swissinfo.ch/eng/partners-group-exits-bubble-tea-brand-gong-cha-after-bain-buyout/91942571"
             }
           ]
         },
@@ -467,8 +498,8 @@
           ],
           "sources": [
             {
-              "label": "Korea JoongAng Daily",
-              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+              "label": "Bain Capital press release",
+              "url": "https://www.baincapital.com/news/bain-capital-acquire-gong-cha-one-worlds-fastest-growing-tea-brands-ta-associates"
             }
           ]
         },
@@ -481,8 +512,8 @@
           ],
           "sources": [
             {
-              "label": "Bloomberg Law",
-              "url": "https://news.bloomberglaw.com/bankruptcy-law/bain-capital-to-buy-bubble-tea-brand-gong-cha-from-ta-associates"
+              "label": "Bain Capital press release",
+              "url": "https://www.baincapital.com/news/bain-capital-acquire-gong-cha-one-worlds-fastest-growing-tea-brands-ta-associates"
             }
           ]
         },
@@ -526,39 +557,21 @@
       "updates": [
         {
           "date": "2026-08-24",
-          "title": "Partners Group to be fully repaid on Gong cha debt",
-          "detail": "Reported by Bloomberg as a result of the Bain buyout; Partners Group first financed the 2019 TA deal.",
-          "source_label": "PE Insights",
-          "source_url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"
+          "title": "Bloomberg: Partners Group to be repaid in full (unconfirmed)",
+          "source_label": "Bloomberg via Swissinfo",
+          "source_url": "https://www.swissinfo.ch/eng/partners-group-exits-bubble-tea-brand-gong-cha-after-bain-buyout/91942571"
         },
         {
           "date": "2026-08-06",
-          "title": "Bain agrees to buy Gong cha from TA Associates",
-          "detail": "Terms not disclosed by Bain. Nikkei Asia reported a price of more than $635M (unconfirmed). Expected to close in Q4 2026.",
-          "source_label": "Bloomberg Law",
-          "source_url": "https://news.bloomberglaw.com/bankruptcy-law/bain-capital-to-buy-bubble-tea-brand-gong-cha-from-ta-associates"
+          "title": "Bain announces deal to buy Gong cha from TA Associates",
+          "source_label": "Bain Capital press release",
+          "source_url": "https://www.baincapital.com/news/bain-capital-acquire-gong-cha-one-worlds-fastest-growing-tea-brands-ta-associates"
         },
         {
           "date": "2026-07-16",
           "title": "Bain, General Atlantic, MBK reported bidding",
-          "detail": "Reported ahead of the signing.",
           "source_label": "KED Global",
           "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
-        },
-        {
-          "date": "2026-05-18",
-          "title": "JPMorgan reported as TA's sale adviser",
-          "detail": "Reported by KED Global.",
-          "source_label": "KED Global",
-          "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
-        },
-        {
-          "date": "2026-05-01",
-          "approx": true,
-          "title": "Reuters: sale could fetch up to ~$2B (unconfirmed)",
-          "detail": "Reported in May 2026; exact date not given in the source reviewed.",
-          "source_label": "Reuters via Investing.com",
-          "source_url": "https://www.investing.com/news/stock-market-news/bain-capital-to-buy-bubble-tea-chain-gong-cha-from-ta-associates-and-others-4839988"
         }
       ],
       "questions": [
@@ -568,19 +581,19 @@
         },
         {
           "q": "Strategic vs. financial buyer: why is a sponsor the natural owner here, and what is a secondary buyout?",
-          "a": "A secondary buyout is a sponsor selling to another sponsor; Bain is the third PE owner (UCK Partners, then TA Associates, now Bain). There is no obvious large strategic buyer reported here; the contested process was among sponsors (Bain, General Atlantic, MBK Partners). A sponsor underwrites unit growth plus leverage on a recurring royalty stream, then exits in 4-6 years. Risks of SBOs: the previous owner already harvested the easy gains, so the next return has to come from growth and exit multiple rather than cost cuts."
+          "a": "A secondary buyout is a sponsor selling to another sponsor; Bain follows two earlier PE owners (UCK Partners / Unison, then TA Associates). There is no obvious large strategic buyer reported here; the contested process was among sponsors (Bain, General Atlantic, MBK Partners). A sponsor underwrites unit growth plus leverage on a recurring royalty stream, then exits in 4-6 years. Risks of SBOs: the previous owner already harvested the easy gains, so the next return has to come from growth and exit multiple rather than cost cuts."
         },
         {
           "q": "Why is the reported price range so wide (~$635M to ~$2B), and what does it imply about the EBITDA multiple?",
-          "a": "The range is a ~3.1x spread, and none of it is official. Plausible explanations (hypotheses, not reported facts): the $2B figure came earlier from sources describing what TA hoped to get, while ~$635M is a later report of the signed price; the figures may measure different things (equity value vs. enterprise value, 100% vs. a stake, with or without debt, including or excluding earn-outs); and the reports may reflect Bain's lower bid winning. Because Gong cha's EBITDA is not disclosed, you cannot compute the multiple; you can only frame it. Illustrative arithmetic only: if EBITDA were $100M, $635M is ~6.4x and $2B is ~20x. The point of the answer: state what you would need (EBITDA, net debt, what the headline number represents), then compare to listed restaurant/beverage franchisor comps. Interviewers want you to flag that the implied multiple is highly sensitive to which number is right."
+          "a": "None of the prices is official. Bain says terms were not disclosed. Reports: Nikkei Asia puts the deal at more than ~$635M; earlier, Reuters (May 2026, citing sources) said the sale could fetch up to ~$2B, and Seoul Economic Daily said the sell side was presenting an enterprise value of around 3 trillion won. Likely reasons for a ~3x gap (hypotheses, not reported facts): the $2B was the seller's ask and ~$635M the signed price; the figures may be on different bases (equity vs enterprise value, 100% vs a stake, debt included or not). Implied multiple on the reported, unofficial 2025 EBITDA of ~$70M (Seoul Economic Daily, attributed to Gong Cha Global): ~$635M is ~9x and ~$2B is ~29x. That bracket matters: Seoul Economic Daily itself notes high multiples in franchise F&B M&A top out around 10x, so ~9x looks like a normal price and ~29x looks like an ask. Say what you would verify: EBITDA definition (pre/post IFRS 16), net debt, and what the headline number represents."
         },
         {
           "q": "Is the price fair vs. comps?",
-          "a": "You cannot say precisely because the price and EBITDA are unconfirmed. Approach: build a comps set of asset-light franchisors (e.g. Domino's, Yum Brands, Restaurant Brands International) and listed Asian tea chains, look at EV/EBITDA and EV/system sales, adjust for growth, geography and franchise mix, and also look at precedent restaurant LBOs. Then show what multiple each reported price implies at a range of EBITDA assumptions and say which sits closer to peers. Also note TA paid about $288M (350B won) in 2019, so a ~$635M price implies roughly 2.2x its entry price in about 7 years; a ~$2B price would be ~7x. (Arithmetic on reported figures.)"
+          "a": "You cannot be precise because the price is unconfirmed. Approach: build comps of asset-light franchisors (e.g. Domino's, Yum Brands, Restaurant Brands International) and listed Asian tea chains; compare EV/EBITDA and EV/system sales, adjusted for growth, geography and franchise mix; add precedent restaurant LBOs. Then show what each reported price implies on reported EBITDA (~$70M, unofficial): ~9x at $635M vs ~29x at $2B, and say which sits nearer peers. Also: TA paid about $288M (350B won) in 2019 (KED Global), so ~$635M would be ~2.2x its entry price and $2B ~7x (arithmetic on reported figures)."
         },
         {
           "q": "How would a deal like this be financed?",
-          "a": "Not disclosed. In a typical sponsor deal: sponsor equity plus term debt (unitranche/private credit or leveraged loans) sized on EBITDA. Franchised, royalty-heavy models support higher leverage because cash flows are recurring and asset-light. The one financing fact reported: Partners Group's private credit position from 2019 is being fully repaid at closing, which indicates the existing capital structure is being refinanced. Be ready to discuss leverage, interest coverage and covenants."
+          "a": "Not disclosed. Typical sponsor structure: sponsor equity plus term debt (unitranche or leveraged loan) sized on EBITDA; franchised, royalty-heavy models can carry higher leverage because cash flows are recurring and asset-light. One reported datapoint: Bloomberg (24 Aug 2026, citing a document it saw) said Partners Group, the 2019 lender, agreed to be repaid in full. That is not confirmed by the companies, but if true it means the existing debt is refinanced at closing. Be ready to discuss leverage, interest coverage and covenants."
         },
         {
           "q": "What are the key risks to the investment and to the deal?",
@@ -591,33 +604,35 @@
           "a": "Returns come from (1) EBITDA growth through unit expansion and same-store sales, (2) multiple expansion, and (3) debt paydown. Exits: IPO (several Asian tea chains have listed in recent years; check current comps), sale to a strategic or to another sponsor (a fourth owner), or a dividend recap. Walk through an LBO returns table: entry multiple, leverage, EBITDA growth, exit multiple, IRR/MOIC. Without disclosed EBITDA, use clearly labeled assumptions."
         }
       ],
-      "summary": "Secondary buyout from TA Associates. Price unconfirmed; closing expected Q4 2026.",
-      "terms": [
-        [
-          "Buyer",
-          "Bain Capital"
-        ],
-        [
-          "Target",
-          "Gong cha (seller: TA Associates)"
-        ],
-        [
-          "Value",
-          "Not disclosed. Reports: $635M+ to ~$2B (unconfirmed)"
-        ],
-        [
-          "Structure",
-          "Secondary buyout; terms not disclosed"
-        ],
-        [
-          "Advisors",
-          "Sell-side: JPMorgan (reported) | Buy-side: not disclosed"
-        ],
-        [
-          "Expected close",
-          "Q4 2026"
-        ]
-      ]
+      "stage": 1,
+      "announced": "2026-08-06",
+      "close_by": "2026-12-31",
+      "close_label": "Q4 2026",
+      "next": {
+        "event": "Closing",
+        "date": "Q4 2026 (approvals not disclosed)"
+      },
+      "tiles": [
+        {
+          "label": "Value",
+          "value": "Not disclosed",
+          "sub": "Reports $635M to ~$2B, unconfirmed"
+        },
+        {
+          "label": "Structure",
+          "value": "Secondary buyout",
+          "sub": "Terms not disclosed"
+        }
+      ],
+      "advisors": "Bain: Nomura  |  Gong cha: J.P. Morgan, NorthPoint",
+      "visual": {
+        "type": "range",
+        "low": 635,
+        "high": 2000,
+        "ebitda": 70,
+        "label": "Reported, unconfirmed",
+        "note": "EBITDA ~$70M also reported, not official"
+      }
     }
   ]
 }

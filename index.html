@@ -10,9 +10,14 @@
 </head>
 <body>
 <header class="bar">
-  <nav class="tabs" role="tablist">
-    <button role="tab" id="tab-today" data-tab="today" class="on" aria-selected="true">Today</button>
-    <button role="tab" id="tab-charts" data-tab="charts" aria-selected="false">Charts</button>
+  <nav class="seg" id="seg" role="tablist" aria-label="View" data-active="today">
+    <span class="thumb" aria-hidden="true"></span>
+    <button role="tab" id="tab-today" data-tab="today" aria-selected="true" aria-controls="view-today" title="Today (1)">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span>Today</span></button>
+    <button role="tab" id="tab-charts" data-tab="charts" aria-selected="false" aria-controls="view-charts" title="Charts (2)">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+      <span>Charts</span></button>
   </nav>
   <div class="status" aria-live="polite">
     <span class="mkt" id="mkt"><i></i><b>&ndash;</b></span>
