@@ -1,0 +1,79 @@
+{
+ "updated": "2026-10-17T05:48:27Z",
+ "headlines": {
+  "source": "WSJ Markets (public RSS)",
+  "feed": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
+  "items": [
+   {
+    "title": "A Popular Tax-Saving Trade is Juicing Wall Street’s Borrowing Binge",
+    "link": "https://www.wsj.com/finance/investing/a-popular-tax-minimizing-trade-is-juicing-wall-streets-borrowing-binge-6d81eac2?mod=rss_markets_main",
+    "published": "2026-10-17T02:06:00Z",
+    "source": null
+   },
+   {
+    "title": "Who Gets the Bulk of Grandma’s Estate? Here’s How to Solve the ‘Cousin Problem’",
+    "link": "https://www.wsj.com/personal-finance/cousin-problem-family-estate-assets-266b30e4?mod=rss_markets_main",
+    "published": "2026-10-17T01:00:00Z",
+    "source": null
+   },
+   {
+    "title": "Blue Owl Founders Promised a Comeback. The Company’s Share Price Hasn’t Budged.",
+    "link": "https://www.wsj.com/finance/blue-owl-stock-price-private-credit-ca6673d9?mod=rss_markets_main",
+    "published": "2026-10-17T00:00:00Z",
+    "source": null
+   }
+  ],
+  "stale": false,
+  "fetched_at": "2026-10-17T05:48:27Z"
+ },
+ "deals": {
+  "mccormick-unilever-foods": {
+   "items": [
+    {
+     "title": "$44.8B McCormick-Unilever food deal clears US antitrust hurdle",
+     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ZRy1nakRSY2c4LXNZRmlCZHBEb0Q1YUMzQ0JYMldieU54bFZOb3V5VmFlTFZRS0FDazh4clZrc0thSTlUUHhGTWJJZThqVjdGSlZxQW1QMk4zSDYtQzdqSTl0M09JYVl0LVVLS1ByUWs4dw?oc=5",
+     "published": "2026-10-16T18:01:30Z",
+     "source": "NJBIZ"
+    },
+    {
+     "title": "Jim Cramer and Elizabeth Warren criticize McCormick's $45B Unilever food merger — but for very different reasons",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUU1mVTRNSXQ2VnZRbWVzU1d4TXBvVTZqRXBSQzFyZDYwdUo0NDQweHpCU2lXR3h6Q1F6NExBZG9zWUZHMml4YTUtdGNjZ214OVZhYUw1UnpJUG9pY0RjTmxKWkFNSm9hRVZTVFVnOWQ0eDdoWW5tTGItdzVEUFcwSzc2YnJJMUZOYUVFUVlpeDBhTHRIZnhUYllBV2lNbHNLNXpQRQ?oc=5",
+     "published": "2026-10-16T16:30:00Z",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Cramer, Warren oppose $45B food merger",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOX21IT3hhQVJqSnFTZkwyTmY0bTNVZWxvY0dnSFdDUXdnNHNFT2x5Z1lvMkdqRjNXY3NiVGw1c2RWN0cyNTczUE16MlFGUFJINWJUcDV6UGZ3OE5XaFo2YTBxdThWbFZIODh0QkZUSFEtY0VobGhDTlVyZjdJNTJMS05NMDN2LW4wS054Z2lQNnRDV0RCNEs0ZkF6NHY?oc=5",
+     "published": "2026-10-16T15:56:00Z",
+     "source": "MoneyWise.com"
+    }
+   ],
+   "stale": false,
+   "fetched_at": "2026-10-17T05:48:27Z"
+  },
+  "bain-gong-cha": {
+   "items": [
+    {
+     "title": "Gong Cha looks to further global growth as profits rise",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMFNLN0R4U2pjb3RfQmRwREVmU3R0UWVZVWJvNkJNV1RRWHNoZmNNOTZYMmFZVDNSSnNyQmMtbElzRXo0bEtCVVVGazFVQXBWSW91OTE3eGRyNEdzeVFoRkd1RE8xd3JSUmg3VUhIT1B5YWYzZ2l2NmplMmJrN3hUR2kwbGZsRTA3d3hYWERWVjZnRFNicy1wRGNiejlWRmNzTy01aFZ2eDM2Zw?oc=5",
+     "published": "2026-10-09T14:21:57Z",
+     "source": "MCA Insight"
+    },
+    {
+     "title": "List of 76 Acquisitions by Bain Capital (Oct 2026)",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZEc1cFQ3Q1hKd1NPWlk0bkNMQUwwZWluVExuZXN4czlSbFI4amtERXpyMDIwUlpoRWFic19MTmxuczlMc2NiR0xpR2taNkhTZG5ZcjR3cEhSX3hoanBoODlqYnVTdHp2RElqRWhsNUlSQllka2d4NTNEMld1MzlTMHdSVWkzQVBYTHdpMHdNOWZXSnViWDdtc3Q0WHdraVlYSG5mMEt1eE1lUlNF?oc=5",
+     "published": "2026-10-02T04:44:24Z",
+     "source": "Tracxn"
+    },
+    {
+     "title": "Private equity keeps coming back for secondary deals in Korea’s restaurant chains",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pT005OUhZZnJRVHJVRjVuU0VYaXZNN1dMNVBzcFBzQmZ1M2hubWxQbnZkS0pudjB4SnVFNm9hR21qWUpBY1N3dkh0d0VDWW5rV2NyRWl6X1dSc1Q0OHFmMk5LRU02UWxVUjdtWTh6ZW53Y28?oc=5",
+     "published": "2026-09-24T07:00:00Z",
+     "source": "KED Global"
+    }
+   ],
+   "stale": false,
+   "fetched_at": "2026-10-17T05:48:28Z"
+  }
+ }
+}

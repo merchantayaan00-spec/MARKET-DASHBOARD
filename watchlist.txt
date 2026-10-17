@@ -1,0 +1,18 @@
+# WATCHLIST - one ticker per line (Yahoo Finance symbols). Lines starting with # are ignored.
+# To ADD a stock: add a new line with its ticker. To REMOVE one: delete its line (or put # in front).
+# Changes show up after the next scheduled refresh, or run the workflow manually (see README.md).
+MKC   # McCormick
+UL    # Unilever
+MCD
+SBUX
+CMG
+YUM
+DPZ
+NKE
+LULU
+WMT
+COST
+TGT
+KO
+PEP
+HSY
