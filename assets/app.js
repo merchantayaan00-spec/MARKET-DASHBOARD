@@ -22,16 +22,9 @@
     if (v == null || isNaN(v)) return "n/a";
     return Number(v).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
   }
-  function sign(v) { return v > 0 ? "up" : v < 0 ? "dn" : ""; }
-  function arrow(v) { return v > 0 ? "▲ " : v < 0 ? "▼ " : ""; }
-  function pct(v, d) { return v == null ? "" : arrow(v) + num(Math.abs(v), d == null ? 2 : d) + "%"; }
+  function dir(v) { return v > 0 ? "up" : v < 0 ? "dn" : "flat"; }
   var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   function md(iso) { if (!iso) return ""; var p = iso.slice(0, 10).split("-"); return MON[+p[1] - 1] + " " + (+p[2]); }
-  function fmtET(iso) {
-    try {
-      return new Date(iso).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
-    } catch (e) { return iso; }
-  }
   function staleChip(rec) {
     return rec && rec.stale ? h("span", { class: "chip stale", text: "stale", title: "Last refresh failed; showing last good value" }) : null;
   }
@@ -41,67 +34,148 @@
       return r.json();
     });
   }
+  function yahoo(sym) { return "https://finance.yahoo.com/quote/" + encodeURIComponent(sym) + "/"; }
+  function fredUrl(id) { return "https://fred.stlouisfed.org/series/" + id; }
 
-  // ---------- tiles ----------
-  // tile(label, value, change, date, opts): all strings; change is {text, dir}
-  function tile(label, value, change, date, o) {
-    o = o || {};
-    return h("div", { class: "t" + (o.big ? " big" : "") + (o.inv ? " inv" : "") }, [
-      h("div", { class: "l" }, [label, o.chip || null, o.stale || null]),
-      h("div", { class: "v " + (o.vcls || ""), text: value }),
-      h("div", { class: "c " + (change ? sign(change.dir) : ""), text: change ? change.text : "" }),
-      h("div", { class: "d", text: date || "" })
+  // ---------- eastern time: market status + next update ----------
+  var ETF = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hour12: false, weekday: "short" });
+  function etParts(d) {
+    var o = {};
+    ETF.formatToParts(d).forEach(function (p) { o[p.type] = p.value; });
+    return { y: +o.year, m: +o.month, d: +o.day, h: (+o.hour) % 24, mi: +o.minute, wd: o.weekday };
+  }
+  function etInstant(y, m, d, hh, mi) {
+    var target = Date.UTC(y, m - 1, d, hh, mi), g = target;
+    for (var i = 0; i < 3; i++) {
+      var p = etParts(new Date(g));
+      g += target - Date.UTC(p.y, p.m - 1, p.d, p.h, p.mi);
+    }
+    return g;
+  }
+  function ymd(p) { return p.y + "-" + ("0" + p.m).slice(-2) + "-" + ("0" + p.d).slice(-2); }
+  // NYSE full-day holidays and 1 pm early closes (update yearly)
+  var HOLIDAYS = ["2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25", "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25",
+    "2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26", "2027-05-31", "2027-06-18", "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24"];
+  var EARLY = ["2026-11-27", "2026-12-24", "2027-11-26"];
+  function marketOpen(now) {
+    var p = etParts(now), key = ymd(p), mins = p.h * 60 + p.mi;
+    if (p.wd === "Sat" || p.wd === "Sun" || HOLIDAYS.indexOf(key) >= 0) return false;
+    return mins >= 570 && mins < (EARLY.indexOf(key) >= 0 ? 780 : 960);
+  }
+  function nextUpdate(now) {
+    var p0 = etParts(now);
+    for (var i = 0; i < 9; i++) {
+      var base = etInstant(p0.y, p0.m, p0.d + i, 12, 0), p = etParts(new Date(base));
+      if (p.wd === "Sat" || p.wd === "Sun") continue;
+      var slots = [[8, 30], [16, 30]];
+      for (var s = 0; s < 2; s++) {
+        var t = etInstant(p.y, p.m, p.d, slots[s][0], slots[s][1]);
+        if (t > now.getTime()) {
+          var same = ymd(p) === ymd(p0);
+          return (same ? "today" : p.wd) + " " + (slots[s][0] > 12 ? slots[s][0] - 12 : slots[s][0]) + ":30 " + (slots[s][0] >= 12 ? "PM" : "AM") + " ET";
+        }
+      }
+    }
+    return "n/a";
+  }
+  function fmtET(iso) {
+    try {
+      return new Date(iso).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+    } catch (e) { return iso; }
+  }
+  function ago(iso) {
+    if (!iso) return "";
+    var m = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+    if (m < 1) return "now";
+    if (m < 60) return m + "m ago";
+    if (m < 1440) return Math.round(m / 60) + "h ago";
+    return md(iso);
+  }
+
+  function renderBar() {
+    var now = new Date(), open = marketOpen(now), m = $("mkt");
+    m.className = "mkt" + (open ? " open" : "");
+    m.querySelector("b").textContent = open ? "Open" : "Closed";
+    var mk = window.MKT || {};
+    var all = Object.keys(mk.quotes || {}).map(function (k) { return mk.quotes[k]; }).concat(Object.keys(mk.fred || {}).map(function (k) { return mk.fred[k]; }));
+    var n = all.filter(function (x) { return x && x.stale; }).length;
+    var u = $("upd"); u.textContent = "Updated " + (mk.updated ? fmtET(mk.updated) : "n/a");
+    if (n) u.appendChild(h("span", { class: "chip stale", text: n + " stale" }));
+    $("nxt").textContent = "Next update " + nextUpdate(now);
+  }
+
+  // ---------- sparkline ----------
+  function spark(vals) {
+    if (!vals || vals.length < 2) return null;
+    var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals), rng = max - min || 1;
+    var pts = vals.map(function (v, i) { return (i / (vals.length - 1) * 100).toFixed(1) + "," + (18 - (v - min) / rng * 16).toFixed(1); }).join(" ");
+    var ns = "http://www.w3.org/2000/svg", s = document.createElementNS(ns, "svg"), pl = document.createElementNS(ns, "polyline");
+    s.setAttribute("viewBox", "0 0 100 20"); s.setAttribute("preserveAspectRatio", "none"); s.setAttribute("class", "sp"); s.setAttribute("aria-hidden", "true");
+    pl.setAttribute("points", pts); pl.setAttribute("fill", "none"); pl.setAttribute("stroke-width", "1.6");
+    pl.setAttribute("stroke-linejoin", "round"); pl.setAttribute("vector-effect", "non-scaling-stroke");
+    pl.setAttribute("stroke", vals[vals.length - 1] >= vals[0] ? "var(--up)" : "var(--dn)");
+    s.appendChild(pl);
+    return s;
+  }
+
+  // ---------- tiles: label, value, change (+ small "as of"), optional sparkline ----------
+  // t: {label, value, vcls, change:{text,dir}, asof, url, spark, big, inv, chip, stale, title}
+  function tile(t) {
+    var attrs = { class: "t" + (t.big ? " big" : "") + (t.inv ? " inv" : "") };
+    if (t.url) { attrs.href = safeUrl(t.url); attrs.target = "_blank"; attrs.rel = "noopener noreferrer"; }
+    if (t.title) attrs.title = t.title;
+    return h(t.url ? "a" : "div", attrs, [
+      h("div", { class: "l" }, [t.label, t.chip || null, t.stale || null]),
+      h("div", { class: "v " + (t.vcls || ""), text: t.value }),
+      h("div", { class: "r" }, [
+        h("span", { class: t.change ? t.change.dir : "", text: t.change ? t.change.text : "" }),
+        h("span", { class: "d", text: t.asof ? "as of " + t.asof : "" })]),
+      t.spark ? spark(t.spark) : null
     ]);
   }
-  function naTile(label, rec) { return tile(label, "n/a", null, rec && rec.error ? "no data" : "", { stale: staleChip(rec), vcls: "na" }); }
+  function chgPct(v) { return v == null ? null : { text: (v > 0 ? "▲ " : v < 0 ? "▼ " : "") + num(Math.abs(v), 2) + "%", dir: dir(v) }; }
+  function chgNum(d, dec, suffix) {
+    if (d == null) return null;
+    if (Math.abs(d) < 1e-9) return { text: num(0, dec) + (suffix || ""), dir: "flat" };
+    return { text: (d > 0 ? "▲ " : "▼ ") + num(Math.abs(d), dec) + (suffix || ""), dir: dir(d) };
+  }
+  function naTile(label, rec, url) { return tile({ label: label, value: "n/a", vcls: "na", stale: staleChip(rec), url: url }); }
 
   function quoteTile(sym, label, o) {
     o = o || {};
     var q = (window.MKT.quotes || {})[sym];
-    if (!q || q.price == null) return naTile(label, q);
-    return tile(label, (o.prefix || "") + num(q.price, 2), { text: pct(q.change_pct), dir: q.change_pct }, md(q.as_of),
-      { big: o.big, stale: staleChip(q), chip: o.chip && o.chip(q) });
+    if (!q || q.price == null) return naTile(label, q, yahoo(sym));
+    return tile({ label: label, value: (o.prefix || "") + num(q.price, 2), change: chgPct(q.change_pct), asof: md(q.as_of), url: yahoo(sym),
+      spark: o.spark ? q.spark : null, big: o.big, stale: staleChip(q), chip: o.chip && o.chip(q) });
   }
 
   function fred(id) { return (window.MKT.fred || {})[id]; }
-
-  // kind: "daily" | "weekly" | "monthly" | "quarterly"
   function fredTile(id, label, o) {
     var r = fred(id);
-    if (!r || r.value == null) return naTile(label, r);
+    if (!r || r.value == null) return naTile(label, r, fredUrl(id));
     var dec = o.dec == null ? 2 : o.dec, d = r.prior_value == null ? null : r.value - r.prior_value;
-    var date;
-    if (o.kind === "daily") date = md(r.obs_date);
-    else if (o.kind === "weekly") date = r.released ? "rel " + md(r.released) : md(r.obs_date);
-    else {
-      var p = r.obs_date.split("-");
-      var per = o.kind === "quarterly" ? "Q" + (Math.floor((+p[1] - 1) / 3) + 1) : MON[+p[1] - 1];
-      date = per + (r.released ? " · rel " + md(r.released) : "");
-    }
-    var val = (o.prefix || "") + num(r.value, dec) + (o.suffix || "");
-    var chg = d == null ? null : Math.abs(d) < 1e-9 ? { text: "unch", dir: 0 } : { text: arrow(d) + num(Math.abs(d), dec) + (o.suffix || ""), dir: d };
-    return tile(label, val, chg, date, { stale: staleChip(r) });
+    var tip = o.kind === "daily" ? "" : (o.kind === "weekly" ? "Week of " + md(r.obs_date) : r.obs_date.slice(0, 7)) + " data" + (r.released ? ", released " + md(r.released) : "");
+    return tile({ label: label, value: (o.prefix || "") + num(r.value, dec) + (o.suffix || ""), change: chgNum(d, dec, o.suffix),
+      asof: md(o.kind === "daily" ? r.obs_date : (r.released || r.obs_date)), url: fredUrl(id), spark: o.spark ? r.spark : null,
+      stale: staleChip(r), title: tip });
   }
 
   // ---------- sections ----------
-  var SECTORS = [["XLK", "Tech"], ["XLF", "Financials"], ["XLY", "Discret."], ["XLC", "Comm."], ["XLV", "Health"], ["XLI", "Industrials"],
-    ["XLP", "Staples"], ["XLE", "Energy"], ["XLU", "Utilities"], ["XLRE", "Real Est."], ["XLB", "Materials"]];
-
   function renderMarkets() {
     var ix = clear("indices");
-    ix.appendChild(quoteTile("^GSPC", "S&P 500", { big: true }));
-    ix.appendChild(quoteTile("^DJI", "Dow", { big: true }));
-    var sec = clear("sectors");
-    SECTORS.forEach(function (s) {
-      var q = (window.MKT.quotes || {})[s[0]], c = q && q.change_pct;
-      var st = "";
-      if (c != null) {
-        var a = Math.min(Math.abs(c) / 3, 1) * 0.55 + 0.1;
-        st = "background:rgba(var(--" + (c >= 0 ? "up" : "dn") + "-rgb)," + a.toFixed(2) + ")";
-      }
-      sec.appendChild(h("div", { class: "h", style: st, title: s[0] + (q && q.stale ? " (stale)" : "") }, [
-        h("div", { class: "n", text: s[1] }),
-        h("div", { class: "p " + (c == null ? "na" : sign(c)), text: c == null ? "n/a" : (c > 0 ? "+" : "") + num(c, 2) + "%" })]));
+    ix.appendChild(quoteTile("^GSPC", "S&P 500", { big: true, spark: true }));
+    ix.appendChild(quoteTile("^DJI", "Dow", { big: true, spark: true }));
+    var sec = clear("sectors"), names = window.SECTOR_NAMES || {};
+    var rows = Object.keys(names).map(function (s) { var q = (window.MKT.quotes || {})[s]; return { s: s, c: q ? q.change_pct : null, q: q }; })
+      .sort(function (a, b) { return (b.c == null ? -99 : b.c) - (a.c == null ? -99 : a.c); });
+    rows.forEach(function (r, i) {
+      var c = r.c, st = "";
+      if (c != null) st = "background:rgba(var(--" + (c >= 0 ? "up" : "dn") + "-rgb)," + (0.1 + Math.min(Math.abs(c) / 3, 1) * 0.55).toFixed(2) + ")";
+      sec.appendChild(h("a", { class: "h" + (i >= 6 ? " w" : ""), style: st, href: yahoo(r.s), target: "_blank", rel: "noopener noreferrer",
+        title: r.s + (r.q && r.q.stale ? " (stale)" : "") }, [
+        h("div", { class: "n", text: names[r.s] }),
+        h("div", { class: "p " + (c == null ? "na" : dir(c)), text: c == null ? "n/a" : (c > 0 ? "+" : "") + num(c, 2) + "%" })]));
     });
   }
 
@@ -112,20 +186,21 @@
 
   function renderRisk() {
     var g = clear("risk-grid");
-    g.appendChild(quoteTile("^VIX", "VIX", { chip: vixChip }));
-    g.appendChild(quoteTile("GC=F", "Gold", { prefix: "$" }));
+    g.appendChild(quoteTile("^VIX", "VIX", { chip: vixChip, spark: true }));
+    g.appendChild(quoteTile("GC=F", "Gold", { prefix: "$", spark: true }));
   }
 
   function renderRates() {
     var g = clear("rates-grid");
-    g.appendChild(fredTile("DGS2", "2Y", { suffix: "%", kind: "daily" }));
-    g.appendChild(fredTile("DGS10", "10Y", { suffix: "%", kind: "daily" }));
+    g.appendChild(fredTile("DGS2", "2Y", { suffix: "%", kind: "daily", spark: true }));
+    g.appendChild(fredTile("DGS10", "10Y", { suffix: "%", kind: "daily", spark: true }));
     var s = fred("T10Y2Y");
-    if (!s || s.value == null) g.appendChild(naTile("2s10s", s));
+    if (!s || s.value == null) g.appendChild(naTile("2s10s", s, fredUrl("T10Y2Y")));
     else {
-      var bps = Math.round(s.value * 100), inv = s.value < 0;
-      g.appendChild(tile("2s10s", (bps > 0 ? "+" : "") + bps + " bps", null, md(s.obs_date),
-        { inv: inv, vcls: inv ? "dn" : "", stale: staleChip(s), chip: inv ? h("span", { class: "chip inv", text: "inverted" }) : null }));
+      var bps = Math.round(s.value * 100), inv = s.value < 0, d = s.prior_value == null ? null : Math.round((s.value - s.prior_value) * 100);
+      g.appendChild(tile({ label: "2s10s", value: (bps > 0 ? "+" : "") + bps + " bps", vcls: inv ? "dn" : "", inv: inv,
+        change: d == null ? null : d === 0 ? { text: "0", dir: "flat" } : { text: (d > 0 ? "▲ " : "▼ ") + Math.abs(d), dir: dir(d) },
+        asof: md(s.obs_date), url: fredUrl("T10Y2Y"), stale: staleChip(s), chip: inv ? h("span", { class: "chip inv", text: "inverted" }) : null }));
     }
     g.appendChild(fredTile("DFF", "Fed funds", { suffix: "%", kind: "daily" }));
     g.appendChild(fredTile("MORTGAGE30US", "30Y mortgage", { suffix: "%", kind: "weekly" }));
@@ -133,17 +208,19 @@
 
   function renderConsumer() {
     var g = clear("consumer-grid"), r = window.MKT.ratio || {};
-    if (!r.mood) g.appendChild(naTile("Consumer mood", r));
-    else g.appendChild(tile("Consumer mood", r.mood, { text: "XLY/XLP " + (r.month_change_pct > 0 ? "+" : "") + num(r.month_change_pct, 1) + "%", dir: r.month_change_pct },
-      "1M \u00b7 " + md(r.as_of), { vcls: r.mood === "Spending" ? "up" : "dn", stale: staleChip(r) }));
+    if (!r.mood) g.appendChild(naTile("Consumer mood", r, yahoo("XLY")));
+    else g.appendChild(tile({ label: "Consumer mood", value: r.mood, vcls: r.mood === "Spending" ? "up" : "dn",
+      change: { text: (r.month_change_pct > 0 ? "▲ " : r.month_change_pct < 0 ? "▼ " : "") + num(Math.abs(r.month_change_pct), 2) + "% 1M", dir: dir(r.month_change_pct) },
+      asof: md(r.as_of), url: yahoo("XLY"), stale: staleChip(r), title: "XLY / XLP ratio, 1 month" }));
     g.appendChild(quoteTile("XRT", "XRT"));
     g.appendChild(fredTile("UMCSENT", "UMich sentiment", { dec: 1, kind: "monthly" }));
-    var rs = fred("RSAFS");
-    if (!rs || rs.mom_pct == null) g.appendChild(naTile("Retail sales MoM", rs));
+    var ra = fred("RSAFS");
+    if (!ra || ra.mom_pct == null) g.appendChild(naTile("Retail sales MoM", ra, fredUrl("RSAFS")));
     else {
-      var p = rs.obs_date.split("-");
-      g.appendChild(tile("Retail sales MoM", (rs.mom_pct > 0 ? "+" : "") + num(rs.mom_pct, 2) + "%", null,
-        MON[+p[1] - 1] + (rs.released ? " · rel " + md(rs.released) : ""), { vcls: sign(rs.mom_pct), stale: staleChip(rs) }));
+      var prevMom = ra.prior_mom_pct;
+      g.appendChild(tile({ label: "Retail sales MoM", value: (ra.mom_pct > 0 ? "+" : "") + num(ra.mom_pct, 2) + "%", vcls: dir(ra.mom_pct),
+        change: chgNum(prevMom == null ? null : ra.mom_pct - prevMom, 2, " pts"), asof: md(ra.released || ra.obs_date), url: fredUrl("RSAFS"),
+        stale: staleChip(ra), title: ra.obs_date.slice(0, 7) + " data" + (ra.released ? ", released " + md(ra.released) : "") }));
     }
     g.appendChild(fredTile("UNRATE", "Unemployment", { suffix: "%", dec: 1, kind: "monthly" }));
     g.appendChild(fredTile("PSAVERT", "Savings rate", { suffix: "%", dec: 1, kind: "monthly" }));
@@ -155,11 +232,12 @@
     var box = clear("headline-list"), hd = (window.NEWS || {}).headlines;
     if (!hd || !hd.items || !hd.items.length) { box.appendChild(h("div", { class: "na", text: "No headlines" })); return; }
     var ul = h("ul", { class: "news" });
-    hd.items.forEach(function (it) {
-      ul.appendChild(h("li", {}, [h("a", { href: safeUrl(it.link), target: "_blank", rel: "noopener noreferrer", text: it.title })]));
+    hd.items.slice(0, 5).forEach(function (it) {
+      ul.appendChild(h("li", {}, [
+        h("a", { href: safeUrl(it.link), target: "_blank", rel: "noopener noreferrer", text: it.title }),
+        h("div", { class: "m", title: it.published || "" }, [(it.source || "") + (it.published ? " · " + ago(it.published) : ""), staleChip(hd)])]));
     });
     box.appendChild(ul);
-    if (hd.stale) box.appendChild(h("div", { class: "d" }, [staleChip(hd)]));
   }
 
   // ---------- deals ----------
@@ -169,25 +247,20 @@
     (D.deals || []).forEach(function (d) {
       var closed = d.status_tag === "Closed";
       var card = h("div", { class: "deal" });
-      card.appendChild(h("div", { class: "dh" }, [h("b", { text: d.name }),
-        h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" })]));
+      var head = h("div", { class: "dh" }, [h("b", { text: d.name }), h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" })]);
+      card.appendChild(head);
       card.appendChild(h("div", { class: "sum", text: d.summary || "" }));
       var tb = h("table", { class: "terms" });
       (d.terms || []).forEach(function (t) { tb.appendChild(h("tr", {}, [h("td", { text: t[0] }), h("td", { text: t[1] })])); });
       card.appendChild(tb);
-
-      var ups = (d.updates || []).filter(function (u) { return !u.upcoming; })
-        .sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3);
+      var ups = (d.updates || []).filter(function (u) { return !u.upcoming; }).sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3);
       var ul = h("ul", { class: "upd" });
       ups.forEach(function (u) {
         ul.appendChild(h("li", { title: u.title }, [h("span", { class: "dt", text: u.approx ? "~" + MON[+u.date.split("-")[1] - 1] : md(u.date) }), u.title]));
       });
       card.appendChild(ul);
-
       var qs = h("div", { class: "qs", hidden: "" });
-      (d.questions || []).forEach(function (q) {
-        qs.appendChild(h("details", { class: "q" }, [h("summary", { text: q.q }), h("p", { text: q.a })]));
-      });
+      (d.questions || []).forEach(function (q) { qs.appendChild(h("details", { class: "q" }, [h("summary", { text: q.q }), h("p", { text: q.a })])); });
       var btn = h("button", { class: "ty", type: "button", text: "Test yourself", "aria-expanded": "false" });
       btn.addEventListener("click", function () {
         var open = qs.hasAttribute("hidden");
@@ -196,36 +269,45 @@
         btn.textContent = open ? "Hide questions" : "Test yourself";
         window.OPEN = window.OPEN || {}; window.OPEN[d.id] = open;
       });
-      card.appendChild(btn);
+      head.appendChild(h("div", { class: "ctl" }, [btn]));
       card.appendChild(qs);
       if (window.OPEN && window.OPEN[d.id]) btn.click();
       root.appendChild(card);
     });
   }
 
-  function renderStamp() {
-    var m = window.MKT || {}, el = clear("stamp");
-    if (!m.updated) { el.textContent = "No data yet"; return; }
-    var all = Object.keys(m.quotes || {}).map(function (k) { return m.quotes[k]; })
-      .concat(Object.keys(m.fred || {}).map(function (k) { return m.fred[k]; }));
-    var n = all.filter(function (x) { return x && x.stale; }).length;
-    el.appendChild(document.createTextNode("Updated "));
-    el.appendChild(h("b", { text: fmtET(m.updated) }));
-    if (n) el.appendChild(h("span", { class: "chip stale", text: n + " stale" }));
+  // ---------- tabs ----------
+  var tab = "today";
+  function showTab(name, push) {
+    tab = name;
+    $("view-today").hidden = name !== "today"; $("view-charts").hidden = name !== "charts";
+    ["today", "charts"].forEach(function (t) {
+      var b = $("tab-" + t); b.classList.toggle("on", t === name); b.setAttribute("aria-selected", String(t === name));
+    });
+    if (push) { try { history.replaceState(null, "", name === "charts" ? "#charts" : "#today"); } catch (e) { /* ignore */ } }
+    if (name === "charts" && window.renderCharts) window.renderCharts();
   }
+  [].forEach.call(document.querySelectorAll(".tabs button"), function (b) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab"), true); });
+  });
 
+  // ---------- boot ----------
   function load() {
     return Promise.all([
       getJSON("data/market.json").catch(function () { return window.MKT || {}; }),
       getJSON("data/news.json").catch(function () { return window.NEWS || {}; }),
-      getJSON("data/deals.json").catch(function () { return window.DEALS || {}; })
+      getJSON("data/deals.json").catch(function () { return window.DEALS || {}; }),
+      getJSON("data/history.json").catch(function () { return window.HIST || {}; })
     ]).then(function (r) {
-      window.MKT = r[0]; window.NEWS = r[1]; window.DEALS = r[2];
-      renderStamp(); renderMarkets(); renderRisk(); renderRates(); renderConsumer(); renderHeadlines(); renderDeals();
+      window.MKT = r[0]; window.NEWS = r[1]; window.DEALS = r[2]; window.HIST = r[3];
+      renderBar(); renderMarkets(); renderRisk(); renderRates(); renderConsumer(); renderHeadlines(); renderDeals();
+      if (tab === "charts" && window.renderCharts) window.renderCharts();
     });
   }
 
+  showTab(location.hash === "#charts" ? "charts" : "today", false);
   load();
-  setInterval(load, 15 * 60 * 1000); // pinned tab: re-read data every 15 min
+  setInterval(renderBar, 60 * 1000);
+  setInterval(load, 15 * 60 * 1000);
   document.addEventListener("visibilitychange", function () { if (!document.hidden) load(); });
 })();

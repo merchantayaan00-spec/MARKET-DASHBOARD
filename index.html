@@ -3,25 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>Market Dashboard</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b3d91'/%3E%3Cpath d='M5 22l7-8 5 4 10-11' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="bar">
-  <h1>MARKET DASHBOARD</h1>
-  <div class="stamp" id="stamp" aria-live="polite">Loading&hellip;</div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-today" data-tab="today" class="on" aria-selected="true">Today</button>
+    <button role="tab" id="tab-charts" data-tab="charts" aria-selected="false">Charts</button>
+  </nav>
+  <div class="status" aria-live="polite">
+    <span class="mkt" id="mkt"><i></i><b>&ndash;</b></span>
+    <span id="upd">Updated &ndash;</span>
+    <span id="nxt">Next &ndash;</span>
+  </div>
 </header>
 
-<main class="grid">
-  <section class="panel p-markets"><div class="ph">Markets</div>
-    <div class="pb"><div class="tiles two" id="indices"></div><div class="heat" id="sectors"></div></div></section>
-  <section class="panel p-risk"><div class="ph">Risk</div><div class="pb"><div class="tiles one" id="risk-grid"></div></div></section>
-  <section class="panel p-rates"><div class="ph">Rates</div><div class="pb"><div class="tiles" id="rates-grid"></div></div></section>
-  <section class="panel p-consumer"><div class="ph">Consumer</div><div class="pb"><div class="tiles" id="consumer-grid"></div></div></section>
-  <section class="panel p-news"><div class="ph">Headlines</div><div class="pb" id="headline-list"></div></section>
-  <section class="panel p-deals"><div class="ph">Deals <span class="meta" id="deals-meta"></span></div><div class="pb"><div class="deals" id="deal-list"></div></div></section>
-</main>
+<div class="view" id="view-today">
+  <main class="grid">
+    <section class="panel p-markets"><div class="ph">Markets</div>
+      <div class="pb"><div class="tiles two" id="indices"></div><div class="heat" id="sectors"></div></div></section>
+    <section class="panel p-risk"><div class="ph">Risk</div><div class="pb"><div class="tiles one" id="risk-grid"></div></div></section>
+    <section class="panel p-rates"><div class="ph">Rates</div><div class="pb"><div class="tiles rates" id="rates-grid"></div></div></section>
+    <section class="panel p-consumer"><div class="ph">Consumer</div><div class="pb"><div class="tiles cons" id="consumer-grid"></div></div></section>
+    <section class="panel p-news"><div class="ph">Headlines</div><div class="pb" id="headline-list"></div></section>
+    <section class="panel p-deals"><div class="ph">Deals <span class="meta" id="deals-meta"></span></div><div class="pb"><div class="deals" id="deal-list"></div></div></section>
+  </main>
+</div>
+
+<div class="view" id="view-charts" hidden>
+  <main class="cgrid" id="chart-grid"></main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="assets/charts.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

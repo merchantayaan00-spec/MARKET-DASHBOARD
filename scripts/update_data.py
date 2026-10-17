@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh data/market.json and data/news.json.
+"""Refresh data/market.json, data/history.json (chart data) and data/news.json.
 
 Runs in GitHub Actions (stdlib only, no installs). Any source that fails keeps
 its last good value and is flagged "stale": true so the page never breaks.
@@ -84,7 +84,7 @@ def with_stale(old, key, fn):
 
 
 # ---------------------------------------------------------------- quotes
-def yahoo_chart(symbol, rng="3mo"):
+def yahoo_chart(symbol, rng="1y"):
     q = urllib.parse.quote(symbol, safe="")
     last = None
     for host in ("query1", "query2"):
@@ -113,16 +113,18 @@ def yahoo_chart(symbol, rng="3mo"):
         "prev_close": round(prev, 4),
         "change_pct": round((price / prev - 1) * 100, 3),
         "as_of": d1,
+        "spark": [round(c, 4) for _, c in pts[-5:]],
     }, pts
 
 
-def fetch_quotes(symbols, old_quotes, history_for=()):
+def fetch_quotes(symbols, old_quotes, ranges=None):
     quotes, hist = {}, {}
+    ranges = ranges or {}
     for s in symbols:
         holder = {}
 
         def go():
-            rec, pts = yahoo_chart(s)
+            rec, pts = yahoo_chart(s, ranges.get(s, "1y"))
             holder["pts"] = pts
             return rec
 
@@ -150,9 +152,12 @@ def fred_series(sid, key, daily):
         "prior_value": float(prior["value"]) if prior else None,
         "prior_date": prior["date"] if prior else None,
         "released": None,
+        "spark": [float(o["value"]) for o in reversed(obs[:5])],
     }
     if sid == "RSAFS" and prior:
         rec["mom_pct"] = round((rec["value"] / rec["prior_value"] - 1) * 100, 2)
+        if len(obs) > 2:
+            rec["prior_mom_pct"] = round((rec["prior_value"] / float(obs[2]["value"]) - 1) * 100, 2)
     if not daily:
         # First-release date of the latest observation (ALFRED vintage data).
         try:
@@ -194,38 +199,57 @@ def parse_rss(raw, n=3):
     return out[:n]
 
 
-# Headline filter: keep finance / stock market / M&A only.
-BAD_PATH = ("/politics", "/lifestyle", "/arts-culture", "/sports", "/health", "/real-estate", "/style",
-            "/personal-finance", "/opinion", "/world", "/us-news", "/tech/", "/science", "/travel", "/food")
-GOOD_PATH = ("/finance", "/markets", "/business/deals", "/economy", "/livecoverage/stock")
-BAD_WORDS = re.compile(r"\b(election|senate|congress|celebrity|recipe|iphone|android|gadget|streaming|movie|"
-                       r"nfl|nba|mlb|olympic|vacation|wedding|dating|horoscope|obituary|estate|grandma)\b", re.I)
-KEYWORDS = re.compile(
-    r"\b(stocks?|shares?|equit(?:y|ies)|markets?|wall street|s&p|nasdaq|dow|russell|fed|federal reserve|"
-    r"rates?|yields?|treasur(?:y|ies)|bonds?|inflation|earnings|profits?|investors?|ipos?|deals?|"
-    r"mergers?|acquisitions?|acquires?|acquired|buyouts?|takeovers?|private equity|private credit|"
-    r"hedge funds?|banks?|banking|lenders?|dollar|oil|gold|crypto|bitcoin|trading|traders?|"
-    r"borrowing|debt|valuations?|spinoffs?|bids?|bidders?)\b", re.I)
+# Headline filter: stock market, economy, interest rates, earnings, M&A. No roundups, columns or opinion.
+BAD_PATH = ("/opinion", "/politics", "/lifestyle", "/arts-culture", "/sports", "/health", "/real-estate", "/style",
+            "/personal-finance", "/world", "/us-news", "/tech/", "/science", "/travel", "/food", "/pro/",
+            "/commodities-futures", "/currencies", "/podcasts", "/video")
+GOOD_PATH = ("/finance", "/economy", "/business", "/markets")
+BAD_TITLE = re.compile(r"roundup|market talk|^opinion|heard on the street|streetwise|overheard|what's news|"
+                       r"\bhow to\b|here's how|\bwhy you\b|your money|\breview\b|\bletters?\b|podcast|"
+                       r"\bobituary|\bcolumn\b|^the .* problem|dollar index|futures (rise|fall|edge|settle)", re.I)
+TOPIC = re.compile(
+    r"\b(stocks?|shares?|equit(?:y|ies)|s&p|nasdaq|dow|russell|wall street|rally|rout|selloff|sell-off|"
+    r"stock market|bond market|markets|economy|economic|inflation|jobs|payrolls|gdp|recession|consumer|"
+    r"retail sales|housing|home prices|tariffs?|unemployment|fed|federal reserve|rates?|yields?|treasur(?:y|ies)|"
+    r"bonds?|mortgages?|earnings|profits?|revenue|forecast|guidance|quarterly|deals?|mergers?|acquires?|"
+    r"acquired|acquisitions?|buyouts?|takeovers?|bids?|private equity|private credit|ipos?|spinoffs?|"
+    r"banks?|banking|lenders?)\b", re.I)
 
 
-def is_finance(item):
+def is_finance(item, strict_path=True):
     path = urllib.parse.urlparse(item["link"]).path.lower() + "/"
-    if any(b in path for b in BAD_PATH) or BAD_WORDS.search(item["title"]):
+    if BAD_TITLE.search(item["title"]) or (strict_path and any(b in path for b in BAD_PATH)):
         return False
-    return any(g in path for g in GOOD_PATH) and KEYWORDS.search(item["title"]) is not None \
-        or KEYWORDS.search(item["title"]) is not None and "/business" in path
+    if strict_path and not any(g in path for g in GOOD_PATH):
+        return False
+    return TOPIC.search(item["title"]) is not None
 
 
 def get_headlines(n=5):
-    for name, feed in (("WSJ Markets (public RSS)", WSJ_FEED),
-                       ("MarketWatch top stories (fallback; WSJ feed failed)", FALLBACK_FEED)):
+    found = []
+    for name, feed, strict in (("WSJ", WSJ_FEED, True), ("MarketWatch", FALLBACK_FEED, False)):
         try:
-            items = [x for x in parse_rss(http_get(feed), n=60) if is_finance(x)][:n]
-            if items:
-                return {"source": name, "feed": feed, "items": items}
+            items = [x for x in parse_rss(http_get(feed), n=80) if is_finance(x, strict)]
         except Exception as e:  # noqa: BLE001
-            print(f"  ! {name}: {e}", file=sys.stderr)
-    raise RuntimeError("no finance headlines from any feed")
+            print(f"  ! {name} feed: {e}", file=sys.stderr)
+            continue
+        for x in items:
+            x["source"] = name
+        found.append(items)
+        if sum(len(f) for f in found) >= n and name == "WSJ" and len(items) >= n:
+            break  # WSJ alone fills the list
+    wsj = found[0] if found else []
+    top = wsj[:n]
+    if len(top) < n:  # top up from MarketWatch, skipping near-duplicates
+        seen = {re.sub(r"\W+", "", x["title"].lower())[:50] for x in top}
+        for x in (found[1] if len(found) > 1 else []):
+            k = re.sub(r"\W+", "", x["title"].lower())[:50]
+            if k not in seen and len(top) < n:
+                top.append(x); seen.add(k)
+    if not top:
+        raise RuntimeError("no finance headlines from any feed")
+    top.sort(key=lambda x: x["published"] or "", reverse=True)
+    return {"source": "WSJ / MarketWatch RSS", "items": top}
 
 
 def deal_news(query):
@@ -240,6 +264,104 @@ def deal_news(query):
     return {"items": items}
 
 
+# ---------------------------------------------------------------- chart history (data/history.json)
+TENORS = [("1M", "DGS1MO"), ("3M", "DGS3MO"), ("6M", "DGS6MO"), ("1Y", "DGS1"),
+          ("2Y", "DGS2"), ("5Y", "DGS5"), ("10Y", "DGS10"), ("30Y", "DGS30")]
+
+
+def d2s(d):
+    return d.strftime("%Y-%m-%d")
+
+
+def days_ago(n):
+    return d2s(datetime.now(timezone.utc) - timedelta(days=n))
+
+
+def fred_obs(sid, key, start):
+    p = {"series_id": sid, "api_key": key, "file_type": "json", "sort_order": "asc",
+         "observation_start": start, "limit": "100000"}
+    obs = json.loads(http_get("https://api.stlouisfed.org/fred/series/observations?" + urllib.parse.urlencode(p)))["observations"]
+    out = [(o["date"], float(o["value"])) for o in obs if o["value"] not in (".", "")]
+    if not out:
+        raise RuntimeError(f"fred {sid}: no observations")
+    return out
+
+
+def sma(vals, n):
+    out, run = [], 0.0
+    for i, v in enumerate(vals):
+        run += v
+        if i >= n:
+            run -= vals[i - n]
+        out.append(round(run / n, 2) if i >= n - 1 else None)
+    return out
+
+
+def build_sp500(hist):
+    pts = hist["^GSPC"]
+    closes = [c for _, c in pts]
+    m50, m200 = sma(closes, 50), sma(closes, 200)
+    k = 252
+    return {"dates": [d for d, _ in pts][-k:], "close": [round(c, 2) for c in closes][-k:],
+            "ma50": m50[-k:], "ma200": m200[-k:]}
+
+
+def build_vix(hist):
+    pts = hist["^VIX"][-252:]
+    return {"dates": [d for d, _ in pts], "close": [round(c, 2) for _, c in pts]}
+
+
+def build_sectors(hist):
+    out = {}
+    for sym in SECTORS:
+        pts = hist[sym]
+        last_d, last = pts[-1]
+        m1_cut = d2s(datetime.strptime(last_d, "%Y-%m-%d") - timedelta(days=30))
+        m1 = [c for d, c in pts if d <= m1_cut]
+        prev_year = [c for d, c in pts if d[:4] < last_d[:4]]
+        out[sym] = {"m1": round((last / m1[-1] - 1) * 100, 2) if m1 else None,
+                    "ytd": round((last / prev_year[-1] - 1) * 100, 2) if prev_year else None}
+    out["as_of"] = hist["XLK"][-1][0]
+    return out
+
+
+def build_yield_curve(key):
+    series = {sid: dict(fred_obs(sid, key, days_ago(420))) for _, sid in TENORS}
+    common = sorted(set.intersection(*[set(v) for v in series.values()]))
+    if not common:
+        raise RuntimeError("no common yield-curve date")
+    today = common[-1]
+    target = d2s(datetime.strptime(today, "%Y-%m-%d") - timedelta(days=365))
+    ago = [d for d in common if d <= target]
+    if not ago:
+        raise RuntimeError("no year-ago yield-curve date")
+    ago = ago[-1]
+    return {"tenors": [t for t, _ in TENORS], "today_date": today, "year_ago_date": ago,
+            "today": [series[sid][today] for _, sid in TENORS],
+            "year_ago": [series[sid][ago] for _, sid in TENORS]}
+
+
+def build_spread(key):
+    obs = fred_obs("T10Y2Y", key, days_ago(740))
+    return {"dates": [d for d, _ in obs], "values": [v for _, v in obs]}
+
+
+def build_consumer(key):
+    cut = days_ago(740)
+    um = [(d, v) for d, v in fred_obs("UMCSENT", key, days_ago(770)) if d >= cut]
+    rs = fred_obs("RSAFS", key, days_ago(820))
+    mom = [(rs[i][0], round((rs[i][1] / rs[i - 1][1] - 1) * 100, 2)) for i in range(1, len(rs)) if rs[i][0] >= cut]
+    return {"umcsent": [[d, v] for d, v in um], "retail_mom": [[d, v] for d, v in mom]}
+
+
+def need_key(key, fn):
+    def run():
+        if not key:
+            raise RuntimeError("FRED_API_KEY not set")
+        return fn(key)
+    return run
+
+
 # ---------------------------------------------------------------- main
 def main():
     old = load_json(DATA / "market.json", {})
@@ -248,7 +370,7 @@ def main():
 
     print("Quotes...")
     symbols = list(dict.fromkeys(INDICES + SECTORS + RISK + CONSUMER_QUOTES))
-    quotes, hist = fetch_quotes(symbols, old_q)
+    quotes, hist = fetch_quotes(symbols, old_q, ranges={"^GSPC": "2y"})
 
     # Consumer mood: XLY/XLP ratio rising over the past month = "Spending", falling = "Defensive"
     def ratio():
@@ -289,6 +411,19 @@ def main():
     }
     save_json(DATA / "market.json", market)
 
+    print("History (charts)...")
+    old_h = load_json(DATA / "history.json", {})
+    history = {"updated": now_iso()}
+    builders = {
+        "sp500": lambda: build_sp500(hist), "vix": lambda: build_vix(hist),
+        "sectors": lambda: build_sectors(hist),
+        "yield_curve": need_key(key, build_yield_curve), "spread": need_key(key, build_spread),
+        "consumer": need_key(key, build_consumer),
+    }
+    for k, fn in builders.items():
+        history[k] = with_stale(old_h, k, fn)
+    save_json(DATA / "history.json", history)
+
     print("News...")
     old_n = load_json(DATA / "news.json", {})
     news = {"updated": now_iso()}
@@ -301,7 +436,7 @@ def main():
                                                 lambda q=d["news_query"]: deal_news(q))
     save_json(DATA / "news.json", news)
 
-    stale = [k for k, v in {**quotes, **fred}.items() if v.get("stale")]
+    stale = [k for k, v in {**quotes, **fred, **{"hist:" + k: history[k] for k in builders}}.items() if v.get("stale")]
     print(f"Done. Stale items: {stale or 'none'}")
 
 
