@@ -41,6 +41,12 @@ a.t:hover,a.h:hover,.deal:hover,.seg button:hover,.tog button:hover,button.ty:ho
 .chip.nervous{background:var(--ink);color:#0a0a0a}
 .chip.panic,.chip.inv{background:var(--dn);border-color:var(--dn);color:#fff}
 
+/* legend for the fill steps */
+.lg{display:inline-flex;align-items:center;gap:12px;color:var(--mut)}
+.lg span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.lg i{display:inline-block;width:14px;height:10px;border:2px solid var(--ink)}
+.lg i.s2{background:var(--ink)}.lg i.s1{background:rgba(245,245,245,.28)}.lg i.s0{background:transparent}
+
 /* today view: fills the screen, rows stretch evenly */
 .view{flex:1;display:flex;min-height:0}
 .grid{flex:1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;padding:6px 8px 8px;align-content:stretch}
@@ -61,14 +67,14 @@ a.t:hover,a.h:hover,.deal:hover,.seg button:hover,.tog button:hover,button.ty:ho
 .t{padding:4px 8px;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:1px;transition:none}
 .t .l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .t .v{font-size:18px;font-weight:500;line-height:1.15;white-space:nowrap;letter-spacing:-.02em}
-.t .r{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-size:11px;font-weight:700;min-height:15px}
+.t .r{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:6px;font-size:11px;font-weight:700;min-height:15px}
 .t .r .d{font-size:9px;font-weight:500;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .t svg.sp{display:block;width:100%;height:18px;margin-top:2px;overflow:visible}
 .t.big .v{font-size:30px}
 .t.big .r{font-size:13px}
 .t.big svg.sp{height:22px}
 .t.inv{border-color:var(--dn)}
-.up{color:var(--up)}.dn{color:var(--dn)}.flat{color:var(--mut)}
+.up{color:var(--up)}.dn{color:var(--dn)}.flat{color:var(--mut)}.neu{color:var(--ink)}
 .na{color:var(--mut)}
 /* move steps: m0 small = outlined, colored text; m1 medium = colored border + faint fill; m2 large = solid fill */
 .t.m1.up,.h.m1.up{border-color:#00e676;background:rgba(0,230,118,.14)}
@@ -115,7 +121,7 @@ button.ty{white-space:nowrap;padding:1px 8px;font-size:10px;font-weight:700;lett
 .dt4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
 .dt4 .k{border:2px solid var(--ink);padding:3px 6px;min-width:0}
 .dt4 .l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
-.dt4 .v{font-size:12px;font-weight:700;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.dt4 .v{font-size:11px;font-weight:700;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .dt4 .s{font-size:9px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .viz{flex:1;display:flex;flex-direction:column;justify-content:center;gap:4px;min-height:44px}
 .own{display:flex;height:20px;gap:3px}
@@ -231,6 +237,7 @@ ul.upd .dt{color:var(--mut);display:inline-block;width:100px}
   .t.big .v{font-size:26px}
   .heat{grid-template-columns:repeat(6,1fr)}.heat .h,.heat .h.w{grid-column:span 2}.heat .h:nth-last-child(-n+2){grid-column:span 3}
   .status{gap:10px}
+  .lg{gap:8px;width:100%}
   .dp{width:100%;border-left:0}
   .dp .hd,.dp .bd{padding-left:12px;padding-right:12px}
   .dp table.kt td:first-child{width:96px;white-space:normal}
