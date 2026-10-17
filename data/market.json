@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T06:15:08Z",
+ "updated": "2026-10-17T06:29:40Z",
  "quotes": {
   "^GSPC": {
    "symbol": "^GSPC",
@@ -8,8 +8,15 @@
    "prev_close": 7744.0601,
    "change_pct": -1.093,
    "as_of": "2026-10-16",
+   "spark": [
+    7807.2402,
+    7805.4502,
+    7718.9399,
+    7744.0601,
+    7659.4399
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:50Z"
+   "fetched_at": "2026-10-17T06:29:28Z"
   },
   "^DJI": {
    "symbol": "^DJI",
@@ -18,8 +25,15 @@
    "prev_close": 52177.6914,
    "change_pct": -0.336,
    "as_of": "2026-10-16",
+   "spark": [
+    51850.5508,
+    51670.1016,
+    51621.4805,
+    52177.6914,
+    52002.4102
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:51Z"
+   "fetched_at": "2026-10-17T06:29:28Z"
   },
   "XLC": {
    "symbol": "XLC",
@@ -28,8 +42,15 @@
    "prev_close": 112.44,
    "change_pct": -1.885,
    "as_of": "2026-10-16",
+   "spark": [
+    111.45,
+    112.28,
+    110.82,
+    112.44,
+    110.32
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:51Z"
+   "fetched_at": "2026-10-17T06:29:29Z"
   },
   "XLY": {
    "symbol": "XLY",
@@ -38,8 +59,15 @@
    "prev_close": 113.41,
    "change_pct": -0.838,
    "as_of": "2026-10-16",
+   "spark": [
+    112.27,
+    112.36,
+    111.5,
+    113.41,
+    112.46
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:52Z"
+   "fetched_at": "2026-10-17T06:29:29Z"
   },
   "XLP": {
    "symbol": "XLP",
@@ -48,8 +76,15 @@
    "prev_close": 86.68,
    "change_pct": 1.084,
    "as_of": "2026-10-16",
+   "spark": [
+    84.41,
+    84.19,
+    86.06,
+    86.68,
+    87.62
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:52Z"
+   "fetched_at": "2026-10-17T06:29:30Z"
   },
   "XLE": {
    "symbol": "XLE",
@@ -58,8 +93,15 @@
    "prev_close": 66.56,
    "change_pct": 2.524,
    "as_of": "2026-10-16",
+   "spark": [
+    66.01,
+    67.2,
+    67.63,
+    66.56,
+    68.24
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:53Z"
+   "fetched_at": "2026-10-17T06:29:30Z"
   },
   "XLF": {
    "symbol": "XLF",
@@ -68,8 +110,15 @@
    "prev_close": 55.27,
    "change_pct": 0.452,
    "as_of": "2026-10-16",
+   "spark": [
+    55.05,
+    54.82,
+    54.52,
+    55.27,
+    55.52
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:53Z"
+   "fetched_at": "2026-10-17T06:29:30Z"
   },
   "XLV": {
    "symbol": "XLV",
@@ -78,8 +127,15 @@
    "prev_close": 177.19,
    "change_pct": -0.271,
    "as_of": "2026-10-16",
+   "spark": [
+    171.99,
+    169.66,
+    173.96,
+    177.19,
+    176.71
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:53Z"
+   "fetched_at": "2026-10-17T06:29:31Z"
   },
   "XLI": {
    "symbol": "XLI",
@@ -88,8 +144,15 @@
    "prev_close": 167.89,
    "change_pct": -0.077,
    "as_of": "2026-10-16",
+   "spark": [
+    169.15,
+    168.67,
+    167.04,
+    167.89,
+    167.76
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:54Z"
+   "fetched_at": "2026-10-17T06:29:31Z"
   },
   "XLB": {
    "symbol": "XLB",
@@ -98,8 +161,15 @@
    "prev_close": 50.56,
    "change_pct": 0.712,
    "as_of": "2026-10-16",
+   "spark": [
+    49.44,
+    49.72,
+    49.67,
+    50.56,
+    50.92
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:54Z"
+   "fetched_at": "2026-10-17T06:29:32Z"
   },
   "XLRE": {
    "symbol": "XLRE",
@@ -108,8 +178,15 @@
    "prev_close": 41.99,
    "change_pct": 0.405,
    "as_of": "2026-10-16",
+   "spark": [
+    41.92,
+    41.83,
+    41.49,
+    41.99,
+    42.16
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:55Z"
+   "fetched_at": "2026-10-17T06:29:32Z"
   },
   "XLK": {
    "symbol": "XLK",
@@ -118,8 +195,15 @@
    "prev_close": 189.19,
    "change_pct": -3.023,
    "as_of": "2026-10-16",
+   "spark": [
+    196.36,
+    196.28,
+    190.43,
+    189.19,
+    183.47
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:55Z"
+   "fetched_at": "2026-10-17T06:29:32Z"
   },
   "XLU": {
    "symbol": "XLU",
@@ -128,8 +212,15 @@
    "prev_close": 41.65,
    "change_pct": 1.345,
    "as_of": "2026-10-16",
+   "spark": [
+    41.63,
+    41.87,
+    41.72,
+    41.65,
+    42.21
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:56Z"
+   "fetched_at": "2026-10-17T06:29:33Z"
   },
   "^VIX": {
    "symbol": "^VIX",
@@ -138,8 +229,15 @@
    "prev_close": 16.46,
    "change_pct": 21.446,
    "as_of": "2026-10-16",
+   "spark": [
+    15.21,
+    15.27,
+    16.87,
+    16.46,
+    19.99
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:56Z"
+   "fetched_at": "2026-10-17T06:29:33Z"
   },
   "GC=F": {
    "symbol": "GC=F",
@@ -148,8 +246,15 @@
    "prev_close": 4170.1001,
    "change_pct": 0.264,
    "as_of": "2026-10-16",
+   "spark": [
+    4190.6001,
+    4177.2998,
+    4107.8999,
+    4170.1001,
+    4181.1001
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:56Z"
+   "fetched_at": "2026-10-17T06:29:33Z"
   },
   "XRT": {
    "symbol": "XRT",
@@ -158,8 +263,15 @@
    "prev_close": 87.82,
    "change_pct": -0.911,
    "as_of": "2026-10-16",
+   "spark": [
+    84.15,
+    84.33,
+    84.7,
+    87.82,
+    87.02
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:57Z"
+   "fetched_at": "2026-10-17T06:29:34Z"
   }
  },
  "ratio": {
@@ -169,7 +281,7 @@
   "month_change_pct": -2.93,
   "mood": "Defensive",
   "stale": false,
-  "fetched_at": "2026-10-17T06:14:57Z"
+  "fetched_at": "2026-10-17T06:29:34Z"
  },
  "fred": {
   "DGS2": {
@@ -179,8 +291,15 @@
    "prior_value": 4.82,
    "prior_date": "2026-10-14",
    "released": null,
+   "spark": [
+    4.75,
+    4.8,
+    4.79,
+    4.82,
+    4.77
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:58Z"
+   "fetched_at": "2026-10-17T06:29:35Z"
   },
   "DGS10": {
    "series": "DGS10",
@@ -189,8 +308,15 @@
    "prior_value": 5.19,
    "prior_date": "2026-10-14",
    "released": null,
+   "spark": [
+    5.22,
+    5.24,
+    5.21,
+    5.19,
+    5.1
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:58Z"
+   "fetched_at": "2026-10-17T06:29:35Z"
   },
   "T10Y2Y": {
    "series": "T10Y2Y",
@@ -199,8 +325,15 @@
    "prior_value": 0.33,
    "prior_date": "2026-10-15",
    "released": null,
+   "spark": [
+    0.44,
+    0.42,
+    0.37,
+    0.33,
+    0.35
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:59Z"
+   "fetched_at": "2026-10-17T06:29:35Z"
   },
   "DFF": {
    "series": "DFF",
@@ -209,8 +342,15 @@
    "prior_value": 3.88,
    "prior_date": "2026-10-14",
    "released": null,
+   "spark": [
+    3.88,
+    3.88,
+    3.88,
+    3.88,
+    3.88
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:59Z"
+   "fetched_at": "2026-10-17T06:29:36Z"
   },
   "MORTGAGE30US": {
    "series": "MORTGAGE30US",
@@ -219,8 +359,15 @@
    "prior_value": 7.4,
    "prior_date": "2026-10-08",
    "released": "2026-10-15",
+   "spark": [
+    6.95,
+    7.03,
+    7.28,
+    7.4,
+    7.4
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:14:59Z"
+   "fetched_at": "2026-10-17T06:29:36Z"
   },
   "UMCSENT": {
    "series": "UMCSENT",
@@ -229,8 +376,15 @@
    "prior_value": 55.2,
    "prior_date": "2026-07-01",
    "released": "2026-08-28",
+   "spark": [
+    49.8,
+    44.8,
+    49.5,
+    55.2,
+    51.7
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:02Z"
+   "fetched_at": "2026-10-17T06:29:37Z"
   },
   "RSAFS": {
    "series": "RSAFS",
@@ -239,9 +393,17 @@
    "prior_value": 739322.0,
    "prior_date": "2026-08-01",
    "released": "2026-10-15",
+   "spark": [
+    731415.0,
+    732898.0,
+    729915.0,
+    739322.0,
+    745021.0
+   ],
    "mom_pct": 0.77,
+   "prior_mom_pct": 1.29,
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:03Z"
+   "fetched_at": "2026-10-17T06:29:38Z"
   },
   "UNRATE": {
    "series": "UNRATE",
@@ -250,8 +412,15 @@
    "prior_value": 4.1,
    "prior_date": "2026-08-01",
    "released": "2026-10-02",
+   "spark": [
+    4.3,
+    4.2,
+    4.1,
+    4.1,
+    4.2
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:03Z"
+   "fetched_at": "2026-10-17T06:29:38Z"
   },
   "PSAVERT": {
    "series": "PSAVERT",
@@ -260,8 +429,15 @@
    "prior_value": 4.6,
    "prior_date": "2026-07-01",
    "released": "2026-09-30",
+   "spark": [
+    4.4,
+    4.4,
+    4.4,
+    4.6,
+    4.1
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:05Z"
+   "fetched_at": "2026-10-17T06:29:39Z"
   },
   "GASREGW": {
    "series": "GASREGW",
@@ -270,8 +446,15 @@
    "prior_value": 4.354,
    "prior_date": "2026-10-05",
    "released": "2026-10-14",
+   "spark": [
+    4.319,
+    4.478,
+    4.465,
+    4.354,
+    4.331
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:07Z"
+   "fetched_at": "2026-10-17T06:29:39Z"
   },
   "DRCCLACBS": {
    "series": "DRCCLACBS",
@@ -280,8 +463,15 @@
    "prior_value": 2.91,
    "prior_date": "2026-01-01",
    "released": "2026-08-25",
+   "spark": [
+    3.04,
+    2.99,
+    2.95,
+    2.91,
+    2.85
+   ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:08Z"
+   "fetched_at": "2026-10-17T06:29:40Z"
   }
  }
 }

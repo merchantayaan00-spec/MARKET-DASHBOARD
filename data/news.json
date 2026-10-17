@@ -1,42 +1,41 @@
 {
- "updated": "2026-10-17T06:15:08Z",
+ "updated": "2026-10-17T06:29:44Z",
  "headlines": {
-  "source": "WSJ Markets (public RSS)",
-  "feed": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
+  "source": "WSJ / MarketWatch RSS",
   "items": [
    {
     "title": "A Popular Tax-Saving Trade is Juicing Wall Street’s Borrowing Binge",
     "link": "https://www.wsj.com/finance/investing/a-popular-tax-minimizing-trade-is-juicing-wall-streets-borrowing-binge-6d81eac2?mod=rss_markets_main",
     "published": "2026-10-17T02:06:00Z",
-    "source": null
+    "source": "WSJ"
    },
    {
     "title": "Blue Owl Founders Promised a Comeback. The Company’s Share Price Hasn’t Budged.",
     "link": "https://www.wsj.com/finance/blue-owl-stock-price-private-credit-ca6673d9?mod=rss_markets_main",
     "published": "2026-10-17T00:00:00Z",
-    "source": null
+    "source": "WSJ"
    },
    {
     "title": "New Cracks in AI Trade Push Wall Street to Worst Week Since June",
     "link": "https://www.wsj.com/finance/stocks/us-death-penalty-execution-rates-41ea3427?mod=rss_markets_main",
     "published": "2026-10-16T22:43:00Z",
-    "source": null
+    "source": "WSJ"
    },
    {
     "title": "U.S. Stocks Fall as Credit Fears Haunt Tech Sector",
     "link": "https://www.wsj.com/finance/investing/u-s-stocks-fall-as-credit-fears-haunt-tech-sector-db50c887?mod=rss_markets_main",
     "published": "2026-10-16T21:39:00Z",
-    "source": null
+    "source": "WSJ"
    },
    {
-    "title": "Auto & Transport Roundup: Market Talk",
-    "link": "https://www.wsj.com/business/auto-transport-roundup-market-talk-a9b213cd?mod=rss_markets_main",
-    "published": "2026-10-16T21:13:00Z",
-    "source": null
+    "title": "A Volatile Week Ends with Tech Stocks Down, Oil Up",
+    "link": "https://www.wsj.com/finance/stocks/a-volatile-week-ends-with-tech-stocks-down-oil-up-5f286ce3?mod=rss_markets_main",
+    "published": "2026-10-16T20:35:00Z",
+    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:15:08Z"
+  "fetched_at": "2026-10-17T06:29:44Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -61,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:09Z"
+   "fetched_at": "2026-10-17T06:29:45Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -85,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:15:09Z"
+   "fetched_at": "2026-10-17T06:29:45Z"
   }
  }
 }
