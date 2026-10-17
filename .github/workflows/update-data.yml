@@ -1,0 +1,62 @@
+name: Refresh market data
+
+on:
+  schedule:
+    # GitHub cron is UTC. Each time is listed twice (daylight / standard time);
+    # the "gate" step below lets only the run that lands at 8am / 4pm Eastern continue.
+    - cron: "30 12 * * 1-5"   # 8:30 AM EDT
+    - cron: "30 13 * * 1-5"   # 8:30 AM EST
+    - cron: "30 20 * * 1-5"   # 4:30 PM EDT
+    - cron: "30 21 * * 1-5"   # 4:30 PM EST
+  workflow_dispatch: {}        # "Run workflow" button for a manual refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Gate on Eastern time
+        id: gate
+        run: |
+          H=$(TZ=America/New_York date +%H)
+          echo "Eastern hour: $H (event: ${{ github.event_name }})"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$H" = "08" ] || [ "$H" = "16" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Not the 8:30 AM / 4:30 PM ET slot (DST duplicate). Skipping."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Fetch data
+        if: steps.gate.outputs.run == 'true'
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/update_data.py
+
+      - name: Commit changes
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "market-dashboard-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/market.json data/news.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Refresh market data $(date -u +'%Y-%m-%d %H:%MZ')"
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push
+          fi
