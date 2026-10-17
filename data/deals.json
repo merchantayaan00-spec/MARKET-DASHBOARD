@@ -1,6 +1,6 @@
 {
   "last_reviewed": "2026-10-17",
-  "note": "Edit this file (not the page code) to update the deal tracker. See DEALS_UPDATE.md. Anything not publicly reported must say 'Not disclosed'.",
+  "note": "Edit this file (not the page code). See DEALS_UPDATE.md. 'facts' and 'updates' hold the verified, sourced record; the page shows only summary, terms, the 3 latest updates and the questions. Anything not publicly reported must say 'Not disclosed'.",
   "deals": [
     {
       "id": "mccormick-unilever-foods",
@@ -8,39 +8,306 @@
       "tag": "Strategic",
       "status_tag": "Pending",
       "closed_date": null,
-      "status": "Pending. Signed 31 Mar 2026. US HSR waiting period ended early (5 Oct 2026). UK CMA Phase 1 decision due 11 Nov 2026. McCormick shareholder vote not yet scheduled in the sources reviewed.",
       "news_query": "McCormick Unilever Foods",
       "facts": [
-        {"label": "Buyer", "items": [{"text": "McCormick & Company (NYSE: MKC). Unilever shareholders end up owning ~65% of the combined company."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}]},
-        {"label": "Target", "items": [{"text": "Unilever's Foods business (Knorr, Hellmann's, etc.), excluding India and other excluded businesses. Spun off and combined via a Reverse Morris Trust."}], "sources": [{"label": "Unilever press release", "url": "https://www.unilever.com/news/press-and-media/press-releases/2026/unilever-announces-the-combination-of-unilever-foods-with-mccormick/"}]},
-        {"label": "Deal value", "items": [{"text": "Unilever Foods enterprise value ~$44.8B (McCormick EV ~$21.0B)."}, {"text": "= $15.7B cash to Unilever + shares worth $29.1B (65.0% of combined equity, at McCormick's one-month VWAP of $57.84)."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}, {"label": "Rothschild & Co", "url": "https://www.rothschildandco.com/en/newsroom/press-releases/2026/03/randco-acted-as-financial-adviser-to-mccormick-on-its-combination-with-unilever/"}]},
-        {"label": "Structure", "items": [{"text": "Cash + stock mix via Reverse Morris Trust. Post-close ownership: Unilever shareholders 55.1%, McCormick shareholders 35.0%, Unilever 9.9% (fully diluted). Unilever committed to an orderly sell-down of its stake over time."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}]},
-        {"label": "Premium paid", "items": [{"text": "Not disclosed. No per-share premium is stated; in a Reverse Morris Trust the price is expressed as a share split plus cash rather than a premium to a target share price."}], "sources": []},
-        {"label": "Implied multiple", "items": [{"text": "~13.8x FY2025 EBITDA for Unilever Foods (same ~13.8x cited for McCormick). Synergy-adjusted multiple: not disclosed. Unilever Foods figures are management estimates."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}]},
-        {"label": "Advisors", "items": [{"text": "McCormick: Citi and Rothschild & Co (financial); Cleary Gottlieb Steen & Hamilton and Hogan Lovells (legal)."}, {"text": "Unilever: Goldman Sachs International and Morgan Stanley & Co. International (financial and corporate brokers); Clifford Chance and Wachtell, Lipton, Rosen & Katz (legal)."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}, {"label": "Rothschild & Co", "url": "https://www.rothschildandco.com/en/newsroom/press-releases/2026/03/randco-acted-as-financial-adviser-to-mccormick-on-its-combination-with-unilever/"}]},
-        {"label": "Strategic rationale", "items": [{"text": "Combine complementary flavor portfolios (herbs, spices, seasonings, cooking aids, condiments, sauces); add Knorr and Hellmann's; expand in EMEA, Latin America and APAC; ~$6B combined foodservice sales platform; targets 3-5% growth in year 3 and operating margin rising from ~21% to ~23-25% by year 3 including synergies."}, {"text": "Synergies: ~$600M run-rate annual cost synergies (net of reinvestment) by year 3, ~two-thirds by year 2; ~$300M one-time costs to achieve; plus ~$100M of incremental synergies reinvested in growth."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}]},
-        {"label": "Financing", "items": [{"text": "$15.7B cash payment funded from balance sheet cash and new debt. Committed $15.7B 364-day bridge (Citi, Goldman Sachs, Morgan Stanley). On 28 Apr 2026, $2.0B of bridge commitments were replaced by a term loan of up to $2.0B maturing 3 years after closing. Targets net leverage of 4.0x or less at close and 3.0x within two years; intends to stay investment grade."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}, {"label": "McCormick 10-Q (Aug 2026)", "url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"}]},
-        {"label": "Expected close", "items": [{"text": "By mid-2027."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}]},
-        {"label": "Approvals needed", "items": [{"text": "McCormick shareholder approval; Form S-4 (McCormick) and Form 10 (Unilever Foods) effectiveness; US HSR clearance (done, 5 Oct 2026); UK CMA review (Phase 1 decision due 11 Nov 2026); other antitrust / foreign investment approvals (the 10-Q does not name jurisdictions; no EU review reported in sources reviewed); works council consultation; customary conditions."}, {"text": "Termination fee: McCormick may owe Unilever $420M (or expense reimbursement up to $75M) in specified circumstances."}], "sources": [{"label": "McCormick 10-Q (Aug 2026)", "url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"}, {"label": "FoodNavigator, 8 Oct 2026", "url": "https://www.foodnavigator.com/Article/2026/10/08/mccormick-unilever-deal-clears-us-antitrust-hurdle/"}]},
-        {"label": "EPS impact", "items": [{"text": "Company says accretive to net sales growth rate, operating margin and adjusted EPS in the first full year. No accretion figure disclosed."}], "sources": [{"label": "McCormick press release", "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}]}
+        {
+          "label": "Buyer",
+          "items": [
+            {
+              "text": "McCormick & Company (NYSE: MKC). Unilever shareholders end up owning ~65% of the combined company."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            }
+          ]
+        },
+        {
+          "label": "Target",
+          "items": [
+            {
+              "text": "Unilever's Foods business (Knorr, Hellmann's, etc.), excluding India and other excluded businesses. Spun off and combined via a Reverse Morris Trust."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Unilever press release",
+              "url": "https://www.unilever.com/news/press-and-media/press-releases/2026/unilever-announces-the-combination-of-unilever-foods-with-mccormick/"
+            }
+          ]
+        },
+        {
+          "label": "Deal value",
+          "items": [
+            {
+              "text": "Unilever Foods enterprise value ~$44.8B (McCormick EV ~$21.0B)."
+            },
+            {
+              "text": "= $15.7B cash to Unilever + shares worth $29.1B (65.0% of combined equity, at McCormick's one-month VWAP of $57.84)."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            },
+            {
+              "label": "Rothschild & Co",
+              "url": "https://www.rothschildandco.com/en/newsroom/press-releases/2026/03/randco-acted-as-financial-adviser-to-mccormick-on-its-combination-with-unilever/"
+            }
+          ]
+        },
+        {
+          "label": "Structure",
+          "items": [
+            {
+              "text": "Cash + stock mix via Reverse Morris Trust. Post-close ownership: Unilever shareholders 55.1%, McCormick shareholders 35.0%, Unilever 9.9% (fully diluted). Unilever committed to an orderly sell-down of its stake over time."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            }
+          ]
+        },
+        {
+          "label": "Premium paid",
+          "items": [
+            {
+              "text": "Not disclosed. No per-share premium is stated; in a Reverse Morris Trust the price is expressed as a share split plus cash rather than a premium to a target share price."
+            }
+          ],
+          "sources": []
+        },
+        {
+          "label": "Implied multiple",
+          "items": [
+            {
+              "text": "~13.8x FY2025 EBITDA for Unilever Foods (same ~13.8x cited for McCormick). Synergy-adjusted multiple: not disclosed. Unilever Foods figures are management estimates."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            }
+          ]
+        },
+        {
+          "label": "Advisors",
+          "items": [
+            {
+              "text": "McCormick: Citi and Rothschild & Co (financial); Cleary Gottlieb Steen & Hamilton and Hogan Lovells (legal)."
+            },
+            {
+              "text": "Unilever: Goldman Sachs International and Morgan Stanley & Co. International (financial and corporate brokers); Clifford Chance and Wachtell, Lipton, Rosen & Katz (legal)."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            },
+            {
+              "label": "Rothschild & Co",
+              "url": "https://www.rothschildandco.com/en/newsroom/press-releases/2026/03/randco-acted-as-financial-adviser-to-mccormick-on-its-combination-with-unilever/"
+            }
+          ]
+        },
+        {
+          "label": "Strategic rationale",
+          "items": [
+            {
+              "text": "Combine complementary flavor portfolios (herbs, spices, seasonings, cooking aids, condiments, sauces); add Knorr and Hellmann's; expand in EMEA, Latin America and APAC; ~$6B combined foodservice sales platform; targets 3-5% growth in year 3 and operating margin rising from ~21% to ~23-25% by year 3 including synergies."
+            },
+            {
+              "text": "Synergies: ~$600M run-rate annual cost synergies (net of reinvestment) by year 3, ~two-thirds by year 2; ~$300M one-time costs to achieve; plus ~$100M of incremental synergies reinvested in growth."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            }
+          ]
+        },
+        {
+          "label": "Financing",
+          "items": [
+            {
+              "text": "$15.7B cash payment funded from balance sheet cash and new debt. Committed $15.7B 364-day bridge (Citi, Goldman Sachs, Morgan Stanley). On 28 Apr 2026, $2.0B of bridge commitments were replaced by a term loan of up to $2.0B maturing 3 years after closing. Targets net leverage of 4.0x or less at close and 3.0x within two years; intends to stay investment grade."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            },
+            {
+              "label": "McCormick 10-Q (Aug 2026)",
+              "url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"
+            }
+          ]
+        },
+        {
+          "label": "Expected close",
+          "items": [
+            {
+              "text": "By mid-2027."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            }
+          ]
+        },
+        {
+          "label": "Approvals needed",
+          "items": [
+            {
+              "text": "McCormick shareholder approval; Form S-4 (McCormick) and Form 10 (Unilever Foods) effectiveness; US HSR clearance (done, 5 Oct 2026); UK CMA review (Phase 1 decision due 11 Nov 2026); other antitrust / foreign investment approvals (the 10-Q does not name jurisdictions; no EU review reported in sources reviewed); works council consultation; customary conditions."
+            },
+            {
+              "text": "Termination fee: McCormick may owe Unilever $420M (or expense reimbursement up to $75M) in specified circumstances."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick 10-Q (Aug 2026)",
+              "url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"
+            },
+            {
+              "label": "FoodNavigator, 8 Oct 2026",
+              "url": "https://www.foodnavigator.com/Article/2026/10/08/mccormick-unilever-deal-clears-us-antitrust-hurdle/"
+            }
+          ]
+        },
+        {
+          "label": "EPS impact",
+          "items": [
+            {
+              "text": "Company says accretive to net sales growth rate, operating margin and adjusted EPS in the first full year. No accretion figure disclosed."
+            }
+          ],
+          "sources": [
+            {
+              "label": "McCormick press release",
+              "url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+            }
+          ]
+        }
       ],
       "updates": [
-        {"date": "2026-11-11", "upcoming": true, "title": "UK CMA Phase 1 decision deadline", "detail": "CMA can clear, accept undertakings, or refer to Phase 2. Unilever has put Colman's mustard up for sale to address overlap with McCormick's French's.", "source_label": "FoodNavigator", "source_url": "https://www.foodnavigator.com/Article/2026/09/17/cma-probes-unilever-mccormick-foods-mega-deal/"},
-        {"date": "2026-10-05", "title": "US antitrust: FTC grants early termination of HSR waiting period", "detail": "Same day, Sen. Elizabeth Warren wrote to the FTC and DOJ asking for scrutiny of the deal.", "source_label": "FoodNavigator", "source_url": "https://www.foodnavigator.com/Article/2026/10/08/mccormick-unilever-deal-clears-us-antitrust-hurdle/"},
-        {"date": "2026-09-01", "approx": true, "title": "UK CMA opens formal Phase 1 investigation", "detail": "Reported as launched in September 2026; exact start date not given in the source. Phase 1 deadline 11 Nov 2026.", "source_label": "FoodNavigator", "source_url": "https://www.foodnavigator.com/Article/2026/09/17/cma-probes-unilever-mccormick-foods-mega-deal/"},
-        {"date": "2026-07-22", "title": "UK CMA invitation to comment", "detail": "Consultation closed 5 Aug 2026.", "source_label": "FoodNavigator", "source_url": "https://www.foodnavigator.com/Article/2026/07/22/unilever-mccormick-merger-anti-trust-consultation-begins/"},
-        {"date": "2026-04-28", "title": "Financing: $2.0B of bridge replaced by term loan", "detail": "$2.0B of the $15.7B bridge commitments terminated and replaced with a term loan of up to $2.0B maturing three years after closing.", "source_label": "McCormick 10-Q", "source_url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"},
-        {"date": "2026-03-31", "title": "Deal announced", "detail": "McCormick to combine with Unilever Foods via Reverse Morris Trust; both boards approved unanimously.", "source_label": "McCormick press release", "source_url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"}
+        {
+          "date": "2026-11-11",
+          "upcoming": true,
+          "title": "UK CMA Phase 1 decision due",
+          "detail": "CMA can clear, accept undertakings, or refer to Phase 2. Unilever has put Colman's mustard up for sale to address overlap with McCormick's French's.",
+          "source_label": "FoodNavigator",
+          "source_url": "https://www.foodnavigator.com/Article/2026/09/17/cma-probes-unilever-mccormick-foods-mega-deal/"
+        },
+        {
+          "date": "2026-10-05",
+          "title": "FTC grants early termination of HSR waiting period",
+          "detail": "Same day, Sen. Elizabeth Warren wrote to the FTC and DOJ asking for scrutiny of the deal.",
+          "source_label": "FoodNavigator",
+          "source_url": "https://www.foodnavigator.com/Article/2026/10/08/mccormick-unilever-deal-clears-us-antitrust-hurdle/"
+        },
+        {
+          "date": "2026-09-01",
+          "approx": true,
+          "title": "UK CMA opens Phase 1 investigation",
+          "detail": "Reported as launched in September 2026; exact start date not given in the source. Phase 1 deadline 11 Nov 2026.",
+          "source_label": "FoodNavigator",
+          "source_url": "https://www.foodnavigator.com/Article/2026/09/17/cma-probes-unilever-mccormick-foods-mega-deal/"
+        },
+        {
+          "date": "2026-07-22",
+          "title": "UK CMA invites comment on the deal",
+          "detail": "Consultation closed 5 Aug 2026.",
+          "source_label": "FoodNavigator",
+          "source_url": "https://www.foodnavigator.com/Article/2026/07/22/unilever-mccormick-merger-anti-trust-consultation-begins/"
+        },
+        {
+          "date": "2026-04-28",
+          "title": "$2.0B of bridge replaced by 3-year term loan",
+          "detail": "$2.0B of the $15.7B bridge commitments terminated and replaced with a term loan of up to $2.0B maturing three years after closing.",
+          "source_label": "McCormick 10-Q",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/0000063754/000006375426000329/mkc-20260831.htm"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "Deal announced",
+          "detail": "McCormick to combine with Unilever Foods via Reverse Morris Trust; both boards approved unanimously.",
+          "source_label": "McCormick press release",
+          "source_url": "https://www.prnewswire.com/news-releases/mccormick-to-combine-with-unilevers-foods-business-creating-a-preeminent-global-flavor-focused-company-302729965.html"
+        }
       ],
       "questions": [
-        {"q": "Why is McCormick doing this deal? What does it get?", "a": "Scale and portfolio. McCormick is a spice/seasoning leader; Unilever Foods brings Knorr and Hellmann's, adds condiments, sauces and cooking aids, and gives it much bigger reach in EMEA, Latin America and APAC plus a ~$6B combined foodservice platform. The pitch is a flavor-focused global leader with ~$600M of run-rate cost synergies by year 3. Combined operating margin goes from ~21% to a targeted 23-25%. (Source: McCormick press release.)"},
-        {"q": "Strategic vs. financial buyer: how would you expect each to value this asset, and who is McCormick?", "a": "McCormick is a strategic buyer, so it can underwrite cost synergies (~$600M) that a financial sponsor could only partly replicate, and it does not need an LBO-style exit. A sponsor would value Unilever Foods on standalone cash flow and leverage capacity, which at this size (~$44.8B EV) is practically out of reach anyway. Note the structure is unusual: McCormick shareholders end up with only ~35% of the combined company, so it behaves more like a merger than a classic acquisition."},
-        {"q": "Is the price fair vs. comps?", "a": "Reported: ~13.8x FY2025 EBITDA for Unilever Foods, with McCormick also at ~13.8x. Matching multiples is what you want in a stock-heavy combination because neither side is giving up value on the exchange ratio. To judge fairness, pull current EV/EBITDA for packaged-food and flavor peers (e.g. Nestle, Kraft Heinz, General Mills, Conagra, Hormel, Kerry/Givaudan for flavors) and precedent food M&A, then compare on growth and margin, not just the headline multiple. Unilever Foods growth and margin are management estimates, so diligence matters. After ~$600M of synergies the effective multiple is lower, but the synergy-adjusted figure is not disclosed."},
-        {"q": "How is it financed?", "a": "Mostly equity: Unilever and its shareholders receive ~65% of the combined company ($29.1B of stock at a $57.84 VWAP). The $15.7B cash piece comes from balance sheet cash and new debt, backed by a committed $15.7B 364-day bridge (Citi, Goldman Sachs, Morgan Stanley), of which $2.0B was swapped into a 3-year term loan in April. Plan is to be at 4.0x net debt/EBITDA or lower at close and de-lever to 3.0x within two years while staying investment grade. Expect bonds to take out the bridge before closing."},
-        {"q": "Is it accretive or dilutive, and why?", "a": "Management says accretive to adjusted EPS in the first full year but gives no number. Mechanics: McCormick issues ~65% new equity (big share count increase) and takes on ~$15.7B of cash-funded debt, so accretion depends on Unilever Foods' earnings contribution at ~13.8x plus synergies outrunning the extra interest expense and the larger share count. Both companies trade at the same multiple, so on a pure stock swap EPS impact would be near neutral, and the synergies and the debt-funded cash payment are what drive the result. A good answer builds a simple pro forma: combined EBIT + synergies - new interest - taxes, over pro forma shares."},
-        {"q": "What are the synergies and what are the costs to get them?", "a": "~$600M run-rate annual cost synergies, net of reinvestments, by year 3 (about two-thirds by year 2), with ~$300M of one-time costs to achieve, plus ~$100M of incremental revenue/cost synergies reinvested in growth. Capitalized at 13.8x, $600M of synergies is worth roughly $8B of value, which is a big part of why the deal makes sense for both sides. (Multiplication is illustrative arithmetic on reported figures.)"},
-        {"q": "What are the key risks and what could block the deal?", "a": "(1) Antitrust: US HSR is cleared, but the UK CMA Phase 1 decision is due 11 Nov 2026 and a referral to Phase 2 would delay closing; the main overlap is mustard (McCormick's French's vs Unilever's Colman's, which Unilever has put up for sale) and condiments. (2) McCormick shareholder vote is required and not yet scheduled in the sources reviewed; both stocks fell after the announcement and some investors criticized it. (3) Leverage of up to 4.0x at close and financing market risk. (4) Reverse Morris Trust tax treatment depends on conditions being met. (5) Integration of a business much larger than McCormick. (6) Termination fee: $420M payable by McCormick in specified cases."},
-        {"q": "Explain a Reverse Morris Trust and why Unilever chose it.", "a": "A parent spins off a business to its shareholders and the spun entity merges with another company, with the parent's shareholders ending up with more than 50% of the combined company. Done correctly, the separation is tax-free to the parent and shareholders for US federal tax purposes. Unilever gets to exit foods tax-efficiently, collect $15.7B in cash, and keep a 9.9% stake it plans to sell down over time. McCormick gets a transformational deal without paying a full cash price."}
+        {
+          "q": "Why is McCormick doing this deal? What does it get?",
+          "a": "Scale and portfolio. McCormick is a spice/seasoning leader; Unilever Foods brings Knorr and Hellmann's, adds condiments, sauces and cooking aids, and gives it much bigger reach in EMEA, Latin America and APAC plus a ~$6B combined foodservice platform. The pitch is a flavor-focused global leader with ~$600M of run-rate cost synergies by year 3. Combined operating margin goes from ~21% to a targeted 23-25%. (Source: McCormick press release.)"
+        },
+        {
+          "q": "Strategic vs. financial buyer: how would you expect each to value this asset, and who is McCormick?",
+          "a": "McCormick is a strategic buyer, so it can underwrite cost synergies (~$600M) that a financial sponsor could only partly replicate, and it does not need an LBO-style exit. A sponsor would value Unilever Foods on standalone cash flow and leverage capacity, which at this size (~$44.8B EV) is practically out of reach anyway. Note the structure is unusual: McCormick shareholders end up with only ~35% of the combined company, so it behaves more like a merger than a classic acquisition."
+        },
+        {
+          "q": "Is the price fair vs. comps?",
+          "a": "Reported: ~13.8x FY2025 EBITDA for Unilever Foods, with McCormick also at ~13.8x. Matching multiples is what you want in a stock-heavy combination because neither side is giving up value on the exchange ratio. To judge fairness, pull current EV/EBITDA for packaged-food and flavor peers (e.g. Nestle, Kraft Heinz, General Mills, Conagra, Hormel, Kerry/Givaudan for flavors) and precedent food M&A, then compare on growth and margin, not just the headline multiple. Unilever Foods growth and margin are management estimates, so diligence matters. After ~$600M of synergies the effective multiple is lower, but the synergy-adjusted figure is not disclosed."
+        },
+        {
+          "q": "How is it financed?",
+          "a": "Mostly equity: Unilever and its shareholders receive ~65% of the combined company ($29.1B of stock at a $57.84 VWAP). The $15.7B cash piece comes from balance sheet cash and new debt, backed by a committed $15.7B 364-day bridge (Citi, Goldman Sachs, Morgan Stanley), of which $2.0B was swapped into a 3-year term loan in April. Plan is to be at 4.0x net debt/EBITDA or lower at close and de-lever to 3.0x within two years while staying investment grade. Expect bonds to take out the bridge before closing."
+        },
+        {
+          "q": "Is it accretive or dilutive, and why?",
+          "a": "Management says accretive to adjusted EPS in the first full year but gives no number. Mechanics: McCormick issues ~65% new equity (big share count increase) and takes on ~$15.7B of cash-funded debt, so accretion depends on Unilever Foods' earnings contribution at ~13.8x plus synergies outrunning the extra interest expense and the larger share count. Both companies trade at the same multiple, so on a pure stock swap EPS impact would be near neutral, and the synergies and the debt-funded cash payment are what drive the result. A good answer builds a simple pro forma: combined EBIT + synergies - new interest - taxes, over pro forma shares."
+        },
+        {
+          "q": "What are the synergies and what are the costs to get them?",
+          "a": "~$600M run-rate annual cost synergies, net of reinvestments, by year 3 (about two-thirds by year 2), with ~$300M of one-time costs to achieve, plus ~$100M of incremental revenue/cost synergies reinvested in growth. Capitalized at 13.8x, $600M of synergies is worth roughly $8B of value, which is a big part of why the deal makes sense for both sides. (Multiplication is illustrative arithmetic on reported figures.)"
+        },
+        {
+          "q": "What are the key risks and what could block the deal?",
+          "a": "(1) Antitrust: US HSR is cleared, but the UK CMA Phase 1 decision is due 11 Nov 2026 and a referral to Phase 2 would delay closing; the main overlap is mustard (McCormick's French's vs Unilever's Colman's, which Unilever has put up for sale) and condiments. (2) McCormick shareholder vote is required and not yet scheduled in the sources reviewed; both stocks fell after the announcement and some investors criticized it. (3) Leverage of up to 4.0x at close and financing market risk. (4) Reverse Morris Trust tax treatment depends on conditions being met. (5) Integration of a business much larger than McCormick. (6) Termination fee: $420M payable by McCormick in specified cases."
+        },
+        {
+          "q": "Explain a Reverse Morris Trust and why Unilever chose it.",
+          "a": "A parent spins off a business to its shareholders and the spun entity merges with another company, with the parent's shareholders ending up with more than 50% of the combined company. Done correctly, the separation is tax-free to the parent and shareholders for US federal tax purposes. Unilever gets to exit foods tax-efficiently, collect $15.7B in cash, and keep a 9.9% stake it plans to sell down over time. McCormick gets a transformational deal without paying a full cash price."
+        }
+      ],
+      "summary": "Reverse Morris Trust. US antitrust cleared; UK CMA Phase 1 decision due Nov 11.",
+      "terms": [
+        [
+          "Buyer",
+          "McCormick (MKC)"
+        ],
+        [
+          "Target",
+          "Unilever Foods"
+        ],
+        [
+          "Value",
+          "~$44.8B EV (~13.8x FY25 EBITDA)"
+        ],
+        [
+          "Structure",
+          "RMT: $15.7B cash + ~65% of combined equity"
+        ],
+        [
+          "Advisors",
+          "MKC: Citi, Rothschild & Co | UL: Goldman, Morgan Stanley"
+        ],
+        [
+          "Expected close",
+          "Mid-2027"
+        ]
       ]
     },
     {
@@ -49,38 +316,307 @@
       "tag": "Private equity",
       "status_tag": "Pending",
       "closed_date": null,
-      "status": "Pending. Agreement announced 6 Aug 2026 (secondary buyout from TA Associates). Expected to close in Q4 2026. Price not officially disclosed.",
       "news_query": "Gong cha Bain Capital",
       "facts": [
-        {"label": "Buyer", "items": [{"text": "Bain Capital (private equity). Becomes Gong cha's third private equity owner."}], "sources": [{"label": "Korea JoongAng Daily", "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"}]},
-        {"label": "Target", "items": [{"text": "Gong cha Global, the bubble tea chain founded in Taiwan in 2006 and headquartered in the UK. Nearly 2,200 stores in 33 markets per Reuters (more than 2,000 stores in ~30 countries and regions per Nikkei)."}], "sources": [{"label": "Reuters via Investing.com", "url": "https://www.investing.com/news/stock-market-news/bain-capital-to-buy-bubble-tea-chain-gong-cha-from-ta-associates-and-others-4839988"}, {"label": "Nikkei Asia", "url": "https://asia.nikkei.com/business/business-deals/bain-capital-to-buy-taiwan-originated-gong-cha-chain-for-over-635m"}]},
-        {"label": "Deal value", "items": [{"text": "Not officially disclosed.", "badge": "Official"}, {"text": "Reported: more than ~$635M (Nikkei Asia, Aug 2026).", "badge": "Unconfirmed"}, {"text": "Earlier report: sale could fetch as much as ~$2B (Reuters, May 2026, citing sources).", "badge": "Unconfirmed"}], "sources": [{"label": "Nikkei Asia", "url": "https://asia.nikkei.com/business/business-deals/bain-capital-to-buy-taiwan-originated-gong-cha-chain-for-over-635m"}, {"label": "Reuters via Investing.com", "url": "https://www.investing.com/news/stock-market-news/bain-capital-to-buy-bubble-tea-chain-gong-cha-from-ta-associates-and-others-4839988"}, {"label": "KED Global", "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"}]},
-        {"label": "Structure", "items": [{"text": "Secondary buyout: Bain buys from TA Associates and other shareholders. Cash vs. stock mix: not disclosed."}], "sources": [{"label": "Korea JoongAng Daily", "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"}]},
-        {"label": "Premium paid", "items": [{"text": "Not applicable (private company); not disclosed."}], "sources": []},
-        {"label": "Implied multiple", "items": [{"text": "Not disclosed. Gong cha's EBITDA and revenue have not been reported in the sources reviewed, so no EV/EBITDA can be calculated from public facts."}], "sources": []},
-        {"label": "Advisors", "items": [{"text": "Sell side: JPMorgan was reported as TA Associates' adviser (KED Global, 18 May 2026). Buy side and legal advisors: not disclosed."}], "sources": [{"label": "KED Global", "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"}]},
-        {"label": "Strategic rationale", "items": [{"text": "Bain plans to keep opening stores in Korea and Japan, accelerate growth in the US, and deepen customer engagement through product innovation, digital marketing and loyalty programs (paraphrased by Korea JoongAng Daily)."}], "sources": [{"label": "Korea JoongAng Daily", "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"}]},
-        {"label": "Financing", "items": [{"text": "Acquisition financing: not disclosed."}, {"text": "Partners Group, which provided a financing package of more than $200M in 2019 and took a minority stake, is being fully repaid on its private credit investment (Bloomberg, via PE Insights, 24 Aug 2026)."}], "sources": [{"label": "PE Insights", "url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"}]},
-        {"label": "Expected close", "items": [{"text": "Q4 2026, subject to closing conditions."}], "sources": [{"label": "Korea JoongAng Daily", "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"}]},
-        {"label": "Approvals needed", "items": [{"text": "Not disclosed. Described only as customary closing conditions."}], "sources": [{"label": "Bloomberg Law", "url": "https://news.bloomberglaw.com/bankruptcy-law/bain-capital-to-buy-bubble-tea-brand-gong-cha-from-ta-associates"}]},
-        {"label": "Process / competing bidders", "items": [{"text": "Bain reportedly prevailed in a contested process that also drew MBK Partners and General Atlantic (reported 16 Jul 2026)."}], "sources": [{"label": "KED Global", "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"}, {"label": "PE Insights", "url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"}]},
-        {"label": "Ownership history", "items": [{"text": "UCK Partners bought 65% of the Korean operation in 2014 (35B won, ~$24.5M) and took over global HQ Royal Tea Taiwan in 2017. TA Associates bought Gong cha in 2019 from Unison Capital for about 350B won ($288M), per KED Global."}], "sources": [{"label": "Korea JoongAng Daily", "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"}, {"label": "KED Global", "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"}]}
+        {
+          "label": "Buyer",
+          "items": [
+            {
+              "text": "Bain Capital (private equity). Becomes Gong cha's third private equity owner."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Korea JoongAng Daily",
+              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+            }
+          ]
+        },
+        {
+          "label": "Target",
+          "items": [
+            {
+              "text": "Gong cha Global, the bubble tea chain founded in Taiwan in 2006 and headquartered in the UK. Nearly 2,200 stores in 33 markets per Reuters (more than 2,000 stores in ~30 countries and regions per Nikkei)."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Reuters via Investing.com",
+              "url": "https://www.investing.com/news/stock-market-news/bain-capital-to-buy-bubble-tea-chain-gong-cha-from-ta-associates-and-others-4839988"
+            },
+            {
+              "label": "Nikkei Asia",
+              "url": "https://asia.nikkei.com/business/business-deals/bain-capital-to-buy-taiwan-originated-gong-cha-chain-for-over-635m"
+            }
+          ]
+        },
+        {
+          "label": "Deal value",
+          "items": [
+            {
+              "text": "Not officially disclosed.",
+              "badge": "Official"
+            },
+            {
+              "text": "Reported: more than ~$635M (Nikkei Asia, Aug 2026).",
+              "badge": "Unconfirmed"
+            },
+            {
+              "text": "Earlier report: sale could fetch as much as ~$2B (Reuters, May 2026, citing sources).",
+              "badge": "Unconfirmed"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Nikkei Asia",
+              "url": "https://asia.nikkei.com/business/business-deals/bain-capital-to-buy-taiwan-originated-gong-cha-chain-for-over-635m"
+            },
+            {
+              "label": "Reuters via Investing.com",
+              "url": "https://www.investing.com/news/stock-market-news/bain-capital-to-buy-bubble-tea-chain-gong-cha-from-ta-associates-and-others-4839988"
+            },
+            {
+              "label": "KED Global",
+              "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+            }
+          ]
+        },
+        {
+          "label": "Structure",
+          "items": [
+            {
+              "text": "Secondary buyout: Bain buys from TA Associates and other shareholders. Cash vs. stock mix: not disclosed."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Korea JoongAng Daily",
+              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+            }
+          ]
+        },
+        {
+          "label": "Premium paid",
+          "items": [
+            {
+              "text": "Not applicable (private company); not disclosed."
+            }
+          ],
+          "sources": []
+        },
+        {
+          "label": "Implied multiple",
+          "items": [
+            {
+              "text": "Not disclosed. Gong cha's EBITDA and revenue have not been reported in the sources reviewed, so no EV/EBITDA can be calculated from public facts."
+            }
+          ],
+          "sources": []
+        },
+        {
+          "label": "Advisors",
+          "items": [
+            {
+              "text": "Sell side: JPMorgan was reported as TA Associates' adviser (KED Global, 18 May 2026). Buy side and legal advisors: not disclosed."
+            }
+          ],
+          "sources": [
+            {
+              "label": "KED Global",
+              "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+            }
+          ]
+        },
+        {
+          "label": "Strategic rationale",
+          "items": [
+            {
+              "text": "Bain plans to keep opening stores in Korea and Japan, accelerate growth in the US, and deepen customer engagement through product innovation, digital marketing and loyalty programs (paraphrased by Korea JoongAng Daily)."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Korea JoongAng Daily",
+              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+            }
+          ]
+        },
+        {
+          "label": "Financing",
+          "items": [
+            {
+              "text": "Acquisition financing: not disclosed."
+            },
+            {
+              "text": "Partners Group, which provided a financing package of more than $200M in 2019 and took a minority stake, is being fully repaid on its private credit investment (Bloomberg, via PE Insights, 24 Aug 2026)."
+            }
+          ],
+          "sources": [
+            {
+              "label": "PE Insights",
+              "url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"
+            }
+          ]
+        },
+        {
+          "label": "Expected close",
+          "items": [
+            {
+              "text": "Q4 2026, subject to closing conditions."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Korea JoongAng Daily",
+              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+            }
+          ]
+        },
+        {
+          "label": "Approvals needed",
+          "items": [
+            {
+              "text": "Not disclosed. Described only as customary closing conditions."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Bloomberg Law",
+              "url": "https://news.bloomberglaw.com/bankruptcy-law/bain-capital-to-buy-bubble-tea-brand-gong-cha-from-ta-associates"
+            }
+          ]
+        },
+        {
+          "label": "Process / competing bidders",
+          "items": [
+            {
+              "text": "Bain reportedly prevailed in a contested process that also drew MBK Partners and General Atlantic (reported 16 Jul 2026)."
+            }
+          ],
+          "sources": [
+            {
+              "label": "KED Global",
+              "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+            },
+            {
+              "label": "PE Insights",
+              "url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"
+            }
+          ]
+        },
+        {
+          "label": "Ownership history",
+          "items": [
+            {
+              "text": "UCK Partners bought 65% of the Korean operation in 2014 (35B won, ~$24.5M) and took over global HQ Royal Tea Taiwan in 2017. TA Associates bought Gong cha in 2019 from Unison Capital for about 350B won ($288M), per KED Global."
+            }
+          ],
+          "sources": [
+            {
+              "label": "Korea JoongAng Daily",
+              "url": "https://www.koreajoongangdaily.com/business/bain-capital-to-acquire-gong-cha-for-635-million/12812024"
+            },
+            {
+              "label": "KED Global",
+              "url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+            }
+          ]
+        }
       ],
       "updates": [
-        {"date": "2026-08-24", "title": "Partners Group to be fully repaid on its Gong cha private credit investment", "detail": "Reported by Bloomberg as a result of the Bain buyout; Partners Group first financed the 2019 TA deal.", "source_label": "PE Insights", "source_url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"},
-        {"date": "2026-08-06", "title": "Bain Capital announces agreement to acquire Gong cha from TA Associates", "detail": "Terms not disclosed by Bain. Nikkei Asia reported a price of more than $635M (unconfirmed). Expected to close in Q4 2026.", "source_label": "Bloomberg Law", "source_url": "https://news.bloomberglaw.com/bankruptcy-law/bain-capital-to-buy-bubble-tea-brand-gong-cha-from-ta-associates"},
-        {"date": "2026-07-16", "title": "Bain, General Atlantic and MBK Partners reported competing for Gong cha", "detail": "Reported ahead of the signing.", "source_label": "KED Global", "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"},
-        {"date": "2026-05-18", "title": "JPMorgan reported as TA Associates' sale adviser", "detail": "Reported by KED Global.", "source_label": "KED Global", "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"},
-        {"date": "2026-05-01", "approx": true, "title": "Reuters, citing sources: sale could fetch as much as $2B", "detail": "Reported in May 2026; exact date not given in the source reviewed.", "source_label": "Reuters via Investing.com", "source_url": "https://www.investing.com/news/stock-market-news/bain-capital-to-buy-bubble-tea-chain-gong-cha-from-ta-associates-and-others-4839988"}
+        {
+          "date": "2026-08-24",
+          "title": "Partners Group to be fully repaid on Gong cha debt",
+          "detail": "Reported by Bloomberg as a result of the Bain buyout; Partners Group first financed the 2019 TA deal.",
+          "source_label": "PE Insights",
+          "source_url": "https://peinsights.substack.com/p/partners-group-cashes-out-of-gong"
+        },
+        {
+          "date": "2026-08-06",
+          "title": "Bain agrees to buy Gong cha from TA Associates",
+          "detail": "Terms not disclosed by Bain. Nikkei Asia reported a price of more than $635M (unconfirmed). Expected to close in Q4 2026.",
+          "source_label": "Bloomberg Law",
+          "source_url": "https://news.bloomberglaw.com/bankruptcy-law/bain-capital-to-buy-bubble-tea-brand-gong-cha-from-ta-associates"
+        },
+        {
+          "date": "2026-07-16",
+          "title": "Bain, General Atlantic, MBK reported bidding",
+          "detail": "Reported ahead of the signing.",
+          "source_label": "KED Global",
+          "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+        },
+        {
+          "date": "2026-05-18",
+          "title": "JPMorgan reported as TA's sale adviser",
+          "detail": "Reported by KED Global.",
+          "source_label": "KED Global",
+          "source_url": "https://www.kedglobal.com/food-beverage/newsView/ked202608060002"
+        },
+        {
+          "date": "2026-05-01",
+          "approx": true,
+          "title": "Reuters: sale could fetch up to ~$2B (unconfirmed)",
+          "detail": "Reported in May 2026; exact date not given in the source reviewed.",
+          "source_label": "Reuters via Investing.com",
+          "source_url": "https://www.investing.com/news/stock-market-news/bain-capital-to-buy-bubble-tea-chain-gong-cha-from-ta-associates-and-others-4839988"
+        }
       ],
       "questions": [
-        {"q": "Why is Bain Capital buying Gong cha? What is the value-creation plan?", "a": "Growth of a scaled, mostly franchised brand with ~2,000+ stores. Reported plan: keep adding stores in Korea and Japan, accelerate the US, and lift engagement through product innovation, digital marketing and loyalty. For a franchisor, value creation = unit growth + same-store sales + operating leverage on royalties/supply chain, plus potentially a bigger multiple at exit. Bain also has restaurant/franchise experience (Domino's Pizza Japan, Fogo de Chao, per Reuters)."},
-        {"q": "Strategic vs. financial buyer: why is a sponsor the natural owner here, and what is a secondary buyout?", "a": "A secondary buyout is a sponsor selling to another sponsor; Bain is the third PE owner (UCK Partners, then TA Associates, now Bain). There is no obvious large strategic buyer reported here; the contested process was among sponsors (Bain, General Atlantic, MBK Partners). A sponsor underwrites unit growth plus leverage on a recurring royalty stream, then exits in 4-6 years. Risks of SBOs: the previous owner already harvested the easy gains, so the next return has to come from growth and exit multiple rather than cost cuts."},
-        {"q": "Why is the reported price range so wide (~$635M to ~$2B), and what does it imply about the EBITDA multiple?", "a": "The range is a ~3.1x spread, and none of it is official. Plausible explanations (hypotheses, not reported facts): the $2B figure came earlier from sources describing what TA hoped to get, while ~$635M is a later report of the signed price; the figures may measure different things (equity value vs. enterprise value, 100% vs. a stake, with or without debt, including or excluding earn-outs); and the reports may reflect Bain's lower bid winning. Because Gong cha's EBITDA is not disclosed, you cannot compute the multiple; you can only frame it. Illustrative arithmetic only: if EBITDA were $100M, $635M is ~6.4x and $2B is ~20x. The point of the answer: state what you would need (EBITDA, net debt, what the headline number represents), then compare to listed restaurant/beverage franchisor comps. Interviewers want you to flag that the implied multiple is highly sensitive to which number is right."},
-        {"q": "Is the price fair vs. comps?", "a": "You cannot say precisely because the price and EBITDA are unconfirmed. Approach: build a comps set of asset-light franchisors (e.g. Domino's, Yum Brands, Restaurant Brands International) and listed Asian tea chains, look at EV/EBITDA and EV/system sales, adjust for growth, geography and franchise mix, and also look at precedent restaurant LBOs. Then show what multiple each reported price implies at a range of EBITDA assumptions and say which sits closer to peers. Also note TA paid about $288M (350B won) in 2019, so a ~$635M price implies roughly 2.2x its entry price in about 7 years; a ~$2B price would be ~7x. (Arithmetic on reported figures.)"},
-        {"q": "How would a deal like this be financed?", "a": "Not disclosed. In a typical sponsor deal: sponsor equity plus term debt (unitranche/private credit or leveraged loans) sized on EBITDA. Franchised, royalty-heavy models support higher leverage because cash flows are recurring and asset-light. The one financing fact reported: Partners Group's private credit position from 2019 is being fully repaid at closing, which indicates the existing capital structure is being refinanced. Be ready to discuss leverage, interest coverage and covenants."},
-        {"q": "What are the key risks to the investment and to the deal?", "a": "Investment risks: fast competition from large Chinese tea chains expanding abroad, low barriers to entry and fad risk, franchisee economics (rents, labor, cup/tea/dairy/sugar costs), health trends on sugar, reliance on master franchisees in Korea/Japan/US, and currency across 30+ markets. Deal risks: closing conditions and approvals are not disclosed, and the price is unconfirmed. Antitrust looks unlikely to be a big issue for a PE buyer without overlapping holdings, but multi-jurisdiction filings may be needed."},
-        {"q": "How does Bain make money on this, and what are the exit routes?", "a": "Returns come from (1) EBITDA growth through unit expansion and same-store sales, (2) multiple expansion, and (3) debt paydown. Exits: IPO (several Asian tea chains have listed in recent years; check current comps), sale to a strategic or to another sponsor (a fourth owner), or a dividend recap. Walk through an LBO returns table: entry multiple, leverage, EBITDA growth, exit multiple, IRR/MOIC. Without disclosed EBITDA, use clearly labeled assumptions."}
+        {
+          "q": "Why is Bain Capital buying Gong cha? What is the value-creation plan?",
+          "a": "Growth of a scaled, mostly franchised brand with ~2,000+ stores. Reported plan: keep adding stores in Korea and Japan, accelerate the US, and lift engagement through product innovation, digital marketing and loyalty. For a franchisor, value creation = unit growth + same-store sales + operating leverage on royalties/supply chain, plus potentially a bigger multiple at exit. Bain also has restaurant/franchise experience (Domino's Pizza Japan, Fogo de Chao, per Reuters)."
+        },
+        {
+          "q": "Strategic vs. financial buyer: why is a sponsor the natural owner here, and what is a secondary buyout?",
+          "a": "A secondary buyout is a sponsor selling to another sponsor; Bain is the third PE owner (UCK Partners, then TA Associates, now Bain). There is no obvious large strategic buyer reported here; the contested process was among sponsors (Bain, General Atlantic, MBK Partners). A sponsor underwrites unit growth plus leverage on a recurring royalty stream, then exits in 4-6 years. Risks of SBOs: the previous owner already harvested the easy gains, so the next return has to come from growth and exit multiple rather than cost cuts."
+        },
+        {
+          "q": "Why is the reported price range so wide (~$635M to ~$2B), and what does it imply about the EBITDA multiple?",
+          "a": "The range is a ~3.1x spread, and none of it is official. Plausible explanations (hypotheses, not reported facts): the $2B figure came earlier from sources describing what TA hoped to get, while ~$635M is a later report of the signed price; the figures may measure different things (equity value vs. enterprise value, 100% vs. a stake, with or without debt, including or excluding earn-outs); and the reports may reflect Bain's lower bid winning. Because Gong cha's EBITDA is not disclosed, you cannot compute the multiple; you can only frame it. Illustrative arithmetic only: if EBITDA were $100M, $635M is ~6.4x and $2B is ~20x. The point of the answer: state what you would need (EBITDA, net debt, what the headline number represents), then compare to listed restaurant/beverage franchisor comps. Interviewers want you to flag that the implied multiple is highly sensitive to which number is right."
+        },
+        {
+          "q": "Is the price fair vs. comps?",
+          "a": "You cannot say precisely because the price and EBITDA are unconfirmed. Approach: build a comps set of asset-light franchisors (e.g. Domino's, Yum Brands, Restaurant Brands International) and listed Asian tea chains, look at EV/EBITDA and EV/system sales, adjust for growth, geography and franchise mix, and also look at precedent restaurant LBOs. Then show what multiple each reported price implies at a range of EBITDA assumptions and say which sits closer to peers. Also note TA paid about $288M (350B won) in 2019, so a ~$635M price implies roughly 2.2x its entry price in about 7 years; a ~$2B price would be ~7x. (Arithmetic on reported figures.)"
+        },
+        {
+          "q": "How would a deal like this be financed?",
+          "a": "Not disclosed. In a typical sponsor deal: sponsor equity plus term debt (unitranche/private credit or leveraged loans) sized on EBITDA. Franchised, royalty-heavy models support higher leverage because cash flows are recurring and asset-light. The one financing fact reported: Partners Group's private credit position from 2019 is being fully repaid at closing, which indicates the existing capital structure is being refinanced. Be ready to discuss leverage, interest coverage and covenants."
+        },
+        {
+          "q": "What are the key risks to the investment and to the deal?",
+          "a": "Investment risks: fast competition from large Chinese tea chains expanding abroad, low barriers to entry and fad risk, franchisee economics (rents, labor, cup/tea/dairy/sugar costs), health trends on sugar, reliance on master franchisees in Korea/Japan/US, and currency across 30+ markets. Deal risks: closing conditions and approvals are not disclosed, and the price is unconfirmed. Antitrust looks unlikely to be a big issue for a PE buyer without overlapping holdings, but multi-jurisdiction filings may be needed."
+        },
+        {
+          "q": "How does Bain make money on this, and what are the exit routes?",
+          "a": "Returns come from (1) EBITDA growth through unit expansion and same-store sales, (2) multiple expansion, and (3) debt paydown. Exits: IPO (several Asian tea chains have listed in recent years; check current comps), sale to a strategic or to another sponsor (a fourth owner), or a dividend recap. Walk through an LBO returns table: entry multiple, leverage, EBITDA growth, exit multiple, IRR/MOIC. Without disclosed EBITDA, use clearly labeled assumptions."
+        }
+      ],
+      "summary": "Secondary buyout from TA Associates. Price unconfirmed; closing expected Q4 2026.",
+      "terms": [
+        [
+          "Buyer",
+          "Bain Capital"
+        ],
+        [
+          "Target",
+          "Gong cha (seller: TA Associates)"
+        ],
+        [
+          "Value",
+          "Not disclosed. Reports: $635M+ to ~$2B (unconfirmed)"
+        ],
+        [
+          "Structure",
+          "Secondary buyout; terms not disclosed"
+        ],
+        [
+          "Advisors",
+          "Sell-side: JPMorgan (reported) | Buy-side: not disclosed"
+        ],
+        [
+          "Expected close",
+          "Q4 2026"
+        ]
       ]
     }
   ]

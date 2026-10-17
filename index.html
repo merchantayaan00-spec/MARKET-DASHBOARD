@@ -3,57 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morning Market Dashboard</title>
+<title>Market Dashboard</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b3d91'/%3E%3Cpath d='M5 22l7-8 5 4 10-11' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header class="top">
-  <div class="wrap top-row">
-    <div>
-      <h1>Morning Market Dashboard</h1>
-      <p class="sub">Markets, rates, the consumer and two live deals</p>
-    </div>
-    <div class="stamp" id="stamp" aria-live="polite">Loading&hellip;</div>
-  </div>
-  <nav class="wrap nav" aria-label="Sections">
-    <a href="#markets">Markets</a><a href="#risk">Risk</a><a href="#rates">Rates</a>
-    <a href="#consumer">Consumer</a><a href="#watchlist">Watchlist</a>
-    <a href="#headlines">Headlines</a><a href="#deals">Deals</a>
-  </nav>
+<header class="bar">
+  <h1>MARKET DASHBOARD</h1>
+  <div class="stamp" id="stamp" aria-live="polite">Loading&hellip;</div>
 </header>
 
-<main class="wrap">
-  <section id="markets"><h2>1 &middot; Markets</h2>
-    <h3>Indices</h3><div class="grid" id="indices"></div>
-    <h3>Futures</h3><div class="grid" id="futures"></div>
-    <h3>S&amp;P 500 sectors</h3><div class="grid sectors" id="sectors"></div>
-  </section>
-
-  <section id="risk"><h2>2 &middot; Risk</h2><div class="grid" id="risk-grid"></div></section>
-
-  <section id="rates"><h2>3 &middot; Rates</h2><div class="grid" id="rates-grid"></div></section>
-
-  <section id="consumer"><h2>4 &middot; State of the consumer</h2>
-    <div class="card chart-card" id="ratio-card"></div>
-    <div class="grid" id="consumer-grid"></div>
-    <p class="fine">Macro data from FRED. &ldquo;Released&rdquo; is the date the latest figure was first published; the period it covers is shown first.</p>
-  </section>
-
-  <section id="watchlist"><h2>5 &middot; Watchlist</h2>
-    <div class="card"><table class="tbl" id="watch-table"></table></div>
-    <p class="fine">Edit <code>watchlist.txt</code> in the repo to change these tickers.</p>
-  </section>
-
-  <section id="headlines"><h2>6 &middot; Top headlines</h2><div class="card" id="headline-list"></div></section>
-
-  <section id="deals"><h2>7 &middot; M&amp;A deal tracker</h2><div id="deal-list"></div></section>
+<main class="grid">
+  <section class="panel p-markets"><div class="ph">Markets</div>
+    <div class="pb"><div class="tiles two" id="indices"></div><div class="heat" id="sectors"></div></div></section>
+  <section class="panel p-risk"><div class="ph">Risk</div><div class="pb"><div class="tiles one" id="risk-grid"></div></div></section>
+  <section class="panel p-rates"><div class="ph">Rates</div><div class="pb"><div class="tiles" id="rates-grid"></div></div></section>
+  <section class="panel p-consumer"><div class="ph">Consumer</div><div class="pb"><div class="tiles" id="consumer-grid"></div></div></section>
+  <section class="panel p-news"><div class="ph">Headlines</div><div class="pb" id="headline-list"></div></section>
+  <section class="panel p-deals"><div class="ph">Deals <span class="meta" id="deals-meta"></span></div><div class="pb"><div class="deals" id="deal-list"></div></div></section>
 </main>
-
-<footer class="wrap foot">
-  Quotes: Yahoo Finance (unofficial, may be delayed). Macro: FRED, St. Louis Fed. Headlines: WSJ public RSS (titles and links only). Deal news: Google News RSS.
-  For personal information only; not investment advice. Items marked <span class="stale">stale</span> show the last good value because the source failed on the latest refresh.
-</footer>
 <script src="assets/app.js"></script>
 </body>
 </html>
