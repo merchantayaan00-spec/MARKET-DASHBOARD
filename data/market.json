@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T05:48:27Z",
+ "updated": "2026-10-17T06:02:49Z",
  "watchlist": [
   "MKC",
   "UL",
@@ -26,7 +26,7 @@
    "change_pct": -1.093,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:09Z"
+   "fetched_at": "2026-10-17T06:01:09Z"
   },
   "^IXIC": {
    "symbol": "^IXIC",
@@ -36,7 +36,7 @@
    "change_pct": -2.145,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:10Z"
+   "fetched_at": "2026-10-17T06:01:10Z"
   },
   "^DJI": {
    "symbol": "^DJI",
@@ -46,7 +46,7 @@
    "change_pct": -0.336,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:10Z"
+   "fetched_at": "2026-10-17T06:01:10Z"
   },
   "^RUT": {
    "symbol": "^RUT",
@@ -56,7 +56,7 @@
    "change_pct": -1.659,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:11Z"
+   "fetched_at": "2026-10-17T06:01:11Z"
   },
   "ES=F": {
    "symbol": "ES=F",
@@ -66,7 +66,7 @@
    "change_pct": -1.113,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:11Z"
+   "fetched_at": "2026-10-17T06:01:11Z"
   },
   "NQ=F": {
    "symbol": "NQ=F",
@@ -76,7 +76,7 @@
    "change_pct": -2.496,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:12Z"
+   "fetched_at": "2026-10-17T06:01:12Z"
   },
   "XLC": {
    "symbol": "XLC",
@@ -86,7 +86,7 @@
    "change_pct": -1.885,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:12Z"
+   "fetched_at": "2026-10-17T06:01:12Z"
   },
   "XLY": {
    "symbol": "XLY",
@@ -96,7 +96,7 @@
    "change_pct": -0.838,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:13Z"
+   "fetched_at": "2026-10-17T06:01:13Z"
   },
   "XLP": {
    "symbol": "XLP",
@@ -106,7 +106,7 @@
    "change_pct": 1.084,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:13Z"
+   "fetched_at": "2026-10-17T06:01:13Z"
   },
   "XLE": {
    "symbol": "XLE",
@@ -116,7 +116,7 @@
    "change_pct": 2.524,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:14Z"
+   "fetched_at": "2026-10-17T06:01:13Z"
   },
   "XLF": {
    "symbol": "XLF",
@@ -126,7 +126,7 @@
    "change_pct": 0.452,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:14Z"
+   "fetched_at": "2026-10-17T06:01:14Z"
   },
   "XLV": {
    "symbol": "XLV",
@@ -136,7 +136,7 @@
    "change_pct": -0.271,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:15Z"
+   "fetched_at": "2026-10-17T06:01:14Z"
   },
   "XLI": {
    "symbol": "XLI",
@@ -146,7 +146,7 @@
    "change_pct": -0.077,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:15Z"
+   "fetched_at": "2026-10-17T06:01:15Z"
   },
   "XLB": {
    "symbol": "XLB",
@@ -156,7 +156,7 @@
    "change_pct": 0.712,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:16Z"
+   "fetched_at": "2026-10-17T06:01:15Z"
   },
   "XLRE": {
    "symbol": "XLRE",
@@ -166,7 +166,7 @@
    "change_pct": 0.405,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:16Z"
+   "fetched_at": "2026-10-17T06:01:16Z"
   },
   "XLK": {
    "symbol": "XLK",
@@ -176,7 +176,7 @@
    "change_pct": -3.023,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:17Z"
+   "fetched_at": "2026-10-17T06:01:16Z"
   },
   "XLU": {
    "symbol": "XLU",
@@ -186,7 +186,7 @@
    "change_pct": 1.345,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:17Z"
+   "fetched_at": "2026-10-17T06:01:17Z"
   },
   "^VIX": {
    "symbol": "^VIX",
@@ -196,7 +196,7 @@
    "change_pct": 21.446,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:17Z"
+   "fetched_at": "2026-10-17T06:01:17Z"
   },
   "CL=F": {
    "symbol": "CL=F",
@@ -206,7 +206,7 @@
    "change_pct": 3.511,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:18Z"
+   "fetched_at": "2026-10-17T06:01:18Z"
   },
   "GC=F": {
    "symbol": "GC=F",
@@ -216,7 +216,7 @@
    "change_pct": 0.264,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:18Z"
+   "fetched_at": "2026-10-17T06:01:18Z"
   },
   "XRT": {
    "symbol": "XRT",
@@ -226,7 +226,7 @@
    "change_pct": -0.911,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:19Z"
+   "fetched_at": "2026-10-17T06:01:19Z"
   },
   "MKC": {
    "symbol": "MKC",
@@ -236,7 +236,7 @@
    "change_pct": 1.4,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:19Z"
+   "fetched_at": "2026-10-17T06:01:19Z"
   },
   "UL": {
    "symbol": "UL",
@@ -246,7 +246,7 @@
    "change_pct": 2.336,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:20Z"
+   "fetched_at": "2026-10-17T06:01:19Z"
   },
   "MCD": {
    "symbol": "MCD",
@@ -256,7 +256,7 @@
    "change_pct": 0.194,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:20Z"
+   "fetched_at": "2026-10-17T06:01:20Z"
   },
   "SBUX": {
    "symbol": "SBUX",
@@ -266,7 +266,7 @@
    "change_pct": 0.661,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:21Z"
+   "fetched_at": "2026-10-17T06:01:20Z"
   },
   "CMG": {
    "symbol": "CMG",
@@ -276,7 +276,7 @@
    "change_pct": -2.256,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:21Z"
+   "fetched_at": "2026-10-17T06:01:21Z"
   },
   "YUM": {
    "symbol": "YUM",
@@ -286,7 +286,7 @@
    "change_pct": -0.212,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:22Z"
+   "fetched_at": "2026-10-17T06:01:21Z"
   },
   "DPZ": {
    "symbol": "DPZ",
@@ -296,7 +296,7 @@
    "change_pct": 1.831,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:22Z"
+   "fetched_at": "2026-10-17T06:01:22Z"
   },
   "NKE": {
    "symbol": "NKE",
@@ -306,7 +306,7 @@
    "change_pct": -0.027,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:23Z"
+   "fetched_at": "2026-10-17T06:01:22Z"
   },
   "LULU": {
    "symbol": "LULU",
@@ -316,7 +316,7 @@
    "change_pct": -2.008,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:23Z"
+   "fetched_at": "2026-10-17T06:01:23Z"
   },
   "WMT": {
    "symbol": "WMT",
@@ -326,7 +326,7 @@
    "change_pct": 0.797,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:24Z"
+   "fetched_at": "2026-10-17T06:01:23Z"
   },
   "COST": {
    "symbol": "COST",
@@ -336,7 +336,7 @@
    "change_pct": 1.135,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:24Z"
+   "fetched_at": "2026-10-17T06:01:24Z"
   },
   "TGT": {
    "symbol": "TGT",
@@ -346,7 +346,7 @@
    "change_pct": -1.513,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:25Z"
+   "fetched_at": "2026-10-17T06:01:24Z"
   },
   "KO": {
    "symbol": "KO",
@@ -356,7 +356,7 @@
    "change_pct": 2.065,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:25Z"
+   "fetched_at": "2026-10-17T06:01:24Z"
   },
   "PEP": {
    "symbol": "PEP",
@@ -366,7 +366,7 @@
    "change_pct": 2.422,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:26Z"
+   "fetched_at": "2026-10-17T06:01:25Z"
   },
   "HSY": {
    "symbol": "HSY",
@@ -376,7 +376,7 @@
    "change_pct": 1.275,
    "as_of": "2026-10-16",
    "stale": false,
-   "fetched_at": "2026-10-17T05:48:26Z"
+   "fetched_at": "2026-10-17T06:01:25Z"
   }
  },
  "ratio": {
@@ -895,52 +895,119 @@
   "change_pct": -1.903,
   "six_month_change_pct": -12.1,
   "stale": false,
-  "fetched_at": "2026-10-17T05:48:27Z"
+  "fetched_at": "2026-10-17T06:01:26Z"
  },
  "fred": {
   "DGS2": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "DGS2",
+   "value": 4.77,
+   "obs_date": "2026-10-15",
+   "prior_value": 4.82,
+   "prior_date": "2026-10-14",
+   "released": null,
+   "stale": false,
+   "fetched_at": "2026-10-17T06:01:50Z"
   },
   "DGS10": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "DGS10",
+   "value": 5.1,
+   "obs_date": "2026-10-15",
+   "prior_value": 5.19,
+   "prior_date": "2026-10-14",
+   "released": null,
+   "stale": false,
+   "fetched_at": "2026-10-17T06:01:53Z"
   },
   "T10Y2Y": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "T10Y2Y",
+   "value": 0.35,
+   "obs_date": "2026-10-16",
+   "prior_value": 0.33,
+   "prior_date": "2026-10-15",
+   "released": null,
+   "stale": false,
+   "fetched_at": "2026-10-17T06:01:54Z"
   },
   "DFF": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "DFF",
+   "value": 3.88,
+   "obs_date": "2026-10-15",
+   "prior_value": 3.88,
+   "prior_date": "2026-10-14",
+   "released": null,
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:11Z"
   },
   "MORTGAGE30US": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "MORTGAGE30US",
+   "value": 7.4,
+   "obs_date": "2026-10-15",
+   "prior_value": 7.4,
+   "prior_date": "2026-10-08",
+   "released": "2026-10-15",
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:17Z"
   },
   "UMCSENT": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "UMCSENT",
+   "value": 51.7,
+   "obs_date": "2026-08-01",
+   "prior_value": 55.2,
+   "prior_date": "2026-07-01",
+   "released": "2026-08-28",
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:30Z"
   },
   "RSAFS": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "RSAFS",
+   "value": 745021.0,
+   "obs_date": "2026-09-01",
+   "prior_value": 739322.0,
+   "prior_date": "2026-08-01",
+   "released": "2026-10-15",
+   "mom_pct": 0.77,
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:36Z"
   },
   "UNRATE": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "UNRATE",
+   "value": 4.2,
+   "obs_date": "2026-09-01",
+   "prior_value": 4.1,
+   "prior_date": "2026-08-01",
+   "released": "2026-10-02",
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:42Z"
   },
   "PSAVERT": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "PSAVERT",
+   "value": 4.1,
+   "obs_date": "2026-08-01",
+   "prior_value": 4.6,
+   "prior_date": "2026-07-01",
+   "released": "2026-09-30",
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:45Z"
   },
   "GASREGW": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "GASREGW",
+   "value": 4.331,
+   "obs_date": "2026-10-12",
+   "prior_value": 4.354,
+   "prior_date": "2026-10-05",
+   "released": "2026-10-14",
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:46Z"
   },
   "DRCCLACBS": {
-   "stale": true,
-   "error": "FRED_API_KEY not set"
+   "series": "DRCCLACBS",
+   "value": 2.85,
+   "obs_date": "2026-04-01",
+   "prior_value": 2.91,
+   "prior_date": "2026-01-01",
+   "released": "2026-08-25",
+   "stale": false,
+   "fetched_at": "2026-10-17T06:02:49Z"
   }
  }
 }
