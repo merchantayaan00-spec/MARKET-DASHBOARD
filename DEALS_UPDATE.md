@@ -1,68 +1,91 @@
 # Weekly deal update instructions
 
-Playbook for the **weekly research update** of the M&A tracker (Mondays, 7:30 AM Eastern). GitHub Actions only refreshes market data and headlines; everything in `data/deals.json` needs a human-quality read of real sources. Follow these steps exactly.
+Playbook for the **weekly research update** of the M&A tracker (Mondays, 7:30 AM Eastern). GitHub Actions only refreshes market data and headlines; everything in `data/deals.json` needs a careful read of real sources. Follow these steps exactly.
 
-Only edit `data/deals.json`. Never touch `index.html`, `assets/`, `scripts/`, `data/market.json` or `data/news.json`.
+Only edit `data/deals.json`. Never touch `index.html`, `assets/`, `scripts/`, `data/market.json`, `data/news.json` or `data/history.json`.
 
-## What the page shows (keep it short)
+## What the page shows
 
-Each deal is a compact card. The page displays only: **name + Pending/Closed badge**, the **`summary`** line, the **`terms`** table (Buyer, Target, Value, Structure, Advisors, Expected close), the **3 most recent `updates`** (date + one-line `title`), and the **`questions`** behind a "Test yourself" button.
+Each deal card shows, in this order: name + Pending/Closed badge + "Test yourself" button; a 3-step **progress tracker** (Announced, Approvals, Closing) with the announcement date, expected close and a countdown; four tiles (**Value, Structure, Expected close, Next catalyst**); one **visual**; one **Advisors** line; the **3 most recent updates**, one line each with an exact date.
 
-`facts` (long, with `sources`) is the verified record behind the scenes. It is not shown on the page but is how you prove every number; keep it accurate and sourced. Source links are not shown on the page.
+`facts` (long, with `sources`) is the verified record behind the scenes. It is not shown on the page but is how every number is proven. Keep it accurate and sourced.
+
+## Deal fields (what to keep current)
+
+| Field | Meaning |
+|---|---|
+| `stage` | Progress tracker position: `0` Announced, `1` Approvals, `2` Closing. Moves forward when the deal advances (e.g. all approvals received and only closing remains: `2`). |
+| `announced` | `YYYY-MM-DD` signing/announcement date. |
+| `close_label` | Expected close as text: `"Mid-2027"`, `"Q4 2026"`, or `"not confirmed"`. |
+| `close_by` | `YYYY-MM-DD` only if a real end date exists (e.g. end of the guided quarter), else `null`. If set, the page shows a countdown ("by Dec 31 \| ~75 days"). If `null` it shows "expected <close_label>". |
+| `next` | `{"event": "...", "date": "..."}`: the **next catalyst** and its date. Use an ISO date when scheduled (the page adds "in Nd"), otherwise short text such as `"Q4 2026"`. Event is 1 to 4 words. |
+| `tiles` | Two tiles (Value, Structure): `{"label","value","sub"}`. `value` is short (e.g. `"$44.8B EV"`); `sub` is one small line. The page adds Expected close and Next catalyst itself. |
+| `advisors` | One short line. Format: `"Buyer: A, B  \|  Target: C, D"`. |
+| `visual` | One visual per deal (see below). |
+| `updates` | List of dated entries; the page shows the 3 newest (excluding `upcoming`). |
+| `questions` | Flashcards: `{"q","a"}`. |
+| `status_tag` / `closed_date` | `"Pending"` or `"Closed"` (+ date). |
+
+Visual types: `{"type":"ownership","segments":[["Label",55.1],...],"note":"short note"}` (post-close ownership; segments should total 100) and `{"type":"range","low":635,"high":2000,"ebitda":70,"label":"Reported, unconfirmed","note":"..."}` (price range in $M; the page computes ~x EBITDA at each end from `ebitda`; omit `ebitda` if no figure is reported). Keep the existing visual unless the facts change; for a new deal choose the type that fits (ownership split for stock deals, range for unconfirmed prices).
 
 ## Ground rules (accuracy)
 
-1. Only write facts found in a real source: company press release, SEC filing, regulator page, or a reputable outlet (Reuters, Bloomberg, WSJ, FT, Nikkei, CNBC, trade press). Record the link in `facts[].sources` / `updates[].source_url`.
-2. If something is not publicly reported write exactly **"Not disclosed"**. Never estimate or fill gaps.
-3. Reported-but-unconfirmed numbers carry `"badge": "Unconfirmed"` in `facts`, and say "unconfirmed" in `terms`.
-4. If sources conflict, show both with the outlet named in `facts`; keep `terms` to the short version.
-5. Practice-answer arithmetic must be labeled "illustrative" and use only reported inputs.
-6. Dates are `YYYY-MM-DD`. If only a month is known use the 1st and set `"approx": true`.
+1. Only write facts found in a real source, and prefer primary sources: company press release, SEC filing (8-K, S-4, 10-Q, 425), regulator page (UK CMA case page, European Commission, FTC), then Reuters, Bloomberg, WSJ, FT, Nikkei, trade press. Record the link in `facts[].sources` / `updates[].source_url`.
+2. If something is not publicly reported, write **"Not disclosed"**. If you cannot verify it, write **"not confirmed"**. Never estimate or fill gaps, and never show a number you could not source.
+3. Reported-but-unconfirmed numbers carry `"badge": "Unconfirmed"` in `facts` and say "unconfirmed" or "reported" on the page.
+4. If sources conflict, show both in `facts` with the outlet named; keep the page version short.
+5. Practice-answer arithmetic must be labeled "illustrative" and use only sourced inputs.
+6. **Every update date is an exact `YYYY-MM-DD`.** No approximate dates and no "~". If you cannot find the exact date, do not add the entry.
+7. A press report is not a company confirmation: say who reported it (e.g. "Bloomberg: ... (unconfirmed)").
 
 ## Step 1: Check each deal for news
 
-For every deal, search the web (primary sources first: company IR, SEC EDGAR, regulator pages such as UK CMA / European Commission / FTC, Rothschild & Co newsroom; then Reuters, Bloomberg, WSJ, FT, Nikkei, trade press). Look for anything since `last_reviewed`: shareholder votes, regulatory milestones, financing, price/terms changes, competing bids, litigation, delays, closing. Re-check every "Not disclosed" field.
+For every deal, search the web (primary sources first) for anything since `last_reviewed`: shareholder votes, regulatory milestones, financing, price or terms changes, competing bids, litigation, delays, closing. Re-check every "Not disclosed" / "not confirmed" field.
 
-- **McCormick + Unilever Foods** (`mccormick-unilever-foods`): McCormick shareholder vote (S-4, meeting date, result); UK CMA (Phase 1 decision was due 2026-11-11; Phase 2 or undertakings; Colman's sale); EU notification; other jurisdictions; S-4 / Form 10 effectiveness; bonds replacing the bridge; ratings; closing (expected mid-2027).
-- **Bain Capital + Gong cha** (`bain-gong-cha`): closing; any official price; financing; approvals; competing bids; new EBITDA/valuation reports.
+- **McCormick + Unilever Foods** (`mccormick-unilever-foods`): McCormick shareholder vote (Form S-4 filing, meeting date, result); UK CMA case page https://www.gov.uk/cma-cases/mccormick-slash-unilever-merger-inquiry (Phase 1 launched 2026-09-16, decision due 2026-11-11; Phase 2 referral or undertakings; Colman's sale); EU notification; other jurisdictions; bonds replacing the bridge; ratings; closing (expected mid-2027). Sources: McCormick IR, SEC EDGAR (CIK 63754), Unilever IR.
+- **Bain Capital + Gong cha** (`bain-gong-cha`): closing announcement; any official price; financing; competing bids; new EBITDA/valuation reports. Sources: Bain Capital newsroom, Gong cha press page, Reuters, Bloomberg, Nikkei Asia.
 
-## Step 2: Add dated updates (ONE LINE each)
+## Step 2: Progress stage and next catalyst
+
+- Update `stage` if the deal moved (Announced 0, Approvals 1, Closing 2).
+- Update `next` to the **next dated event** and its date (e.g. the CMA decision date, the shareholder meeting date, the expected closing). When an event happens, replace `next` with the following one.
+- Update `close_label` / `close_by` if the expected close changed.
+- Set top-level `last_reviewed` to today, even if nothing changed.
+
+## Step 3: Latest 3 updates (one line each, exact dates)
 
 Add one object per new event to `updates`:
 
 ```json
-{"date": "2026-11-11", "title": "CMA clears Phase 1", "source_label": "CMA", "source_url": "https://..."}
+{"date": "2026-11-11", "title": "CMA clears Phase 1", "source_label": "CMA case page", "source_url": "https://..."}
 ```
 
-- `title` is **one line, 90 characters or fewer**, plain facts, no sentences of explanation. Good: "McCormick shareholders approve deal (vote 2026-12-04)". Bad: a paragraph.
-- `detail` is optional: at most one short sentence, not shown on the page. Omit it unless it adds a number.
-- Use `"upcoming": true` for scheduled future milestones (not shown on the page; keep for tracking). When it happens, replace it with a real dated entry.
-- Never delete past updates. The page shows only the 3 newest.
+- `title` is **one line, 90 characters or fewer**: plain facts, no explanation.
+- Use `"upcoming": true` for scheduled future milestones; they are not shown in the 3 latest. When the event happens, replace the upcoming entry with the real dated one (remove `upcoming`).
+- Never delete past updates. The page shows only the 3 newest, so make sure the newest three are the most important and exact.
 
-## Step 3: Update summary, terms, facts
+## Step 4: Refresh tiles, advisors, visual, facts
 
-- Rewrite `summary`: **one line, 100 characters or fewer**, current status + next milestone with a date (e.g. "Reverse Morris Trust. US cleared; UK CMA Phase 1 decision due Nov 11.").
-- Update `terms` (array of `["Label","value"]` pairs, in this order: Buyer, Target, Value, Structure, Advisors, Expected close). Each value is **short (about 70 characters or fewer)**. Use "Not disclosed" for unknowns; label unconfirmed figures "(unconfirmed)".
-- Keep `terms` consistent with `facts`. Update `facts` and their `sources` whenever something changes or is newly disclosed.
-- Set top-level `last_reviewed` to today, even if nothing changed.
+- Update `tiles`, `advisors` and `visual` whenever the underlying facts change (final price, new ownership split, new reported EBITDA, new advisors).
+- Keep `facts` (and their `sources`) consistent with what the page shows; update them first, then derive the short page text.
 
-## Step 4: Add 2 to 3 new practice questions
+## Step 5: Add 2 to 3 new practice questions
 
-Append to `questions`: `{"q": "...", "a": "..."}`. Investment-banking interview style (why this deal, strategic vs financial buyer, valuation vs comps, financing, accretion/dilution, synergies, risks, what could block it, structure mechanics). Tie at least one to something that happened this week. Answers: **3 to 6 sentences**, sourced numbers only. Keep at most about 10 questions per deal; drop the oldest or weakest.
+Append to `questions`: `{"q": "...", "a": "..."}`. Investment-banking interview style (why this deal, strategic vs financial buyer, valuation vs comps, financing, accretion/dilution, synergies, risks, what could block it, structure mechanics). Tie at least one to something that happened this week. Answers: 3 to 6 sentences, sourced numbers only. Keep at most about 10 questions per deal; drop the oldest or weakest. These appear on the flashcards (question, "Show answer", "Got it" / "Missed", running score).
 
-## Step 5: Mark a deal closed
+## Step 6: Mark a deal closed
 
-On a source-confirmed close: set `"status_tag": "Closed"` and `"closed_date"`; rewrite `summary` ("Closed <date>. Final terms ..."); add a "Deal closes" update; update `terms`/`facts` with final values (final price if disclosed); add one lessons-learned question. The deal stays on the page marked Closed for **14 days**.
+On a source-confirmed close: set `"status_tag": "Closed"` and `"closed_date"`; set `stage` to `2`; set `next` to `{"event":"Closed","date":"<date>"}`; add a "Deal closes" update (exact date); update `tiles`/`facts` with final values (final price if disclosed); add one lessons-learned question. The deal stays on the page marked Closed for **14 days**.
 
-## Step 6: Replace closed deals (after 14 days)
+## Step 7: Replace closed deals (after 14 days)
 
-When `closed_date` is 14+ days ago, remove the deal and add a **new consumer deal announced in the last few months** (restaurants and food, retail and apparel, or consumer products). Prefer deals where **Rothschild & Co is an advisor** (https://www.rothschildandco.com/en/newsroom/). Keep **one strategic and one private equity deal** on the page whenever possible: replace like with like. If no good same-type match exists, say so in the commit message.
+When `closed_date` is 14+ days ago, remove the deal and add a **new consumer deal announced in the last few months** (restaurants and food, retail and apparel, or consumer products). Prefer deals where **Rothschild & Co is an advisor** (https://www.rothschildandco.com/en/newsroom/). Keep **one strategic and one private equity deal** whenever possible: replace like with like; if no good same-type match exists, say so in the commit message.
 
-New entry shape (same as existing deals): `id` (kebab-case), `name`, `tag` ("Strategic" or "Private equity"), `status_tag` ("Pending"), `closed_date` (null), `summary`, `terms`, `news_query` (Google News search words), `facts` (buyer, target, deal value, structure, premium, implied multiple, advisors on each side, strategic rationale, financing, expected close, approvals needed, each with sources), `updates` (at least the announcement), `questions` (5-7). Same accuracy rules.
+New entry fields: `id` (kebab-case), `name`, `tag` ("Strategic" or "Private equity"), `status_tag` ("Pending"), `closed_date` (null), `stage`, `announced`, `close_label`, `close_by`, `next`, `tiles`, `advisors`, `visual`, `news_query` (Google News search words), `facts` (buyer, target, deal value, structure, premium, implied multiple, advisors on each side, strategic rationale, financing, expected close, approvals needed, each with sources), `updates` (at least the announcement, exact date), `questions` (5-7).
 
-## Step 7: Validate and save
+## Step 8: Validate and save
 
 1. `python3 -c "import json; json.load(open('data/deals.json'))"` prints nothing.
-2. Every deal has `id, name, tag, status_tag, summary, terms, news_query, facts, updates, questions`; `terms` has exactly the 6 labels above; every update `title` is one line (90 chars or fewer); all URLs start with `https://`.
+2. Every deal has all fields listed above; every update `date` matches `YYYY-MM-DD` with no `approx` key; every update `title` is one line (90 characters or fewer); `tiles` has 2 entries; all URLs start with `https://`.
 3. Commit only `data/deals.json`: `Weekly deal update YYYY-MM-DD: <one-line summary>`; push to `main` (or push a branch and open a PR if main is protected).
-4. Reply with a short summary: what changed per deal, any new/replaced deal, anything unverified.
+4. Reply with a short summary: what changed per deal (stage, next catalyst, new updates), any new or replaced deal, anything you could not verify.

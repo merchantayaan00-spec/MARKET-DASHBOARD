@@ -9,7 +9,7 @@
   var C = { ink: "#e6edf5", muted: "#8392a5", line: "#243040", accent: "#6aa8ff", amber: "#f5b942",
     purple: "#b58cff", up: "#2ecc71", dn: "#ff5a5f", panel: "#121923" };
   var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  var state = { sp: "1Y", vix: "6M", spread: "2Y", sector: "1M" };
+  var state = { sp: "1Y", vix: "6M", ff: "3Y", sector: "1M" };
   var charts = [];
 
   function md(d) { var p = d.split("-"); return MON[+p[1] - 1] + " " + (+p[2]); }
@@ -21,16 +21,28 @@
   var CARDS = [
     { id: "sp", title: "S&P 500: Trend", sub: "Above the 200 day = uptrend.", toggle: ["1M", "6M", "1Y"], key: "sp" },
     { id: "yc", title: "Yield Curve: Today vs 1 Year Ago", sub: "Downward slope = inverted, a recession warning." },
-    { id: "spread", title: "2s10s Spread", sub: "Below zero = inverted.", toggle: ["1M", "6M", "1Y", "2Y"], key: "spread" },
+    { id: "ff", title: "Fed Funds Rate", sub: "Higher = tighter money. Lower = easier money.", toggle: ["1Y", "3Y", "5Y", "10Y"], key: "ff" },
     { id: "vix", title: "VIX: Fear Gauge", sub: "Above 20 = nervous, above 30 = panic.", toggle: ["1M", "6M", "1Y"], key: "vix" },
     { id: "sec", title: "Sector Performance", sub: "Leaders up top, laggards at the bottom.", toggle: ["1M", "YTD"], key: "sector" },
-    { id: "cons", title: "Consumer Health", sub: "Rising together = stronger consumer." }
+    { id: "cons", title: "Consumer Sentiment", sub: "Higher = people feel better about the economy." }
   ];
-  var DAYS = { "1M": 21, "6M": 126, "1Y": 252, "2Y": 100000 };
+  var DAYS = { "1M": 21, "6M": 126, "1Y": 252 };          // trading-day series (S&P, VIX)
+  var CAL = { "1Y": 365, "3Y": 1096, "5Y": 1826, "10Y": 3652 }; // calendar-day series (Fed funds is daily, 7 days a week)
 
-  function build() {
+  // Fed funds ranges the stored history can support (its span must cover the range)
+  function ffRanges(H) {
+    var b = H && H.fedfunds, all = ["1Y", "3Y", "5Y", "10Y"];
+    if (!b || !b.dates || !b.dates.length) return all;
+    var span = (Date.parse(b.dates[b.dates.length - 1]) - Date.parse(b.dates[0])) / 864e5;
+    var ok = all.filter(function (r) { return span >= CAL[r] * 0.97; });
+    return ok.length ? ok : ["1Y"];
+  }
+
+  function build(H) {
     var grid = document.getElementById("chart-grid");
     if (grid.firstChild) return;
+    var ffr = ffRanges(H);
+    if (ffr.indexOf(state.ff) < 0) state.ff = ffr[ffr.length - 1];
     CARDS.forEach(function (c) {
       var card = el("section", "cc");
       var top = el("div", "ct"), left = el("div");
@@ -38,7 +50,7 @@
       top.appendChild(left);
       if (c.toggle) {
         var t = el("div", "tog");
-        c.toggle.forEach(function (name) {
+        (c.id === "ff" ? ffr : c.toggle).forEach(function (name) {
           var b = el("button", state[c.key] === name ? "on" : "", name);
           b.type = "button";
           b.addEventListener("click", function () {
@@ -79,7 +91,7 @@
     return {
       grid: { display: false }, border: { color: C.line },
       ticks: { maxTicksLimit: 6, maxRotation: 0, autoSkipPadding: 18,
-        callback: function (v) { var d = dates[v]; if (!d) return ""; return range === "1Y" || range === "2Y" ? myy(d) : md(d); } }
+        callback: function (v) { var d = dates[v]; if (!d) return ""; return range === "1M" || range === "6M" ? md(d) : myy(d); } }
     };
   }
   function yScale(extra) {
@@ -142,17 +154,29 @@
         plugins: { legend: { align: "end" }, tooltip: { callbacks: { label: function (c) { return c.dataset.label.split(" (")[0] + ": " + fmt(c.parsed.y, 2) + "%"; } } } } } });
   }
 
-  function renderSpread(H) {
-    var b = H.spread;
-    if (!b || !b.dates) return slotCanvas("spread", "No data yet");
-    var cv = slotCanvas("spread"), n = DAYS[state.spread], dates = lastN(b.dates, n);
-    add(cv, { type: "line", data: { labels: dates, datasets: [{ label: "10Y minus 2Y", data: lastN(b.values, n), borderColor: C.accent, borderWidth: 1.6,
-      fill: { target: "origin", above: "rgba(46,204,113,.16)", below: "rgba(255,90,95,.28)" } }] },
-      options: { scales: { x: xScale(dates, state.spread),
-        y: yScale({ grid: { color: function (c) { return c.tick.value === 0 ? "#e6edf5" : C.line; }, lineWidth: function (c) { return c.tick.value === 0 ? 2 : 1; } },
-          ticks: { maxTicksLimit: 6, callback: function (v) { return fmt(v, 1) + "%"; } } }) },
+  var lastLabel = {
+    id: "lastLabel",
+    afterDatasetsDraw: function (chart) {
+      var m = chart.getDatasetMeta(0), pt = m.data[m.data.length - 1], d = chart.data.datasets[0].data;
+      if (!pt || d[d.length - 1] == null) return;
+      var ctx = chart.ctx, v = d[d.length - 1];
+      ctx.save(); ctx.fillStyle = C.accent; ctx.beginPath(); ctx.arc(pt.x, pt.y, 3.5, 0, 6.2832); ctx.fill();
+      ctx.fillStyle = C.ink; ctx.font = "700 12px sans-serif"; ctx.textBaseline = "middle"; ctx.textAlign = "left";
+      ctx.fillText(fmt(v, 2) + "%", pt.x + 8, pt.y); ctx.restore();
+    }
+  };
+
+  function renderFF(H) {
+    var b = H.fedfunds;
+    if (!b || !b.dates) return slotCanvas("ff", "No data yet");
+    var cv = slotCanvas("ff"), cut = Date.parse(b.dates[b.dates.length - 1]) - CAL[state.ff] * 864e5, i0 = 0;
+    while (i0 < b.dates.length - 1 && Date.parse(b.dates[i0]) < cut) i0++;
+    var dates = b.dates.slice(i0), vals = b.values.slice(i0);
+    add(cv, { type: "line", plugins: [lastLabel], data: { labels: dates, datasets: [{ label: "Fed funds", data: vals, borderColor: C.accent, borderWidth: 2, stepped: "before" }] },
+      options: { layout: { padding: { right: 46 } },
+        scales: { x: xScale(dates, state.ff), y: yScale({ ticks: { maxTicksLimit: 6, callback: function (v) { return fmt(v, 1) + "%"; } } }) },
         plugins: { legend: { display: false }, tooltip: { callbacks: { title: function (i) { return full(dates[i[0].dataIndex]); },
-          label: function (c) { var v = c.parsed.y; return "10Y - 2Y: " + (v > 0 ? "+" : "") + fmt(v * 100, 0) + " bps"; } } } } } });
+          label: function (c) { return "Fed funds: " + fmt(c.parsed.y, 2) + "%"; } } } } } });
   }
 
   function renderVIX(H) {
@@ -185,35 +209,29 @@
 
   function renderConsumer(H) {
     var b = H.consumer;
-    if (!b || !b.umcsent) return slotCanvas("cons", "No data yet");
-    var cv = slotCanvas("cons");
-    var labels = Array.from(new Set(b.umcsent.map(function (x) { return x[0]; }).concat(b.retail_mom.map(function (x) { return x[0]; })))).sort();
-    var um = {}, rs = {};
-    b.umcsent.forEach(function (x) { um[x[0]] = x[1]; }); b.retail_mom.forEach(function (x) { rs[x[0]] = x[1]; });
-    add(cv, { data: { labels: labels, datasets: [
-      { type: "bar", label: "Retail sales MoM", yAxisID: "y1", data: labels.map(function (d) { return rs[d] == null ? null : rs[d]; }),
-        backgroundColor: labels.map(function (d) { return rs[d] >= 0 ? "rgba(245,185,66,.55)" : "rgba(255,90,95,.6)"; }), borderRadius: 2, order: 2 },
-      { type: "line", label: "UMich sentiment", yAxisID: "y", data: labels.map(function (d) { return um[d] == null ? null : um[d]; }),
-        borderColor: C.accent, pointRadius: 2, pointHoverRadius: 4, spanGaps: true, order: 1 }] },
-      options: { scales: {
-        x: { grid: { display: false }, border: { color: C.line }, ticks: { maxTicksLimit: 7, maxRotation: 0, callback: function (v) { return myy(labels[v]); } } },
-        y: yScale({ position: "left", ticks: { maxTicksLimit: 6 }, title: { display: false } }),
-        y1: yScale({ position: "right", grid: { display: false }, ticks: { maxTicksLimit: 6, callback: function (v) { return v + "%"; } } }) },
+    if (!b || !b.umcsent || !b.umcsent.length) return slotCanvas("cons", "No data yet");
+    var cv = slotCanvas("cons"), labels = b.umcsent.map(function (x) { return x[0]; }), vals = b.umcsent.map(function (x) { return x[1]; });
+    var ds = [{ label: "UMich sentiment", data: vals, borderColor: C.accent, pointRadius: 2, pointHoverRadius: 4 }];
+    if (b.avg != null) ds.push({ label: "Long-run avg (since " + b.avg_since + ")", data: labels.map(function () { return b.avg; }), borderColor: C.amber,
+      borderDash: [2, 4], borderWidth: 1.4, pointRadius: 0, pointHoverRadius: 0 });
+    add(cv, { type: "line", data: { labels: labels, datasets: ds },
+      options: { scales: { x: { grid: { display: false }, border: { color: C.line }, ticks: { maxTicksLimit: 7, maxRotation: 0, callback: function (v) { return myy(labels[v]); } } },
+        y: yScale({ ticks: { maxTicksLimit: 6 } }) },
         plugins: { legend: { align: "end" }, tooltip: { callbacks: { title: function (i) { return myy(labels[i[0].dataIndex]); },
-          label: function (c) { return c.dataset.label + ": " + (c.dataset.yAxisID === "y1" ? fmt(c.parsed.y, 2) + "%" : fmt(c.parsed.y, 1)); } } } } } });
+          label: function (c) { return c.dataset.label + ": " + fmt(c.parsed.y, 1); } } } } } });
   }
 
   window.renderCharts = function (H) {
     if (H) window.HIST = H;
     H = window.HIST || {};
-    build();
+    build(H);
     charts.forEach(function (c) { c.destroy(); }); charts = [];
     if (!window.Chart) {
       CARDS.forEach(function (c) { slotCanvas(c.id, "Chart library failed to load"); });
       return;
     }
     setDefaults();
-    [renderSP, renderYC, renderSpread, renderVIX, renderSectors, renderConsumer].forEach(function (fn) {
+    [renderSP, renderYC, renderFF, renderVIX, renderSectors, renderConsumer].forEach(function (fn) {
       try { fn(H); } catch (e) { if (window.console) console.error(e); }
     });
   };

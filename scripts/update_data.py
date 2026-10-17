@@ -31,7 +31,7 @@ CONSUMER_QUOTES = ["XRT"]
 
 # FRED series: id -> (daily?, transform)
 FRED_SERIES = {
-    "DGS2": True, "DGS10": True, "T10Y2Y": True, "DFF": True,
+    "DGS2": True, "DGS10": True, "DFF": True,
     "MORTGAGE30US": False, "UMCSENT": False, "RSAFS": False, "UNRATE": False,
     "PSAVERT": False, "GASREGW": False, "DRCCLACBS": False,
 }
@@ -341,17 +341,22 @@ def build_yield_curve(key):
             "year_ago": [series[sid][ago] for _, sid in TENORS]}
 
 
-def build_spread(key):
-    obs = fred_obs("T10Y2Y", key, days_ago(740))
-    return {"dates": [d for d, _ in obs], "values": [v for _, v in obs]}
+def build_fedfunds(key):
+    """Effective federal funds rate (FRED series DFF, daily), last ~10 years."""
+    obs = fred_obs("DFF", key, days_ago(3660))
+    first = json.loads(http_get("https://api.stlouisfed.org/fred/series/observations?" + urllib.parse.urlencode(
+        {"series_id": "DFF", "api_key": key, "file_type": "json", "sort_order": "asc", "limit": "1"})))["observations"][0]["date"]
+    print(f"  DFF: earliest observation on FRED {first}; stored {len(obs)} daily points from {obs[0][0]}")
+    return {"dates": [d for d, _ in obs], "values": [v for _, v in obs], "earliest_on_fred": first}
 
 
 def build_consumer(key):
+    """UMich consumer sentiment: last 24 months plus the long-run average (monthly data since 1978)."""
+    allobs = fred_obs("UMCSENT", key, "1978-01-01")
     cut = days_ago(740)
-    um = [(d, v) for d, v in fred_obs("UMCSENT", key, days_ago(770)) if d >= cut]
-    rs = fred_obs("RSAFS", key, days_ago(820))
-    mom = [(rs[i][0], round((rs[i][1] / rs[i - 1][1] - 1) * 100, 2)) for i in range(1, len(rs)) if rs[i][0] >= cut]
-    return {"umcsent": [[d, v] for d, v in um], "retail_mom": [[d, v] for d, v in mom]}
+    recent = [[d, v] for d, v in allobs if d >= cut]
+    avg = round(sum(v for _, v in allobs) / len(allobs), 1)
+    return {"umcsent": recent, "avg": avg, "avg_since": allobs[0][0][:4]}
 
 
 def need_key(key, fn):
@@ -417,7 +422,7 @@ def main():
     builders = {
         "sp500": lambda: build_sp500(hist), "vix": lambda: build_vix(hist),
         "sectors": lambda: build_sectors(hist),
-        "yield_curve": need_key(key, build_yield_curve), "spread": need_key(key, build_spread),
+        "yield_curve": need_key(key, build_yield_curve), "fedfunds": need_key(key, build_fedfunds),
         "consumer": need_key(key, build_consumer),
     }
     for k, fn in builders.items():

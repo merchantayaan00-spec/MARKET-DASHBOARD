@@ -194,14 +194,6 @@
     var g = clear("rates-grid");
     g.appendChild(fredTile("DGS2", "2Y", { suffix: "%", kind: "daily", spark: true }));
     g.appendChild(fredTile("DGS10", "10Y", { suffix: "%", kind: "daily", spark: true }));
-    var s = fred("T10Y2Y");
-    if (!s || s.value == null) g.appendChild(naTile("2s10s", s, fredUrl("T10Y2Y")));
-    else {
-      var bps = Math.round(s.value * 100), inv = s.value < 0, d = s.prior_value == null ? null : Math.round((s.value - s.prior_value) * 100);
-      g.appendChild(tile({ label: "2s10s", value: (bps > 0 ? "+" : "") + bps + " bps", vcls: inv ? "dn" : "", inv: inv,
-        change: d == null ? null : d === 0 ? { text: "0", dir: "flat" } : { text: (d > 0 ? "▲ " : "▼ ") + Math.abs(d), dir: dir(d) },
-        asof: md(s.obs_date), url: fredUrl("T10Y2Y"), stale: staleChip(s), chip: inv ? h("span", { class: "chip inv", text: "inverted" }) : null }));
-    }
     g.appendChild(fredTile("DFF", "Fed funds", { suffix: "%", kind: "daily" }));
     g.appendChild(fredTile("MORTGAGE30US", "30Y mortgage", { suffix: "%", kind: "weekly" }));
   }
@@ -241,55 +233,154 @@
   }
 
   // ---------- deals ----------
+  function mdy(iso) { var p = iso.split("-"); return MON[+p[1] - 1] + " " + (+p[2]) + ", " + p[0]; }
+  function isoDate(v) { return /^\d{4}-\d{2}-\d{2}$/.test(v || ""); }
+  function daysUntil(iso) { var p = iso.split("-"); return Math.ceil((Date.UTC(+p[0], +p[1] - 1, +p[2]) - Date.now()) / 864e5); }
+
+  function tracker(d, closed) {
+    var cur = closed ? 2 : (d.stage == null ? 1 : d.stage), names = ["Announced", "Approvals", "Closing"], steps = h("div", { class: "steps" }), lb = h("div", { class: "lb" });
+    var extra = [d.announced ? mdy(d.announced) : "n/a", "", ""];
+    if (closed) extra[2] = d.closed_date ? mdy(d.closed_date) : "done";
+    else if (isoDate(d.close_by)) extra[2] = "by " + md(d.close_by) + " \u00b7 ~" + Math.max(daysUntil(d.close_by), 0) + " days";
+    else extra[2] = "expected " + (d.close_label || "n/a").toLowerCase();
+    names.forEach(function (n, i) {
+      steps.appendChild(h("div", { class: "st" + (i < cur || (closed && i === 2) ? " done" : i === cur ? " cur" : "") }));
+      lb.appendChild(h("span", { class: i === cur ? "on" : "" }, [n, extra[i] ? h("em", { text: " " + extra[i] }) : null]));
+    });
+    return h("div", { class: "trk" }, [steps, lb]);
+  }
+
+  function tiles4(d) {
+    var nx = d.next || {}, nd = isoDate(nx.date) ? md(nx.date) + (daysUntil(nx.date) >= 0 ? " · in " + daysUntil(nx.date) + "d" : "") : (nx.date || "");
+    var list = (d.tiles || []).concat([{ label: "Expected close", value: d.close_label || "not confirmed", sub: isoDate(d.close_by) ? "by " + md(d.close_by) : "" },
+      { label: "Next catalyst", value: nx.event || "not confirmed", sub: nd }]);
+    var box = h("div", { class: "dt4" });
+    list.forEach(function (t) { box.appendChild(h("div", { class: "k" }, [h("div", { class: "l", text: t.label }), h("div", { class: "v", text: t.value }), h("div", { class: "s", text: t.sub || "", title: t.sub || "" })])); });
+    return box;
+  }
+
+  function visual(v) {
+    var box = h("div", { class: "viz" });
+    if (!v) return box;
+    if (v.type === "ownership") {
+      var colors = ["var(--accent)", "var(--warn)", "#7d8da1"], bar = h("div", { class: "own" }), leg = h("div", { class: "leg" });
+      v.segments.forEach(function (sg, i) {
+        bar.appendChild(h("i", { style: "flex:" + sg[1] + ";background:" + colors[i % 3], text: num(sg[1], 1) + "%" }));
+        leg.appendChild(h("span", {}, [h("em", { style: "background:" + colors[i % 3] }), sg[0]]));
+      });
+      if (v.note) leg.appendChild(h("span", { class: "nt", text: v.note }));
+      box.appendChild(bar); box.appendChild(leg);
+    } else if (v.type === "range") {
+      var max = Math.ceil(v.high * 1.1 / 100) * 100, pl = v.low / max * 100, ph = v.high / max * 100;
+      function lbl(x) { return x >= 1000 ? "$" + num(x / 1000, x % 1000 ? 1 : 0).replace(/\.0$/, "") + "B" : "$" + x + "M"; }
+      function mult(x) { return v.ebitda ? "~" + Math.round(x / v.ebitda) + "x EBITDA" : ""; }
+      var r = h("div", { class: "rng" }, [h("div", { class: "tr" }),
+        h("div", { class: "fl", style: "left:" + pl + "%;width:" + (ph - pl) + "%" }),
+        h("div", { class: "mk", style: "left:calc(" + pl + "% - 1px)" }), h("div", { class: "mk", style: "left:calc(" + ph + "% - 2px)" }),
+        h("div", { class: "a", style: "left:" + pl + "%", text: lbl(v.low) }), h("div", { class: "b", style: "left:" + pl + "%", text: mult(v.low) }),
+        h("div", { class: "a", style: "left:" + ph + "%", text: "~" + lbl(v.high) }), h("div", { class: "b", style: "left:" + ph + "%", text: mult(v.high) })]);
+      box.appendChild(r);
+      box.appendChild(h("div", { class: "vnote" }, [h("b", { text: v.label || "" }), v.note ? " · " + v.note : ""]));
+    }
+    return box;
+  }
+
   function renderDeals() {
     var root = clear("deal-list"), D = window.DEALS || {};
     $("deals-meta").textContent = D.last_reviewed ? "reviewed " + md(D.last_reviewed) : "";
     (D.deals || []).forEach(function (d) {
-      var closed = d.status_tag === "Closed";
-      var card = h("div", { class: "deal" });
-      var head = h("div", { class: "dh" }, [h("b", { text: d.name }), h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" })]);
-      card.appendChild(head);
-      card.appendChild(h("div", { class: "sum", text: d.summary || "" }));
-      var tb = h("table", { class: "terms" });
-      (d.terms || []).forEach(function (t) { tb.appendChild(h("tr", {}, [h("td", { text: t[0] }), h("td", { text: t[1] })])); });
-      card.appendChild(tb);
-      var ups = (d.updates || []).filter(function (u) { return !u.upcoming; }).sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3);
+      var closed = d.status_tag === "Closed", card = h("div", { class: "deal" });
+      var btn = h("button", { class: "ty", type: "button", text: "Test yourself" });
+      btn.addEventListener("click", function () { openCards(d); });
+      card.appendChild(h("div", { class: "dh" }, [h("b", { text: d.name }), h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" }), h("div", { class: "ctl" }, [btn])]));
+      card.appendChild(tracker(d, closed));
+      card.appendChild(tiles4(d));
+      card.appendChild(visual(d.visual));
+      card.appendChild(h("div", { class: "adv", title: d.advisors || "" }, [h("b", { text: "Advisors " }), d.advisors || "not disclosed"]));
       var ul = h("ul", { class: "upd" });
-      ups.forEach(function (u) {
-        ul.appendChild(h("li", { title: u.title }, [h("span", { class: "dt", text: u.approx ? "~" + MON[+u.date.split("-")[1] - 1] : md(u.date) }), u.title]));
-      });
+      (d.updates || []).filter(function (u) { return !u.upcoming && isoDate(u.date); }).sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3)
+        .forEach(function (u) { ul.appendChild(h("li", { title: u.title }, [h("span", { class: "dt", text: mdy(u.date) }), u.title])); });
       card.appendChild(ul);
-      var qs = h("div", { class: "qs", hidden: "" });
-      (d.questions || []).forEach(function (q) { qs.appendChild(h("details", { class: "q" }, [h("summary", { text: q.q }), h("p", { text: q.a })])); });
-      var btn = h("button", { class: "ty", type: "button", text: "Test yourself", "aria-expanded": "false" });
-      btn.addEventListener("click", function () {
-        var open = qs.hasAttribute("hidden");
-        if (open) qs.removeAttribute("hidden"); else qs.setAttribute("hidden", "");
-        btn.setAttribute("aria-expanded", String(open));
-        btn.textContent = open ? "Hide questions" : "Test yourself";
-        window.OPEN = window.OPEN || {}; window.OPEN[d.id] = open;
-      });
-      head.appendChild(h("div", { class: "ctl" }, [btn]));
-      card.appendChild(qs);
-      if (window.OPEN && window.OPEN[d.id]) btn.click();
       root.appendChild(card);
     });
   }
 
-  // ---------- tabs ----------
-  var tab = "today";
-  function showTab(name, push) {
-    tab = name;
-    $("view-today").hidden = name !== "today"; $("view-charts").hidden = name !== "charts";
-    ["today", "charts"].forEach(function (t) {
-      var b = $("tab-" + t); b.classList.toggle("on", t === name); b.setAttribute("aria-selected", String(t === name));
-    });
-    if (push) { try { history.replaceState(null, "", name === "charts" ? "#charts" : "#today"); } catch (e) { /* ignore */ } }
-    if (name === "charts" && window.renderCharts) window.renderCharts();
+  // ---------- flashcards ----------
+  var fc = null;
+  function closeCards() {
+    if (!fc) return;
+    document.removeEventListener("keydown", fc.key, true);
+    fc.el.remove(); if (fc.prev && fc.prev.focus) fc.prev.focus(); fc = null;
   }
-  [].forEach.call(document.querySelectorAll(".tabs button"), function (b) {
-    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab"), true); });
+  function openCards(d) {
+    var qs = (d.questions || []).slice();
+    if (!qs.length) return;
+    var st = { i: 0, shown: false, got: 0, miss: 0 };
+    var back = h("div", { class: "fcb", role: "presentation" }), box = h("div", { class: "fc", role: "dialog", "aria-modal": "true", "aria-label": d.name + " practice questions" });
+    back.appendChild(box);
+    function draw() {
+      box.textContent = "";
+      var done = st.i >= qs.length;
+      box.appendChild(h("div", { class: "top" }, [h("span", {}, [h("b", { text: d.name }), done ? " · Done" : " · Question " + (st.i + 1) + " of " + qs.length]),
+        h("span", { class: "sc" }, [h("span", { class: "up", text: "✓ " + st.got }), h("span", { class: "dn", text: "✗ " + st.miss })]),
+        h("button", { class: "x", type: "button", "aria-label": "Close", text: "×" })]));
+      box.querySelector(".x").addEventListener("click", closeCards);
+      if (done) {
+        box.appendChild(h("div", { class: "big", text: st.got + " / " + qs.length }));
+        box.appendChild(h("div", { class: "bar2" }, [h("i", { style: "width:" + Math.round(st.got / qs.length * 100) + "%" })]));
+        var again = h("button", { class: "b pri", type: "button", text: "Restart" }), cl = h("button", { class: "b", type: "button", text: "Close" });
+        again.addEventListener("click", function () { st = { i: 0, shown: false, got: 0, miss: 0 }; draw(); }); cl.addEventListener("click", closeCards);
+        box.appendChild(h("div", { class: "row" }, [cl, again])); again.focus(); return;
+      }
+      box.appendChild(h("div", { class: "q", text: qs[st.i].q }));
+      var row = h("div", { class: "row" });
+      if (!st.shown) {
+        var show = h("button", { class: "b pri", type: "button", text: "Show answer" });
+        show.addEventListener("click", function () { st.shown = true; draw(); }); row.appendChild(show);
+        box.appendChild(row); show.focus();
+      } else {
+        box.appendChild(h("div", { class: "an", text: qs[st.i].a }));
+        var mis = h("button", { class: "b mis", type: "button", text: "Missed" }), got = h("button", { class: "b got", type: "button", text: "Got it" });
+        mis.addEventListener("click", function () { st.miss++; st.i++; st.shown = false; draw(); });
+        got.addEventListener("click", function () { st.got++; st.i++; st.shown = false; draw(); });
+        row.appendChild(mis); row.appendChild(got); box.appendChild(row); got.focus();
+      }
+    }
+    back.addEventListener("mousedown", function (e) { if (e.target === back) closeCards(); });
+    fc = { el: back, prev: document.activeElement, key: function (e) { if (e.key === "Escape") { e.preventDefault(); closeCards(); } } };
+    document.addEventListener("keydown", fc.key, true);
+    document.body.appendChild(back); draw();
+  }
+
+  // ---------- tabs ----------
+  var tab = "today", TABS = ["today", "charts"];
+  function store(v) { try { if (v) localStorage.setItem("md.tab", v); else return localStorage.getItem("md.tab"); } catch (e) { /* storage unavailable */ } return null; }
+  function showTab(name, opts) {
+    opts = opts || {};
+    if (TABS.indexOf(name) < 0) name = "today";
+    var changed = name !== tab; tab = name;
+    $("seg").setAttribute("data-active", name);
+    var tv = $("view-today"), cv = $("view-charts"), target = name === "charts" ? cv : tv, other = name === "charts" ? tv : cv;
+    TABS.forEach(function (t) { var b = $("tab-" + t); b.setAttribute("aria-selected", String(t === name)); b.tabIndex = t === name ? 0 : -1; });
+    other.hidden = true; target.hidden = false;
+    if (name === "charts" && window.renderCharts) window.renderCharts();
+    if (changed && !opts.initial) { target.classList.remove("fade"); void target.offsetWidth; target.classList.add("fade"); }
+    if (opts.persist !== false) {
+      store(name);
+      try { history.replaceState(null, "", "#" + name); } catch (e) { /* ignore */ }
+    }
+    if (opts.focus) $("tab-" + name).focus();
+  }
+  [].forEach.call(document.querySelectorAll(".seg button"), function (b) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
   });
+  document.addEventListener("keydown", function (e) {
+    if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || fc) return;
+    var t = e.target, tag = t && t.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (t && t.isContentEditable)) return;
+    if (e.key === "1") showTab("today"); else if (e.key === "2") showTab("charts");
+  });
+  window.addEventListener("hashchange", function () { var n = location.hash.replace("#", ""); if (TABS.indexOf(n) >= 0) showTab(n); });
 
   // ---------- boot ----------
   function load() {
@@ -305,7 +396,8 @@
     });
   }
 
-  showTab(location.hash === "#charts" ? "charts" : "today", false);
+  var hashTab = location.hash.replace("#", ""), saved = store();
+  showTab(TABS.indexOf(hashTab) >= 0 ? hashTab : (TABS.indexOf(saved) >= 0 ? saved : "today"), { initial: true });
   load();
   setInterval(renderBar, 60 * 1000);
   setInterval(load, 15 * 60 * 1000);
