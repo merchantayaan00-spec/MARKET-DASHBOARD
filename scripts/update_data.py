@@ -16,7 +16,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -24,10 +24,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 UA = "Mozilla/5.0 (compatible; personal-market-dashboard/1.0)"
 
-INDICES = ["^GSPC", "^IXIC", "^DJI", "^RUT"]
-FUTURES = ["ES=F", "NQ=F"]
+INDICES = ["^GSPC", "^DJI"]
 SECTORS = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLB", "XLRE", "XLK", "XLU"]
-RISK = ["^VIX", "CL=F", "GC=F"]
+RISK = ["^VIX", "GC=F"]
 CONSUMER_QUOTES = ["XRT"]
 
 # FRED series: id -> (daily?, transform)
@@ -85,7 +84,7 @@ def with_stale(old, key, fn):
 
 
 # ---------------------------------------------------------------- quotes
-def yahoo_chart(symbol, rng="6mo"):
+def yahoo_chart(symbol, rng="3mo"):
     q = urllib.parse.quote(symbol, safe="")
     last = None
     for host in ("query1", "query2"):
@@ -195,17 +194,38 @@ def parse_rss(raw, n=3):
     return out[:n]
 
 
-def get_headlines():
-    try:
-        items = parse_rss(http_get(WSJ_FEED))
-        if len(items) >= 1:
-            return {"source": "WSJ Markets (public RSS)", "feed": WSJ_FEED, "items": items}
-    except Exception as e:  # noqa: BLE001
-        print(f"  ! WSJ feed: {e}", file=sys.stderr)
-    items = parse_rss(http_get(FALLBACK_FEED))
-    if not items:
-        raise RuntimeError("fallback feed empty")
-    return {"source": "MarketWatch top stories (fallback - WSJ feed failed)", "feed": FALLBACK_FEED, "items": items}
+# Headline filter: keep finance / stock market / M&A only.
+BAD_PATH = ("/politics", "/lifestyle", "/arts-culture", "/sports", "/health", "/real-estate", "/style",
+            "/personal-finance", "/opinion", "/world", "/us-news", "/tech/", "/science", "/travel", "/food")
+GOOD_PATH = ("/finance", "/markets", "/business/deals", "/economy", "/livecoverage/stock")
+BAD_WORDS = re.compile(r"\b(election|senate|congress|celebrity|recipe|iphone|android|gadget|streaming|movie|"
+                       r"nfl|nba|mlb|olympic|vacation|wedding|dating|horoscope|obituary|estate|grandma)\b", re.I)
+KEYWORDS = re.compile(
+    r"\b(stocks?|shares?|equit(?:y|ies)|markets?|wall street|s&p|nasdaq|dow|russell|fed|federal reserve|"
+    r"rates?|yields?|treasur(?:y|ies)|bonds?|inflation|earnings|profits?|investors?|ipos?|deals?|"
+    r"mergers?|acquisitions?|acquires?|acquired|buyouts?|takeovers?|private equity|private credit|"
+    r"hedge funds?|banks?|banking|lenders?|dollar|oil|gold|crypto|bitcoin|trading|traders?|"
+    r"borrowing|debt|valuations?|spinoffs?|bids?|bidders?)\b", re.I)
+
+
+def is_finance(item):
+    path = urllib.parse.urlparse(item["link"]).path.lower() + "/"
+    if any(b in path for b in BAD_PATH) or BAD_WORDS.search(item["title"]):
+        return False
+    return any(g in path for g in GOOD_PATH) and KEYWORDS.search(item["title"]) is not None \
+        or KEYWORDS.search(item["title"]) is not None and "/business" in path
+
+
+def get_headlines(n=5):
+    for name, feed in (("WSJ Markets (public RSS)", WSJ_FEED),
+                       ("MarketWatch top stories (fallback; WSJ feed failed)", FALLBACK_FEED)):
+        try:
+            items = [x for x in parse_rss(http_get(feed), n=60) if is_finance(x)][:n]
+            if items:
+                return {"source": name, "feed": feed, "items": items}
+        except Exception as e:  # noqa: BLE001
+            print(f"  ! {name}: {e}", file=sys.stderr)
+    raise RuntimeError("no finance headlines from any feed")
 
 
 def deal_news(query):
@@ -221,34 +241,28 @@ def deal_news(query):
 
 
 # ---------------------------------------------------------------- main
-def read_watchlist():
-    out = []
-    for line in (ROOT / "watchlist.txt").read_text().splitlines():
-        t = line.split("#")[0].strip().upper()
-        if t and t not in out:
-            out.append(t)
-    return out
-
-
 def main():
     old = load_json(DATA / "market.json", {})
     old_q = old.get("quotes", {})
     old_f = old.get("fred", {})
-    watch = read_watchlist()
 
     print("Quotes...")
-    symbols = list(dict.fromkeys(INDICES + FUTURES + SECTORS + RISK + CONSUMER_QUOTES + watch))
+    symbols = list(dict.fromkeys(INDICES + SECTORS + RISK + CONSUMER_QUOTES))
     quotes, hist = fetch_quotes(symbols, old_q)
 
-    # XLY/XLP ratio, 6 months
+    # Consumer mood: XLY/XLP ratio rising over the past month = "Spending", falling = "Defensive"
     def ratio():
         a, b = dict(hist["XLY"]), dict(hist["XLP"])
-        pts = [[d, round(a[d] / b[d], 4)] for d in sorted(set(a) & set(b))]
-        if len(pts) < 20:
+        pts = [(d, a[d] / b[d]) for d in sorted(set(a) & set(b))]
+        if len(pts) < 10:
             raise RuntimeError("not enough overlapping history")
-        return {"points": pts, "value": pts[-1][1], "as_of": pts[-1][0],
-                "change_pct": round((pts[-1][1] / pts[-2][1] - 1) * 100, 3),
-                "six_month_change_pct": round((pts[-1][1] / pts[0][1] - 1) * 100, 2)}
+        last_d, last_v = pts[-1]
+        cutoff = (datetime.strptime(last_d, "%Y-%m-%d") - timedelta(days=30)).strftime("%Y-%m-%d")
+        base = [p for p in pts if p[0] <= cutoff]
+        base_d, base_v = base[-1] if base else pts[0]
+        chg = (last_v / base_v - 1) * 100
+        return {"value": round(last_v, 4), "as_of": last_d, "base_date": base_d,
+                "month_change_pct": round(chg, 2), "mood": "Spending" if chg >= 0 else "Defensive"}
 
     try:
         ratio_rec = ratio()
@@ -269,7 +283,6 @@ def main():
 
     market = {
         "updated": now_iso(),
-        "watchlist": watch,
         "quotes": quotes,
         "ratio": ratio_rec,
         "fred": fred,

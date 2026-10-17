@@ -16,35 +16,24 @@
     return el;
   }
   function $(id) { return document.getElementById(id); }
+  function clear(id) { var e = $(id); e.textContent = ""; return e; }
   function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : "#"; }
-  function link(text, url) { return h("a", { href: safeUrl(url), target: "_blank", rel: "noopener noreferrer", text: text }); }
   function num(v, d) {
     if (v == null || isNaN(v)) return "n/a";
     return Number(v).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
   }
-  function pct(v, d) { return v == null ? "n/a" : (v > 0 ? "+" : "") + num(v, d == null ? 2 : d) + "%"; }
-  function cls(v) { return v == null ? "" : v > 0 ? "up" : v < 0 ? "down" : ""; }
-  function stale(rec, extra) {
-    if (!rec || !rec.stale) return null;
-    var s = h("span", { class: "stale", text: "stale", title: "Latest refresh failed. Showing the last good value" + (rec.fetched_at ? " from " + rec.fetched_at.slice(0, 10) : "") + "." });
-    return s;
-  }
-  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  function fmtDate(iso) { // 2026-10-05 -> Oct 5, 2026
-    if (!iso) return "";
-    var p = iso.slice(0, 10).split("-");
-    return MONTHS[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
-  }
-  function fmtPeriod(iso, quarterly) { // observation period
-    if (!iso) return "";
-    var p = iso.split("-");
-    if (quarterly) return "Q" + (Math.floor((+p[1] - 1) / 3) + 1) + " " + p[0];
-    return MONTHS[+p[1] - 1] + " " + p[0];
-  }
+  function sign(v) { return v > 0 ? "up" : v < 0 ? "dn" : ""; }
+  function arrow(v) { return v > 0 ? "▲ " : v < 0 ? "▼ " : ""; }
+  function pct(v, d) { return v == null ? "" : arrow(v) + num(Math.abs(v), d == null ? 2 : d) + "%"; }
+  var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function md(iso) { if (!iso) return ""; var p = iso.slice(0, 10).split("-"); return MON[+p[1] - 1] + " " + (+p[2]); }
   function fmtET(iso) {
     try {
       return new Date(iso).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
     } catch (e) { return iso; }
+  }
+  function staleChip(rec) {
+    return rec && rec.stale ? h("span", { class: "chip stale", text: "stale", title: "Last refresh failed; showing last good value" }) : null;
   }
   function getJSON(path) {
     return fetch(path + "?t=" + Date.now(), { cache: "no-store" }).then(function (r) {
@@ -53,246 +42,176 @@
     });
   }
 
-  var NAMES = {
-    "^GSPC": "S&P 500", "^IXIC": "Nasdaq Composite", "^DJI": "Dow Jones", "^RUT": "Russell 2000",
-    "ES=F": "S&P 500 futures", "NQ=F": "Nasdaq 100 futures",
-    "XLC": "Communication", "XLY": "Cons. Discretionary", "XLP": "Cons. Staples", "XLE": "Energy",
-    "XLF": "Financials", "XLV": "Health Care", "XLI": "Industrials", "XLB": "Materials",
-    "XLRE": "Real Estate", "XLK": "Technology", "XLU": "Utilities",
-    "^VIX": "VIX", "CL=F": "WTI crude oil", "GC=F": "Gold", "XRT": "XRT (Retail ETF)"
-  };
-
   // ---------- tiles ----------
-  function quoteTile(sym, opts) {
-    opts = opts || {};
+  // tile(label, value, change, date, opts): all strings; change is {text, dir}
+  function tile(label, value, change, date, o) {
+    o = o || {};
+    return h("div", { class: "t" + (o.big ? " big" : "") + (o.inv ? " inv" : "") }, [
+      h("div", { class: "l" }, [label, o.chip || null, o.stale || null]),
+      h("div", { class: "v " + (o.vcls || ""), text: value }),
+      h("div", { class: "c " + (change ? sign(change.dir) : ""), text: change ? change.text : "" }),
+      h("div", { class: "d", text: date || "" })
+    ]);
+  }
+  function naTile(label, rec) { return tile(label, "n/a", null, rec && rec.error ? "no data" : "", { stale: staleChip(rec), vcls: "na" }); }
+
+  function quoteTile(sym, label, o) {
+    o = o || {};
     var q = (window.MKT.quotes || {})[sym];
-    var label = h("div", { class: "lbl" }, [h("span", { text: NAMES[sym] || sym }), h("span", { text: opts.ticker || "" })]);
-    if (!q || q.price == null) {
-      return h("div", { class: "card tile" }, [label, h("div", { class: "val na", text: "n/a" }), h("div", { class: "note" }, ["No data yet", stale(q)])]);
-    }
-    var c = q.change_pct;
-    var kids = [label,
-      h("div", { class: "val", text: (opts.prefix || "") + num(q.price, opts.dec == null ? 2 : opts.dec) }),
-      h("div", { class: "chg " + cls(c) }, [pct(c), stale(q)])];
-    if (opts.extra) kids.push(opts.extra);
-    var t = h("div", { class: "card tile" + (opts.sector ? " sec " + (c > 0 ? "up-bg" : c < 0 ? "down-bg" : "") : "") }, kids);
-    return t;
+    if (!q || q.price == null) return naTile(label, q);
+    return tile(label, (o.prefix || "") + num(q.price, 2), { text: pct(q.change_pct), dir: q.change_pct }, md(q.as_of),
+      { big: o.big, stale: staleChip(q), chip: o.chip && o.chip(q) });
   }
 
-  function fredVal(id) { return (window.MKT.fred || {})[id]; }
+  function fred(id) { return (window.MKT.fred || {})[id]; }
 
+  // kind: "daily" | "weekly" | "monthly" | "quarterly"
   function fredTile(id, label, o) {
-    o = o || {};
-    var r = fredVal(id);
-    var head = h("div", { class: "lbl" }, [h("span", { text: label })]);
-    if (!r || r.value == null) {
-      return h("div", { class: "card tile" }, [head, h("div", { class: "val na", text: "n/a" }), h("div", { class: "note" }, [(r && r.error) || "No data yet", stale(r)])]);
+    var r = fred(id);
+    if (!r || r.value == null) return naTile(label, r);
+    var dec = o.dec == null ? 2 : o.dec, d = r.prior_value == null ? null : r.value - r.prior_value;
+    var date;
+    if (o.kind === "daily") date = md(r.obs_date);
+    else if (o.kind === "weekly") date = r.released ? "rel " + md(r.released) : md(r.obs_date);
+    else {
+      var p = r.obs_date.split("-");
+      var per = o.kind === "quarterly" ? "Q" + (Math.floor((+p[1] - 1) / 3) + 1) : MON[+p[1] - 1];
+      date = per + (r.released ? " · rel " + md(r.released) : "");
     }
-    var big = o.mom ? pct(r.mom_pct, 2) + " MoM" : (o.prefix || "") + num(r.value, o.dec == null ? 2 : o.dec) + (o.suffix || "");
-    var kids = [head, h("div", { class: "val", text: big })];
-    if (o.mom) kids.push(h("div", { class: "note", text: "Level: $" + num(r.value / 1000, 1) + "B" }));
-    else if (r.prior_value != null && o.showPrior !== false) {
-      var d = r.value - r.prior_value;
-      kids.push(h("div", { class: "note", text: "Prior: " + (o.prefix || "") + num(r.prior_value, o.dec == null ? 2 : o.dec) + (o.suffix || "") + " (" + (d > 0 ? "+" : "") + num(d, o.dec == null ? 2 : o.dec) + ")" }));
-    }
-    var when = o.daily ? "As of " + fmtDate(r.obs_date) : o.weekly ? "Week of " + fmtDate(r.obs_date) + (r.released ? " \u00b7 released " + fmtDate(r.released) : "") : fmtPeriod(r.obs_date, o.quarterly) + (r.released ? " · released " + fmtDate(r.released) : "");
-    kids.push(h("div", { class: "note" }, [when, stale(r)]));
-    return h("div", { class: "card tile" }, kids);
+    var val = (o.prefix || "") + num(r.value, dec) + (o.suffix || "");
+    var chg = d == null ? null : Math.abs(d) < 1e-9 ? { text: "unch", dir: 0 } : { text: arrow(d) + num(Math.abs(d), dec) + (o.suffix || ""), dir: d };
+    return tile(label, val, chg, date, { stale: staleChip(r) });
   }
 
   // ---------- sections ----------
+  var SECTORS = [["XLK", "Tech"], ["XLF", "Financials"], ["XLY", "Discret."], ["XLC", "Comm."], ["XLV", "Health"], ["XLI", "Industrials"],
+    ["XLP", "Staples"], ["XLE", "Energy"], ["XLU", "Utilities"], ["XLRE", "Real Est."], ["XLB", "Materials"]];
+
   function renderMarkets() {
-    var m = $("indices"); m.textContent = "";
-    ["^GSPC", "^IXIC", "^DJI", "^RUT"].forEach(function (s) { m.appendChild(quoteTile(s, { dec: 2 })); });
-    var f = $("futures"); f.textContent = "";
-    ["ES=F", "NQ=F"].forEach(function (s) { f.appendChild(quoteTile(s, { dec: 2 })); });
-    var sec = $("sectors"); sec.textContent = "";
-    ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLB", "XLRE", "XLK", "XLU"].forEach(function (s) {
-      sec.appendChild(quoteTile(s, { dec: 2, sector: true, ticker: s }));
+    var ix = clear("indices");
+    ix.appendChild(quoteTile("^GSPC", "S&P 500", { big: true }));
+    ix.appendChild(quoteTile("^DJI", "Dow", { big: true }));
+    var sec = clear("sectors");
+    SECTORS.forEach(function (s) {
+      var q = (window.MKT.quotes || {})[s[0]], c = q && q.change_pct;
+      var st = "";
+      if (c != null) {
+        var a = Math.min(Math.abs(c) / 3, 1) * 0.55 + 0.1;
+        st = "background:rgba(var(--" + (c >= 0 ? "up" : "dn") + "-rgb)," + a.toFixed(2) + ")";
+      }
+      sec.appendChild(h("div", { class: "h", style: st, title: s[0] + (q && q.stale ? " (stale)" : "") }, [
+        h("div", { class: "n", text: s[1] }),
+        h("div", { class: "p " + (c == null ? "na" : sign(c)), text: c == null ? "n/a" : (c > 0 ? "+" : "") + num(c, 2) + "%" })]));
     });
   }
 
-  function vixLabel(v) {
-    if (v < 15) return ["Calm", "calm"];
-    if (v <= 20) return ["Normal", "normal"];
-    if (v <= 30) return ["Nervous", "nervous"];
-    return ["Panic", "panic"];
+  function vixChip(q) {
+    var v = q.price, l = v < 15 ? ["Calm", "calm"] : v <= 20 ? ["Normal", ""] : v <= 30 ? ["Nervous", "nervous"] : ["Panic", "panic"];
+    return h("span", { class: "chip " + l[1], text: l[0] });
   }
 
   function renderRisk() {
-    var g = $("risk-grid"); g.textContent = "";
-    var q = (window.MKT.quotes || {})["^VIX"];
-    var extra = null;
-    if (q && q.price != null) { var l = vixLabel(q.price); extra = h("div", { class: "note" }, [h("span", { class: "pill " + l[1], text: l[0] }), " under 15 calm · 15-20 normal · 20-30 nervous · 30+ panic"]); }
-    g.appendChild(quoteTile("^VIX", { dec: 2, extra: extra }));
-    g.appendChild(quoteTile("CL=F", { dec: 2, prefix: "$" }));
-    g.appendChild(quoteTile("GC=F", { dec: 2, prefix: "$" }));
+    var g = clear("risk-grid");
+    g.appendChild(quoteTile("^VIX", "VIX", { chip: vixChip }));
+    g.appendChild(quoteTile("GC=F", "Gold", { prefix: "$" }));
   }
 
   function renderRates() {
-    var g = $("rates-grid"); g.textContent = "";
-    g.appendChild(fredTile("DGS2", "2Y Treasury", { suffix: "%", daily: true }));
-    g.appendChild(fredTile("DGS10", "10Y Treasury", { suffix: "%", daily: true }));
-    var s = fredVal("T10Y2Y");
-    if (!s || s.value == null) {
-      g.appendChild(fredTile("T10Y2Y", "2s10s spread", {}));
-    } else {
+    var g = clear("rates-grid");
+    g.appendChild(fredTile("DGS2", "2Y", { suffix: "%", kind: "daily" }));
+    g.appendChild(fredTile("DGS10", "10Y", { suffix: "%", kind: "daily" }));
+    var s = fred("T10Y2Y");
+    if (!s || s.value == null) g.appendChild(naTile("2s10s", s));
+    else {
       var bps = Math.round(s.value * 100), inv = s.value < 0;
-      var kids = [h("div", { class: "lbl" }, [h("span", { text: "2s10s spread" })]),
-        h("div", { class: "val " + (inv ? "down" : ""), text: (bps > 0 ? "+" : "") + bps + " bps" }),
-        h("div", { class: "note" }, [inv ? h("span", { class: "pill inv", text: "INVERTED" }) : h("span", { class: "pill normal", text: "Normal (positive)" }), stale(s)]),
-        h("div", { class: "note", text: "As of " + fmtDate(s.obs_date) })];
-      g.appendChild(h("div", { class: "card tile", style: inv ? "border-color:var(--down)" : "" }, kids));
+      g.appendChild(tile("2s10s", (bps > 0 ? "+" : "") + bps + " bps", null, md(s.obs_date),
+        { inv: inv, vcls: inv ? "dn" : "", stale: staleChip(s), chip: inv ? h("span", { class: "chip inv", text: "inverted" }) : null }));
     }
-    g.appendChild(fredTile("DFF", "Fed funds (effective)", { suffix: "%", daily: true }));
-    g.appendChild(fredTile("MORTGAGE30US", "30Y mortgage rate", { suffix: "%", weekly: true }));
-  }
-
-  function chart(points) {
-    var W = 800, H = 170, pl = 8, pr = 44, pt = 10, pb = 20;
-    var vals = points.map(function (p) { return p[1]; });
-    var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals), pad = (max - min) * 0.08 || 0.01;
-    min -= pad; max += pad;
-    var x = function (i) { return pl + (W - pl - pr) * i / (points.length - 1); };
-    var y = function (v) { return pt + (H - pt - pb) * (1 - (v - min) / (max - min)); };
-    var d = points.map(function (p, i) { return (i ? "L" : "M") + x(i).toFixed(1) + " " + y(p[1]).toFixed(1); }).join(" ");
-    var ns = "http://www.w3.org/2000/svg";
-    var svg = document.createElementNS(ns, "svg");
-    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.setAttribute("class", "chart"); svg.setAttribute("preserveAspectRatio", "none");
-    svg.setAttribute("role", "img"); svg.setAttribute("aria-label", "XLY divided by XLP, six months");
-    function add(tag, attrs, text) { var e = document.createElementNS(ns, tag); Object.keys(attrs).forEach(function (k) { e.setAttribute(k, attrs[k]); }); if (text) e.textContent = text; svg.appendChild(e); return e; }
-    for (var i = 0; i < 4; i++) {
-      var v = min + (max - min) * i / 3;
-      add("line", { x1: pl, x2: W - pr, y1: y(v), y2: y(v) });
-      add("text", { x: W - pr + 4, y: y(v) + 4 }, v.toFixed(3));
-    }
-    add("path", { class: "a", d: d + " L" + x(points.length - 1) + " " + (H - pb) + " L" + x(0) + " " + (H - pb) + " Z" });
-    add("path", { class: "l", d: d, "vector-effect": "non-scaling-stroke" });
-    add("text", { x: pl, y: H - 4 }, fmtDate(points[0][0]));
-    add("text", { x: W - pr, y: H - 4, "text-anchor": "end" }, fmtDate(points[points.length - 1][0]));
-    return svg;
+    g.appendChild(fredTile("DFF", "Fed funds", { suffix: "%", kind: "daily" }));
+    g.appendChild(fredTile("MORTGAGE30US", "30Y mortgage", { suffix: "%", kind: "weekly" }));
   }
 
   function renderConsumer() {
-    var r = window.MKT.ratio || {}, card = $("ratio-card"); card.textContent = "";
-    if (!r.points || !r.points.length) {
-      card.appendChild(h("div", { class: "na", text: "XLY/XLP ratio: no data yet" }));
-    } else {
-      card.appendChild(h("div", { class: "chart-head" }, [
-        h("span", {}, [h("b", { text: "XLY / XLP ratio  " }), h("span", { text: num(r.value, 3) }), stale(r)]),
-        h("span", { class: cls(r.six_month_change_pct), text: pct(r.six_month_change_pct, 1) + " over 6 months  ·  " + pct(r.change_pct) + " today" }),
-        h("span", { class: "fine", text: "Rising = discretionary outperforming staples (risk-on consumer)" })]));
-      card.appendChild(chart(r.points));
+    var g = clear("consumer-grid"), r = window.MKT.ratio || {};
+    if (!r.mood) g.appendChild(naTile("Consumer mood", r));
+    else g.appendChild(tile("Consumer mood", r.mood, { text: "XLY/XLP " + (r.month_change_pct > 0 ? "+" : "") + num(r.month_change_pct, 1) + "%", dir: r.month_change_pct },
+      "1M \u00b7 " + md(r.as_of), { vcls: r.mood === "Spending" ? "up" : "dn", stale: staleChip(r) }));
+    g.appendChild(quoteTile("XRT", "XRT"));
+    g.appendChild(fredTile("UMCSENT", "UMich sentiment", { dec: 1, kind: "monthly" }));
+    var rs = fred("RSAFS");
+    if (!rs || rs.mom_pct == null) g.appendChild(naTile("Retail sales MoM", rs));
+    else {
+      var p = rs.obs_date.split("-");
+      g.appendChild(tile("Retail sales MoM", (rs.mom_pct > 0 ? "+" : "") + num(rs.mom_pct, 2) + "%", null,
+        MON[+p[1] - 1] + (rs.released ? " · rel " + md(rs.released) : ""), { vcls: sign(rs.mom_pct), stale: staleChip(rs) }));
     }
-    var g = $("consumer-grid"); g.textContent = "";
-    g.appendChild(quoteTile("XRT", { dec: 2, ticker: "XRT" }));
-    g.appendChild(fredTile("UMCSENT", "UMich consumer sentiment", { dec: 1 }));
-    g.appendChild(fredTile("RSAFS", "Retail sales (MoM)", { mom: true }));
-    g.appendChild(fredTile("UNRATE", "Unemployment rate", { suffix: "%", dec: 1 }));
-    g.appendChild(fredTile("PSAVERT", "Personal savings rate", { suffix: "%", dec: 1 }));
-    g.appendChild(fredTile("GASREGW", "Avg US gas price (regular)", { prefix: "$", dec: 3, weekly: true }));
-    g.appendChild(fredTile("DRCCLACBS", "Credit card delinquency rate", { suffix: "%", dec: 2, quarterly: true }));
-  }
-
-  function renderWatch() {
-    var t = $("watch-table"); t.textContent = "";
-    t.appendChild(h("thead", {}, [h("tr", {}, [h("th", { text: "Ticker" }), h("th", { text: "Price" }), h("th", { text: "Day %" })])]));
-    var tb = h("tbody");
-    (window.MKT.watchlist || []).forEach(function (s) {
-      var q = (window.MKT.quotes || {})[s];
-      var first = h("td", {}, [h("b", { text: s }), q && q.name ? h("span", { class: "nm", text: q.name }) : null]);
-      if (!q || q.price == null) {
-        tb.appendChild(h("tr", {}, [first, h("td", { class: "na", text: "n/a" }), h("td", {}, [stale(q) || h("span", { class: "na", text: "no data" })])]));
-      } else {
-        tb.appendChild(h("tr", {}, [first, h("td", { text: "$" + num(q.price, 2) }), h("td", { class: cls(q.change_pct) }, [pct(q.change_pct), stale(q)])]));
-      }
-    });
-    t.appendChild(tb);
+    g.appendChild(fredTile("UNRATE", "Unemployment", { suffix: "%", dec: 1, kind: "monthly" }));
+    g.appendChild(fredTile("PSAVERT", "Savings rate", { suffix: "%", dec: 1, kind: "monthly" }));
+    g.appendChild(fredTile("GASREGW", "Gas price", { prefix: "$", dec: 3, kind: "weekly" }));
+    g.appendChild(fredTile("DRCCLACBS", "Card delinquency", { suffix: "%", dec: 2, kind: "quarterly" }));
   }
 
   function renderHeadlines() {
-    var box = $("headline-list"); box.textContent = "";
-    var hd = (window.NEWS || {}).headlines;
-    if (!hd || !hd.items || !hd.items.length) { box.appendChild(h("div", { class: "na", text: "No headlines yet." })); return; }
-    var ul = h("ul", { class: "hl" });
+    var box = clear("headline-list"), hd = (window.NEWS || {}).headlines;
+    if (!hd || !hd.items || !hd.items.length) { box.appendChild(h("div", { class: "na", text: "No headlines" })); return; }
+    var ul = h("ul", { class: "news" });
     hd.items.forEach(function (it) {
-      ul.appendChild(h("li", {}, [link(it.title, it.link), h("div", { class: "meta", text: it.published ? fmtET(it.published) : "" })]));
+      ul.appendChild(h("li", {}, [h("a", { href: safeUrl(it.link), target: "_blank", rel: "noopener noreferrer", text: it.title })]));
     });
     box.appendChild(ul);
-    box.appendChild(h("div", { class: "fine" }, [(hd.source || "") + " · headlines and links only", stale(hd)]));
+    if (hd.stale) box.appendChild(h("div", { class: "d" }, [staleChip(hd)]));
   }
 
   // ---------- deals ----------
   function renderDeals() {
-    var root = $("deal-list"); root.textContent = "";
-    var deals = (window.DEALS || {}).deals || [];
-    deals.forEach(function (d) {
+    var root = clear("deal-list"), D = window.DEALS || {};
+    $("deals-meta").textContent = D.last_reviewed ? "reviewed " + md(D.last_reviewed) : "";
+    (D.deals || []).forEach(function (d) {
       var closed = d.status_tag === "Closed";
-      var head = h("div", { class: "deal-head" }, [
-        h("h3", { text: d.name }),
-        h("span", { class: "tag" + (closed ? " closed" : " pending"), text: closed ? "Closed" + (d.closed_date ? " " + fmtDate(d.closed_date) : "") : d.status_tag }),
-        h("span", { class: "tag", text: d.tag })]);
-      var body = h("div", { class: "deal-body" });
+      var card = h("div", { class: "deal" });
+      card.appendChild(h("div", { class: "dh" }, [h("b", { text: d.name }),
+        h("span", { class: "badge" + (closed ? " closed" : ""), text: closed ? "Closed" : "Pending" })]));
+      card.appendChild(h("div", { class: "sum", text: d.summary || "" }));
+      var tb = h("table", { class: "terms" });
+      (d.terms || []).forEach(function (t) { tb.appendChild(h("tr", {}, [h("td", { text: t[0] }), h("td", { text: t[1] })])); });
+      card.appendChild(tb);
 
-      body.appendChild(h("h4", { text: "Deal terms" }));
-      var dl = h("dl", { class: "facts" });
-      (d.facts || []).forEach(function (f) {
-        dl.appendChild(h("dt", { text: f.label }));
-        var ul = h("ul");
-        (f.items || []).forEach(function (it) {
-          ul.appendChild(h("li", {}, [it.text, it.badge ? h("span", { class: "badge" + (it.badge === "Official" ? " official" : ""), text: it.badge }) : null]));
-        });
-        var dd = h("dd", {}, [ul]);
-        if (f.sources && f.sources.length) {
-          var s = h("div", { class: "src" }, ["Source: "]);
-          f.sources.forEach(function (x, i) { if (i) s.appendChild(document.createTextNode(" · ")); s.appendChild(link(x.label, x.url)); });
-          dd.appendChild(s);
-        }
-        dl.appendChild(dd);
+      var ups = (d.updates || []).filter(function (u) { return !u.upcoming; })
+        .sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3);
+      var ul = h("ul", { class: "upd" });
+      ups.forEach(function (u) {
+        ul.appendChild(h("li", { title: u.title }, [h("span", { class: "dt", text: u.approx ? "~" + MON[+u.date.split("-")[1] - 1] : md(u.date) }), u.title]));
       });
-      body.appendChild(dl);
+      card.appendChild(ul);
 
-      body.appendChild(h("h4", { text: "Updates" }));
-      var tl = h("ul", { class: "tl" });
-      (d.updates || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; }).forEach(function (u) {
-        tl.appendChild(h("li", { class: u.upcoming ? "up" : "" }, [
-          h("div", { class: "d", text: (u.approx ? "~" : "") + fmtDate(u.date) + (u.upcoming ? "  ·  UPCOMING" : "") }),
-          h("div", {}, [h("b", { text: u.title })]),
-          u.detail ? h("div", { text: u.detail }) : null,
-          u.source_url ? h("div", { class: "src" }, ["Source: ", link(u.source_label || "link", u.source_url)]) : null]));
-      });
-      body.appendChild(tl);
-
-      body.appendChild(h("h4", { text: "Latest news (auto-refreshed)" }));
-      var n = ((window.NEWS || {}).deals || {})[d.id];
-      var nl = h("ul", { class: "news" });
-      if (n && n.items && n.items.length) {
-        n.items.forEach(function (it) {
-          nl.appendChild(h("li", {}, [link(it.title, it.link), h("div", { class: "meta" }, [[it.source, it.published ? fmtDate(it.published) : ""].filter(Boolean).join(" · "), stale(n)])]));
-        });
-      } else nl.appendChild(h("li", { class: "na", text: "No news yet." }));
-      body.appendChild(nl);
-
-      body.appendChild(h("h4", { text: "Test yourself (click to reveal)" }));
+      var qs = h("div", { class: "qs", hidden: "" });
       (d.questions || []).forEach(function (q) {
-        body.appendChild(h("details", { class: "q" }, [h("summary", { text: q.q }), h("div", { class: "ans", text: q.a })]));
+        qs.appendChild(h("details", { class: "q" }, [h("summary", { text: q.q }), h("p", { text: q.a })]));
       });
-
-      root.appendChild(h("div", { class: "card deal" }, [head, h("div", { class: "status" }, [h("b", { text: "Current status: " }), d.status]), body]));
+      var btn = h("button", { class: "ty", type: "button", text: "Test yourself", "aria-expanded": "false" });
+      btn.addEventListener("click", function () {
+        var open = qs.hasAttribute("hidden");
+        if (open) qs.removeAttribute("hidden"); else qs.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", String(open));
+        btn.textContent = open ? "Hide questions" : "Test yourself";
+        window.OPEN = window.OPEN || {}; window.OPEN[d.id] = open;
+      });
+      card.appendChild(btn);
+      card.appendChild(qs);
+      if (window.OPEN && window.OPEN[d.id]) btn.click();
+      root.appendChild(card);
     });
-    var lr = (window.DEALS || {}).last_reviewed;
-    if (lr) root.appendChild(h("p", { class: "fine", text: "Deal analysis last reviewed " + fmtDate(lr) + " (updated weekly by hand; headlines refresh automatically)." }));
   }
 
-  // ---------- boot ----------
   function renderStamp() {
-    var m = window.MKT || {}, el = $("stamp"); el.textContent = "";
+    var m = window.MKT || {}, el = clear("stamp");
     if (!m.updated) { el.textContent = "No data yet"; return; }
-    var all = [].concat(Object.keys(m.quotes || {}).map(function (k) { return m.quotes[k]; }), Object.keys(m.fred || {}).map(function (k) { return m.fred[k]; }));
+    var all = Object.keys(m.quotes || {}).map(function (k) { return m.quotes[k]; })
+      .concat(Object.keys(m.fred || {}).map(function (k) { return m.fred[k]; }));
     var n = all.filter(function (x) { return x && x.stale; }).length;
-    el.appendChild(document.createTextNode("Last updated: "));
+    el.appendChild(document.createTextNode("Updated "));
     el.appendChild(h("b", { text: fmtET(m.updated) }));
-    if (n) el.appendChild(h("div", {}, [h("span", { class: "stale", text: n + " stale" }), " some sources failed; showing last good values"]));
+    if (n) el.appendChild(h("span", { class: "chip stale", text: n + " stale" }));
   }
 
   function load() {
@@ -302,14 +221,11 @@
       getJSON("data/deals.json").catch(function () { return window.DEALS || {}; })
     ]).then(function (r) {
       window.MKT = r[0]; window.NEWS = r[1]; window.DEALS = r[2];
-      var open = {};
-      [].forEach.call(document.querySelectorAll("details.q[open] summary"), function (s) { open[s.textContent] = 1; });
-      renderStamp(); renderMarkets(); renderRisk(); renderRates(); renderConsumer(); renderWatch(); renderHeadlines(); renderDeals();
-      [].forEach.call(document.querySelectorAll("details.q"), function (d) { if (open[d.firstChild.textContent]) d.open = true; });
+      renderStamp(); renderMarkets(); renderRisk(); renderRates(); renderConsumer(); renderHeadlines(); renderDeals();
     });
   }
 
   load();
-  setInterval(load, 15 * 60 * 1000); // pinned tab: re-read the data files every 15 min
+  setInterval(load, 15 * 60 * 1000); // pinned tab: re-read data every 15 min
   document.addEventListener("visibilitychange", function () { if (!document.hidden) load(); });
 })();
