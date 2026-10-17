@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T06:54:25Z",
+ "updated": "2026-10-17T07:11:46Z",
  "sp500": {
   "dates": [
    "2025-10-16",
@@ -1018,7 +1018,7 @@
    7271.44
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:54:25Z"
+  "fetched_at": "2026-10-17T07:11:46Z"
  },
  "vix": {
   "dates": [
@@ -1530,7 +1530,7 @@
    19.99
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:54:25Z"
+  "fetched_at": "2026-10-17T07:11:46Z"
  },
  "sectors": {
   "XLC": {
@@ -1579,7 +1579,7 @@
   },
   "as_of": "2026-10-16",
   "stale": false,
-  "fetched_at": "2026-10-17T06:54:25Z"
+  "fetched_at": "2026-10-17T07:11:46Z"
  },
  "yield_curve": {
   "tenors": [
@@ -1615,7 +1615,7 @@
    4.64
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:54:28Z"
+  "fetched_at": "2026-10-17T07:11:48Z"
  },
  "fedfunds": {
   "dates": [
@@ -8942,7 +8942,7 @@
   ],
   "earliest_on_fred": "1954-07-01",
   "stale": false,
-  "fetched_at": "2026-10-17T06:54:28Z"
+  "fetched_at": "2026-10-17T07:11:49Z"
  },
  "consumer": {
   "umcsent": [
@@ -9038,6 +9038,6 @@
   "avg": 83.7,
   "avg_since": "1978",
   "stale": false,
-  "fetched_at": "2026-10-17T06:54:29Z"
+  "fetched_at": "2026-10-17T07:11:50Z"
  }
 }

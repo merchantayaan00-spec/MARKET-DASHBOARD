@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T06:54:25Z",
+ "updated": "2026-10-17T07:11:46Z",
  "quotes": {
   "^GSPC": {
    "symbol": "^GSPC",
@@ -16,7 +16,7 @@
     7659.4399
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:11Z"
+   "fetched_at": "2026-10-17T07:11:35Z"
   },
   "^DJI": {
    "symbol": "^DJI",
@@ -33,7 +33,7 @@
     52002.4102
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:12Z"
+   "fetched_at": "2026-10-17T07:11:36Z"
   },
   "XLC": {
    "symbol": "XLC",
@@ -50,7 +50,7 @@
     110.32
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:12Z"
+   "fetched_at": "2026-10-17T07:11:36Z"
   },
   "XLY": {
    "symbol": "XLY",
@@ -67,7 +67,7 @@
     112.46
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:13Z"
+   "fetched_at": "2026-10-17T07:11:36Z"
   },
   "XLP": {
    "symbol": "XLP",
@@ -84,7 +84,7 @@
     87.62
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:13Z"
+   "fetched_at": "2026-10-17T07:11:37Z"
   },
   "XLE": {
    "symbol": "XLE",
@@ -101,7 +101,7 @@
     68.24
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:14Z"
+   "fetched_at": "2026-10-17T07:11:37Z"
   },
   "XLF": {
    "symbol": "XLF",
@@ -118,7 +118,7 @@
     55.52
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:14Z"
+   "fetched_at": "2026-10-17T07:11:38Z"
   },
   "XLV": {
    "symbol": "XLV",
@@ -135,7 +135,7 @@
     176.71
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:15Z"
+   "fetched_at": "2026-10-17T07:11:38Z"
   },
   "XLI": {
    "symbol": "XLI",
@@ -152,7 +152,7 @@
     167.76
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:15Z"
+   "fetched_at": "2026-10-17T07:11:38Z"
   },
   "XLB": {
    "symbol": "XLB",
@@ -169,7 +169,7 @@
     50.92
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:16Z"
+   "fetched_at": "2026-10-17T07:11:39Z"
   },
   "XLRE": {
    "symbol": "XLRE",
@@ -186,7 +186,7 @@
     42.16
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:16Z"
+   "fetched_at": "2026-10-17T07:11:39Z"
   },
   "XLK": {
    "symbol": "XLK",
@@ -203,7 +203,7 @@
     183.47
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:17Z"
+   "fetched_at": "2026-10-17T07:11:40Z"
   },
   "XLU": {
    "symbol": "XLU",
@@ -220,7 +220,7 @@
     42.21
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:17Z"
+   "fetched_at": "2026-10-17T07:11:40Z"
   },
   "^VIX": {
    "symbol": "^VIX",
@@ -237,7 +237,7 @@
     19.99
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:18Z"
+   "fetched_at": "2026-10-17T07:11:40Z"
   },
   "GC=F": {
    "symbol": "GC=F",
@@ -254,7 +254,7 @@
     4181.1001
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:18Z"
+   "fetched_at": "2026-10-17T07:11:41Z"
   },
   "XRT": {
    "symbol": "XRT",
@@ -271,7 +271,7 @@
     87.02
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:19Z"
+   "fetched_at": "2026-10-17T07:11:41Z"
   }
  },
  "ratio": {
@@ -281,7 +281,7 @@
   "month_change_pct": -2.93,
   "mood": "Defensive",
   "stale": false,
-  "fetched_at": "2026-10-17T06:54:19Z"
+  "fetched_at": "2026-10-17T07:11:41Z"
  },
  "fred": {
   "DGS2": {
@@ -299,7 +299,7 @@
     4.77
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:19Z"
+   "fetched_at": "2026-10-17T07:11:42Z"
   },
   "DGS10": {
    "series": "DGS10",
@@ -316,7 +316,7 @@
     5.1
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:20Z"
+   "fetched_at": "2026-10-17T07:11:42Z"
   },
   "DFF": {
    "series": "DFF",
@@ -333,7 +333,7 @@
     3.88
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:20Z"
+   "fetched_at": "2026-10-17T07:11:42Z"
   },
   "MORTGAGE30US": {
    "series": "MORTGAGE30US",
@@ -350,7 +350,7 @@
     7.4
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:21Z"
+   "fetched_at": "2026-10-17T07:11:43Z"
   },
   "UMCSENT": {
    "series": "UMCSENT",
@@ -367,7 +367,7 @@
     51.7
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:22Z"
+   "fetched_at": "2026-10-17T07:11:43Z"
   },
   "RSAFS": {
    "series": "RSAFS",
@@ -386,7 +386,7 @@
    "mom_pct": 0.77,
    "prior_mom_pct": 1.29,
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:23Z"
+   "fetched_at": "2026-10-17T07:11:44Z"
   },
   "UNRATE": {
    "series": "UNRATE",
@@ -403,7 +403,7 @@
     4.2
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:23Z"
+   "fetched_at": "2026-10-17T07:11:44Z"
   },
   "PSAVERT": {
    "series": "PSAVERT",
@@ -420,7 +420,7 @@
     4.1
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:24Z"
+   "fetched_at": "2026-10-17T07:11:44Z"
   },
   "GASREGW": {
    "series": "GASREGW",
@@ -437,7 +437,7 @@
     4.331
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:25Z"
+   "fetched_at": "2026-10-17T07:11:45Z"
   },
   "DRCCLACBS": {
    "series": "DRCCLACBS",
@@ -454,7 +454,7 @@
     2.85
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:54:25Z"
+   "fetched_at": "2026-10-17T07:11:46Z"
   }
  }
 }
