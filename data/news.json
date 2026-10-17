@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T06:02:49Z",
+ "updated": "2026-10-17T06:15:08Z",
  "headlines": {
   "source": "WSJ Markets (public RSS)",
   "feed": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
@@ -11,20 +11,32 @@
     "source": null
    },
    {
-    "title": "Who Gets the Bulk of Grandma’s Estate? Here’s How to Solve the ‘Cousin Problem’",
-    "link": "https://www.wsj.com/personal-finance/cousin-problem-family-estate-assets-266b30e4?mod=rss_markets_main",
-    "published": "2026-10-17T01:00:00Z",
-    "source": null
-   },
-   {
     "title": "Blue Owl Founders Promised a Comeback. The Company’s Share Price Hasn’t Budged.",
     "link": "https://www.wsj.com/finance/blue-owl-stock-price-private-credit-ca6673d9?mod=rss_markets_main",
     "published": "2026-10-17T00:00:00Z",
     "source": null
+   },
+   {
+    "title": "New Cracks in AI Trade Push Wall Street to Worst Week Since June",
+    "link": "https://www.wsj.com/finance/stocks/us-death-penalty-execution-rates-41ea3427?mod=rss_markets_main",
+    "published": "2026-10-16T22:43:00Z",
+    "source": null
+   },
+   {
+    "title": "U.S. Stocks Fall as Credit Fears Haunt Tech Sector",
+    "link": "https://www.wsj.com/finance/investing/u-s-stocks-fall-as-credit-fears-haunt-tech-sector-db50c887?mod=rss_markets_main",
+    "published": "2026-10-16T21:39:00Z",
+    "source": null
+   },
+   {
+    "title": "Auto & Transport Roundup: Market Talk",
+    "link": "https://www.wsj.com/business/auto-transport-roundup-market-talk-a9b213cd?mod=rss_markets_main",
+    "published": "2026-10-16T21:13:00Z",
+    "source": null
    }
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T06:02:49Z"
+  "fetched_at": "2026-10-17T06:15:08Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -49,7 +61,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:02:50Z"
+   "fetched_at": "2026-10-17T06:15:09Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -73,7 +85,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T06:02:50Z"
+   "fetched_at": "2026-10-17T06:15:09Z"
   }
  }
 }
