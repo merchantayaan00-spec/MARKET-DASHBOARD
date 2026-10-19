@@ -1,41 +1,41 @@
 {
- "updated": "2026-10-17T07:11:50Z",
+ "updated": "2026-10-19T20:56:11Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "A Popular Tax-Saving Trade is Juicing Wall Street’s Borrowing Binge",
-    "link": "https://www.wsj.com/finance/investing/a-popular-tax-minimizing-trade-is-juicing-wall-streets-borrowing-binge-6d81eac2?mod=rss_markets_main",
-    "published": "2026-10-17T02:06:00Z",
+    "title": "U.S. Stocks Mostly Higher as AI Credit Worries Abate",
+    "link": "https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008?mod=rss_markets_main",
+    "published": "2026-10-19T20:21:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Blue Owl Founders Promised a Comeback. The Company’s Share Price Hasn’t Budged.",
-    "link": "https://www.wsj.com/finance/blue-owl-stock-price-private-credit-ca6673d9?mod=rss_markets_main",
-    "published": "2026-10-17T00:00:00Z",
+    "title": "Elon Musk Promises to Give Out SpaceX Shares to U.S. Children",
+    "link": "https://www.wsj.com/finance/stocks/elon-musk-promises-to-give-out-spacex-shares-to-u-s-children-69ffe0b5?mod=rss_markets_main",
+    "published": "2026-10-19T20:18:00Z",
     "source": "WSJ"
    },
    {
-    "title": "New Cracks in AI Trade Push Wall Street to Worst Week Since June",
-    "link": "https://www.wsj.com/finance/stocks/us-death-penalty-execution-rates-41ea3427?mod=rss_markets_main",
-    "published": "2026-10-16T22:43:00Z",
+    "title": "U.S. Treasury Yields Turn Higher With Oil; French Bond Yields Rise on Protests",
+    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-fall-in-asian-trade-e5171539?mod=rss_markets_main",
+    "published": "2026-10-19T19:27:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Fall as Credit Fears Haunt Tech Sector",
-    "link": "https://www.wsj.com/finance/investing/u-s-stocks-fall-as-credit-fears-haunt-tech-sector-db50c887?mod=rss_markets_main",
-    "published": "2026-10-16T21:39:00Z",
+    "title": "See What 71 Economists Told Us About Where Growth and Yields Are Headed",
+    "link": "https://www.wsj.com/finance/see-what-71-economists-told-us-about-where-growth-and-yields-are-headed-8977cb44?mod=rss_markets_main",
+    "published": "2026-10-19T15:44:00Z",
     "source": "WSJ"
    },
    {
-    "title": "A Volatile Week Ends with Tech Stocks Down, Oil Up",
-    "link": "https://www.wsj.com/finance/stocks/a-volatile-week-ends-with-tech-stocks-down-oil-up-5f286ce3?mod=rss_markets_main",
-    "published": "2026-10-16T20:35:00Z",
+    "title": "Netflix Stock Might be a Sleeper Hit",
+    "link": "https://www.wsj.com/finance/stocks/netflix-stock-might-be-a-sleeper-hit-fd4bd2b1?mod=rss_markets_main",
+    "published": "2026-10-19T10:33:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-10-17T07:11:50Z"
+  "fetched_at": "2026-10-19T20:56:11Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -60,14 +60,14 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T07:11:50Z"
+   "fetched_at": "2026-10-19T20:56:12Z"
   },
   "bain-gong-cha": {
    "items": [
     {
      "title": "Gong Cha looks to further global growth as profits rise",
      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMFNLN0R4U2pjb3RfQmRwREVmU3R0UWVZVWJvNkJNV1RRWHNoZmNNOTZYMmFZVDNSSnNyQmMtbElzRXo0bEtCVVVGazFVQXBWSW91OTE3eGRyNEdzeVFoRkd1RE8xd3JSUmg3VUhIT1B5YWYzZ2l2NmplMmJrN3hUR2kwbGZsRTA3d3hYWERWVjZnRFNicy1wRGNiejlWRmNzTy01aFZ2eDM2Zw?oc=5",
-     "published": "2026-10-09T14:21:57Z",
+     "published": "2026-10-09T07:00:00Z",
      "source": "MCA Insight"
     },
     {
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-17T07:11:51Z"
+   "fetched_at": "2026-10-19T20:56:12Z"
   }
  }
 }
