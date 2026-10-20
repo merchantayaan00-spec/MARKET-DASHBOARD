@@ -1,41 +1,41 @@
 {
- "updated": "2026-10-19T20:56:11Z",
+ "updated": "2026-10-20T20:55:22Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "U.S. Stocks Mostly Higher as AI Credit Worries Abate",
-    "link": "https://www.wsj.com/finance/investing/u-s-stocks-mostly-higher-as-ai-credit-worries-abate-600bf008?mod=rss_markets_main",
-    "published": "2026-10-19T20:21:00Z",
+    "title": "U.S. Stocks Mixed as Strong Earnings Offset AI Credit Fears",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-as-strong-earnings-offset-ai-credit-fears-d55414c3?mod=rss_markets_main",
+    "published": "2026-10-20T20:21:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Elon Musk Promises to Give Out SpaceX Shares to U.S. Children",
-    "link": "https://www.wsj.com/finance/stocks/elon-musk-promises-to-give-out-spacex-shares-to-u-s-children-69ffe0b5?mod=rss_markets_main",
-    "published": "2026-10-19T20:18:00Z",
+    "title": "Stocks Make a U-Turn on Hopes of U.S.-Iran Diplomacy",
+    "link": "https://www.wsj.com/finance/stocks/stocks-make-a-u-turn-on-hopes-of-u-s-iran-diplomacy-39fb739b?mod=rss_markets_main",
+    "published": "2026-10-20T20:18:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Treasury Yields Turn Higher With Oil; French Bond Yields Rise on Protests",
-    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-fall-in-asian-trade-e5171539?mod=rss_markets_main",
-    "published": "2026-10-19T19:27:00Z",
+    "title": "Treasury Yields Fall on String of Weak Housing Data",
+    "link": "https://www.wsj.com/finance/french-government-bonds-recover-as-yields-on-eurozone-u-s-peers-fall-cf473ce6?mod=rss_markets_main",
+    "published": "2026-10-20T18:51:00Z",
     "source": "WSJ"
    },
    {
-    "title": "See What 71 Economists Told Us About Where Growth and Yields Are Headed",
-    "link": "https://www.wsj.com/finance/see-what-71-economists-told-us-about-where-growth-and-yields-are-headed-8977cb44?mod=rss_markets_main",
-    "published": "2026-10-19T15:44:00Z",
+    "title": "U.S. Stocks Turn Higher, Setting Aside AI Jitters",
+    "link": "https://www.wsj.com/finance/stocks/ai-selloff-returns-oil-tops-110-a-barrel-b8400c70?mod=rss_markets_main",
+    "published": "2026-10-20T16:23:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Netflix Stock Might be a Sleeper Hit",
-    "link": "https://www.wsj.com/finance/stocks/netflix-stock-might-be-a-sleeper-hit-fd4bd2b1?mod=rss_markets_main",
-    "published": "2026-10-19T10:33:00Z",
+    "title": "Stocks Face Headwind That Ended Other Bull Markets",
+    "link": "https://www.wsj.com/finance/stocks/stocks-face-headwind-that-ended-other-bull-markets-10b9b7b0?mod=rss_markets_main",
+    "published": "2026-10-20T10:44:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-10-19T20:56:11Z"
+  "fetched_at": "2026-10-20T20:55:22Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -53,14 +53,14 @@
      "source": "Yahoo Finance"
     },
     {
-     "title": "Cramer, Warren oppose $45B food merger",
-     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOX21IT3hhQVJqSnFTZkwyTmY0bTNVZWxvY0dnSFdDUXdnNHNFT2x5Z1lvMkdqRjNXY3NiVGw1c2RWN0cyNTczUE16MlFGUFJINWJUcDV6UGZ3OE5XaFo2YTBxdThWbFZIODh0QkZUSFEtY0VobGhDTlVyZjdJNTJMS05NMDN2LW4wS054Z2lQNnRDV0RCNEs0ZkF6NHY?oc=5",
-     "published": "2026-10-16T15:56:00Z",
-     "source": "MoneyWise.com"
+     "title": "‘Big Condiment’ warning gets Warren roasted online over progressive's economic priorities",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOOHphUGRWQTJaYUZRX3pyUkI0ZklRdGx4STdrSXNNY0hKOWtTMHctcUdNNFJvTHJnekRwTkZHNDQ0aFVvRmh1WTNVa0NQRmlaTmg4Q2tXR3RrUVZuSzU2MEk5N0ZGbGNZNGlSVV9SRlZjWDNnbEU5MnBqZ2RfWVBGczJIYjg0dDlVeVEwQTQzLTRhTDBYR2RRVVBPZWtTbjJ5OW5SQjltZnBfMG9LNU9pdEY5RFluV2w5Yks0?oc=5",
+     "published": "2026-10-15T15:28:13Z",
+     "source": "Fox News"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-19T20:56:12Z"
+   "fetched_at": "2026-10-20T20:55:22Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-19T20:56:12Z"
+   "fetched_at": "2026-10-20T20:55:23Z"
   }
  }
 }
