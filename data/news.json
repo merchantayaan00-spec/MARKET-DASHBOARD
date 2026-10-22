@@ -1,45 +1,51 @@
 {
- "updated": "2026-10-21T20:56:00Z",
+ "updated": "2026-10-22T20:56:32Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "U.S. Stocks Rise as SpaceX Spurs AI Relief Rally",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-rise-as-spacex-spurs-ai-relief-rally-9d3763e7?mod=rss_markets_main",
-    "published": "2026-10-21T20:41:00Z",
+    "title": "Meta’s Hunt for AI Capital Strikes a Raw Nerve on Wall Street",
+    "link": "https://www.wsj.com/finance/stocks/metas-hunt-for-ai-capital-strikes-a-raw-nerve-on-wall-street-e2de1601?mod=rss_markets_main",
+    "published": "2026-10-22T20:55:00Z",
     "source": "WSJ"
    },
    {
-    "title": "French Bond Yields Hit Multiyear Highs, U.S. Treasury Yields Edge Higher",
-    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-edge-higher-in-asian-trade-0c544484?mod=rss_markets_main",
-    "published": "2026-10-21T20:30:00Z",
+    "title": "U.S. Tech Stocks Drop on AI Spending Concerns",
+    "link": "https://www.wsj.com/finance/stocks/u-s-tech-stocks-drop-on-ai-spending-concerns-05400b55?mod=rss_markets_main",
+    "published": "2026-10-22T20:45:00Z",
     "source": "WSJ"
    },
    {
-    "title": "SpaceX and Tesla Consider Merger",
-    "link": "https://www.wsj.com/finance/stocks/spacex-and-tesla-consider-merger-9a38832d?mod=rss_markets_main",
-    "published": "2026-10-21T20:26:00Z",
+    "title": "Tech Stocks Fall on AI Concerns",
+    "link": "https://www.wsj.com/finance/investing/tech-stocks-fall-on-ai-concerns-eea49847?mod=rss_markets_main",
+    "published": "2026-10-22T20:26:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Rise as SpaceX Earnings Boost AI Trade",
-    "link": "https://www.wsj.com/finance/stocks/nasdaq-futures-higher-after-asian-ai-rally-5d6a76ef?mod=rss_markets_main",
-    "published": "2026-10-21T18:30:00Z",
+    "title": "U.S. 10-Year Treasury Yield Falls Under 5% as French Turmoil Fuels Flight for Safety",
+    "link": "https://www.wsj.com/finance/investing/french-government-bond-yields-rise-spread-widens-as-treasury-yields-fall-e67fc4cd?mod=rss_markets_main",
+    "published": "2026-10-22T20:15:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Housing Looks Awful. These Housing-Related Stocks Don’t.",
-    "link": "https://www.wsj.com/finance/stocks/housing-looks-awful-these-housing-related-stocks-dont-bcc009ae?mod=rss_markets_main",
-    "published": "2026-10-21T10:28:00Z",
+    "title": "U.S. Stocks Fall as Tech Selloff Deepens",
+    "link": "https://www.wsj.com/finance/investing/ai-stocks-slide-after-earnings-disappoint-french-bonds-tumble-and-oil-tops-112-734e47a7?mod=rss_markets_main",
+    "published": "2026-10-22T18:42:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-10-21T20:56:00Z"
+  "fetched_at": "2026-10-22T20:56:32Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
+    {
+     "title": "US-based McCormick announces plan to acquire at least 76.55% stake in Unilever Pakistan Foods",
+     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORU93dDJ3YkRua243UnFSZWlKZWpGY0hYNkMtOEZVZGFia0Z4Zmd0RFNibG9aTW84QTRNazQ1bWs0S29XQWZjY2Zza0hya2xoaUVNeUJINWVuTExBS2U3QVlTVS1XdEtTdjJ2SlBBRlZEQ1NnNGg0YXluWkpQVWtvWmZIbWJWMlVxaUhpbFdZRG9sY0h0YzRZOUpPdFppU1NsakIwQ09NX0R2Yld3SzVralhjUDdxTWNrT3NPUnlDSXZnN3lDa1YxT0Y4cTlkdw?oc=5",
+     "published": "2026-10-22T11:08:07Z",
+     "source": "Investify"
+    },
     {
      "title": "McCormick moves to take control of Unilever Pakistan Foods in $45B global deal",
      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQT01VNTNndEpsT1hrTUt5OGl6Q3dqdnNILWlGV25Sd281STRPcUNVU195Y3N5bWRMV0NzUVpwZFVfeHYxVkxlSGpOdm4zMDdQREZ1LTVmaFZLWFR0bDBIUjZMcWZUeWlxLVhqVmRPdDM0NE50T09jNWwyRmdJeWxmWlc4RzZ4VlZpeVNBYlZMWnNIbnFHaTNkQWpJN2RqZEduby1BR0NwNTBvRE4ySExseA?oc=5",
@@ -48,43 +54,37 @@
     },
     {
      "title": "US spice maker McCormick announces plan to acquire majority stake in Unilever Pakistan Foods",
-     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORURGVlhnVl84bnpNaWlUak1xeHU2WF9ZNTVfdkdxNEFXRVY1NWxOeGZ0SFBQUUQ0YkVmMUZVOHRFU2laYUhLSHZhMjVtaDJHVWlxM0kzUFY1VjhVcXB5TDlmU0lreHF5c2lnMUZaY194M3ZVUEU4UVd5RmlwUk5PQnZYRjRnN1pieVVqWlBwTnB4TWg5SkNWUkR2bjRpbXpGcXlsRzFSTkQwdWR5T1l1OUhZT3YtRWFsNXM2Wnd1UWF3aFh4UmtqRkt2ZUxTdw?oc=5",
-     "published": "2026-10-21T07:03:10Z",
-     "source": "Investify"
-    },
-    {
-     "title": "McCormick targets majority control of Unilever Pakistan Foods",
-     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYzE3Y01LLVpvQm40LUNydU5Cd0tyZnVNN2k1MWVqREcxbEx4aEtwd1NRazhvNktlRWI0UC1MQnJqWEcxYnkzNmFMWW9UdTFyNk5CN1lZeHl1SmdMcS1zMV93ZEFaQi1FSjNYWkxhYlI5UUNDbUhWWXlOOGtCMFk2d04tVTZ4RVQyTlZNRjdlaXBzR1U0TE5FQg?oc=5",
-     "published": "2026-10-21T06:59:00Z",
-     "source": "Mettis Global"
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcTdZZFZTWDBPSkxzNWFLcXVzSERzTUlLYVh3dG9xejhfT1FpeU1iZF9IYTVqRFZGM25fN2FpQkNfUjJjeFF1Q2d4bGFUeFM0VUZtLWdCZ3hEbC15aTl2T2ZkRlEyM21hek5TY0JRQzQxNnRJUFA4SkZCS08xal9vUjZfaDJ2UHI2Zjg2ZU9IMmtOMmZ4VG5OT0Zfbld2ME1ZeG9KTnNSRVVGYk8tSXdUSmFabVgxNnJ2RFpmMDhUZXRnS2FkNVFaR0NSaHLSAVZBVV95cUxQeWFsY244LXJvZ2lVTzNMckJFZy1mZG9mNjk3SmhpbnplNmJnVlY4eTNDX0FHbmR4RnJOUFNCS29vV0l0clJ2VFpSdDVndzlrVnJtSXFXZw?oc=5",
+     "published": "2026-10-21T06:15:41Z",
+     "source": "Business Recorder"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-21T20:56:00Z"
+   "fetched_at": "2026-10-22T20:56:32Z"
   },
   "bain-gong-cha": {
    "items": [
     {
-     "title": "Gong Cha looks to further global growth as profits rise",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMFNLN0R4U2pjb3RfQmRwREVmU3R0UWVZVWJvNkJNV1RRWHNoZmNNOTZYMmFZVDNSSnNyQmMtbElzRXo0bEtCVVVGazFVQXBWSW91OTE3eGRyNEdzeVFoRkd1RE8xd3JSUmg3VUhIT1B5YWYzZ2l2NmplMmJrN3hUR2kwbGZsRTA3d3hYWERWVjZnRFNicy1wRGNiejlWRmNzTy01aFZ2eDM2Zw?oc=5",
-     "published": "2026-10-09T07:00:00Z",
-     "source": "MCA Insight"
+     "title": "Gong cha bubble tea chain changing hands in deal between Boston PE firms",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQ19XQXNjcW01SmJSNnU3c3VmWjNaM3ljOEVabmp5VE83VXVlZTlVMmVuZUozMnJyWUYteXlOTUJ0Y0pqdlQ0S09RQS1GR245ZXpQaEk0TFJLdm1sLV9rN1Z3c0xKYXFxTnFaRFY3Wlg2bnFISHh0UjNLc2lnaEpJOU1qemdFYjRhdEFzVDlVemJSdEZnYld1TlN1VUxKbzRVQUlHX29LWEc?oc=5",
+     "published": "2026-08-25T07:00:00Z",
+     "source": "The Business Journals"
     },
     {
-     "title": "List of 76 Acquisitions by Bain Capital (Oct 2026)",
-     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZEc1cFQ3Q1hKd1NPWlk0bkNMQUwwZWluVExuZXN4czlSbFI4amtERXpyMDIwUlpoRWFic19MTmxuczlMc2NiR0xpR2taNkhTZG5ZcjR3cEhSX3hoanBoODlqYnVTdHp2RElqRWhsNUlSQllka2d4NTNEMld1MzlTMHdSVWkzQVBYTHdpMHdNOWZXSnViWDdtc3Q0WHdraVlYSG5mMEt1eE1lUlNF?oc=5",
-     "published": "2026-10-02T04:44:24Z",
-     "source": "Tracxn"
+     "title": "Partners Group Exits Gong cha as Bain Capital Takes Control of Bubble-Tea Chain",
+     "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOUFpjak1aU1Q5ZXVhSU1TZDRTd25hV0h5alhBYm1xdHJ2alRFRUNnYmttNmtDYXFiRmhnZW1ZdXE5cDQzMzMyVlVUX3JiNmthNTJJcFlrRWpxVFlKRWJDQi1GRmRQb3lsR1FMQ2dQV0RHd0o3Z0M4U3dHZkdIODdRRjVSNGNIZFRueUdLeHM1OW5vbXBaNmlxLWdxU3Npbjk2N0NrNzY0bUVCSHdQcDBXalAzSUF0MGFVQTU2RTNmbWdHdkxjd1UwVjU5THN5Tld5TmRnel9VdU16elZjRVJESDVITHZ1Zw?oc=5",
+     "published": "2026-08-25T07:00:00Z",
+     "source": "AD HOC NEWS"
     },
     {
-     "title": "Private equity keeps coming back for secondary deals in Korea’s restaurant chains",
-     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pT005OUhZZnJRVHJVRjVuU0VYaXZNN1dMNVBzcFBzQmZ1M2hubWxQbnZkS0pudjB4SnVFNm9hR21qWUpBY1N3dkh0d0VDWW5rV2NyRWl6X1dSc1Q0OHFmMk5LRU02UWxVUjdtWTh6ZW53Y28?oc=5",
-     "published": "2026-09-24T07:00:00Z",
-     "source": "KED Global"
+     "title": "Partners Group exits tea chain Gong Cha after Bain buyout",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxORW1NWFlkZ0RYOG5Zc3BsZDQ4SFQ4NkExNE9sSnlBQUJhYnpOQzZaNm5rdkRIZDZYMVdjeUpDUzdKVVJWZ0pfckhGQXU0d21yQ3pIcU14YmM3a1o0azlReGphRklvRGxvWElfSEJ5RER1TEdfVFpwYzN0Uk1NUV9Mcw?oc=5",
+     "published": "2026-08-24T07:00:00Z",
+     "source": "DealStreetAsia"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-21T20:56:01Z"
+   "fetched_at": "2026-10-22T20:56:33Z"
   }
  }
 }
