@@ -1,45 +1,51 @@
 {
- "updated": "2026-10-26T20:58:41Z",
+ "updated": "2026-10-27T20:58:16Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "U.S. Stocks Rise Ahead of Tech Earnings",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-rise-ahead-of-tech-earnings-d53bc5e5?mod=rss_markets_main",
-    "published": "2026-10-26T20:20:00Z",
+    "title": "U.S. Stocks Add to Gains Ahead of Earnings, Fed Statement",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-add-to-gains-ahead-of-earnings-fed-statement-d996e176?mod=rss_markets_main",
+    "published": "2026-10-27T20:45:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Treasury Yields Mixed as Markets Price In a Fed Hold",
-    "link": "https://www.wsj.com/finance/jgb-yields-higher-amid-concerns-about-higher-energy-prices-897f5458?mod=rss_markets_main",
-    "published": "2026-10-26T19:52:00Z",
+    "title": "Tech Stocks Power Higher, Oil Cools",
+    "link": "https://www.wsj.com/finance/stocks/tech-stocks-power-higher-oil-cools-724e6a63?mod=rss_markets_main",
+    "published": "2026-10-27T20:23:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Treasury Yields Little Changed, French Bonds Outperform",
-    "link": "https://www.wsj.com/economy/central-banking/treasury-yields-turn-slightly-higher-french-bonds-outperform-2fd1aaa0?mod=rss_markets_main",
-    "published": "2026-10-26T19:34:00Z",
+    "title": "Tech Stocks Add to Gains After Yesterday’s Anthropic Rally",
+    "link": "https://www.wsj.com/finance/stocks/stock-futures-steady-as-anthropic-rally-stalls-israel-election-in-focus-9c4f12ad?mod=rss_markets_main",
+    "published": "2026-10-27T18:29:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Tech Shares Rally After Anthropic Files for Historic IPO",
-    "link": "https://www.wsj.com/finance/investing/stock-futures-treasurys-steady-as-brazilian-assets-slide-402fb905?mod=rss_markets_main",
-    "published": "2026-10-26T18:53:00Z",
+    "title": "Broadcom CEO Intervened to Seal $63 Billion Anthropic Debt Deal",
+    "link": "https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f?mod=rss_markets_main",
+    "published": "2026-10-27T17:50:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Asian Stocks Decline as Appetite for Risky Assets Ebbs",
-    "link": "https://www.wsj.com/finance/stocks/asian-stocks-decline-as-appetite-for-risky-assets-ebbs-926087d6?mod=rss_markets_main",
-    "published": "2026-10-26T05:30:00Z",
+    "title": "General Motors Moving Stock Listing to Nasdaq From NYSE",
+    "link": "https://www.wsj.com/finance/stocks/general-motors-moving-stock-listing-to-nasdaq-from-nyse-fbc36f02?mod=rss_markets_main",
+    "published": "2026-10-27T14:54:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-10-26T20:58:41Z"
+  "fetched_at": "2026-10-27T20:58:16Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
+    {
+     "title": "Dutch Regulator Rejects Unilever's Sale of Unox Assets to Zwanenberg",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPc3M5TUh5SS1uSWU0eldsT2Y4MTZELTUwOXNNSE83eXBGYnhYb0EtMnBmWTZNa1RhQmZ2YkxvZmN3d0hWNHdhd0hYLS1HTTB6WlNHVmRRcUFSQnBGeVVpc1Y0MjdOUTRZS056dXhjaEx1SWJSRWIzbERiVjhCUUJRYkFNMm95SjhQc0xXc3RJbnpDc1NpZ0JpLThPUnNVT1ZtYWs1Tw?oc=5",
+     "published": "2026-10-27T12:45:12Z",
+     "source": "Yahoo Finance"
+    },
     {
      "title": "CPI | McCormick’s $44.8 Billion Unilever Food Deal Clears Key US Antitrust Hurdle",
      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVXJWakNiMFh1MTZCZWFMWTdaM1V4ai1oMU5ybW5Oa3NzbVlSeFhOdkFEZW9abXR5TDVybVVUdURvVWo4SERLSC00NVdrSTVlSWdZYklQRWhBWEd3XzJRZEswMGczbUJsbm1DdmNMaTBhVmFYV1JXcUJ5dm5QaHUyOW9Ubmo1RC1hdVhQVnAwZ1V4c29oanpNcWhjc2lMVXRLdGF0RGc3QmVwZUk?oc=5",
@@ -51,16 +57,10 @@
      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcXJlM3pRZkJxMXlvanRQQi1fSHZjbG5FaHBJQWVTcEhCUzBIbG1ERktWUG5xbUE0dGdkRTVRN3QxVk9FWmZscmlSd3VhdnVvTGEtRWl0Z1NCSkxkOFBxc3RneVJUMUwwTW95YVVLV3luSlVqNGZzbndqMWJ1ZjEwWDdqODZvLWlEVlJidzBzcHY2YzQxS1FpRUtPVQ?oc=5",
      "published": "2026-10-23T20:35:42Z",
      "source": "Maryland Daily Record"
-    },
-    {
-     "title": "McCormick moves to take control of Unilever Pakistan Foods in $45B global deal",
-     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQT01VNTNndEpsT1hrTUt5OGl6Q3dqdnNILWlGV25Sd281STRPcUNVU195Y3N5bWRMV0NzUVpwZFVfeHYxVkxlSGpOdm4zMDdQREZ1LTVmaFZLWFR0bDBIUjZMcWZUeWlxLVhqVmRPdDM0NE50T09jNWwyRmdJeWxmWlc4RzZ4VlZpeVNBYlZMWnNIbnFHaTNkQWpJN2RqZEduby1BR0NwNTBvRE4ySExseA?oc=5",
-     "published": "2026-10-21T07:06:30Z",
-     "source": "Dealroom"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-26T20:58:42Z"
+   "fetched_at": "2026-10-27T20:58:17Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -71,20 +71,20 @@
      "source": "PEI Private Equity"
     },
     {
-     "title": "Gong Cha looks to further global growth as profits rise",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMFNLN0R4U2pjb3RfQmRwREVmU3R0UWVZVWJvNkJNV1RRWHNoZmNNOTZYMmFZVDNSSnNyQmMtbElzRXo0bEtCVVVGazFVQXBWSW91OTE3eGRyNEdzeVFoRkd1RE8xd3JSUmg3VUhIT1B5YWYzZ2l2NmplMmJrN3hUR2kwbGZsRTA3d3hYWERWVjZnRFNicy1wRGNiejlWRmNzTy01aFZ2eDM2Zw?oc=5",
-     "published": "2026-10-09T07:00:00Z",
-     "source": "MCA Insight"
+     "title": "Partners Group Exits Gong cha as Bain Capital Takes Control of Bubble-Tea Chain",
+     "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOUFpjak1aU1Q5ZXVhSU1TZDRTd25hV0h5alhBYm1xdHJ2alRFRUNnYmttNmtDYXFiRmhnZW1ZdXE5cDQzMzMyVlVUX3JiNmthNTJJcFlrRWpxVFlKRWJDQi1GRmRQb3lsR1FMQ2dQV0RHd0o3Z0M4U3dHZkdIODdRRjVSNGNIZFRueUdLeHM1OW5vbXBaNmlxLWdxU3Npbjk2N0NrNzY0bUVCSHdQcDBXalAzSUF0MGFVQTU2RTNmbWdHdkxjd1UwVjU5THN5Tld5TmRnel9VdU16elZjRVJESDVITHZ1Zw?oc=5",
+     "published": "2026-08-25T07:00:00Z",
+     "source": "AD HOC NEWS"
     },
     {
-     "title": "List of 76 Acquisitions by Bain Capital (Oct 2026)",
-     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZEc1cFQ3Q1hKd1NPWlk0bkNMQUwwZWluVExuZXN4czlSbFI4amtERXpyMDIwUlpoRWFic19MTmxuczlMc2NiR0xpR2taNkhTZG5ZcjR3cEhSX3hoanBoODlqYnVTdHp2RElqRWhsNUlSQllka2d4NTNEMld1MzlTMHdSVWkzQVBYTHdpMHdNOWZXSnViWDdtc3Q0WHdraVlYSG5mMEt1eE1lUlNF?oc=5",
-     "published": "2026-10-07T07:00:00Z",
-     "source": "Tracxn"
+     "title": "Partners Group exits Gong Cha investment after Bain Capital buyout of bubble tea brand",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTnZmR3RaZ0gwc0x5cDNEUHJRSkI1RG1XblE5eTk2a0VQS0NhcXgxenc2ZFM1UHA1RDQ1anIxaEZETG8teDBXUHF0dVI1djZxRnBobjVLYlM1MW50UTVHUFZTMFE4cXdOeGgwZWpHb2c2QldxT08tUXRJOXc0TjFfeTZtUExKZW9xWlRZNUVVS3JSWC1RdUhEZFJYMmV6am5CRE5ZSQ?oc=5",
+     "published": "2026-08-24T07:00:00Z",
+     "source": "The Straits Times"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-10-26T20:58:42Z"
+   "fetched_at": "2026-10-27T20:58:17Z"
   }
  }
 }
