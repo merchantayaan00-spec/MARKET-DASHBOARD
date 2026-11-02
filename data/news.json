@@ -1,12 +1,18 @@
 {
- "updated": "2026-11-02T13:36:05Z",
+ "updated": "2026-11-02T21:04:34Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Stock Futures Higher, Oil Lower as Investors Return to Risk",
+    "title": "Dow Rebounds After Friday’s Selloff as Oil Slides",
     "link": "https://www.wsj.com/finance/stocks/stock-futures-higher-oil-lower-as-investors-return-to-risk-17e79294?mod=rss_markets_main",
-    "published": "2026-11-02T13:03:00Z",
+    "published": "2026-11-02T19:23:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "U.S. Treasury, European Bond Yields Fall as Oil Prices Drop",
+    "link": "https://www.wsj.com/finance/investing/treasury-yields-little-changed-in-asian-trade-ahead-of-midterms-key-data-this-week-c5a1fdb3?mod=rss_markets_main",
+    "published": "2026-11-02T19:10:00Z",
     "source": "WSJ"
    },
    {
@@ -22,12 +28,6 @@
     "source": "WSJ"
    },
    {
-    "title": "U.S. Treasury, European Bond Yields Fall as Oil Prices Drop",
-    "link": "https://www.wsj.com/finance/investing/treasury-yields-little-changed-in-asian-trade-ahead-of-midterms-key-data-this-week-c5a1fdb3?mod=rss_markets_main",
-    "published": "2026-11-02T11:06:00Z",
-    "source": "WSJ"
-   },
-   {
     "title": "European Indexes Open Mostly Lower as Healthcare Stocks Slide",
     "link": "https://www.wsj.com/finance/stocks/nikkei-falls-0-9-dragged-by-bank-tech-stocks-a63f180d?mod=rss_markets_main",
     "published": "2026-11-02T08:25:00Z",
@@ -35,33 +35,32 @@
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-02T13:36:05Z"
+  "fetched_at": "2026-11-02T21:04:34Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
-     "title": "Dutch Regulator Rejects Unilever's Sale of Unox Assets to Zwanenberg",
-     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPc3M5TUh5SS1uSWU0eldsT2Y4MTZELTUwOXNNSE83eXBGYnhYb0EtMnBmWTZNa1RhQmZ2YkxvZmN3d0hWNHdhd0hYLS1HTTB6WlNHVmRRcUFSQnBGeVVpc1Y0MjdOUTRZS056dXhjaEx1SWJSRWIzbERiVjhCUUJRYkFNMm95SjhQc0xXc3RJbnpDc1NpZ0JpLThPUnNVT1ZtYWs1Tw?oc=5",
-     "published": "2026-10-27T12:45:12Z",
-     "source": "Yahoo Finance"
+     "title": "Is McCormick (MKC) Cheap As Unilever Foods Synergies Drive Its Valuation Case?",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZGVXWE1xUmlRV3hCLWo4NXpseXQ3Um4xWTNqSFBHOWdZWURiQjJzd29BelQxRFl0bGp4QjVhd1dTVFA2T2s3TkZuNDZLdEoyRVp2TFAtcFVzN202cWpWSHVvNzNwTVNTV3ZOZ2daOGNhNWpFcXJKU3l3VFpPZjJMR29aUUtwTG96UzB0SUd4QVZDQURYMmVlemV5QXlWODZaZUhZWGlfRGczZ0thRWk0LXVUZGswYmlib0ZuZUFWNGNNcFlpTEVhalJkSmdhZktGTkZpStIB2gFBVV95cUxPZU1kVjhSWVF6bFVra1dnVXZ6cTNVNkR4UHJzMV9oMDNXMnRvQ2NTeDhybUpjYmFLQXFZREg1VW8zal9OZ0lSZmIyTWduQmJfYnl0aFBiWUxIWm56NEVaQnZETjMzcmtlRkNYRThXRTJUWmVveTNOQ0xEbHFFaG5NX2ZFdUJoWGNtY0hnUndXZVJIbjhJZTc0OG13US01bTlodFpVMXJCc3NxZjcyX2hjeks2UEUycFhBS2NnempRNjdKVlo3NllZOTVTRFNTcURORXlyU3lHa1ZRdw?oc=5",
+     "published": "2026-11-02T01:42:59Z",
+     "source": "Simply Wall St"
     },
     {
-     "title": "CPI | McCormick’s $44.8 Billion Unilever Food Deal Clears Key US Antitrust Hurdle",
-     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVXJWakNiMFh1MTZCZWFMWTdaM1V4ai1oMU5ybW5Oa3NzbVlSeFhOdkFEZW9abXR5TDVybVVUdURvVWo4SERLSC00NVdrSTVlSWdZYklQRWhBWEd3XzJRZEswMGczbUJsbm1DdmNMaTBhVmFYV1JXcUJ5dm5QaHUyOW9Ubmo1RC1hdVhQVnAwZ1V4c29oanpNcWhjc2lMVXRLdGF0RGc3QmVwZUk?oc=5",
-     "published": "2026-10-25T15:07:52Z",
-     "source": "PYMNTS.com"
+     "title": "McCormick & Company, Incorporated (MKC) Stock Price, News, Quote & History",
+     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBIRm9XbWZRRFlwLTNNblNhdG1hVlJKUlhGTTN4NHF2bUNBNG1KNVU0N3N0WERPLUNsTFQ5UnFybnptR0g3ZWVVWHFac3EwbkVo?oc=5",
+     "published": "2026-11-01T19:02:26Z",
+     "source": "Yahoo! Finance Canada"
     },
     {
-     "title": "$44.8B deal with MD-based McCormick and Unilever clears antitrust hurdle",
-     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcXJlM3pRZkJxMXlvanRQQi1fSHZjbG5FaHBJQWVTcEhCUzBIbG1ERktWUG5xbUE0dGdkRTVRN3QxVk9FWmZscmlSd3VhdnVvTGEtRWl0Z1NCSkxkOFBxc3RneVJUMUwwTW95YVVLV3luSlVqNGZzbndqMWJ1ZjEwWDdqODZvLWlEVlJidzBzcHY2YzQxS1FpRUtPVQ?oc=5",
-     "published": "2026-10-23T20:35:42Z",
-     "source": "Maryland Daily Record"
+     "title": "Unilever targets mayonnaise reset as food volumes fall in Q3",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd2E0NHM1T3dzZDB2anQ5TmxjM0xGNWlhODlhZEtLMFlCRU13b0NRZWhSUUFJMkttdUl0QVFBQ1ZndXhSOWR0SzdYRFljbHJ4TEc1TU9RTHIyeXVGZHl0cGprNFpoVDZ4MWsySzh1M2lJVm02TVg2UGRDS2I2M3g3VHZaT3pSM0Y2bVFr?oc=5",
+     "published": "2026-10-29T15:25:45Z",
+     "source": "Food Ingredients First"
     }
    ],
-   "stale": true,
-   "fetched_at": "2026-10-27T20:58:17Z",
-   "error": "GET failed: HTTPError: HTTP Error 503: Service Unavailable"
+   "stale": false,
+   "fetched_at": "2026-11-02T21:04:34Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -72,21 +71,20 @@
      "source": "PEI Private Equity"
     },
     {
-     "title": "Partners Group Exits Gong cha as Bain Capital Takes Control of Bubble-Tea Chain",
-     "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOUFpjak1aU1Q5ZXVhSU1TZDRTd25hV0h5alhBYm1xdHJ2alRFRUNnYmttNmtDYXFiRmhnZW1ZdXE5cDQzMzMyVlVUX3JiNmthNTJJcFlrRWpxVFlKRWJDQi1GRmRQb3lsR1FMQ2dQV0RHd0o3Z0M4U3dHZkdIODdRRjVSNGNIZFRueUdLeHM1OW5vbXBaNmlxLWdxU3Npbjk2N0NrNzY0bUVCSHdQcDBXalAzSUF0MGFVQTU2RTNmbWdHdkxjd1UwVjU5THN5Tld5TmRnel9VdU16elZjRVJESDVITHZ1Zw?oc=5",
-     "published": "2026-08-25T07:00:00Z",
-     "source": "AD HOC NEWS"
+     "title": "Gong Cha looks to further global growth as profits rise",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMFNLN0R4U2pjb3RfQmRwREVmU3R0UWVZVWJvNkJNV1RRWHNoZmNNOTZYMmFZVDNSSnNyQmMtbElzRXo0bEtCVVVGazFVQXBWSW91OTE3eGRyNEdzeVFoRkd1RE8xd3JSUmg3VUhIT1B5YWYzZ2l2NmplMmJrN3hUR2kwbGZsRTA3d3hYWERWVjZnRFNicy1wRGNiejlWRmNzTy01aFZ2eDM2Zw?oc=5",
+     "published": "2026-10-09T07:00:00Z",
+     "source": "MCA Insight"
     },
     {
-     "title": "Partners Group exits Gong Cha investment after Bain Capital buyout of bubble tea brand",
-     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTnZmR3RaZ0gwc0x5cDNEUHJRSkI1RG1XblE5eTk2a0VQS0NhcXgxenc2ZFM1UHA1RDQ1anIxaEZETG8teDBXUHF0dVI1djZxRnBobjVLYlM1MW50UTVHUFZTMFE4cXdOeGgwZWpHb2c2QldxT08tUXRJOXc0TjFfeTZtUExKZW9xWlRZNUVVS3JSWC1RdUhEZFJYMmV6am5CRE5ZSQ?oc=5",
-     "published": "2026-08-24T07:00:00Z",
-     "source": "The Straits Times"
+     "title": "Private equity keeps coming back for secondary deals in Korea’s restaurant chains",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pT005OUhZZnJRVHJVRjVuU0VYaXZNN1dMNVBzcFBzQmZ1M2hubWxQbnZkS0pudjB4SnVFNm9hR21qWUpBY1N3dkh0d0VDWW5rV2NyRWl6X1dSc1Q0OHFmMk5LRU02UWxVUjdtWTh6ZW53Y28?oc=5",
+     "published": "2026-09-24T07:00:00Z",
+     "source": "KED Global"
     }
    ],
-   "stale": true,
-   "fetched_at": "2026-10-27T20:58:17Z",
-   "error": "GET failed: HTTPError: HTTP Error 503: Service Unavailable"
+   "stale": false,
+   "fetched_at": "2026-11-02T21:04:35Z"
   }
  }
 }

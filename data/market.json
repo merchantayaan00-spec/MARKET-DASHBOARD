@@ -1,287 +1,287 @@
 {
- "updated": "2026-11-02T13:36:01Z",
+ "updated": "2026-11-02T21:04:31Z",
  "quotes": {
   "^GSPC": {
    "symbol": "^GSPC",
    "name": "S&P 500",
-   "price": 7580.0698,
-   "prev_close": 7720.3901,
-   "change_pct": -1.818,
-   "as_of": "2026-10-30",
+   "price": 7541.3701,
+   "prev_close": 7580.0698,
+   "change_pct": -0.511,
+   "as_of": "2026-11-02",
    "spark": [
-    7676.77,
     7722.6001,
     7743.98,
     7720.3901,
-    7580.0698
+    7580.0698,
+    7541.3701
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:47Z"
+   "fetched_at": "2026-11-02T21:04:15Z"
   },
   "^DJI": {
    "symbol": "^DJI",
    "name": "Dow Jones Industrial Average",
-   "price": 51770.3086,
-   "prev_close": 52342.5586,
-   "change_pct": -1.093,
-   "as_of": "2026-10-30",
+   "price": 51983.9805,
+   "prev_close": 51770.3086,
+   "change_pct": 0.413,
+   "as_of": "2026-11-02",
    "spark": [
-    52361.5781,
     52377.5703,
     52475.1016,
     52342.5586,
-    51770.3086
+    51770.3086,
+    51983.9805
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:48Z"
+   "fetched_at": "2026-11-02T21:04:16Z"
   },
   "XLC": {
    "symbol": "XLC",
    "name": "State Street Communication Serv",
-   "price": 99.9,
-   "prev_close": 101.21,
-   "change_pct": -1.294,
-   "as_of": "2026-10-30",
+   "price": 100.28,
+   "prev_close": 99.9,
+   "change_pct": 0.38,
+   "as_of": "2026-11-02",
    "spark": [
-    103.85,
     103.58,
     103.14,
     101.21,
-    99.9
+    99.9,
+    100.28
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:48Z"
+   "fetched_at": "2026-11-02T21:04:16Z"
   },
   "XLY": {
    "symbol": "XLY",
    "name": "State Street Consumer Discretio",
-   "price": 115.38,
-   "prev_close": 116.2,
-   "change_pct": -0.706,
-   "as_of": "2026-10-30",
+   "price": 118.14,
+   "prev_close": 115.38,
+   "change_pct": 2.392,
+   "as_of": "2026-11-02",
    "spark": [
-    114.26,
     115.45,
     115.33,
     116.2,
-    115.38
+    115.38,
+    118.14
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:48Z"
+   "fetched_at": "2026-11-02T21:04:16Z"
   },
   "XLP": {
    "symbol": "XLP",
    "name": "State Street Consumer Staples S",
-   "price": 89.42,
-   "prev_close": 88.18,
-   "change_pct": 1.406,
-   "as_of": "2026-10-30",
+   "price": 90.85,
+   "prev_close": 89.42,
+   "change_pct": 1.599,
+   "as_of": "2026-11-02",
    "spark": [
-    87.96,
     87.15,
     86.84,
     88.18,
-    89.42
+    89.42,
+    90.85
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:49Z"
+   "fetched_at": "2026-11-02T21:04:17Z"
   },
   "XLE": {
    "symbol": "XLE",
    "name": "State Street Energy Select Sect",
-   "price": 70.02,
-   "prev_close": 68.71,
-   "change_pct": 1.907,
-   "as_of": "2026-10-30",
+   "price": 67.27,
+   "prev_close": 70.02,
+   "change_pct": -3.927,
+   "as_of": "2026-11-02",
    "spark": [
-    69.64,
     68.21,
     68.45,
     68.71,
-    70.02
+    70.02,
+    67.27
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:49Z"
+   "fetched_at": "2026-11-02T21:04:17Z"
   },
   "XLF": {
    "symbol": "XLF",
    "name": "State Street Financial Select S",
-   "price": 56.51,
-   "prev_close": 56.94,
-   "change_pct": -0.755,
-   "as_of": "2026-10-30",
+   "price": 57.54,
+   "prev_close": 56.51,
+   "change_pct": 1.823,
+   "as_of": "2026-11-02",
    "spark": [
-    56.02,
     55.88,
     56.13,
     56.94,
-    56.51
+    56.51,
+    57.54
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:50Z"
+   "fetched_at": "2026-11-02T21:04:19Z"
   },
   "XLV": {
    "symbol": "XLV",
    "name": "State Street Health Care Select",
-   "price": 184.87,
-   "prev_close": 184.04,
-   "change_pct": 0.451,
-   "as_of": "2026-10-30",
+   "price": 184.65,
+   "prev_close": 184.87,
+   "change_pct": -0.119,
+   "as_of": "2026-11-02",
    "spark": [
-    179.28,
     179.18,
     179.72,
     184.04,
-    184.87
+    184.87,
+    184.65
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:50Z"
+   "fetched_at": "2026-11-02T21:04:19Z"
   },
   "XLI": {
    "symbol": "XLI",
    "name": "State Street Industrial Select ",
-   "price": 167.4,
-   "prev_close": 170.13,
-   "change_pct": -1.605,
-   "as_of": "2026-10-30",
+   "price": 169.75,
+   "prev_close": 167.4,
+   "change_pct": 1.404,
+   "as_of": "2026-11-02",
    "spark": [
-    166.96,
     167.92,
     168.49,
     170.13,
-    167.4
+    167.4,
+    169.75
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:51Z"
+   "fetched_at": "2026-11-02T21:04:20Z"
   },
   "XLB": {
    "symbol": "XLB",
    "name": "State Street Materials Select S",
-   "price": 52.74,
-   "prev_close": 52.53,
-   "change_pct": 0.4,
-   "as_of": "2026-10-30",
+   "price": 53.66,
+   "prev_close": 52.74,
+   "change_pct": 1.744,
+   "as_of": "2026-11-02",
    "spark": [
-    51.38,
     51.78,
     51.86,
     52.53,
-    52.74
+    52.74,
+    53.66
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:51Z"
+   "fetched_at": "2026-11-02T21:04:20Z"
   },
   "XLRE": {
    "symbol": "XLRE",
    "name": "State Street Real Estate Select",
-   "price": 43.17,
-   "prev_close": 43.06,
-   "change_pct": 0.255,
-   "as_of": "2026-10-30",
+   "price": 43.65,
+   "prev_close": 43.17,
+   "change_pct": 1.112,
+   "as_of": "2026-11-02",
    "spark": [
-    42.8,
     42.44,
     42.13,
     43.06,
-    43.17
+    43.17,
+    43.65
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:51Z"
+   "fetched_at": "2026-11-02T21:04:21Z"
   },
   "XLK": {
    "symbol": "XLK",
    "name": "State Street Technology Select ",
-   "price": 179.51,
-   "prev_close": 188.74,
-   "change_pct": -4.89,
-   "as_of": "2026-10-30",
+   "price": 174.24,
+   "prev_close": 179.51,
+   "change_pct": -2.936,
+   "as_of": "2026-11-02",
    "spark": [
-    186.32,
     189.49,
     191.0,
     188.74,
-    179.51
+    179.51,
+    174.24
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:52Z"
+   "fetched_at": "2026-11-02T21:04:21Z"
   },
   "XLU": {
    "symbol": "XLU",
    "name": "State Street Utilities Select S",
-   "price": 43.43,
-   "prev_close": 43.14,
-   "change_pct": 0.672,
-   "as_of": "2026-10-30",
+   "price": 43.68,
+   "prev_close": 43.43,
+   "change_pct": 0.576,
+   "as_of": "2026-11-02",
    "spark": [
-    42.55,
     42.85,
     42.49,
     43.14,
-    43.43
+    43.43,
+    43.68
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:52Z"
+   "fetched_at": "2026-11-02T21:04:22Z"
   },
   "^VIX": {
    "symbol": "^VIX",
    "name": "CBOE Volatility Index",
-   "price": 19.42,
+   "price": 21.26,
    "prev_close": 19.42,
-   "change_pct": 0.0,
+   "change_pct": 9.475,
    "as_of": "2026-11-02",
    "spark": [
     17.52,
     16.91,
     17.2,
     19.42,
-    19.42
+    21.26
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:53Z"
+   "fetched_at": "2026-11-02T21:04:22Z"
   },
   "GC=F": {
    "symbol": "GC=F",
    "name": "Gold Dec 26",
-   "price": 3912.1001,
+   "price": 3956.6001,
    "prev_close": 3898.8999,
-   "change_pct": 0.339,
+   "change_pct": 1.48,
    "as_of": "2026-11-02",
    "spark": [
     4074.6001,
     4051.6001,
     4031.3999,
     3898.8999,
-    3912.1001
+    3956.6001
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:53Z"
+   "fetched_at": "2026-11-02T21:04:23Z"
   },
   "XRT": {
    "symbol": "XRT",
    "name": "State Street SPDR S&P Retail ET",
-   "price": 88.72,
-   "prev_close": 89.01,
-   "change_pct": -0.326,
-   "as_of": "2026-10-30",
+   "price": 90.53,
+   "prev_close": 88.72,
+   "change_pct": 2.04,
+   "as_of": "2026-11-02",
    "spark": [
-    87.42,
     87.31,
     86.74,
     89.01,
-    88.72
+    88.72,
+    90.53
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:53Z"
+   "fetched_at": "2026-11-02T21:04:23Z"
   }
  },
  "ratio": {
-  "value": 1.2903,
-  "as_of": "2026-10-30",
-  "base_date": "2026-09-30",
-  "month_change_pct": -4.45,
+  "value": 1.3004,
+  "as_of": "2026-11-02",
+  "base_date": "2026-10-02",
+  "month_change_pct": -4.83,
   "mood": "Defensive",
   "stale": false,
-  "fetched_at": "2026-11-02T13:35:54Z"
+  "fetched_at": "2026-11-02T21:04:23Z"
  },
  "fred": {
   "DGS2": {
@@ -299,7 +299,7 @@
     4.61
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:54Z"
+   "fetched_at": "2026-11-02T21:04:24Z"
   },
   "DGS10": {
    "series": "DGS10",
@@ -316,7 +316,7 @@
     4.98
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:54Z"
+   "fetched_at": "2026-11-02T21:04:24Z"
   },
   "DFF": {
    "series": "DFF",
@@ -333,7 +333,7 @@
     3.88
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:55Z"
+   "fetched_at": "2026-11-02T21:04:24Z"
   },
   "MORTGAGE30US": {
    "series": "MORTGAGE30US",
@@ -350,7 +350,7 @@
     7.24
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:56Z"
+   "fetched_at": "2026-11-02T21:04:25Z"
   },
   "UMCSENT": {
    "series": "UMCSENT",
@@ -367,7 +367,7 @@
     48.1
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:57Z"
+   "fetched_at": "2026-11-02T21:04:25Z"
   },
   "RSAFS": {
    "series": "RSAFS",
@@ -386,7 +386,7 @@
    "mom_pct": 0.77,
    "prior_mom_pct": 1.29,
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:57Z"
+   "fetched_at": "2026-11-02T21:04:27Z"
   },
   "UNRATE": {
    "series": "UNRATE",
@@ -403,7 +403,7 @@
     4.2
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:58Z"
+   "fetched_at": "2026-11-02T21:04:30Z"
   },
   "PSAVERT": {
    "series": "PSAVERT",
@@ -420,7 +420,7 @@
     3.8
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:35:59Z"
+   "fetched_at": "2026-11-02T21:04:30Z"
   },
   "GASREGW": {
    "series": "GASREGW",
@@ -437,7 +437,7 @@
     4.269
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:36:00Z"
+   "fetched_at": "2026-11-02T21:04:31Z"
   },
   "DRCCLACBS": {
    "series": "DRCCLACBS",
@@ -454,7 +454,7 @@
     2.85
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T13:36:01Z"
+   "fetched_at": "2026-11-02T21:04:31Z"
   }
  }
 }
