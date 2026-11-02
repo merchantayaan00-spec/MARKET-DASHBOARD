@@ -1,41 +1,41 @@
 {
- "updated": "2026-10-27T20:58:16Z",
+ "updated": "2026-11-02T13:36:05Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "U.S. Stocks Add to Gains Ahead of Earnings, Fed Statement",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-add-to-gains-ahead-of-earnings-fed-statement-d996e176?mod=rss_markets_main",
-    "published": "2026-10-27T20:45:00Z",
+    "title": "Stock Futures Higher, Oil Lower as Investors Return to Risk",
+    "link": "https://www.wsj.com/finance/stocks/stock-futures-higher-oil-lower-as-investors-return-to-risk-17e79294?mod=rss_markets_main",
+    "published": "2026-11-02T13:03:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Tech Stocks Power Higher, Oil Cools",
-    "link": "https://www.wsj.com/finance/stocks/tech-stocks-power-higher-oil-cools-724e6a63?mod=rss_markets_main",
-    "published": "2026-10-27T20:23:00Z",
+    "title": "Trump Family-Linked Mining Venture Aims to Go Public in $2 Billion Deal",
+    "link": "https://www.wsj.com/finance/trump-family-linked-mining-venture-aims-to-go-public-in-2-billion-deal-38d85946?mod=rss_markets_main",
+    "published": "2026-11-02T12:00:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Tech Stocks Add to Gains After Yesterday’s Anthropic Rally",
-    "link": "https://www.wsj.com/finance/stocks/stock-futures-steady-as-anthropic-rally-stalls-israel-election-in-focus-9c4f12ad?mod=rss_markets_main",
-    "published": "2026-10-27T18:29:00Z",
+    "title": "This Bond Measure Says Stocks Are Cheap. Don’t Believe It.",
+    "link": "https://www.wsj.com/finance/investing/this-bond-measure-says-stocks-are-cheap-dont-believe-it-1db3069a?mod=rss_markets_main",
+    "published": "2026-11-02T11:47:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Broadcom CEO Intervened to Seal $63 Billion Anthropic Debt Deal",
-    "link": "https://www.wsj.com/finance/broadcom-ceo-intervened-to-seal-63-billion-anthropic-debt-deal-c807754f?mod=rss_markets_main",
-    "published": "2026-10-27T17:50:00Z",
+    "title": "U.S. Treasury, European Bond Yields Fall as Oil Prices Drop",
+    "link": "https://www.wsj.com/finance/investing/treasury-yields-little-changed-in-asian-trade-ahead-of-midterms-key-data-this-week-c5a1fdb3?mod=rss_markets_main",
+    "published": "2026-11-02T11:06:00Z",
     "source": "WSJ"
    },
    {
-    "title": "General Motors Moving Stock Listing to Nasdaq From NYSE",
-    "link": "https://www.wsj.com/finance/stocks/general-motors-moving-stock-listing-to-nasdaq-from-nyse-fbc36f02?mod=rss_markets_main",
-    "published": "2026-10-27T14:54:00Z",
+    "title": "European Indexes Open Mostly Lower as Healthcare Stocks Slide",
+    "link": "https://www.wsj.com/finance/stocks/nikkei-falls-0-9-dragged-by-bank-tech-stocks-a63f180d?mod=rss_markets_main",
+    "published": "2026-11-02T08:25:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-10-27T20:58:16Z"
+  "fetched_at": "2026-11-02T13:36:05Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -59,8 +59,9 @@
      "source": "Maryland Daily Record"
     }
    ],
-   "stale": false,
-   "fetched_at": "2026-10-27T20:58:17Z"
+   "stale": true,
+   "fetched_at": "2026-10-27T20:58:17Z",
+   "error": "GET failed: HTTPError: HTTP Error 503: Service Unavailable"
   },
   "bain-gong-cha": {
    "items": [
@@ -83,8 +84,9 @@
      "source": "The Straits Times"
     }
    ],
-   "stale": false,
-   "fetched_at": "2026-10-27T20:58:17Z"
+   "stale": true,
+   "fetched_at": "2026-10-27T20:58:17Z",
+   "error": "GET failed: HTTPError: HTTP Error 503: Service Unavailable"
   }
  }
 }
