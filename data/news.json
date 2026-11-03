@@ -1,41 +1,41 @@
 {
- "updated": "2026-11-02T21:04:34Z",
+ "updated": "2026-11-03T13:32:19Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Dow Rebounds After Friday’s Selloff as Oil Slides",
-    "link": "https://www.wsj.com/finance/stocks/stock-futures-higher-oil-lower-as-investors-return-to-risk-17e79294?mod=rss_markets_main",
-    "published": "2026-11-02T19:23:00Z",
+    "title": "Beijing Reins In IPO Rush After AI Concerns Hit Stock Market",
+    "link": "https://www.wsj.com/finance/stocks/beijing-reins-in-ipo-rush-after-ai-concerns-hit-stock-market-d6abe32b?mod=rss_markets_main",
+    "published": "2026-11-03T13:02:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Treasury, European Bond Yields Fall as Oil Prices Drop",
-    "link": "https://www.wsj.com/finance/investing/treasury-yields-little-changed-in-asian-trade-ahead-of-midterms-key-data-this-week-c5a1fdb3?mod=rss_markets_main",
-    "published": "2026-11-02T19:10:00Z",
+    "title": "Treasury, European Government Bond Yields Rise as Markets Await U.S. Midterm Election Results",
+    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-rise-as-markets-await-midterm-election-results-ddbae162?mod=rss_markets_main",
+    "published": "2026-11-03T10:04:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Trump Family-Linked Mining Venture Aims to Go Public in $2 Billion Deal",
-    "link": "https://www.wsj.com/finance/trump-family-linked-mining-venture-aims-to-go-public-in-2-billion-deal-38d85946?mod=rss_markets_main",
-    "published": "2026-11-02T12:00:00Z",
+    "title": "European Chip Stocks Fall After Asia Selloff",
+    "link": "https://www.wsj.com/finance/stocks/australian-banks-outperforming-on-rotation-away-from-ai-04a0c978?mod=rss_markets_main",
+    "published": "2026-11-03T09:30:00Z",
     "source": "WSJ"
    },
    {
-    "title": "This Bond Measure Says Stocks Are Cheap. Don’t Believe It.",
-    "link": "https://www.wsj.com/finance/investing/this-bond-measure-says-stocks-are-cheap-dont-believe-it-1db3069a?mod=rss_markets_main",
-    "published": "2026-11-02T11:47:00Z",
+    "title": "America’s Multi-Trillion-Dollar AI Buildout Is on the Ballot—and Wall Street Is Watching",
+    "link": "https://www.wsj.com/finance/stocks/the-risks-state-and-local-elections-pose-for-wall-street-and-the-ai-trade-3bc5219d?mod=rss_markets_main",
+    "published": "2026-11-02T22:24:00Z",
     "source": "WSJ"
    },
    {
-    "title": "European Indexes Open Mostly Lower as Healthcare Stocks Slide",
-    "link": "https://www.wsj.com/finance/stocks/nikkei-falls-0-9-dragged-by-bank-tech-stocks-a63f180d?mod=rss_markets_main",
-    "published": "2026-11-02T08:25:00Z",
+    "title": "U.S. Stocks Mixed as Percolating AI Fears Offset Oil Relief",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-as-percolating-ai-fears-offset-oil-relief-6c9535a6?mod=rss_markets_main",
+    "published": "2026-11-02T22:02:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-02T21:04:34Z"
+  "fetched_at": "2026-11-03T13:32:20Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -60,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T21:04:34Z"
+   "fetched_at": "2026-11-03T13:32:21Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -77,14 +77,14 @@
      "source": "MCA Insight"
     },
     {
-     "title": "Private equity keeps coming back for secondary deals in Korea’s restaurant chains",
-     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pT005OUhZZnJRVHJVRjVuU0VYaXZNN1dMNVBzcFBzQmZ1M2hubWxQbnZkS0pudjB4SnVFNm9hR21qWUpBY1N3dkh0d0VDWW5rV2NyRWl6X1dSc1Q0OHFmMk5LRU02UWxVUjdtWTh6ZW53Y28?oc=5",
-     "published": "2026-09-24T07:00:00Z",
-     "source": "KED Global"
+     "title": "129. Gong Cha | Top-400-2026",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQXhFS3lIOENzZGxuNmI3WGp0bE15M2FvS05Yc1hPUjkwV3p5WW1ra29CUEhZZnhrN2RYYTJQTElCUUx2QkYtU19aMmdLdzg3UkhmdmNKVmpTQWZiakJLOVJYNTh5dndoSjJ4SUI0TnUxSS1XMDdTbm84ZDRiWUlQanZrOWg2TDhzZUFjWElqcUpOLVNSbGE2STM2ZGFSblJSMmNNNXhpS3JJZw?oc=5",
+     "published": "2026-09-30T07:00:00Z",
+     "source": "franchisetimes.com"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-02T21:04:35Z"
+   "fetched_at": "2026-11-03T13:32:22Z"
   }
  }
 }
