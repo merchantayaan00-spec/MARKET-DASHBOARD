@@ -1,8 +1,26 @@
 {
- "updated": "2026-11-03T13:32:19Z",
+ "updated": "2026-11-03T21:10:31Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
+   {
+    "title": "Treasury, European Government Bond Yields Rise as Markets Await U.S. Midterm Election Results",
+    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-rise-as-markets-await-midterm-election-results-ddbae162?mod=rss_markets_main",
+    "published": "2026-11-03T19:53:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "Tech Stocks Rise Despite Apple Slump",
+    "link": "https://www.wsj.com/finance/investing/dow-futures-fall-treasurys-yields-rise-heading-into-midterms-d3a6a938?mod=rss_markets_main",
+    "published": "2026-11-03T19:38:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "Carl Icahn’s CVR Energy Strikes $4 Billion Deal for Two Marathon Refineries",
+    "link": "https://www.wsj.com/business/deals/carl-icahns-cvr-energy-near-over-4-billion-deal-for-marathon-refineries-e8487579?mod=rss_markets_main",
+    "published": "2026-11-03T14:33:00Z",
+    "source": "WSJ"
+   },
    {
     "title": "Beijing Reins In IPO Rush After AI Concerns Hit Stock Market",
     "link": "https://www.wsj.com/finance/stocks/beijing-reins-in-ipo-rush-after-ai-concerns-hit-stock-market-d6abe32b?mod=rss_markets_main",
@@ -10,32 +28,14 @@
     "source": "WSJ"
    },
    {
-    "title": "Treasury, European Government Bond Yields Rise as Markets Await U.S. Midterm Election Results",
-    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-rise-as-markets-await-midterm-election-results-ddbae162?mod=rss_markets_main",
-    "published": "2026-11-03T10:04:00Z",
-    "source": "WSJ"
-   },
-   {
     "title": "European Chip Stocks Fall After Asia Selloff",
     "link": "https://www.wsj.com/finance/stocks/australian-banks-outperforming-on-rotation-away-from-ai-04a0c978?mod=rss_markets_main",
     "published": "2026-11-03T09:30:00Z",
     "source": "WSJ"
-   },
-   {
-    "title": "America’s Multi-Trillion-Dollar AI Buildout Is on the Ballot—and Wall Street Is Watching",
-    "link": "https://www.wsj.com/finance/stocks/the-risks-state-and-local-elections-pose-for-wall-street-and-the-ai-trade-3bc5219d?mod=rss_markets_main",
-    "published": "2026-11-02T22:24:00Z",
-    "source": "WSJ"
-   },
-   {
-    "title": "U.S. Stocks Mixed as Percolating AI Fears Offset Oil Relief",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-as-percolating-ai-fears-offset-oil-relief-6c9535a6?mod=rss_markets_main",
-    "published": "2026-11-02T22:02:00Z",
-    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-03T13:32:20Z"
+  "fetched_at": "2026-11-03T21:10:31Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -47,20 +47,20 @@
      "source": "Simply Wall St"
     },
     {
-     "title": "McCormick & Company, Incorporated (MKC) Stock Price, News, Quote & History",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBIRm9XbWZRRFlwLTNNblNhdG1hVlJKUlhGTTN4NHF2bUNBNG1KNVU0N3N0WERPLUNsTFQ5UnFybnptR0g3ZWVVWHFac3EwbkVo?oc=5",
-     "published": "2026-11-01T19:02:26Z",
-     "source": "Yahoo! Finance Canada"
-    },
-    {
      "title": "Unilever targets mayonnaise reset as food volumes fall in Q3",
      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd2E0NHM1T3dzZDB2anQ5TmxjM0xGNWlhODlhZEtLMFlCRU13b0NRZWhSUUFJMkttdUl0QVFBQ1ZndXhSOWR0SzdYRFljbHJ4TEc1TU9RTHIyeXVGZHl0cGprNFpoVDZ4MWsySzh1M2lJVm02TVg2UGRDS2I2M3g3VHZaT3pSM0Y2bVFr?oc=5",
      "published": "2026-10-29T15:25:45Z",
      "source": "Food Ingredients First"
+    },
+    {
+     "title": "Continued strong performance in the third quarter",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUm4xUExYdTIxS1Q1SXMyM1NpaGJxOG5YZXNmN2tIVHd5ZkRsTGxSOUpwREx2ZVNwUkNIVUR2UGJhR01mUURldjFxSlFGSnhHTnhMX2w2NERWQ0F0NXFHamxrR3EzQ0ZqcVB0eVlzY1NDejkweHZ4NjJoWEVjR2VVaUVpMWdfQVZXLU5WQmg1RVlEaXRmSldiYXdIY2dERUJJY0ZGUktjRWxjQzRHOXpnM0ZDUmZyUnc?oc=5",
+     "published": "2026-10-28T07:00:00Z",
+     "source": "Unilever Global"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-03T13:32:21Z"
+   "fetched_at": "2026-11-03T21:10:32Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -71,20 +71,20 @@
      "source": "PEI Private Equity"
     },
     {
-     "title": "Gong Cha looks to further global growth as profits rise",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMFNLN0R4U2pjb3RfQmRwREVmU3R0UWVZVWJvNkJNV1RRWHNoZmNNOTZYMmFZVDNSSnNyQmMtbElzRXo0bEtCVVVGazFVQXBWSW91OTE3eGRyNEdzeVFoRkd1RE8xd3JSUmg3VUhIT1B5YWYzZ2l2NmplMmJrN3hUR2kwbGZsRTA3d3hYWERWVjZnRFNicy1wRGNiejlWRmNzTy01aFZ2eDM2Zw?oc=5",
-     "published": "2026-10-09T07:00:00Z",
-     "source": "MCA Insight"
+     "title": "Partners Group exits Gong cha credit investment as Bain Capital steps in",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQc1R2MGNNTVhiSmswU1FSX3F3YXlKVWNFOFZmNWVJZjc5d1UxVU1LUTNraFQ2aUp3TlBMckUwNU9YRENpTjlweHFRYnNoWHd0MEFLSUotUTdRSWhmSmZyOGhfdDNBbktXZUdTNEQxVmtTZUxOWmtkRFRydHJWWkpIOUVSbS1CSHI3eTJFSlhEUE9MOGFnanFBdmx2czlQTF9WOGY2Vk4wREphR3NxVl8yQjQ3YjRvOHFXRnZlR3MzeVo2b3JnRGJEWWNFLU1PRms3aDVZdVJlTFNNbVVrWWgwWm5xTUdCMWxkbHZWelNmaw?oc=5",
+     "published": "2026-08-25T07:00:00Z",
+     "source": "The Globe and Mail"
     },
     {
-     "title": "129. Gong Cha | Top-400-2026",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQXhFS3lIOENzZGxuNmI3WGp0bE15M2FvS05Yc1hPUjkwV3p5WW1ra29CUEhZZnhrN2RYYTJQTElCUUx2QkYtU19aMmdLdzg3UkhmdmNKVmpTQWZiakJLOVJYNTh5dndoSjJ4SUI0TnUxSS1XMDdTbm84ZDRiWUlQanZrOWg2TDhzZUFjWElqcUpOLVNSbGE2STM2ZGFSblJSMmNNNXhpS3JJZw?oc=5",
-     "published": "2026-09-30T07:00:00Z",
-     "source": "franchisetimes.com"
+     "title": "Partners Group exits Gong Cha investment after Bain Capital buyout of bubble tea brand",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTnZmR3RaZ0gwc0x5cDNEUHJRSkI1RG1XblE5eTk2a0VQS0NhcXgxenc2ZFM1UHA1RDQ1anIxaEZETG8teDBXUHF0dVI1djZxRnBobjVLYlM1MW50UTVHUFZTMFE4cXdOeGgwZWpHb2c2QldxT08tUXRJOXc0TjFfeTZtUExKZW9xWlRZNUVVS3JSWC1RdUhEZFJYMmV6am5CRE5ZSQ?oc=5",
+     "published": "2026-08-24T07:00:00Z",
+     "source": "The Straits Times"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-03T13:32:22Z"
+   "fetched_at": "2026-11-03T21:10:32Z"
   }
  }
 }
