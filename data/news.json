@@ -1,24 +1,30 @@
 {
- "updated": "2026-11-03T21:10:31Z",
+ "updated": "2026-11-04T13:35:24Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Treasury, European Government Bond Yields Rise as Markets Await U.S. Midterm Election Results",
-    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-rise-as-markets-await-midterm-election-results-ddbae162?mod=rss_markets_main",
-    "published": "2026-11-03T19:53:00Z",
+    "title": "Treasury Yields Decline After Democrat Triumph; Eurozone Bond Yields Trade Mixed",
+    "link": "https://www.wsj.com/finance/investing/two-year-treasury-yield-falls-to-two-month-low-as-democrats-sweep-midterm-elections-79fb1f8e?mod=rss_markets_main",
+    "published": "2026-11-04T12:38:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Tech Stocks Rise Despite Apple Slump",
-    "link": "https://www.wsj.com/finance/investing/dow-futures-fall-treasurys-yields-rise-heading-into-midterms-d3a6a938?mod=rss_markets_main",
-    "published": "2026-11-03T19:38:00Z",
+    "title": "Stock Futures Rally, Treasurys Strengthen After Democratic Sweep",
+    "link": "https://www.wsj.com/finance/investing/stock-futures-edge-lower-treasurys-strengthen-after-democratic-sweep-f2198d07?mod=rss_markets_main",
+    "published": "2026-11-04T11:23:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Carl Icahn’s CVR Energy Strikes $4 Billion Deal for Two Marathon Refineries",
-    "link": "https://www.wsj.com/business/deals/carl-icahns-cvr-energy-near-over-4-billion-deal-for-marathon-refineries-e8487579?mod=rss_markets_main",
-    "published": "2026-11-03T14:33:00Z",
+    "title": "Asia Markets Get Midterm Whiplash as Selloff Gives Way to Relief Rally",
+    "link": "https://www.wsj.com/finance/tech-declines-dollar-weakens-in-asia-as-u-s-midterm-votes-roll-in-bbeb85a5?mod=rss_markets_main",
+    "published": "2026-11-04T06:59:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "Apple Shares Slip, Meta Debt Costs Rise",
+    "link": "https://www.wsj.com/finance/stocks/apple-shares-slip-meta-debt-costs-rise-a8eb0510?mod=rss_markets_main",
+    "published": "2026-11-03T21:21:00Z",
     "source": "WSJ"
    },
    {
@@ -26,16 +32,10 @@
     "link": "https://www.wsj.com/finance/stocks/beijing-reins-in-ipo-rush-after-ai-concerns-hit-stock-market-d6abe32b?mod=rss_markets_main",
     "published": "2026-11-03T13:02:00Z",
     "source": "WSJ"
-   },
-   {
-    "title": "European Chip Stocks Fall After Asia Selloff",
-    "link": "https://www.wsj.com/finance/stocks/australian-banks-outperforming-on-rotation-away-from-ai-04a0c978?mod=rss_markets_main",
-    "published": "2026-11-03T09:30:00Z",
-    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-03T21:10:31Z"
+  "fetched_at": "2026-11-04T13:35:24Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -53,14 +53,14 @@
      "source": "Food Ingredients First"
     },
     {
-     "title": "Continued strong performance in the third quarter",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUm4xUExYdTIxS1Q1SXMyM1NpaGJxOG5YZXNmN2tIVHd5ZkRsTGxSOUpwREx2ZVNwUkNIVUR2UGJhR01mUURldjFxSlFGSnhHTnhMX2w2NERWQ0F0NXFHamxrR3EzQ0ZqcVB0eVlzY1NDejkweHZ4NjJoWEVjR2VVaUVpMWdfQVZXLU5WQmg1RVlEaXRmSldiYXdIY2dERUJJY0ZGUktjRWxjQzRHOXpnM0ZDUmZyUnc?oc=5",
-     "published": "2026-10-28T07:00:00Z",
-     "source": "Unilever Global"
+     "title": "Key facts: ULVR Q3 +5.2%; Foods split to McCormick; Q4 price rises",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZTBKX2dkaEZoZmM0b0FiWTFVWUxkQVVEeHU3V1E3WTdFVGozQkJ2U21uUlRYTDVKSHBLZkY2N2RwTUlWcGQzTm9sZHFxRFNZeFNqVWFnRmJzbnVBQlQ1XzVyOVJLZmFGcXBscjFUbUFsVnZDWEdOdzhON05Cd2ZyMlZ6ZHl2ak84cVEyY0V6d0hmWTBWWWhpSnl6RXZNSkhrS1ViWGtuMnJiWnh0ak5GU0gwNnpsNFJpcXBiZlpZRFc?oc=5",
+     "published": "2026-10-29T08:00:00Z",
+     "source": "TradingView"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-03T21:10:32Z"
+   "fetched_at": "2026-11-04T13:35:25Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-03T21:10:32Z"
+   "fetched_at": "2026-11-04T13:35:25Z"
   }
  }
 }
