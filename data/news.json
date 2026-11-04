@@ -1,18 +1,18 @@
 {
- "updated": "2026-11-04T13:35:24Z",
+ "updated": "2026-11-04T21:14:13Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Treasury Yields Decline After Democrat Triumph; Eurozone Bond Yields Trade Mixed",
+    "title": "Treasury Yields Down Following Democrats Midterm Win",
     "link": "https://www.wsj.com/finance/investing/two-year-treasury-yield-falls-to-two-month-low-as-democrats-sweep-midterm-elections-79fb1f8e?mod=rss_markets_main",
-    "published": "2026-11-04T12:38:00Z",
+    "published": "2026-11-04T20:18:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Stock Futures Rally, Treasurys Strengthen After Democratic Sweep",
+    "title": "U.S. Stocks Jump After Democrats Sweep Congress",
     "link": "https://www.wsj.com/finance/investing/stock-futures-edge-lower-treasurys-strengthen-after-democratic-sweep-f2198d07?mod=rss_markets_main",
-    "published": "2026-11-04T11:23:00Z",
+    "published": "2026-11-04T19:16:00Z",
     "source": "WSJ"
    },
    {
@@ -22,20 +22,20 @@
     "source": "WSJ"
    },
    {
+    "title": "U.S. Stocks Mixed Amid Midterm, Iran War Nerves",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-amid-midterm-iran-war-nerves-e1e285d4?mod=rss_markets_main",
+    "published": "2026-11-03T22:08:00Z",
+    "source": "WSJ"
+   },
+   {
     "title": "Apple Shares Slip, Meta Debt Costs Rise",
     "link": "https://www.wsj.com/finance/stocks/apple-shares-slip-meta-debt-costs-rise-a8eb0510?mod=rss_markets_main",
     "published": "2026-11-03T21:21:00Z",
     "source": "WSJ"
-   },
-   {
-    "title": "Beijing Reins In IPO Rush After AI Concerns Hit Stock Market",
-    "link": "https://www.wsj.com/finance/stocks/beijing-reins-in-ipo-rush-after-ai-concerns-hit-stock-market-d6abe32b?mod=rss_markets_main",
-    "published": "2026-11-03T13:02:00Z",
-    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-04T13:35:24Z"
+  "fetched_at": "2026-11-04T21:14:13Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -60,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-04T13:35:25Z"
+   "fetched_at": "2026-11-04T21:14:14Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-04T13:35:25Z"
+   "fetched_at": "2026-11-04T21:14:14Z"
   }
  }
 }
