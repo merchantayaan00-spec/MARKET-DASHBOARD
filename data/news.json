@@ -1,50 +1,50 @@
 {
- "updated": "2026-11-04T21:14:13Z",
+ "updated": "2026-11-05T13:39:45Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Treasury Yields Down Following Democrats Midterm Win",
-    "link": "https://www.wsj.com/finance/investing/two-year-treasury-yield-falls-to-two-month-low-as-democrats-sweep-midterm-elections-79fb1f8e?mod=rss_markets_main",
-    "published": "2026-11-04T20:18:00Z",
+    "title": "AI Selloff Extends, Treasurys Gain as Blue Wave Reverberates",
+    "link": "https://www.wsj.com/finance/stocks/ai-selloff-extends-treasurys-gain-as-blue-wave-reverberates-2d60fa21?mod=rss_markets_main",
+    "published": "2026-11-05T09:46:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Jump After Democrats Sweep Congress",
-    "link": "https://www.wsj.com/finance/investing/stock-futures-edge-lower-treasurys-strengthen-after-democratic-sweep-f2198d07?mod=rss_markets_main",
-    "published": "2026-11-04T19:16:00Z",
+    "title": "European Defense Stocks Under Pressure After Mixed Earnings, Midterm Results",
+    "link": "https://www.wsj.com/finance/stocks/nikkei-rises-0-7-led-by-auto-pharma-stocks-f42def12?mod=rss_markets_main",
+    "published": "2026-11-05T09:24:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Asia Markets Get Midterm Whiplash as Selloff Gives Way to Relief Rally",
-    "link": "https://www.wsj.com/finance/tech-declines-dollar-weakens-in-asia-as-u-s-midterm-votes-roll-in-bbeb85a5?mod=rss_markets_main",
-    "published": "2026-11-04T06:59:00Z",
+    "title": "ArcelorMittal Says Europe’s Steel Tariffs Are Boosting Profits",
+    "link": "https://www.wsj.com/business/earnings/arcelormittal-says-europes-higher-steel-tariffs-are-boosting-profits-e1be8987?mod=rss_markets_main",
+    "published": "2026-11-05T08:58:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Mixed Amid Midterm, Iran War Nerves",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-amid-midterm-iran-war-nerves-e1e285d4?mod=rss_markets_main",
-    "published": "2026-11-03T22:08:00Z",
+    "title": "U.S. Stocks Rally on Divided Government as AI Wobbles Continue",
+    "link": "https://www.wsj.com/finance/investing/u-s-stocks-rally-on-divided-government-as-ai-wobbles-continue-1a679abe?mod=rss_markets_main",
+    "published": "2026-11-04T21:55:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Apple Shares Slip, Meta Debt Costs Rise",
-    "link": "https://www.wsj.com/finance/stocks/apple-shares-slip-meta-debt-costs-rise-a8eb0510?mod=rss_markets_main",
-    "published": "2026-11-03T21:21:00Z",
+    "title": "Stocks Surge, Oil Plummets on Democrat Victory",
+    "link": "https://www.wsj.com/finance/stocks/stocks-surge-oil-plummets-on-democrat-victory-d4f606b5?mod=rss_markets_main",
+    "published": "2026-11-04T21:32:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-04T21:14:13Z"
+  "fetched_at": "2026-11-05T13:39:45Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
-     "title": "Is McCormick (MKC) Cheap As Unilever Foods Synergies Drive Its Valuation Case?",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZGVXWE1xUmlRV3hCLWo4NXpseXQ3Um4xWTNqSFBHOWdZWURiQjJzd29BelQxRFl0bGp4QjVhd1dTVFA2T2s3TkZuNDZLdEoyRVp2TFAtcFVzN202cWpWSHVvNzNwTVNTV3ZOZ2daOGNhNWpFcXJKU3l3VFpPZjJMR29aUUtwTG96UzB0SUd4QVZDQURYMmVlemV5QXlWODZaZUhZWGlfRGczZ0thRWk0LXVUZGswYmlib0ZuZUFWNGNNcFlpTEVhalJkSmdhZktGTkZpStIB2gFBVV95cUxPZU1kVjhSWVF6bFVra1dnVXZ6cTNVNkR4UHJzMV9oMDNXMnRvQ2NTeDhybUpjYmFLQXFZREg1VW8zal9OZ0lSZmIyTWduQmJfYnl0aFBiWUxIWm56NEVaQnZETjMzcmtlRkNYRThXRTJUWmVveTNOQ0xEbHFFaG5NX2ZFdUJoWGNtY0hnUndXZVJIbjhJZTc0OG13US01bTlodFpVMXJCc3NxZjcyX2hjeks2UEUycFhBS2NnempRNjdKVlo3NllZOTVTRFNTcURORXlyU3lHa1ZRdw?oc=5",
-     "published": "2026-11-02T01:42:59Z",
-     "source": "Simply Wall St"
+     "title": "McCormick/Unilever: SAMR Switches Case Back to Standard Probe from Fast-Track Process, Potentially Extending Review Period",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPMEFrX0E2bFZvRXVrbFhfbGZUbmt0OXAybVhyRzZBYXNIY05peWFUNDlrUlAwc0VfWWRCbUJqa0Z1em4xLTF5cTk2cXB5SEt5M2xENEc4YTVNMUNMX2dMeUtHRm5idk9MSGRwV0Z2SVhxOTRLeWY0OGNEYUhZaFVGdjNONUZEZUlvM05Rd1JoMTdUNm1Rem90OWJqQkRUS0c3S0tXTnpuZXJMTWNza3ZGeDB1bHhaakg4OUNnTFF3SEV6bG1KcTVXN1ZOb09HREZjbHpvZnpRNHZ1LXBUVWFYa2RRNA?oc=5",
+     "published": "2026-11-03T08:00:00Z",
+     "source": "The Capitol Forum"
     },
     {
      "title": "Unilever targets mayonnaise reset as food volumes fall in Q3",
@@ -60,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-04T21:14:14Z"
+   "fetched_at": "2026-11-05T13:39:45Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-04T21:14:14Z"
+   "fetched_at": "2026-11-05T13:39:46Z"
   }
  }
 }
