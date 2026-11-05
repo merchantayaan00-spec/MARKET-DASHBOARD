@@ -1,12 +1,18 @@
 {
- "updated": "2026-11-05T13:39:45Z",
+ "updated": "2026-11-05T21:12:05Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "AI Selloff Extends, Treasurys Gain as Blue Wave Reverberates",
-    "link": "https://www.wsj.com/finance/stocks/ai-selloff-extends-treasurys-gain-as-blue-wave-reverberates-2d60fa21?mod=rss_markets_main",
-    "published": "2026-11-05T09:46:00Z",
+    "title": "Wall Street Gets $2.5 Trillion AI Reality Check With Historic Rout of Tech Stocks",
+    "link": "https://www.wsj.com/finance/stocks/wall-street-gets-2-5-trillion-ai-reality-check-with-historic-rout-of-tech-stocks-93985d7c?mod=rss_markets_main",
+    "published": "2026-11-05T21:07:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "Your House vs. the Stock Market: Which Has Been a Better Investment?",
+    "link": "https://www.wsj.com/finance/investing/home-vs-stock-market-investment-6783607f?mod=rss_markets_main",
+    "published": "2026-11-05T20:00:00Z",
     "source": "WSJ"
    },
    {
@@ -26,16 +32,10 @@
     "link": "https://www.wsj.com/finance/investing/u-s-stocks-rally-on-divided-government-as-ai-wobbles-continue-1a679abe?mod=rss_markets_main",
     "published": "2026-11-04T21:55:00Z",
     "source": "WSJ"
-   },
-   {
-    "title": "Stocks Surge, Oil Plummets on Democrat Victory",
-    "link": "https://www.wsj.com/finance/stocks/stocks-surge-oil-plummets-on-democrat-victory-d4f606b5?mod=rss_markets_main",
-    "published": "2026-11-04T21:32:00Z",
-    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-05T13:39:45Z"
+  "fetched_at": "2026-11-05T21:12:05Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -47,20 +47,20 @@
      "source": "The Capitol Forum"
     },
     {
+     "title": "Is McCormick (MKC) Cheap As Unilever Foods Synergies Drive Its Valuation Case?",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZGVXWE1xUmlRV3hCLWo4NXpseXQ3Um4xWTNqSFBHOWdZWURiQjJzd29BelQxRFl0bGp4QjVhd1dTVFA2T2s3TkZuNDZLdEoyRVp2TFAtcFVzN202cWpWSHVvNzNwTVNTV3ZOZ2daOGNhNWpFcXJKU3l3VFpPZjJMR29aUUtwTG96UzB0SUd4QVZDQURYMmVlemV5QXlWODZaZUhZWGlfRGczZ0thRWk0LXVUZGswYmlib0ZuZUFWNGNNcFlpTEVhalJkSmdhZktGTkZpStIB2gFBVV95cUxPZU1kVjhSWVF6bFVra1dnVXZ6cTNVNkR4UHJzMV9oMDNXMnRvQ2NTeDhybUpjYmFLQXFZREg1VW8zal9OZ0lSZmIyTWduQmJfYnl0aFBiWUxIWm56NEVaQnZETjMzcmtlRkNYRThXRTJUWmVveTNOQ0xEbHFFaG5NX2ZFdUJoWGNtY0hnUndXZVJIbjhJZTc0OG13US01bTlodFpVMXJCc3NxZjcyX2hjeks2UEUycFhBS2NnempRNjdKVlo3NllZOTVTRFNTcURORXlyU3lHa1ZRdw?oc=5",
+     "published": "2026-11-02T01:42:59Z",
+     "source": "Simply Wall St"
+    },
+    {
      "title": "Unilever targets mayonnaise reset as food volumes fall in Q3",
      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd2E0NHM1T3dzZDB2anQ5TmxjM0xGNWlhODlhZEtLMFlCRU13b0NRZWhSUUFJMkttdUl0QVFBQ1ZndXhSOWR0SzdYRFljbHJ4TEc1TU9RTHIyeXVGZHl0cGprNFpoVDZ4MWsySzh1M2lJVm02TVg2UGRDS2I2M3g3VHZaT3pSM0Y2bVFr?oc=5",
      "published": "2026-10-29T15:25:45Z",
      "source": "Food Ingredients First"
-    },
-    {
-     "title": "Key facts: ULVR Q3 +5.2%; Foods split to McCormick; Q4 price rises",
-     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZTBKX2dkaEZoZmM0b0FiWTFVWUxkQVVEeHU3V1E3WTdFVGozQkJ2U21uUlRYTDVKSHBLZkY2N2RwTUlWcGQzTm9sZHFxRFNZeFNqVWFnRmJzbnVBQlQ1XzVyOVJLZmFGcXBscjFUbUFsVnZDWEdOdzhON05Cd2ZyMlZ6ZHl2ak84cVEyY0V6d0hmWTBWWWhpSnl6RXZNSkhrS1ViWGtuMnJiWnh0ak5GU0gwNnpsNFJpcXBiZlpZRFc?oc=5",
-     "published": "2026-10-29T08:00:00Z",
-     "source": "TradingView"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-05T13:39:45Z"
+   "fetched_at": "2026-11-05T21:12:06Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-05T13:39:46Z"
+   "fetched_at": "2026-11-05T21:12:06Z"
   }
  }
 }
