@@ -1,50 +1,50 @@
 {
- "updated": "2026-11-05T21:12:05Z",
+ "updated": "2026-11-06T13:32:49Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Wall Street Gets $2.5 Trillion AI Reality Check With Historic Rout of Tech Stocks",
-    "link": "https://www.wsj.com/finance/stocks/wall-street-gets-2-5-trillion-ai-reality-check-with-historic-rout-of-tech-stocks-93985d7c?mod=rss_markets_main",
-    "published": "2026-11-05T21:07:00Z",
+    "title": "Nasdaq Futures Rally After Asian AI Rout as Investors Brace for Jobs Day",
+    "link": "https://www.wsj.com/finance/stocks/nasdaq-futures-steady-after-asian-ai-rout-as-investors-brace-for-jobs-day-83415c52?mod=rss_markets_main",
+    "published": "2026-11-06T13:11:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Your House vs. the Stock Market: Which Has Been a Better Investment?",
-    "link": "https://www.wsj.com/finance/investing/home-vs-stock-market-investment-6783607f?mod=rss_markets_main",
-    "published": "2026-11-05T20:00:00Z",
+    "title": "Profits Are About as Good as They’ll Get",
+    "link": "https://www.wsj.com/finance/stocks/profits-are-about-as-good-as-theyll-get-72154bc8?mod=rss_markets_main",
+    "published": "2026-11-06T11:44:00Z",
     "source": "WSJ"
    },
    {
-    "title": "European Defense Stocks Under Pressure After Mixed Earnings, Midterm Results",
-    "link": "https://www.wsj.com/finance/stocks/nikkei-rises-0-7-led-by-auto-pharma-stocks-f42def12?mod=rss_markets_main",
-    "published": "2026-11-05T09:24:00Z",
+    "title": "What the Midterm Shake-Up Means for Markets and Investors",
+    "link": "https://www.wsj.com/finance/investing/what-the-midterm-shake-up-means-for-markets-and-investors-b1135215?mod=rss_markets_main",
+    "published": "2026-11-06T10:42:00Z",
     "source": "WSJ"
    },
    {
-    "title": "ArcelorMittal Says Europe’s Steel Tariffs Are Boosting Profits",
-    "link": "https://www.wsj.com/business/earnings/arcelormittal-says-europes-higher-steel-tariffs-are-boosting-profits-e1be8987?mod=rss_markets_main",
-    "published": "2026-11-05T08:58:00Z",
+    "title": "The Argument for Buying Treasury Bonds Is Still Strong",
+    "link": "https://www.wsj.com/finance/investing/the-argument-for-buying-treasury-bonds-is-still-strong-be338920?mod=rss_markets_main",
+    "published": "2026-11-06T10:30:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Rally on Divided Government as AI Wobbles Continue",
-    "link": "https://www.wsj.com/finance/investing/u-s-stocks-rally-on-divided-government-as-ai-wobbles-continue-1a679abe?mod=rss_markets_main",
-    "published": "2026-11-04T21:55:00Z",
+    "title": "Healthcare Stocks Caught Up in Market Selloff",
+    "link": "https://www.wsj.com/finance/stocks/nikkei-falls-5-9-dragged-by-chip-stocks-d8937761?mod=rss_markets_main",
+    "published": "2026-11-06T10:11:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-05T21:12:05Z"
+  "fetched_at": "2026-11-06T13:32:49Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
-     "title": "McCormick/Unilever: SAMR Switches Case Back to Standard Probe from Fast-Track Process, Potentially Extending Review Period",
-     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPMEFrX0E2bFZvRXVrbFhfbGZUbmt0OXAybVhyRzZBYXNIY05peWFUNDlrUlAwc0VfWWRCbUJqa0Z1em4xLTF5cTk2cXB5SEt5M2xENEc4YTVNMUNMX2dMeUtHRm5idk9MSGRwV0Z2SVhxOTRLeWY0OGNEYUhZaFVGdjNONUZEZUlvM05Rd1JoMTdUNm1Rem90OWJqQkRUS0c3S0tXTnpuZXJMTWNza3ZGeDB1bHhaakg4OUNnTFF3SEV6bG1KcTVXN1ZOb09HREZjbHpvZnpRNHZ1LXBUVWFYa2RRNA?oc=5",
-     "published": "2026-11-03T08:00:00Z",
-     "source": "The Capitol Forum"
+     "title": "Unilever Seeks €1 Billion in Savings by 2029 to Boost Turnaround",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQN29ObThuR2RxTmtta0ZBUTFTN1J5bXJVVlVKanJZaTQ5X0xqRjBFU2xsR1Q5Vl9MdERBOWlwQmxRT2RKd2FhemRXakJKdlBPUjk2QUVyMEZuWmdwM1VaQ3pieVQzTi1tSktjUF9ObmYxYk42MkxwSnVzZEkyZmFDNGhxN2JubkhHTVhUOFpBYTlVVmRzeGs1Q0MtLWR4MGlyRXZjeVJWSVMyQVk1b2lncndfNWY?oc=5",
+     "published": "2026-11-03T16:49:15Z",
+     "source": "Bloomberg.com"
     },
     {
      "title": "Is McCormick (MKC) Cheap As Unilever Foods Synergies Drive Its Valuation Case?",
@@ -60,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-05T21:12:06Z"
+   "fetched_at": "2026-11-06T13:32:49Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-05T21:12:06Z"
+   "fetched_at": "2026-11-06T13:32:50Z"
   }
  }
 }
