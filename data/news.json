@@ -1,18 +1,24 @@
 {
- "updated": "2026-11-09T13:40:47Z",
+ "updated": "2026-11-09T21:14:12Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Treasury Yields Largely Steady After Last Week’s Trading",
-    "link": "https://www.wsj.com/finance/gilts-outperform-eurozone-peers-as-oil-prices-drop-500fe046?mod=rss_markets_main",
-    "published": "2026-11-09T13:32:00Z",
+    "title": "Anthropic Prepares to Push Ahead With IPO Despite Market Jitters",
+    "link": "https://www.wsj.com/finance/stocks/anthropic-prepares-to-push-ahead-with-ipo-despite-market-jitters-843dd16c?mod=rss_markets_main",
+    "published": "2026-11-09T21:12:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Nvidia Slides Premarket as Stock Futures Rally",
+    "title": "U.S., Eurozone Bond Yields Rise Ahead of Inflation, Rates Outlook",
+    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-edge-lower-as-oil-prices-decline-71869e97?mod=rss_markets_main",
+    "published": "2026-11-09T19:33:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "U.S. Stocks Leap Despite Nvidia Slide",
     "link": "https://www.wsj.com/finance/stocks/stock-futures-treasurys-steady-but-nvidia-slides-premarket-on-huang-probe-31deea55?mod=rss_markets_main",
-    "published": "2026-11-09T13:20:00Z",
+    "published": "2026-11-09T19:29:00Z",
     "source": "WSJ"
    },
    {
@@ -26,16 +32,10 @@
     "link": "https://www.wsj.com/finance/stocks/boeings-deal-losses-are-coming-into-sharper-view-256c7642?mod=rss_markets_main",
     "published": "2026-11-09T11:13:00Z",
     "source": "WSJ"
-   },
-   {
-    "title": "For Big Bank Stocks, Capitol Hill’s Bark Is Worse Than Its Bite",
-    "link": "https://www.wsj.com/finance/regulation/for-big-bank-stocks-capitol-hills-bark-is-worse-than-its-bite-e436a99b?mod=rss_markets_main",
-    "published": "2026-11-09T10:30:00Z",
-    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-09T13:40:47Z"
+  "fetched_at": "2026-11-09T21:14:12Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -47,20 +47,20 @@
      "source": "Reuters"
     },
     {
-     "title": "Unilever targets mayonnaise reset as food volumes fall in Q3",
-     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd2E0NHM1T3dzZDB2anQ5TmxjM0xGNWlhODlhZEtLMFlCRU13b0NRZWhSUUFJMkttdUl0QVFBQ1ZndXhSOWR0SzdYRFljbHJ4TEc1TU9RTHIyeXVGZHl0cGprNFpoVDZ4MWsySzh1M2lJVm02TVg2UGRDS2I2M3g3VHZaT3pSM0Y2bVFr?oc=5",
-     "published": "2026-10-29T15:25:45Z",
-     "source": "Food Ingredients First"
-    },
-    {
      "title": "Jim Cramer and Elizabeth Warren criticize McCormick's $45B Unilever food merger — but for very different reasons",
      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUU1mVTRNSXQ2VnZRbWVzU1d4TXBvVTZqRXBSQzFyZDYwdUo0NDQweHpCU2lXR3h6Q1F6NExBZG9zWUZHMml4YTUtdGNjZ214OVZhYUw1UnpJUG9pY0RjTmxKWkFNSm9hRVZTVFVnOWQ0eDdoWW5tTGItdzVEUFcwSzc2YnJJMUZOYUVFUVlpeDBhTHRIZnhUYllBV2lNbHNLNXpQRQ?oc=5",
      "published": "2026-10-16T07:00:00Z",
      "source": "Yahoo Finance"
+    },
+    {
+     "title": "McCormick-Unilever deal clears US antitrust hurdle as UK review deadline looms",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMXc1b0JKOTRKVURUOEpVNkdmUDNHWnVicW94RlQtQ21LampjaEdLT0RZSkRoZG1wb0R0b21mRDYyUmpTZldMTlFzRllkbmdnZVNjTTV1RDd4Qm4tRlRlSzBiVW5Pd0lnZ2ZPRGt5Q05uRmdEVEw2WFNEcFVoY3NiaFpkSHVCemp3R3RpMkVPa0dCSGdCdTdoZjdMUW9YWUt5TEE?oc=5",
+     "published": "2026-10-08T07:00:00Z",
+     "source": "FoodNavigator.com"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-09T13:40:48Z"
+   "fetched_at": "2026-11-09T21:14:12Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -71,20 +71,20 @@
      "source": "PEI Private Equity"
     },
     {
+     "title": "Gong cha bubble tea chain changing hands in deal between Boston PE firms",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQ19XQXNjcW01SmJSNnU3c3VmWjNaM3ljOEVabmp5VE83VXVlZTlVMmVuZUozMnJyWUYteXlOTUJ0Y0pqdlQ0S09RQS1GR245ZXpQaEk0TFJLdm1sLV9rN1Z3c0xKYXFxTnFaRFY3Wlg2bnFISHh0UjNLc2lnaEpJOU1qemdFYjRhdEFzVDlVemJSdEZnYld1TlN1VUxKbzRVQUlHX29LWEc?oc=5",
+     "published": "2026-08-25T07:00:00Z",
+     "source": "The Business Journals"
+    },
+    {
      "title": "Partners Group exits Gong cha credit investment as Bain Capital steps in",
      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQc1R2MGNNTVhiSmswU1FSX3F3YXlKVWNFOFZmNWVJZjc5d1UxVU1LUTNraFQ2aUp3TlBMckUwNU9YRENpTjlweHFRYnNoWHd0MEFLSUotUTdRSWhmSmZyOGhfdDNBbktXZUdTNEQxVmtTZUxOWmtkRFRydHJWWkpIOUVSbS1CSHI3eTJFSlhEUE9MOGFnanFBdmx2czlQTF9WOGY2Vk4wREphR3NxVl8yQjQ3YjRvOHFXRnZlR3MzeVo2b3JnRGJEWWNFLU1PRms3aDVZdVJlTFNNbVVrWWgwWm5xTUdCMWxkbHZWelNmaw?oc=5",
      "published": "2026-08-25T07:00:00Z",
      "source": "The Globe and Mail"
-    },
-    {
-     "title": "Partners Group exits Gong Cha investment after Bain Capital buyout of bubble tea brand",
-     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTnZmR3RaZ0gwc0x5cDNEUHJRSkI1RG1XblE5eTk2a0VQS0NhcXgxenc2ZFM1UHA1RDQ1anIxaEZETG8teDBXUHF0dVI1djZxRnBobjVLYlM1MW50UTVHUFZTMFE4cXdOeGgwZWpHb2c2QldxT08tUXRJOXc0TjFfeTZtUExKZW9xWlRZNUVVS3JSWC1RdUhEZFJYMmV6am5CRE5ZSQ?oc=5",
-     "published": "2026-08-24T07:00:00Z",
-     "source": "The Straits Times"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-09T13:40:48Z"
+   "fetched_at": "2026-11-09T21:14:13Z"
   }
  }
 }
