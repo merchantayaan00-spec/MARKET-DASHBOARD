@@ -1,66 +1,66 @@
 {
- "updated": "2026-11-06T21:06:43Z",
+ "updated": "2026-11-09T13:40:47Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "AI Stocks Rebound After Brutal Week for Nasdaq",
-    "link": "https://www.wsj.com/finance/stocks/nasdaq-futures-steady-after-asian-ai-rout-as-investors-brace-for-jobs-day-83415c52?mod=rss_markets_main",
-    "published": "2026-11-06T19:13:00Z",
+    "title": "Treasury Yields Largely Steady After Last Week’s Trading",
+    "link": "https://www.wsj.com/finance/gilts-outperform-eurozone-peers-as-oil-prices-drop-500fe046?mod=rss_markets_main",
+    "published": "2026-11-09T13:32:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Treasury Yields Rise on Strong Jobs Data",
-    "link": "https://www.wsj.com/finance/investing/u-s-treasurys-little-changed-markets-await-employment-data-88f3f2b6?mod=rss_markets_main",
-    "published": "2026-11-06T17:36:00Z",
+    "title": "Nvidia Slides Premarket as Stock Futures Rally",
+    "link": "https://www.wsj.com/finance/stocks/stock-futures-treasurys-steady-but-nvidia-slides-premarket-on-huang-probe-31deea55?mod=rss_markets_main",
+    "published": "2026-11-09T13:20:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Profits Are About as Good as They’ll Get",
-    "link": "https://www.wsj.com/finance/stocks/profits-are-about-as-good-as-theyll-get-72154bc8?mod=rss_markets_main",
-    "published": "2026-11-06T11:44:00Z",
+    "title": "NYSE to Settle Tokenized Stocks on Avalanche Blockchain",
+    "link": "https://www.wsj.com/finance/regulation/nyse-to-settle-tokenized-stocks-on-avalanche-blockchain-038ce412?mod=rss_markets_main",
+    "published": "2026-11-09T13:05:00Z",
     "source": "WSJ"
    },
    {
-    "title": "What the Midterm Shake-Up Means for Markets and Investors",
-    "link": "https://www.wsj.com/finance/investing/what-the-midterm-shake-up-means-for-markets-and-investors-b1135215?mod=rss_markets_main",
-    "published": "2026-11-06T10:42:00Z",
+    "title": "Boeing’s Deal Losses Are Coming Into Sharper View",
+    "link": "https://www.wsj.com/finance/stocks/boeings-deal-losses-are-coming-into-sharper-view-256c7642?mod=rss_markets_main",
+    "published": "2026-11-09T11:13:00Z",
     "source": "WSJ"
    },
    {
-    "title": "The Argument for Buying Treasury Bonds Is Still Strong",
-    "link": "https://www.wsj.com/finance/investing/the-argument-for-buying-treasury-bonds-is-still-strong-be338920?mod=rss_markets_main",
-    "published": "2026-11-06T10:30:00Z",
+    "title": "For Big Bank Stocks, Capitol Hill’s Bark Is Worse Than Its Bite",
+    "link": "https://www.wsj.com/finance/regulation/for-big-bank-stocks-capitol-hills-bark-is-worse-than-its-bite-e436a99b?mod=rss_markets_main",
+    "published": "2026-11-09T10:30:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-06T21:06:43Z"
+  "fetched_at": "2026-11-09T13:40:47Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
-     "title": "Unilever Seeks €1 Billion in Savings by 2029 to Boost Turnaround",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQN29ObThuR2RxTmtta0ZBUTFTN1J5bXJVVlVKanJZaTQ5X0xqRjBFU2xsR1Q5Vl9MdERBOWlwQmxRT2RKd2FhemRXakJKdlBPUjk2QUVyMEZuWmdwM1VaQ3pieVQzTi1tSktjUF9ObmYxYk42MkxwSnVzZEkyZmFDNGhxN2JubkhHTVhUOFpBYTlVVmRzeGs1Q0MtLWR4MGlyRXZjeVJWSVMyQVk1b2lncndfNWY?oc=5",
-     "published": "2026-11-03T16:49:15Z",
-     "source": "Bloomberg.com"
-    },
-    {
-     "title": "Is McCormick (MKC) Cheap As Unilever Foods Synergies Drive Its Valuation Case?",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZGVXWE1xUmlRV3hCLWo4NXpseXQ3Um4xWTNqSFBHOWdZWURiQjJzd29BelQxRFl0bGp4QjVhd1dTVFA2T2s3TkZuNDZLdEoyRVp2TFAtcFVzN202cWpWSHVvNzNwTVNTV3ZOZ2daOGNhNWpFcXJKU3l3VFpPZjJMR29aUUtwTG96UzB0SUd4QVZDQURYMmVlemV5QXlWODZaZUhZWGlfRGczZ0thRWk0LXVUZGswYmlib0ZuZUFWNGNNcFlpTEVhalJkSmdhZktGTkZpStIB2gFBVV95cUxPZU1kVjhSWVF6bFVra1dnVXZ6cTNVNkR4UHJzMV9oMDNXMnRvQ2NTeDhybUpjYmFLQXFZREg1VW8zal9OZ0lSZmIyTWduQmJfYnl0aFBiWUxIWm56NEVaQnZETjMzcmtlRkNYRThXRTJUWmVveTNOQ0xEbHFFaG5NX2ZFdUJoWGNtY0hnUndXZVJIbjhJZTc0OG13US01bTlodFpVMXJCc3NxZjcyX2hjeks2UEUycFhBS2NnempRNjdKVlo3NllZOTVTRFNTcURORXlyU3lHa1ZRdw?oc=5",
-     "published": "2026-11-02T01:42:59Z",
-     "source": "Simply Wall St"
+     "title": "Unilever targets $1.12 billion savings in home, personal care pivot",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNaFJYeG9UMjdNc1k0TElralpWVEwzN1lCTkVMV0V3VUlEYW5sV1RhVUk0MzFKSGZNNGFFTVVBcmRlR0h0VWExMFIyNlAzaFhOWklFLXo1Z25qNlBGYUtCMmNfeDltTlk4MVpkZmVpaHlrOTl6Ylg5VnFxcU5DYWtEczVPQ3FBRVhqZlJETmQxNFlnVVc0OXZOYmM0aXc5UFUyS2RqYVFIT1pZcTVmRkE?oc=5",
+     "published": "2026-11-03T18:06:53Z",
+     "source": "Reuters"
     },
     {
      "title": "Unilever targets mayonnaise reset as food volumes fall in Q3",
      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd2E0NHM1T3dzZDB2anQ5TmxjM0xGNWlhODlhZEtLMFlCRU13b0NRZWhSUUFJMkttdUl0QVFBQ1ZndXhSOWR0SzdYRFljbHJ4TEc1TU9RTHIyeXVGZHl0cGprNFpoVDZ4MWsySzh1M2lJVm02TVg2UGRDS2I2M3g3VHZaT3pSM0Y2bVFr?oc=5",
      "published": "2026-10-29T15:25:45Z",
      "source": "Food Ingredients First"
+    },
+    {
+     "title": "Jim Cramer and Elizabeth Warren criticize McCormick's $45B Unilever food merger — but for very different reasons",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUU1mVTRNSXQ2VnZRbWVzU1d4TXBvVTZqRXBSQzFyZDYwdUo0NDQweHpCU2lXR3h6Q1F6NExBZG9zWUZHMml4YTUtdGNjZ214OVZhYUw1UnpJUG9pY0RjTmxKWkFNSm9hRVZTVFVnOWQ0eDdoWW5tTGItdzVEUFcwSzc2YnJJMUZOYUVFUVlpeDBhTHRIZnhUYllBV2lNbHNLNXpQRQ?oc=5",
+     "published": "2026-10-16T07:00:00Z",
+     "source": "Yahoo Finance"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-06T21:06:44Z"
+   "fetched_at": "2026-11-09T13:40:48Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-06T21:06:44Z"
+   "fetched_at": "2026-11-09T13:40:48Z"
   }
  }
 }
