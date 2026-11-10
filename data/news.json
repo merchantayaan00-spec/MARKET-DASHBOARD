@@ -1,41 +1,41 @@
 {
- "updated": "2026-11-10T13:31:01Z",
+ "updated": "2026-11-10T21:09:16Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
+    "title": "Hot Inflation Revives Wall Street’s Rate Hike Fears",
+    "link": "https://www.wsj.com/finance/investing/hot-inflation-revives-wall-streets-rate-hike-fears-1ce54f85?mod=rss_markets_main",
+    "published": "2026-11-10T20:52:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "Stocks Fall as Inflation Comes in Hotter Than Expected",
+    "link": "https://www.wsj.com/finance/stocks/global-stocks-strengthen-as-oil-dips-below-90-a-barrel-557620e0?mod=rss_markets_main",
+    "published": "2026-11-10T19:25:00Z",
+    "source": "WSJ"
+   },
+   {
     "title": "Anthropic to Seek $1.3 Trillion Valuation in IPO",
     "link": "https://www.wsj.com/finance/stocks/anthropic-ipo-valuation-8337b669?mod=rss_markets_main",
-    "published": "2026-11-10T13:18:00Z",
+    "published": "2026-11-10T18:41:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Global Stocks Strengthen as Oil Dips Below $90 a Barrel",
-    "link": "https://www.wsj.com/finance/stocks/global-stocks-strengthen-as-oil-dips-below-90-a-barrel-557620e0?mod=rss_markets_main",
-    "published": "2026-11-10T12:43:00Z",
+    "title": "U.S. 10-Year Treasury Tops 5% on Expectations of Higher Interest Rates",
+    "link": "https://www.wsj.com/economy/central-banking/treasury-yields-edge-up-ahead-of-u-s-inflation-data-7a55db79?mod=rss_markets_main",
+    "published": "2026-11-10T18:07:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Capitol Hill’s Bark Is Worse Than Its Bite for Bank Stocks",
-    "link": "https://www.wsj.com/finance/investing/capitol-hills-bark-is-worse-than-its-bite-for-bank-stocks-a6a6ce84?mod=rss_markets_main",
-    "published": "2026-11-10T11:25:00Z",
-    "source": "WSJ"
-   },
-   {
-    "title": "Wall Street Pay Set to Climb After Volatile Markets and IPOs Fuel Bank Profits",
-    "link": "https://www.wsj.com/finance/wall-street-pay-set-to-climb-after-volatile-markets-and-ipos-fuel-bank-profits-94fd9137?mod=rss_markets_main",
-    "published": "2026-11-10T11:00:00Z",
-    "source": "WSJ"
-   },
-   {
-    "title": "Singapore Central Bank Rolls Out Gold-Vaulting Services",
-    "link": "https://www.wsj.com/finance/singapore-central-bank-rolls-out-gold-vaulting-services-8a2d4f0d?mod=rss_markets_main",
-    "published": "2026-11-10T08:02:00Z",
+    "title": "Anthropic Founders’ Stakes Are Worth $18 Billion Apiece at IPO Price",
+    "link": "https://www.wsj.com/finance/anthropic-founders-stakes-are-worth-18-billion-apiece-at-ipo-price-2c746365?mod=rss_markets_main",
+    "published": "2026-11-10T17:54:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-10T13:31:02Z"
+  "fetched_at": "2026-11-10T21:09:17Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -60,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-10T13:31:02Z"
+   "fetched_at": "2026-11-10T21:09:17Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-10T13:31:02Z"
+   "fetched_at": "2026-11-10T21:09:17Z"
   }
  }
 }
