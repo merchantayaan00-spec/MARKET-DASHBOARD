@@ -1,41 +1,41 @@
 {
- "updated": "2026-11-09T21:14:12Z",
+ "updated": "2026-11-10T13:31:01Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Anthropic Prepares to Push Ahead With IPO Despite Market Jitters",
-    "link": "https://www.wsj.com/finance/stocks/anthropic-prepares-to-push-ahead-with-ipo-despite-market-jitters-843dd16c?mod=rss_markets_main",
-    "published": "2026-11-09T21:12:00Z",
+    "title": "Anthropic to Seek $1.3 Trillion Valuation in IPO",
+    "link": "https://www.wsj.com/finance/stocks/anthropic-ipo-valuation-8337b669?mod=rss_markets_main",
+    "published": "2026-11-10T13:18:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S., Eurozone Bond Yields Rise Ahead of Inflation, Rates Outlook",
-    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-edge-lower-as-oil-prices-decline-71869e97?mod=rss_markets_main",
-    "published": "2026-11-09T19:33:00Z",
+    "title": "Global Stocks Strengthen as Oil Dips Below $90 a Barrel",
+    "link": "https://www.wsj.com/finance/stocks/global-stocks-strengthen-as-oil-dips-below-90-a-barrel-557620e0?mod=rss_markets_main",
+    "published": "2026-11-10T12:43:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Leap Despite Nvidia Slide",
-    "link": "https://www.wsj.com/finance/stocks/stock-futures-treasurys-steady-but-nvidia-slides-premarket-on-huang-probe-31deea55?mod=rss_markets_main",
-    "published": "2026-11-09T19:29:00Z",
+    "title": "Capitol Hill’s Bark Is Worse Than Its Bite for Bank Stocks",
+    "link": "https://www.wsj.com/finance/investing/capitol-hills-bark-is-worse-than-its-bite-for-bank-stocks-a6a6ce84?mod=rss_markets_main",
+    "published": "2026-11-10T11:25:00Z",
     "source": "WSJ"
    },
    {
-    "title": "NYSE to Settle Tokenized Stocks on Avalanche Blockchain",
-    "link": "https://www.wsj.com/finance/regulation/nyse-to-settle-tokenized-stocks-on-avalanche-blockchain-038ce412?mod=rss_markets_main",
-    "published": "2026-11-09T13:05:00Z",
+    "title": "Wall Street Pay Set to Climb After Volatile Markets and IPOs Fuel Bank Profits",
+    "link": "https://www.wsj.com/finance/wall-street-pay-set-to-climb-after-volatile-markets-and-ipos-fuel-bank-profits-94fd9137?mod=rss_markets_main",
+    "published": "2026-11-10T11:00:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Boeing’s Deal Losses Are Coming Into Sharper View",
-    "link": "https://www.wsj.com/finance/stocks/boeings-deal-losses-are-coming-into-sharper-view-256c7642?mod=rss_markets_main",
-    "published": "2026-11-09T11:13:00Z",
+    "title": "Singapore Central Bank Rolls Out Gold-Vaulting Services",
+    "link": "https://www.wsj.com/finance/singapore-central-bank-rolls-out-gold-vaulting-services-8a2d4f0d?mod=rss_markets_main",
+    "published": "2026-11-10T08:02:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-09T21:14:12Z"
+  "fetched_at": "2026-11-10T13:31:02Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -60,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-09T21:14:12Z"
+   "fetched_at": "2026-11-10T13:31:02Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -71,20 +71,20 @@
      "source": "PEI Private Equity"
     },
     {
-     "title": "Gong cha bubble tea chain changing hands in deal between Boston PE firms",
-     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQ19XQXNjcW01SmJSNnU3c3VmWjNaM3ljOEVabmp5VE83VXVlZTlVMmVuZUozMnJyWUYteXlOTUJ0Y0pqdlQ0S09RQS1GR245ZXpQaEk0TFJLdm1sLV9rN1Z3c0xKYXFxTnFaRFY3Wlg2bnFISHh0UjNLc2lnaEpJOU1qemdFYjRhdEFzVDlVemJSdEZnYld1TlN1VUxKbzRVQUlHX29LWEc?oc=5",
-     "published": "2026-08-25T07:00:00Z",
-     "source": "The Business Journals"
-    },
-    {
      "title": "Partners Group exits Gong cha credit investment as Bain Capital steps in",
      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQc1R2MGNNTVhiSmswU1FSX3F3YXlKVWNFOFZmNWVJZjc5d1UxVU1LUTNraFQ2aUp3TlBMckUwNU9YRENpTjlweHFRYnNoWHd0MEFLSUotUTdRSWhmSmZyOGhfdDNBbktXZUdTNEQxVmtTZUxOWmtkRFRydHJWWkpIOUVSbS1CSHI3eTJFSlhEUE9MOGFnanFBdmx2czlQTF9WOGY2Vk4wREphR3NxVl8yQjQ3YjRvOHFXRnZlR3MzeVo2b3JnRGJEWWNFLU1PRms3aDVZdVJlTFNNbVVrWWgwWm5xTUdCMWxkbHZWelNmaw?oc=5",
      "published": "2026-08-25T07:00:00Z",
      "source": "The Globe and Mail"
+    },
+    {
+     "title": "Partners Group exits Gong Cha investment after Bain Capital buyout of bubble tea brand",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTnZmR3RaZ0gwc0x5cDNEUHJRSkI1RG1XblE5eTk2a0VQS0NhcXgxenc2ZFM1UHA1RDQ1anIxaEZETG8teDBXUHF0dVI1djZxRnBobjVLYlM1MW50UTVHUFZTMFE4cXdOeGgwZWpHb2c2QldxT08tUXRJOXc0TjFfeTZtUExKZW9xWlRZNUVVS3JSWC1RdUhEZFJYMmV6am5CRE5ZSQ?oc=5",
+     "published": "2026-08-24T07:00:00Z",
+     "source": "The Straits Times"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-09T21:14:13Z"
+   "fetched_at": "2026-11-10T13:31:02Z"
   }
  }
 }
