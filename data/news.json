@@ -1,66 +1,66 @@
 {
- "updated": "2026-11-10T21:09:16Z",
+ "updated": "2026-11-11T13:38:01Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Hot Inflation Revives Wall Street’s Rate Hike Fears",
-    "link": "https://www.wsj.com/finance/investing/hot-inflation-revives-wall-streets-rate-hike-fears-1ce54f85?mod=rss_markets_main",
-    "published": "2026-11-10T20:52:00Z",
+    "title": "Nasdaq-Backed Payward Launches Tokenized Versions of European Stocks",
+    "link": "https://www.wsj.com/finance/stocks/payward-to-launch-tokenized-versions-of-u-k-european-stocks-ae35dc78?mod=rss_markets_main",
+    "published": "2026-11-11T11:57:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Stocks Fall as Inflation Comes in Hotter Than Expected",
-    "link": "https://www.wsj.com/finance/stocks/global-stocks-strengthen-as-oil-dips-below-90-a-barrel-557620e0?mod=rss_markets_main",
-    "published": "2026-11-10T19:25:00Z",
+    "title": "Hospital Stocks Are Feeling Blue, in a Good Way",
+    "link": "https://www.wsj.com/finance/stocks/hospital-stocks-are-feeling-blue-in-a-good-way-f4d73ed2?mod=rss_markets_main",
+    "published": "2026-11-11T11:18:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Anthropic to Seek $1.3 Trillion Valuation in IPO",
-    "link": "https://www.wsj.com/finance/stocks/anthropic-ipo-valuation-8337b669?mod=rss_markets_main",
-    "published": "2026-11-10T18:41:00Z",
+    "title": "European Chip Stocks Climb After CoreWeave Results Fuel AI Optimism",
+    "link": "https://www.wsj.com/finance/stocks/nikkei-flat-supported-by-bank-pharma-stocks-2c6e1b38?mod=rss_markets_main",
+    "published": "2026-11-11T09:25:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. 10-Year Treasury Tops 5% on Expectations of Higher Interest Rates",
-    "link": "https://www.wsj.com/economy/central-banking/treasury-yields-edge-up-ahead-of-u-s-inflation-data-7a55db79?mod=rss_markets_main",
-    "published": "2026-11-10T18:07:00Z",
+    "title": "Asian Bond Yields Rise on Growing Expectations for Fed Rate Hike",
+    "link": "https://www.wsj.com/finance/asian-bond-yields-rise-on-growing-expectations-for-fed-rate-hike-a2491a28?mod=rss_markets_main",
+    "published": "2026-11-11T06:37:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Anthropic Founders’ Stakes Are Worth $18 Billion Apiece at IPO Price",
-    "link": "https://www.wsj.com/finance/anthropic-founders-stakes-are-worth-18-billion-apiece-at-ipo-price-2c746365?mod=rss_markets_main",
-    "published": "2026-11-10T17:54:00Z",
+    "title": "U.S. Stocks Slip on Inflation, AI Worries",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-slip-on-inflation-ai-worries-feb790bc?mod=rss_markets_main",
+    "published": "2026-11-10T21:54:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-10T21:09:17Z"
+  "fetched_at": "2026-11-11T13:38:01Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
-     "title": "Unilever targets $1.12 billion savings in home, personal care pivot",
-     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNaFJYeG9UMjdNc1k0TElralpWVEwzN1lCTkVMV0V3VUlEYW5sV1RhVUk0MzFKSGZNNGFFTVVBcmRlR0h0VWExMFIyNlAzaFhOWklFLXo1Z25qNlBGYUtCMmNfeDltTlk4MVpkZmVpaHlrOTl6Ylg5VnFxcU5DYWtEczVPQ3FBRVhqZlJETmQxNFlnVVc0OXZOYmM0aXc5UFUyS2RqYVFIT1pZcTVmRkE?oc=5",
-     "published": "2026-11-03T18:06:53Z",
-     "source": "Reuters"
+     "title": "CMA raises competition concerns over McCormick’s Unilever Foods acquisition",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNbGJpVnhOVzJ2VnNIZG1nbUJHNmZ3N3otWW5zV01wLTRKTzlYbGNRTjZXcGJIZ01FTkY1d3FDTHNQQUpBWGJwNXIxb1REZFZ3ZFV2WWQyZmxSaFVhVnNyNU14Vk1OTGp4MlZDcm81c0duVTZoQl9mbVBkcEE3cHM4MFhIWnF1dUZsV1FRT0JMQjJJMDY4SldMcFR5dVRXa0xra3NsWTlMcUY4NFE?oc=5",
+     "published": "2026-11-11T13:20:47Z",
+     "source": "FoodBev Media"
     },
     {
-     "title": "Jim Cramer and Elizabeth Warren criticize McCormick's $45B Unilever food merger — but for very different reasons",
-     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUU1mVTRNSXQ2VnZRbWVzU1d4TXBvVTZqRXBSQzFyZDYwdUo0NDQweHpCU2lXR3h6Q1F6NExBZG9zWUZHMml4YTUtdGNjZ214OVZhYUw1UnpJUG9pY0RjTmxKWkFNSm9hRVZTVFVnOWQ0eDdoWW5tTGItdzVEUFcwSzc2YnJJMUZOYUVFUVlpeDBhTHRIZnhUYllBV2lNbHNLNXpQRQ?oc=5",
-     "published": "2026-10-16T07:00:00Z",
-     "source": "Yahoo Finance"
+     "title": "Unilever's Food Business Acquisition by McCormick Faces CMA Scru",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcGpNVXBMeUt3NVhPZG5Hdk1PTzdoUmVwbHlrOVJ1NVJSWlJjZHBweEsteW1MMnZfdXpXZmJhOGhnRkxZVnVhblY0XzRYWEo3SDY3Z1pxek4wc2NSWWQ2WU5rMmVLOE8yN3ZZVGhPbWpPbzg4MzJ5QW5RRWJHSTh1dUExcVF1RktDVUx2YkhTbER4YlhVbEFRTlBfNzA1czM0QllNN0hZTFFyZw?oc=5",
+     "published": "2026-11-11T13:18:02Z",
+     "source": "GuruFocus"
     },
     {
-     "title": "McCormick-Unilever deal clears US antitrust hurdle as UK review deadline looms",
-     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMXc1b0JKOTRKVURUOEpVNkdmUDNHWnVicW94RlQtQ21LampjaEdLT0RZSkRoZG1wb0R0b21mRDYyUmpTZldMTlFzRllkbmdnZVNjTTV1RDd4Qm4tRlRlSzBiVW5Pd0lnZ2ZPRGt5Q05uRmdEVEw2WFNEcFVoY3NiaFpkSHVCemp3R3RpMkVPa0dCSGdCdTdoZjdMUW9YWUt5TEE?oc=5",
-     "published": "2026-10-08T07:00:00Z",
-     "source": "FoodNavigator.com"
+     "title": "UPDATE: Unilever notes progress on approvals for deal with McCormick",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdUFCMkdPaDlYaDVQeHJHVFVXWklFaWR1ZE45N0JwQ0Y4YTc0R29JVzB4Vm9jRTdERjVXaGRWRlVuZnpEOGdXV24wc0NsaVBOS3FuZTRXczRRRTdvcDcwRmRMTUd0RjZneW11dnI1Y2hIUlN3MjlVczN5cWxfcF9nc3JPN2hOQlpXYUtQSHlXMW9va1J4QkV6RS1VVXBGbGl1dDVuZ085clhUQzRQOXJnbWtWNFVTdw?oc=5",
+     "published": "2026-11-11T12:25:00Z",
+     "source": "London South East"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-10T21:09:17Z"
+   "fetched_at": "2026-11-11T13:38:02Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -71,20 +71,20 @@
      "source": "PEI Private Equity"
     },
     {
+     "title": "Gong cha bubble tea chain changing hands in deal between Boston PE firms",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQ19XQXNjcW01SmJSNnU3c3VmWjNaM3ljOEVabmp5VE83VXVlZTlVMmVuZUozMnJyWUYteXlOTUJ0Y0pqdlQ0S09RQS1GR245ZXpQaEk0TFJLdm1sLV9rN1Z3c0xKYXFxTnFaRFY3Wlg2bnFISHh0UjNLc2lnaEpJOU1qemdFYjRhdEFzVDlVemJSdEZnYld1TlN1VUxKbzRVQUlHX29LWEc?oc=5",
+     "published": "2026-08-25T07:00:00Z",
+     "source": "The Business Journals"
+    },
+    {
      "title": "Partners Group exits Gong cha credit investment as Bain Capital steps in",
      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQc1R2MGNNTVhiSmswU1FSX3F3YXlKVWNFOFZmNWVJZjc5d1UxVU1LUTNraFQ2aUp3TlBMckUwNU9YRENpTjlweHFRYnNoWHd0MEFLSUotUTdRSWhmSmZyOGhfdDNBbktXZUdTNEQxVmtTZUxOWmtkRFRydHJWWkpIOUVSbS1CSHI3eTJFSlhEUE9MOGFnanFBdmx2czlQTF9WOGY2Vk4wREphR3NxVl8yQjQ3YjRvOHFXRnZlR3MzeVo2b3JnRGJEWWNFLU1PRms3aDVZdVJlTFNNbVVrWWgwWm5xTUdCMWxkbHZWelNmaw?oc=5",
      "published": "2026-08-25T07:00:00Z",
      "source": "The Globe and Mail"
-    },
-    {
-     "title": "Partners Group exits Gong Cha investment after Bain Capital buyout of bubble tea brand",
-     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTnZmR3RaZ0gwc0x5cDNEUHJRSkI1RG1XblE5eTk2a0VQS0NhcXgxenc2ZFM1UHA1RDQ1anIxaEZETG8teDBXUHF0dVI1djZxRnBobjVLYlM1MW50UTVHUFZTMFE4cXdOeGgwZWpHb2c2QldxT08tUXRJOXc0TjFfeTZtUExKZW9xWlRZNUVVS3JSWC1RdUhEZFJYMmV6am5CRE5ZSQ?oc=5",
-     "published": "2026-08-24T07:00:00Z",
-     "source": "The Straits Times"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-10T21:09:17Z"
+   "fetched_at": "2026-11-11T13:38:02Z"
   }
  }
 }
