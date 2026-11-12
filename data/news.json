@@ -1,80 +1,80 @@
 {
- "updated": "2026-11-11T13:38:01Z",
+ "updated": "2026-11-12T13:40:39Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Nasdaq-Backed Payward Launches Tokenized Versions of European Stocks",
-    "link": "https://www.wsj.com/finance/stocks/payward-to-launch-tokenized-versions-of-u-k-european-stocks-ae35dc78?mod=rss_markets_main",
-    "published": "2026-11-11T11:57:00Z",
+    "title": "Nvidia Leadership Crisis Drags on U.S. Stock Futures, Pressures AI Trade",
+    "link": "https://www.wsj.com/finance/stocks/nvidia-leadership-scandal-drags-on-u-s-stock-futures-pressures-ai-trade-e7f6e5b8?mod=rss_markets_main",
+    "published": "2026-11-12T13:01:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Hospital Stocks Are Feeling Blue, in a Good Way",
-    "link": "https://www.wsj.com/finance/stocks/hospital-stocks-are-feeling-blue-in-a-good-way-f4d73ed2?mod=rss_markets_main",
-    "published": "2026-11-11T11:18:00Z",
+    "title": "Brookfield Earnings Buoyed by Fund Raising, Wealth Solutions Growth",
+    "link": "https://www.wsj.com/finance/investing/brookfield-earnings-buoyed-by-fund-raising-wealth-solutions-growth-05a27297?mod=rss_markets_main",
+    "published": "2026-11-12T12:57:00Z",
     "source": "WSJ"
    },
    {
-    "title": "European Chip Stocks Climb After CoreWeave Results Fuel AI Optimism",
-    "link": "https://www.wsj.com/finance/stocks/nikkei-flat-supported-by-bank-pharma-stocks-2c6e1b38?mod=rss_markets_main",
-    "published": "2026-11-11T09:25:00Z",
+    "title": "The Inflation Fight May Be About to Turn Painful",
+    "link": "https://www.wsj.com/finance/investing/the-inflation-fight-may-be-about-to-turn-painful-1d053d79?mod=rss_markets_main",
+    "published": "2026-11-12T10:57:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Asian Bond Yields Rise on Growing Expectations for Fed Rate Hike",
-    "link": "https://www.wsj.com/finance/asian-bond-yields-rise-on-growing-expectations-for-fed-rate-hike-a2491a28?mod=rss_markets_main",
-    "published": "2026-11-11T06:37:00Z",
+    "title": "Endeavour Mining Shares Tumble as Stoppages Affect Full-Year Output",
+    "link": "https://www.wsj.com/business/endeavour-mining-shares-tumble-as-stoppages-affect-full-year-output-fe0a6cd4?mod=rss_markets_main",
+    "published": "2026-11-12T09:09:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Slip on Inflation, AI Worries",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-slip-on-inflation-ai-worries-feb790bc?mod=rss_markets_main",
-    "published": "2026-11-10T21:54:00Z",
+    "title": "Metro Bank Hangs Up ‘For Sale’ Sign",
+    "link": "https://www.wsj.com/business/deals/metro-bank-hangs-up-for-sale-sign-6a1e3da4?mod=rss_markets_main",
+    "published": "2026-11-12T08:25:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-11T13:38:01Z"
+  "fetched_at": "2026-11-12T13:40:39Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
-     "title": "CMA raises competition concerns over McCormick’s Unilever Foods acquisition",
-     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNbGJpVnhOVzJ2VnNIZG1nbUJHNmZ3N3otWW5zV01wLTRKTzlYbGNRTjZXcGJIZ01FTkY1d3FDTHNQQUpBWGJwNXIxb1REZFZ3ZFV2WWQyZmxSaFVhVnNyNU14Vk1OTGp4MlZDcm81c0duVTZoQl9mbVBkcEE3cHM4MFhIWnF1dUZsV1FRT0JMQjJJMDY4SldMcFR5dVRXa0xra3NsWTlMcUY4NFE?oc=5",
-     "published": "2026-11-11T13:20:47Z",
-     "source": "FoodBev Media"
+     "title": "McCormick: Unilever asset acquisition plan under scrutiny in the UK",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbWdoalhnYnlNR19oSUVJNWw4TEFYT3g1VVBma0JVUVBqNGd6NFJ0MERDTlZWb0dWUzN6eFdXblZvcVVjeDF3cE1lN19Pd2E5UGZORjlZTlBmbGJXTGlnbXRfblhWNjg3OGs0b0tUN0tZbW1pOXFrZlFod1VMVzBuZG1kT3ZyZWdCWjRyaFBpOFQzYTNESzIwTGZEWXJOb1N4dkZLRWkyWDJ2WUpGSXRab2c1RjNFcUxMYWhV?oc=5",
+     "published": "2026-11-12T09:21:23Z",
+     "source": "marketscreener.com"
     },
     {
-     "title": "Unilever's Food Business Acquisition by McCormick Faces CMA Scru",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcGpNVXBMeUt3NVhPZG5Hdk1PTzdoUmVwbHlrOVJ1NVJSWlJjZHBweEsteW1MMnZfdXpXZmJhOGhnRkxZVnVhblY0XzRYWEo3SDY3Z1pxek4wc2NSWWQ2WU5rMmVLOE8yN3ZZVGhPbWpPbzg4MzJ5QW5RRWJHSTh1dUExcVF1RktDVUx2YkhTbER4YlhVbEFRTlBfNzA1czM0QllNN0hZTFFyZw?oc=5",
-     "published": "2026-11-11T13:18:02Z",
-     "source": "GuruFocus"
+     "title": "UK watchdog flags dry mix concerns in McCormick–Unilever deal",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNeGJyOTZoMEszakRKTl8tUkJ2NjFpVGlQT0lwdzFEZ3ppdFk1c3VXZGpoY0Q0MHRwQng4by1rOFNnZW9naUxwbGxPTW9ZUWFlNUFlRzRwSEI2VTZyMGlsM2QxZFg0TndOalAzNUtRTURJZXlGOG9HWXNRS1c1RlE5Tk1MZEp0T1pJeHc?oc=5",
+     "published": "2026-11-12T08:54:58Z",
+     "source": "Food Ingredients First"
     },
     {
-     "title": "UPDATE: Unilever notes progress on approvals for deal with McCormick",
-     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdUFCMkdPaDlYaDVQeHJHVFVXWklFaWR1ZE45N0JwQ0Y4YTc0R29JVzB4Vm9jRTdERjVXaGRWRlVuZnpEOGdXV24wc0NsaVBOS3FuZTRXczRRRTdvcDcwRmRMTUd0RjZneW11dnI1Y2hIUlN3MjlVczN5cWxfcF9nc3JPN2hOQlpXYUtQSHlXMW9va1J4QkV6RS1VVXBGbGl1dDVuZ085clhUQzRQOXJnbWtWNFVTdw?oc=5",
-     "published": "2026-11-11T12:25:00Z",
-     "source": "London South East"
+     "title": "Unilever stock faces UK remedy deadline for McCormick deal",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdGxfVUxERlBfaFZhR2ltdk5LbnY2U0RpbHJBN2gzcHRkc2ZZM1REUU41LXItYUdIam9wTlo3NWQ0Rkg1bHREQklDMFJYOW81LUgtWWdTVmxrT0xvTjVQTExFQkZrMEpGaDJoelZ4VDRkTkVHYlFhNDdhVkNaaVpTMXNLWWc3TTNZa2JJM1Vvc29jb1NsMVlaQVR2c2ZvWW5LWVQxaURUdUY2TUZrTnZkZ2U3Ny1ieXNGNEZuQkNXbw?oc=5",
+     "published": "2026-11-12T06:52:15Z",
+     "source": "finchannel"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-11T13:38:02Z"
+   "fetched_at": "2026-11-12T13:40:39Z"
   },
   "bain-gong-cha": {
    "items": [
+    {
+     "title": "Bain Capital Completes 900 Billion Won Gong Cha Buyout",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWDhVNFlTcUVTUkx3NmliN3FoUXJ3ZUtPLVR3UU1GRWV2eE1wT3BlV0NnWjhKZ1pVZWNTODlJdDNpYS1mRHlLajV2LUlsTXR4RU1Ud1luYW9QT01Nay1CZE5wd0lrQ2RJWUEtSm4tdnBJamdpbXdXVW53SldWb1ljblR2aVZ0U1VNamh4QUlpVVB0LXhZSUpQcFA2dw?oc=5",
+     "published": "2026-11-12T02:06:27Z",
+     "source": "Seoul Economic Daily"
+    },
     {
      "title": "Bain Capital to acquire Gong cha from TA Associates",
      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUEZXSUF4UGlrNHplaHhNeWdsMXh3TUJtRkdMeVc5eWNQVUVCM3Vla05fNXdVY1E4Qjc5bTV0WkRLd05RNk9zZFNEbkZTa1JFanJRM21LbHR2RjV6T2QtTGdIZnRDR25HbjNLU3pkYWdzaC1oYVJGV2xPRktIcnc3ejJVdzBPMy1LT3F1eEhybzNYM2h6NDZoYXh2Yw?oc=5",
      "published": "2026-10-22T16:11:33Z",
      "source": "PEI Private Equity"
-    },
-    {
-     "title": "Gong cha bubble tea chain changing hands in deal between Boston PE firms",
-     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQ19XQXNjcW01SmJSNnU3c3VmWjNaM3ljOEVabmp5VE83VXVlZTlVMmVuZUozMnJyWUYteXlOTUJ0Y0pqdlQ0S09RQS1GR245ZXpQaEk0TFJLdm1sLV9rN1Z3c0xKYXFxTnFaRFY3Wlg2bnFISHh0UjNLc2lnaEpJOU1qemdFYjRhdEFzVDlVemJSdEZnYld1TlN1VUxKbzRVQUlHX29LWEc?oc=5",
-     "published": "2026-08-25T07:00:00Z",
-     "source": "The Business Journals"
     },
     {
      "title": "Partners Group exits Gong cha credit investment as Bain Capital steps in",
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-11T13:38:02Z"
+   "fetched_at": "2026-11-12T13:40:39Z"
   }
  }
 }
