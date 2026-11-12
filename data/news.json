@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-12T13:40:39Z",
+ "updated": "2026-11-12T21:12:44Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Nvidia Leadership Crisis Drags on U.S. Stock Futures, Pressures AI Trade",
-    "link": "https://www.wsj.com/finance/stocks/nvidia-leadership-scandal-drags-on-u-s-stock-futures-pressures-ai-trade-e7f6e5b8?mod=rss_markets_main",
-    "published": "2026-11-12T13:01:00Z",
+    "title": "Cravath Employee Is Charged With Insider Trading Using Confidential Deal Information",
+    "link": "https://www.wsj.com/finance/regulation/cravath-employee-is-charged-with-insider-trading-using-confidential-deal-information-a5cdd0a9?mod=rss_markets_main",
+    "published": "2026-11-12T19:08:00Z",
     "source": "WSJ"
    },
    {
@@ -22,45 +22,45 @@
     "source": "WSJ"
    },
    {
-    "title": "Endeavour Mining Shares Tumble as Stoppages Affect Full-Year Output",
-    "link": "https://www.wsj.com/business/endeavour-mining-shares-tumble-as-stoppages-affect-full-year-output-fe0a6cd4?mod=rss_markets_main",
-    "published": "2026-11-12T09:09:00Z",
-    "source": "WSJ"
-   },
-   {
     "title": "Metro Bank Hangs Up ‘For Sale’ Sign",
     "link": "https://www.wsj.com/business/deals/metro-bank-hangs-up-for-sale-sign-6a1e3da4?mod=rss_markets_main",
     "published": "2026-11-12T08:25:00Z",
     "source": "WSJ"
+   },
+   {
+    "title": "European Stock Indexes Higher as Investors Rotate Away From AI",
+    "link": "https://www.wsj.com/finance/stocks/nikkei-falls-0-2-dragged-by-electronics-stocks-0da84013?mod=rss_markets_main",
+    "published": "2026-11-12T08:23:00Z",
+    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-12T13:40:39Z"
+  "fetched_at": "2026-11-12T21:12:44Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
+     "title": "Britain threatens deeper probe into $65 billion US–UK food merger that would reshape ownership behind Knorr and Hellmann’s across Africa",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPMEpLdS1PVlhMTFFHRUd4TWdwNzBQR1BQeG14b1RLLS1uUTI1TTlGcU5wXzFJOEt1Tm52NGVJajhxbkxFUGVPSzJLdnRWQ09hVVFaX0JQWC14SnExSjlZNWl3TzhvQjBjbmtEMHlvSlNpTk1fb0dLMFI5dmNoaFY1UF9xWFNlS2tnU0E1VEJ0dnluUjZiV0l4djdfMlQ0dGI4S21Zbk1WV2o5Qkx4SjkxSjZDNXhiRnJkbmhPR3BPLW5xdFFwYzdtU3A5bVBxdkpPQ1Zv?oc=5",
+     "published": "2026-11-12T16:27:49Z",
+     "source": "Business Insider Africa"
+    },
+    {
+     "title": "Unilever, McCormick face in-depth UK probe without fixes",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPd1ktSEY4Vnl3VXhTd0tZbVFDQm42R0tCQnZQMnoxVlJHcm5WeVhsOWNiWERfNER5aHVCYk5vMURNbWE2U3BRYi0tWlVvLUVacnh1V1V6NHlJdTZLbjlLM1hlckRKY2RuNndyRVZCNnlES3Z6d3ZBTGNEcXJwNFpOZElVT3ZpM1hLUFM5QWNrTGdIZnlWc3pYRG54ZGhxQQ?oc=5",
+     "published": "2026-11-12T14:28:00Z",
+     "source": "Malaysia Sun"
+    },
+    {
      "title": "McCormick: Unilever asset acquisition plan under scrutiny in the UK",
      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbWdoalhnYnlNR19oSUVJNWw4TEFYT3g1VVBma0JVUVBqNGd6NFJ0MERDTlZWb0dWUzN6eFdXblZvcVVjeDF3cE1lN19Pd2E5UGZORjlZTlBmbGJXTGlnbXRfblhWNjg3OGs0b0tUN0tZbW1pOXFrZlFod1VMVzBuZG1kT3ZyZWdCWjRyaFBpOFQzYTNESzIwTGZEWXJOb1N4dkZLRWkyWDJ2WUpGSXRab2c1RjNFcUxMYWhV?oc=5",
      "published": "2026-11-12T09:21:23Z",
      "source": "marketscreener.com"
-    },
-    {
-     "title": "UK watchdog flags dry mix concerns in McCormick–Unilever deal",
-     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNeGJyOTZoMEszakRKTl8tUkJ2NjFpVGlQT0lwdzFEZ3ppdFk1c3VXZGpoY0Q0MHRwQng4by1rOFNnZW9naUxwbGxPTW9ZUWFlNUFlRzRwSEI2VTZyMGlsM2QxZFg0TndOalAzNUtRTURJZXlGOG9HWXNRS1c1RlE5Tk1MZEp0T1pJeHc?oc=5",
-     "published": "2026-11-12T08:54:58Z",
-     "source": "Food Ingredients First"
-    },
-    {
-     "title": "Unilever stock faces UK remedy deadline for McCormick deal",
-     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdGxfVUxERlBfaFZhR2ltdk5LbnY2U0RpbHJBN2gzcHRkc2ZZM1REUU41LXItYUdIam9wTlo3NWQ0Rkg1bHREQklDMFJYOW81LUgtWWdTVmxrT0xvTjVQTExFQkZrMEpGaDJoelZ4VDRkTkVHYlFhNDdhVkNaaVpTMXNLWWc3TTNZa2JJM1Vvc29jb1NsMVlaQVR2c2ZvWW5LWVQxaURUdUY2TUZrTnZkZ2U3Ny1ieXNGNEZuQkNXbw?oc=5",
-     "published": "2026-11-12T06:52:15Z",
-     "source": "finchannel"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-12T13:40:39Z"
+   "fetched_at": "2026-11-12T21:12:44Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-12T13:40:39Z"
+   "fetched_at": "2026-11-12T21:12:45Z"
   }
  }
 }
