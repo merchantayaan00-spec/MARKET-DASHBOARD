@@ -1,12 +1,30 @@
 {
- "updated": "2026-11-13T13:36:19Z",
+ "updated": "2026-11-13T21:13:57Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Stock Futures Lower as Investors Look to U.S. Inflation Data",
+    "title": "U.S. Stocks Decline as Nvidia Shares Slide Again",
     "link": "https://www.wsj.com/finance/stocks/stock-futures-lower-as-investors-look-to-u-s-inflation-data-5b1b5988?mod=rss_markets_main",
-    "published": "2026-11-13T11:19:00Z",
+    "published": "2026-11-13T20:02:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "Anthropic Chief Tells Jamie Dimon He Hopes IPO Will ‘Underpromise and Overdeliver’",
+    "link": "https://www.wsj.com/finance/anthropic-chief-tells-jamie-dimon-he-hopes-ipo-will-underpromise-and-overdeliver-1ba2dd71?mod=rss_markets_main",
+    "published": "2026-11-13T18:46:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "Cravath Employee Is Charged With Insider Trading Using Confidential Deal Information",
+    "link": "https://www.wsj.com/finance/regulation/cravath-employee-is-charged-with-insider-trading-using-confidential-deal-information-a5cdd0a9?mod=rss_markets_main",
+    "published": "2026-11-13T15:18:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "The Stock Market’s Bargain Bin Is Secretly Stuffed With AI Stocks",
+    "link": "https://www.wsj.com/finance/investing/the-stock-markets-bargain-bin-is-secretly-stuffed-with-ai-stocks-8fa3edbe?mod=rss_markets_main",
+    "published": "2026-11-13T14:00:00Z",
     "source": "WSJ"
    },
    {
@@ -14,28 +32,10 @@
     "link": "https://www.wsj.com/finance/stocks/how-the-ai-trade-hijacked-the-treasury-market-for-a-month-3fa26a9f?mod=rss_markets_main",
     "published": "2026-11-13T11:17:00Z",
     "source": "WSJ"
-   },
-   {
-    "title": "European Stock Indexes Turn Positive as Oil Drops",
-    "link": "https://www.wsj.com/finance/stocks/nikkei-rises-1-1-led-by-chip-stocks-eb2ed881?mod=rss_markets_main",
-    "published": "2026-11-13T10:52:00Z",
-    "source": "WSJ"
-   },
-   {
-    "title": "Asia’s Stock Rebound Fades as Nvidia Uncertainty Lingers",
-    "link": "https://www.wsj.com/finance/stocks/asia-stocks-stage-tentative-rebound-as-nvidia-uncertainty-lingers-c0953e15?mod=rss_markets_main",
-    "published": "2026-11-13T07:09:00Z",
-    "source": "WSJ"
-   },
-   {
-    "title": "AI Bots Are Using Credit Cards. Banks Are Racing to Keep Up.",
-    "link": "https://www.wsj.com/finance/ai-bots-are-using-credit-cards-banks-are-racing-to-keep-up-c30dda30?mod=rss_markets_main",
-    "published": "2026-11-13T01:00:00Z",
-    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-13T13:36:19Z"
+  "fetched_at": "2026-11-13T21:13:57Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -43,7 +43,7 @@
     {
      "title": "Unilever and McCormick have days to address merger risk",
      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOb1ZGSlFsU1JKRXBmbjIzS3RFVFBZTm52dHoxbjVpampTOUlOUGhjaHVvVDZLYzc4MENMbjBrZUZweW5KTmFacEpQZ3VBTzRYS0tjZG5xbTRLUU5tWGwxcHRqcnhjSHNTUU9ZQVdQNzlmS1dGSnltYkY1MElrZmhJM1R3aThDS1k?oc=5",
-     "published": "2026-11-13T11:00:19Z",
+     "published": "2026-11-13T10:59:41Z",
      "source": "Townpress Newspaper"
     },
     {
@@ -54,13 +54,13 @@
     },
     {
      "title": "Unilever, McCormick face in-depth UK probe without fixes",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPd1ktSEY4Vnl3VXhTd0tZbVFDQm42R0tCQnZQMnoxVlJHcm5WeVhsOWNiWERfNER5aHVCYk5vMURNbWE2U3BRYi0tWlVvLUVacnh1V1V6NHlJdTZLbjlLM1hlckRKY2RuNndyRVZCNnlES3Z6d3ZBTGNEcXJwNFpOZElVT3ZpM1hLUFM5QWNrTGdIZnlWc3pYRG54ZGhxQQ?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRUZQdmhpeGN2VjhxQXpEMWt2SXlBVnlnMERwYlhNdzdkX2ZwRko2SWlmdE11RFZmTGZldlB1UU9WbDRZSk9WNjlJNFJrQURTQmpnNDVIRWZzYlNDSnBBZXZfczUwTWV0OTk0b1d0V2tTWTdlSzU5OE5JOVhUbkhfeFQtaWVvZE1LUEVwQlp3TmRmZXd6YkVnbDBQaTdBWlI2?oc=5",
      "published": "2026-11-12T14:28:00Z",
-     "source": "Malaysia Sun"
+     "source": "https://www.indiagazette.com/"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-13T13:36:20Z"
+   "fetched_at": "2026-11-13T21:13:58Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-13T13:36:20Z"
+   "fetched_at": "2026-11-13T21:13:58Z"
   }
  }
 }
