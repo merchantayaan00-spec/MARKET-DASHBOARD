@@ -1,66 +1,66 @@
 {
- "updated": "2026-11-13T21:13:57Z",
+ "updated": "2026-11-16T21:11:07Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "U.S. Stocks Decline as Nvidia Shares Slide Again",
-    "link": "https://www.wsj.com/finance/stocks/stock-futures-lower-as-investors-look-to-u-s-inflation-data-5b1b5988?mod=rss_markets_main",
-    "published": "2026-11-13T20:02:00Z",
+    "title": "Treasury Yields Slip to Start Busy Week",
+    "link": "https://www.wsj.com/finance/-63dc4bbf?mod=rss_markets_main",
+    "published": "2026-11-16T20:47:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Anthropic Chief Tells Jamie Dimon He Hopes IPO Will ‘Underpromise and Overdeliver’",
-    "link": "https://www.wsj.com/finance/anthropic-chief-tells-jamie-dimon-he-hopes-ipo-will-underpromise-and-overdeliver-1ba2dd71?mod=rss_markets_main",
-    "published": "2026-11-13T18:46:00Z",
+    "title": "U.S. Stocks Fall as Nvidia Drama Continues",
+    "link": "https://www.wsj.com/finance/investing/stock-futures-slip-ahead-of-pivotal-week-for-ai-trade-with-nvidia-anthropic-in-focus-c1768330?mod=rss_markets_main",
+    "published": "2026-11-16T20:25:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Cravath Employee Is Charged With Insider Trading Using Confidential Deal Information",
-    "link": "https://www.wsj.com/finance/regulation/cravath-employee-is-charged-with-insider-trading-using-confidential-deal-information-a5cdd0a9?mod=rss_markets_main",
-    "published": "2026-11-13T15:18:00Z",
+    "title": "Treasury Yields Fall, German Bunds’ Tick Higher",
+    "link": "https://www.wsj.com/finance/investing/u-s-treasury-yields-decline-but-fed-rate-hike-prospects-in-focus-1257629b?mod=rss_markets_main",
+    "published": "2026-11-16T20:16:00Z",
     "source": "WSJ"
    },
    {
-    "title": "The Stock Market’s Bargain Bin Is Secretly Stuffed With AI Stocks",
-    "link": "https://www.wsj.com/finance/investing/the-stock-markets-bargain-bin-is-secretly-stuffed-with-ai-stocks-8fa3edbe?mod=rss_markets_main",
-    "published": "2026-11-13T14:00:00Z",
+    "title": "Kalshi Buys Securities Firm to Expand Into Stock Trading",
+    "link": "https://www.wsj.com/finance/kalshi-buys-securities-firm-to-expand-into-stock-trading-8c1ade89?mod=rss_markets_main",
+    "published": "2026-11-16T19:33:00Z",
     "source": "WSJ"
    },
    {
-    "title": "How the AI Trade Hijacked the Treasury Market for a Month",
-    "link": "https://www.wsj.com/finance/stocks/how-the-ai-trade-hijacked-the-treasury-market-for-a-month-3fa26a9f?mod=rss_markets_main",
-    "published": "2026-11-13T11:17:00Z",
+    "title": "The Investors Set to Win Big in Anthropic’s IPO",
+    "link": "https://www.wsj.com/finance/investing/the-investors-set-to-win-big-in-anthropics-ipo-a2fc795c?mod=rss_markets_main",
+    "published": "2026-11-16T10:30:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-13T21:13:57Z"
+  "fetched_at": "2026-11-16T21:11:07Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
+     "title": "Unilever stock: UK watchdog seeks remedies for McCormick deal",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWkdGS3MtZVFRYmRycDR1elIzZWtiNkhYb2N3Y1hRVW9pdWhHdl9sZ1dza1FEaFpHY0VhaDA1clk5TzJvWlh4ZDJnbzFDaWJRVGhjT25CY3pvdl95eGJWamI4VmJiWDU4eENuQVJJVWdYb0wxZjBBdmgxam1HNVdJdXllYXVmdElTcm1iajR6dlFSUXlBakVUTG01OVBrNVBQSmctcjY4dGdTNEJ5cDBmekNORGh0cUhNSmtDZDVrNEo?oc=5",
+     "published": "2026-11-16T16:25:30Z",
+     "source": "ad-hoc-news.de"
+    },
+    {
+     "title": "McCormick: A Dividend Aristocrat On Sale With 4% Yield (NYSE:MKC)",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNWWNSeVBabGRlT2hFT1NaNTZGd1c3UWtoQmlaZXc3SV9JaG4wRFZETFlESl9SbWl5OTd4SEY5VE8xaHMwNmxPQno5czhLTlkyN0JpRnUtTDhjQUZtanRRakE2ZHl3NXV0aURQRURySFVZRFBxY2ZQZEdyX1o3NllvSTVObnJUd1NfN2JJYXotcGpvcXJveE5zb3FVN3pSR3Nmc3pGeXpTQ3U?oc=5",
+     "published": "2026-11-16T13:30:32Z",
+     "source": "Seeking Alpha"
+    },
+    {
      "title": "Unilever and McCormick have days to address merger risk",
      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOb1ZGSlFsU1JKRXBmbjIzS3RFVFBZTm52dHoxbjVpampTOUlOUGhjaHVvVDZLYzc4MENMbjBrZUZweW5KTmFacEpQZ3VBTzRYS0tjZG5xbTRLUU5tWGwxcHRqcnhjSHNTUU9ZQVdQNzlmS1dGSnltYkY1MElrZmhJM1R3aThDS1k?oc=5",
      "published": "2026-11-13T10:59:41Z",
      "source": "Townpress Newspaper"
-    },
-    {
-     "title": "Britain threatens deeper probe into $65 billion US–UK food merger that would reshape ownership behind Knorr and Hellmann’s across Africa",
-     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPMEpLdS1PVlhMTFFHRUd4TWdwNzBQR1BQeG14b1RLLS1uUTI1TTlGcU5wXzFJOEt1Tm52NGVJajhxbkxFUGVPSzJLdnRWQ09hVVFaX0JQWC14SnExSjlZNWl3TzhvQjBjbmtEMHlvSlNpTk1fb0dLMFI5dmNoaFY1UF9xWFNlS2tnU0E1VEJ0dnluUjZiV0l4djdfMlQ0dGI4S21Zbk1WV2o5Qkx4SjkxSjZDNXhiRnJkbmhPR3BPLW5xdFFwYzdtU3A5bVBxdkpPQ1Zv?oc=5",
-     "published": "2026-11-12T16:27:49Z",
-     "source": "Business Insider Africa"
-    },
-    {
-     "title": "Unilever, McCormick face in-depth UK probe without fixes",
-     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRUZQdmhpeGN2VjhxQXpEMWt2SXlBVnlnMERwYlhNdzdkX2ZwRko2SWlmdE11RFZmTGZldlB1UU9WbDRZSk9WNjlJNFJrQURTQmpnNDVIRWZzYlNDSnBBZXZfczUwTWV0OTk0b1d0V2tTWTdlSzU5OE5JOVhUbkhfeFQtaWVvZE1LUEVwQlp3TmRmZXd6YkVnbDBQaTdBWlI2?oc=5",
-     "published": "2026-11-12T14:28:00Z",
-     "source": "https://www.indiagazette.com/"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-13T21:13:58Z"
+   "fetched_at": "2026-11-16T21:11:14Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -83,8 +83,9 @@
      "source": "The Straits Times"
     }
    ],
-   "stale": false,
-   "fetched_at": "2026-11-13T21:13:58Z"
+   "stale": true,
+   "fetched_at": "2026-11-13T21:13:58Z",
+   "error": "GET failed: HTTPError: HTTP Error 429: Too Many Requests"
   }
  }
 }
