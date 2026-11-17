@@ -1,8 +1,20 @@
 {
- "updated": "2026-11-17T21:08:12Z",
+ "updated": "2026-11-17T21:52:06Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
+   {
+    "title": "Slower Retail Sales Drag on Market",
+    "link": "https://www.wsj.com/finance/stocks/slower-retail-sales-drag-on-market-fd1db66a?mod=rss_markets_main",
+    "published": "2026-11-17T21:49:00Z",
+    "source": "WSJ"
+   },
+   {
+    "title": "U.S. Stocks Fall as AI Doubts Fester",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-fall-as-ai-doubts-fester-a0979bdb?mod=rss_markets_main",
+    "published": "2026-11-17T21:21:00Z",
+    "source": "WSJ"
+   },
    {
     "title": "Stocks Dip Ahead of Nvidia Earnings",
     "link": "https://www.wsj.com/finance/stocks/nasdaq-futures-slip-as-investors-look-to-nvidia-earnings-1007fe69?mod=rss_markets_main",
@@ -20,32 +32,14 @@
     "link": "https://www.wsj.com/finance/anthropic-plans-to-raise-ipo-price-after-strong-demand-1a6b0af1?mod=rss_markets_main",
     "published": "2026-11-17T17:02:00Z",
     "source": "WSJ"
-   },
-   {
-    "title": "Deutsche Bank Shares Drop After Leaks Put Spotlight on Troubled Past",
-    "link": "https://www.wsj.com/finance/deutsche-bank-shares-drop-after-wide-ranging-whistleblower-leaks-bc550948?mod=rss_markets_main",
-    "published": "2026-11-17T14:14:00Z",
-    "source": "WSJ"
-   },
-   {
-    "title": "European Stock Indexes Lower Amid Market-Wide Falls",
-    "link": "https://www.wsj.com/finance/stocks/nikkei-falls-0-9-dragged-by-chip-financial-stocks-0445db62?mod=rss_markets_main",
-    "published": "2026-11-17T08:39:00Z",
-    "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-17T21:08:12Z"
+  "fetched_at": "2026-11-17T21:52:06Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
-    {
-     "title": "McCormick (MKC) Could Be 14% Below Fair Value Following Its Unilever Foods Narrative",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQU3BzWWxwVTBmYnVZaldBWWY2VGQ5QmZSQTJrYnA5b3h3aEs1bnBTUGNuMW1jcml0Q0UzdzV1WEJRczN6VXdrNHVueE0yX1B4NGVEY0xnTmY1RnREWnAyVWdQSUtSTXBkcDlyMm9FUWFqaVpESEcxT0hnLVlzLUFlUzF6WEtnbmxZZUhLeDNhdks5Q08wcU05ekNlNkpsR3k0a0JLMXBQcGlpZ1BwN2ozSTZMRW9uak13U0ttVmJJNnZUcU9NUXNoMEsxZzg2MG5BMlc4S9IB2gFBVV95cUxQNXg2eXRRTjNMS1ZXdjVmV3g5ZlN3WG5jWGxjZERTUzVMR3R4c1hmNk9FZE5HRGVwcGtjMXphNks1X0N3Wm5VbWVOR1pFM2pxT3p3RHlUSlNVVHB3VzRmQkJYMjhtSlg4Y2RPRE5zTTdZSEd4U2hLaW96cTN1TnpjMDFHaUtCOVdFNjU0czVmY0tZX2hfWTRkMlU5UjNNbEd1UE5Hb0lYaE94b2MyYTZVc3h3RktqVjN1bXg0NUtERVZmcEc2WTZoQUZOT3lNLUtuUFVzM2s5Rk4tdw?oc=5",
-     "published": "2026-11-17T00:21:54Z",
-     "source": "Simply Wall St"
-    },
     {
      "title": "Unilever stock: UK watchdog seeks remedies for McCormick deal",
      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWkdGS3MtZVFRYmRycDR1elIzZWtiNkhYb2N3Y1hRVW9pdWhHdl9sZ1dza1FEaFpHY0VhaDA1clk5TzJvWlh4ZDJnbzFDaWJRVGhjT25CY3pvdl95eGJWamI4VmJiWDU4eENuQVJJVWdYb0wxZjBBdmgxam1HNVdJdXllYXVmdElTcm1iajR6dlFSUXlBakVUTG01OVBrNVBQSmctcjY4dGdTNEJ5cDBmekNORGh0cUhNSmtDZDVrNEo?oc=5",
@@ -57,10 +51,16 @@
      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNWWNSeVBabGRlT2hFT1NaNTZGd1c3UWtoQmlaZXc3SV9JaG4wRFZETFlESl9SbWl5OTd4SEY5VE8xaHMwNmxPQno5czhLTlkyN0JpRnUtTDhjQUZtanRRakE2ZHl3NXV0aURQRURySFVZRFBxY2ZQZEdyX1o3NllvSTVObnJUd1NfN2JJYXotcGpvcXJveE5zb3FVN3pSR3Nmc3pGeXpTQ3U?oc=5",
      "published": "2026-11-16T13:30:32Z",
      "source": "Seeking Alpha"
+    },
+    {
+     "title": "Unilever and McCormick have days to address merger risk",
+     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOb1ZGSlFsU1JKRXBmbjIzS3RFVFBZTm52dHoxbjVpampTOUlOUGhjaHVvVDZLYzc4MENMbjBrZUZweW5KTmFacEpQZ3VBTzRYS0tjZG5xbTRLUU5tWGwxcHRqcnhjSHNTUU9ZQVdQNzlmS1dGSnltYkY1MElrZmhJM1R3aThDS1k?oc=5",
+     "published": "2026-11-13T10:59:41Z",
+     "source": "Townpress Newspaper"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-17T21:08:13Z"
+   "fetched_at": "2026-11-17T21:52:07Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-17T21:08:13Z"
+   "fetched_at": "2026-11-17T21:52:07Z"
   }
  }
 }
