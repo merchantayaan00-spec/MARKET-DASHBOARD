@@ -1,66 +1,66 @@
 {
- "updated": "2026-11-17T21:52:06Z",
+ "updated": "2026-11-18T21:32:01Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "Slower Retail Sales Drag on Market",
-    "link": "https://www.wsj.com/finance/stocks/slower-retail-sales-drag-on-market-fd1db66a?mod=rss_markets_main",
-    "published": "2026-11-17T21:49:00Z",
+    "title": "U.S. Stocks Mixed, Nvidia Falls, Ahead of Anthropic IPO",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-nvidia-falls-ahead-of-anthropic-ipo-c7de4692?mod=rss_markets_main",
+    "published": "2026-11-18T21:28:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Stocks Fall as AI Doubts Fester",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-fall-as-ai-doubts-fester-a0979bdb?mod=rss_markets_main",
-    "published": "2026-11-17T21:21:00Z",
+    "title": "Treasury Yields Fall Despite Hawkish Fed Expectations",
+    "link": "https://www.wsj.com/finance/jgbs-edge-lower-ahead-of-20-year-auction-91707090?mod=rss_markets_main",
+    "published": "2026-11-18T20:34:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Stocks Dip Ahead of Nvidia Earnings",
-    "link": "https://www.wsj.com/finance/stocks/nasdaq-futures-slip-as-investors-look-to-nvidia-earnings-1007fe69?mod=rss_markets_main",
-    "published": "2026-11-17T19:27:00Z",
+    "title": "Alstom Shares Drop After Train Maker Floats Possible Equity Raise",
+    "link": "https://www.wsj.com/business/alstom-shares-drop-after-train-maker-floats-possible-equity-raise-5800e588?mod=rss_markets_main",
+    "published": "2026-11-18T13:17:00Z",
     "source": "WSJ"
    },
    {
-    "title": "U.S. Treasury, Eurozone Bond Yields Edge Lower",
-    "link": "https://www.wsj.com/economy/central-banking/u-s-treasury-eurozone-bond-yields-edge-lower-as-fresh-drivers-are-sought-746b3b6d?mod=rss_markets_main",
-    "published": "2026-11-17T17:56:00Z",
+    "title": "European Chip Stocks Rise After Strong Nvidia Results",
+    "link": "https://www.wsj.com/finance/stocks/nikkei-rises-1-0-led-by-chip-ai-stocks-b486ab61?mod=rss_markets_main",
+    "published": "2026-11-18T09:31:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Anthropic Plans to Raise IPO Price After Strong Demand",
-    "link": "https://www.wsj.com/finance/anthropic-plans-to-raise-ipo-price-after-strong-demand-1a6b0af1?mod=rss_markets_main",
-    "published": "2026-11-17T17:02:00Z",
+    "title": "Asian Equities Mixed as Investors Parse Nvidia’s Quarterly Results, Guidance",
+    "link": "https://www.wsj.com/finance/asian-equities-mixed-as-investors-parse-nvidias-results-guidance-7041c3ea?mod=rss_markets_main",
+    "published": "2026-11-18T05:33:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-17T21:52:06Z"
+  "fetched_at": "2026-11-18T21:32:01Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
-     "title": "Unilever stock: UK watchdog seeks remedies for McCormick deal",
-     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWkdGS3MtZVFRYmRycDR1elIzZWtiNkhYb2N3Y1hRVW9pdWhHdl9sZ1dza1FEaFpHY0VhaDA1clk5TzJvWlh4ZDJnbzFDaWJRVGhjT25CY3pvdl95eGJWamI4VmJiWDU4eENuQVJJVWdYb0wxZjBBdmgxam1HNVdJdXllYXVmdElTcm1iajR6dlFSUXlBakVUTG01OVBrNVBQSmctcjY4dGdTNEJ5cDBmekNORGh0cUhNSmtDZDVrNEo?oc=5",
-     "published": "2026-11-16T16:25:30Z",
+     "title": "Unilever Indonesia stock: Unilever agrees to McCormick food deal",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQSWJMMnZVcm5PSUV4YV91MWRyN3psYUgzYVJORnpITmRzOHExZGNGaTVzV2Z0WDNoSG1scm1JeFZsUEpFOXQzckNLNldHcV9KNjFCZ3hhSHBFSzhzUGt1dGUybUw5dFA2Q2hYSTEtWHp3NlZYejZ3NnpLMTdQU3ZVNWNLY3Z0eGhzbFV2UDYyaU51VGNKaWwtU2RDTUR6ZUhkM3Y2by1ieEZmaGM4azNJSFlsNUVtcGNpQ19FRWtlZ2hyeTIy?oc=5",
+     "published": "2026-11-18T14:30:01Z",
      "source": "ad-hoc-news.de"
     },
     {
-     "title": "McCormick: A Dividend Aristocrat On Sale With 4% Yield (NYSE:MKC)",
-     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNWWNSeVBabGRlT2hFT1NaNTZGd1c3UWtoQmlaZXc3SV9JaG4wRFZETFlESl9SbWl5OTd4SEY5VE8xaHMwNmxPQno5czhLTlkyN0JpRnUtTDhjQUZtanRRakE2ZHl3NXV0aURQRURySFVZRFBxY2ZQZEdyX1o3NllvSTVObnJUd1NfN2JJYXotcGpvcXJveE5zb3FVN3pSR3Nmc3pGeXpTQ3U?oc=5",
-     "published": "2026-11-16T13:30:32Z",
-     "source": "Seeking Alpha"
+     "title": "What Does McCormick's (NYSE:MKC) Dividend Raise Signal Ahead of the Unilever Foods Deal?",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMmxhZWVjYUlnT3FyU1BOMi1hd0lBWGVscC1udFM1QmV6d29yamNfODBJVmJJNDFRbnNnMjVYcWxQYWdNMUNTdzh5c3F0MEc0WFByRjJEQ3hETTBsSUJTb2tGdExaVDhhSFNWTXpwbmpOdVNIQ0gtOWNOS3lDRnM2MHc4NUIzQXdFV2JIRVZvTTNGb3JZdFBHN1V1LVJMVlRyazQxaEo1cGJsOUtMVjVKNUJVS05WVjd6bk1rcU1qS3p3MDV6dEE?oc=5",
+     "published": "2026-11-18T05:49:00Z",
+     "source": "Kalkine Media"
     },
     {
-     "title": "Unilever and McCormick have days to address merger risk",
-     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOb1ZGSlFsU1JKRXBmbjIzS3RFVFBZTm52dHoxbjVpampTOUlOUGhjaHVvVDZLYzc4MENMbjBrZUZweW5KTmFacEpQZ3VBTzRYS0tjZG5xbTRLUU5tWGwxcHRqcnhjSHNTUU9ZQVdQNzlmS1dGSnltYkY1MElrZmhJM1R3aThDS1k?oc=5",
-     "published": "2026-11-13T10:59:41Z",
-     "source": "Townpress Newspaper"
+     "title": "Unilever’s McCormick tie-up gets saucy with CMA probe",
+     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE90QzItbTNYZENMTkdnMUVyOFREcl9EWmplb21xVzRKaDhWT0Jnbkk5YkNOV20wOGFGYkVaVGpPT3N3QlpTUDNfODhfb0U3MFNVLUg1YmgxeDhRR2p3Q0Q5OWpn?oc=5",
+     "published": "2026-11-17T19:05:19Z",
+     "source": "City AM"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-17T21:52:07Z"
+   "fetched_at": "2026-11-18T21:32:02Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -84,7 +84,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-17T21:52:07Z"
+   "fetched_at": "2026-11-18T21:32:02Z"
   }
  }
 }
