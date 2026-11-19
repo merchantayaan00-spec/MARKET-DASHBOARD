@@ -1,41 +1,41 @@
 {
- "updated": "2026-11-18T21:32:01Z",
+ "updated": "2026-11-19T21:43:47Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "U.S. Stocks Mixed, Nvidia Falls, Ahead of Anthropic IPO",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-mixed-nvidia-falls-ahead-of-anthropic-ipo-c7de4692?mod=rss_markets_main",
-    "published": "2026-11-18T21:28:00Z",
+    "title": "U.S. Stocks Slide as AI Bust Continues Despite Anthropic IPO",
+    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-slide-as-ai-bust-continues-despite-anthropic-ipo-5a14e137?mod=rss_markets_main",
+    "published": "2026-11-19T21:30:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Treasury Yields Fall Despite Hawkish Fed Expectations",
-    "link": "https://www.wsj.com/finance/jgbs-edge-lower-ahead-of-20-year-auction-91707090?mod=rss_markets_main",
-    "published": "2026-11-18T20:34:00Z",
+    "title": "Treasury Yields Slip as Risk-Off Mode Survives Anthropic’s IPO",
+    "link": "https://www.wsj.com/finance/investing/jgbs-edge-higher-amid-mixed-developments-c690e1af?mod=rss_markets_main",
+    "published": "2026-11-19T21:00:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Alstom Shares Drop After Train Maker Floats Possible Equity Raise",
-    "link": "https://www.wsj.com/business/alstom-shares-drop-after-train-maker-floats-possible-equity-raise-5800e588?mod=rss_markets_main",
-    "published": "2026-11-18T13:17:00Z",
+    "title": "Treasury Yields Fall as Anthropic Fails to Sustain Risk Appetite",
+    "link": "https://www.wsj.com/economy/central-banking/treasury-eurozone-bond-yields-edge-higher-47e08817?mod=rss_markets_main",
+    "published": "2026-11-19T21:00:00Z",
     "source": "WSJ"
    },
    {
-    "title": "European Chip Stocks Rise After Strong Nvidia Results",
-    "link": "https://www.wsj.com/finance/stocks/nikkei-rises-1-0-led-by-chip-ai-stocks-b486ab61?mod=rss_markets_main",
-    "published": "2026-11-18T09:31:00Z",
+    "title": "Investors Dumping AI Stocks to Buy Into Anthropic Send Tech Shares Lower",
+    "link": "https://www.wsj.com/finance/stocks/stock-futures-rise-as-optimism-improves-ahead-of-anthropic-trading-debut-ecdfbb2f?mod=rss_markets_main",
+    "published": "2026-11-19T20:22:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Asian Equities Mixed as Investors Parse Nvidia’s Quarterly Results, Guidance",
-    "link": "https://www.wsj.com/finance/asian-equities-mixed-as-investors-parse-nvidias-results-guidance-7041c3ea?mod=rss_markets_main",
-    "published": "2026-11-18T05:33:00Z",
+    "title": "What to Know About Anthropic’s Record-Breaking IPO",
+    "link": "https://www.wsj.com/finance/stocks/what-to-know-about-anthropics-record-breaking-ipo-372a1fec?mod=rss_markets_main",
+    "published": "2026-11-19T18:14:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-18T21:32:01Z"
+  "fetched_at": "2026-11-19T21:43:47Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
@@ -60,7 +60,7 @@
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-18T21:32:02Z"
+   "fetched_at": "2026-11-19T21:43:48Z"
   },
   "bain-gong-cha": {
    "items": [
@@ -77,14 +77,14 @@
      "source": "The Business Times"
     },
     {
-     "title": "Bain Capital To Acquire Gong Cha From TA Associates",
-     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1SNWtJdFhUekk2bW40S1FWeXltUm5XYnRxSWtiVl96RjhxeVRsOGRKUUh6UzRTVy10SnJFUWNza3JSSk02OEdNS2NidUpUa0JtUXdLYW9zMjNmelFCcjU1SmplS0pldmxZUVlFZEVkaXQzY1FtdDNYQUNSb9IBgAFBVV95cUxQcG9pYUgtTkhacWpHUXg3aEFTbUExeDB6U3lqUGtMeEVPTjBSSXVidWFiSW5vZ19TaUxPUFp4QzllN0tTLU5ySXhVR2JFT3lMVXBTTnZrVl9KOHE3TTY0YnBKSFVUSWFXTnRKbDlpa19lZm4wc2llc29WSDZJcGx1ag?oc=5",
-     "published": "2026-08-14T07:00:00Z",
-     "source": "Pulse 2.0"
+     "title": "Gong cha to Expand Globally Under Bain Capital Ownership: Three Strategies Driving Growth Beyond the Bubble Tea Boom",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5tb0JqMUJUNXh4TWZwRUZjRnpTZ0w4MjZCM3RQZTFHaE10d21UcU9qNmxwSEJxWUZfUmgwb3NBM1lUMDFlVHlKOUVIUklsdE1yZjl3bHREUm5SMVJ0ZnVoZVZCZ3ViVV9wYVBHWnQ2QUUwMnVQZ0E?oc=5",
+     "published": "2026-08-13T07:00:00Z",
+     "source": "BigGo Finance"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-18T21:32:02Z"
+   "fetched_at": "2026-11-19T21:43:48Z"
   }
  }
 }
