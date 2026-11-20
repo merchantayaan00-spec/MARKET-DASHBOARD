@@ -1,69 +1,75 @@
 {
- "updated": "2026-11-19T21:43:47Z",
+ "updated": "2026-11-20T21:26:52Z",
  "headlines": {
   "source": "WSJ / MarketWatch RSS",
   "items": [
    {
-    "title": "U.S. Stocks Slide as AI Bust Continues Despite Anthropic IPO",
-    "link": "https://www.wsj.com/finance/stocks/u-s-stocks-slide-as-ai-bust-continues-despite-anthropic-ipo-5a14e137?mod=rss_markets_main",
-    "published": "2026-11-19T21:30:00Z",
+    "title": "Anthropic’s IPO Bust Deepens $4 Trillion AI Wipeout on Wall Street",
+    "link": "https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90?mod=rss_markets_main",
+    "published": "2026-11-20T21:03:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Treasury Yields Slip as Risk-Off Mode Survives Anthropic’s IPO",
-    "link": "https://www.wsj.com/finance/investing/jgbs-edge-higher-amid-mixed-developments-c690e1af?mod=rss_markets_main",
-    "published": "2026-11-19T21:00:00Z",
+    "title": "Tech Rout Deepens as Anthropic Stock Slides",
+    "link": "https://www.wsj.com/finance/stocks/nasdaq-set-for-fresh-decline-as-ai-selloff-intensifies-e974bbb5?mod=rss_markets_main",
+    "published": "2026-11-20T19:31:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Treasury Yields Fall as Anthropic Fails to Sustain Risk Appetite",
-    "link": "https://www.wsj.com/economy/central-banking/treasury-eurozone-bond-yields-edge-higher-47e08817?mod=rss_markets_main",
-    "published": "2026-11-19T21:00:00Z",
+    "title": "Grabbing Inflation Protection Now Is a No-Brainer",
+    "link": "https://www.wsj.com/finance/investing/grabbing-inflation-protection-now-is-a-no-brainer-45a6364e?mod=rss_markets_main",
+    "published": "2026-11-20T11:16:00Z",
     "source": "WSJ"
    },
    {
-    "title": "Investors Dumping AI Stocks to Buy Into Anthropic Send Tech Shares Lower",
-    "link": "https://www.wsj.com/finance/stocks/stock-futures-rise-as-optimism-improves-ahead-of-anthropic-trading-debut-ecdfbb2f?mod=rss_markets_main",
-    "published": "2026-11-19T20:22:00Z",
+    "title": "Anthropic Lives Up to Wall Street Hype, but AI Doubts Linger",
+    "link": "https://www.wsj.com/finance/investing/anthropic-lives-up-to-wall-street-hype-but-ai-doubts-linger-d6a4519b?mod=rss_markets_main",
+    "published": "2026-11-20T10:59:00Z",
     "source": "WSJ"
    },
    {
-    "title": "What to Know About Anthropic’s Record-Breaking IPO",
-    "link": "https://www.wsj.com/finance/stocks/what-to-know-about-anthropics-record-breaking-ipo-372a1fec?mod=rss_markets_main",
-    "published": "2026-11-19T18:14:00Z",
+    "title": "British Bank Backed by Kushner’s Affinity Gets U.S. License",
+    "link": "https://www.wsj.com/economy/central-banking/oaknorth-secures-u-s-federal-reserve-clearance-to-buy-community-unity-bank-58718919?mod=rss_markets_main",
+    "published": "2026-11-20T09:18:00Z",
     "source": "WSJ"
    }
   ],
   "stale": false,
-  "fetched_at": "2026-11-19T21:43:47Z"
+  "fetched_at": "2026-11-20T21:26:52Z"
  },
  "deals": {
   "mccormick-unilever-foods": {
    "items": [
     {
+     "title": "McCormick (MKC) Faces Legal Probe Over Its Proposed Foods Merger",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQWllJb3pPT0RkMVBnbnJiSFAtUk1LZnZEVVAycExDcWp6OXN4UWMyT3pRajN0TEJwYWdMdXpReWtDTHlmc3IzTlJtYU9xeElQclpwZ3JxTUhKeWRKU2JiclVDdlk4VHlOSHhRUnVIMmJIZ0doU2lyZTZ6VlJPZzNINVFvXzh5NmNwVjJBQnhCa2ZJeU51NjNCdnhxZy0zRVRnS0ZJYXhVMGhlcXlGeUhoc1ZoTXJHdmJUSDliOUNqMEg5dVd5SjdnTjRuQmt4YmNTNmFUN9IB2gFBVV95cUxOVmNpRy1uSnNON1dtS2t4MG9NNWw0d04xRWVCWGEzRDBQRlk4a2tmcDFPakxLMENJaHJyVWk1eVF2ZVNlRlA0eUcwQkQzMnotem4yUDJjYzFYNE9uckhWODBPQUVrOXZtcloteDFsd1RrZHY5TXJWM21qSnlfam9DZTB3SDBZUVo0SFl4MHZJLTZJajQwQ3AzT1BFanMwRDdMbEppUGdQekExYjFscVlCY3Y2TTBnQmtrLVh3aDFtbURWMFFuRGtidENHZEF3TnB4S2t0WnpHN1J5UQ?oc=5",
+     "published": "2026-11-20T09:09:24Z",
+     "source": "Simply Wall St"
+    },
+    {
+     "title": "What Should Investors Know About McCormick (MKC) Merger Investigation?",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNXlMMVNYaVJNUFhGNW85TDJ3MHRyQjJrdW92SkJNdFRFd3dzQ3JhdXk3Qzd1cmlnQXVoX3pjZVlwNXJQMC03cFFGSEZESkJ2ZXdFSTFGYjZySVl4aVgxYllVZFY5WV9yd2U5TTVxUWVMbjVjcmczcGtQTVRPT0FDREFySzQ4azNZWlhOSW1RbTlQR0JBX2N2WGdnMkZhelZfYkE?oc=5",
+     "published": "2026-11-20T00:16:00Z",
+     "source": "Yahoo Finance"
+    },
+    {
      "title": "Unilever Indonesia stock: Unilever agrees to McCormick food deal",
      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQSWJMMnZVcm5PSUV4YV91MWRyN3psYUgzYVJORnpITmRzOHExZGNGaTVzV2Z0WDNoSG1scm1JeFZsUEpFOXQzckNLNldHcV9KNjFCZ3hhSHBFSzhzUGt1dGUybUw5dFA2Q2hYSTEtWHp3NlZYejZ3NnpLMTdQU3ZVNWNLY3Z0eGhzbFV2UDYyaU51VGNKaWwtU2RDTUR6ZUhkM3Y2by1ieEZmaGM4azNJSFlsNUVtcGNpQ19FRWtlZ2hyeTIy?oc=5",
      "published": "2026-11-18T14:30:01Z",
      "source": "ad-hoc-news.de"
-    },
-    {
-     "title": "What Does McCormick's (NYSE:MKC) Dividend Raise Signal Ahead of the Unilever Foods Deal?",
-     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMmxhZWVjYUlnT3FyU1BOMi1hd0lBWGVscC1udFM1QmV6d29yamNfODBJVmJJNDFRbnNnMjVYcWxQYWdNMUNTdzh5c3F0MEc0WFByRjJEQ3hETTBsSUJTb2tGdExaVDhhSFNWTXpwbmpOdVNIQ0gtOWNOS3lDRnM2MHc4NUIzQXdFV2JIRVZvTTNGb3JZdFBHN1V1LVJMVlRyazQxaEo1cGJsOUtMVjVKNUJVS05WVjd6bk1rcU1qS3p3MDV6dEE?oc=5",
-     "published": "2026-11-18T05:49:00Z",
-     "source": "Kalkine Media"
-    },
-    {
-     "title": "Unilever’s McCormick tie-up gets saucy with CMA probe",
-     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE90QzItbTNYZENMTkdnMUVyOFREcl9EWmplb21xVzRKaDhWT0Jnbkk5YkNOV20wOGFGYkVaVGpPT3N3QlpTUDNfODhfb0U3MFNVLUg1YmgxeDhRR2p3Q0Q5OWpn?oc=5",
-     "published": "2026-11-17T19:05:19Z",
-     "source": "City AM"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-19T21:43:48Z"
+   "fetched_at": "2026-11-20T21:26:52Z"
   },
   "bain-gong-cha": {
    "items": [
+    {
+     "title": "Bain Capital to acquire Gong cha from TA Associates",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUEZXSUF4UGlrNHplaHhNeWdsMXh3TUJtRkdMeVc5eWNQVUVCM3Vla05fNXdVY1E4Qjc5bTV0WkRLd05RNk9zZFNEbkZTa1JFanJRM21LbHR2RjV6T2QtTGdIZnRDR25HbjNLU3pkYWdzaC1oYVJGV2xPRktIcnc3ejJVdzBPMy1LT3F1eEhybzNYM2h6NDZoYXh2Yw?oc=5",
+     "published": "2026-10-22T16:11:33Z",
+     "source": "PEI Private Equity"
+    },
     {
      "title": "Partners Group exits Gong Cha investment after Bain Capital buyout of bubble tea brand",
      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTnZmR3RaZ0gwc0x5cDNEUHJRSkI1RG1XblE5eTk2a0VQS0NhcXgxenc2ZFM1UHA1RDQ1anIxaEZETG8teDBXUHF0dVI1djZxRnBobjVLYlM1MW50UTVHUFZTMFE4cXdOeGgwZWpHb2c2QldxT08tUXRJOXc0TjFfeTZtUExKZW9xWlRZNUVVS3JSWC1RdUhEZFJYMmV6am5CRE5ZSQ?oc=5",
@@ -75,16 +81,10 @@
      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNWtsWXZZV0xpV0xXSWd4dnR0Y2l5RHpvVnBxYk9OVWNaejE5T2VUSlpJT2VPYU12dVB1QUZhTW1CWnBIbzE1bmZMQnJTclFpYldrUTlOZ0JPeE9ld2FPNFBOLUNJQ09QRzNFVjIxaGtaQXlBRlZaVUVxejljdktnYXBYa2VZV2g1Vkwtc3c1MVdlZlp2bXdlT3YteTZjMDhOczZiMVdwWWZ6cDBxbXlTY1J4ZGJtaFFuNmo4RGxjbzN3UVpS?oc=5",
      "published": "2026-08-24T07:00:00Z",
      "source": "The Business Times"
-    },
-    {
-     "title": "Gong cha to Expand Globally Under Bain Capital Ownership: Three Strategies Driving Growth Beyond the Bubble Tea Boom",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5tb0JqMUJUNXh4TWZwRUZjRnpTZ0w4MjZCM3RQZTFHaE10d21UcU9qNmxwSEJxWUZfUmgwb3NBM1lUMDFlVHlKOUVIUklsdE1yZjl3bHREUm5SMVJ0ZnVoZVZCZ3ViVV9wYVBHWnQ2QUUwMnVQZ0E?oc=5",
-     "published": "2026-08-13T07:00:00Z",
-     "source": "BigGo Finance"
     }
    ],
    "stale": false,
-   "fetched_at": "2026-11-19T21:43:48Z"
+   "fetched_at": "2026-11-20T21:26:53Z"
   }
  }
 }
